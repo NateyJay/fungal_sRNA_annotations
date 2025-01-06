@@ -61,3 +61,4 @@ rsconnect/
 *.bw
 *.bigwig
 *.gz
+*.txt
