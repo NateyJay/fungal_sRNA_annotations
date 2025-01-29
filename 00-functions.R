@@ -29,7 +29,7 @@ filter_projects <- function(p.df) {
   p.df$f_has_peak <- p.df$project %in% k.df$project
   table(p.df$f_has_peak)
   
-  k.df <- k.df[k.df$size < 18,]
+  k.df <- k.df[k.df$size < 18 | k.df$size > 32,]
   # no slope
   p.df$f_no_slope <- !p.df$project %in% k.df$project & p.df$f_has_peak
   table(p.df$f_no_slope)
@@ -76,7 +76,7 @@ get_project.df <- function(filter = T) {
   
   m.df$abbv <- str_sub(m.df$project, 1, 5)
   
-  if (filter) m.df <- filter_projects(m.df)
+  # if (filter) m.df <- filter_projects(m.df)
   return(m.df)
   
 }
@@ -111,6 +111,7 @@ get_peak.df <- function() {
   
   for (project in p.df$project) {
     message(project)
+    # peak_file = file.path("../+annotations", project, "align/alignment.peak_table.txt")
     peak_file = file.path("../+annotations", project, "align/alignment.peak_summary.txt")
     
     if (!file.exists(peak_file)) {
@@ -216,7 +217,7 @@ get_profile.df <- function() {
 
 
 
-filter_loci <- function() {
+filter_loci <- function(annotation.df) {
   a.df <- annotation.df
   s.df <- scale.df
   s.df <- s.df[s.df$peak != "None",]
@@ -267,6 +268,8 @@ get_annotation.df <- function(filter=T) {
     
     a.df <- read.delim(ann_file)
     
+    if ('condition' %in% names(a.df)) a.df$condition <- NULL
+    
     if (nrow(a.df) == 0 ) {message("   ^^^ annotation empty"); next}
     
     
@@ -278,7 +281,7 @@ get_annotation.df <- function(filter=T) {
   }
   
   
-  if (filter) filter_loci()
+  # if (filter) filter_loci()
   
   return(out.df) 
 }

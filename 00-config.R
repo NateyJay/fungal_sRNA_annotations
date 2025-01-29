@@ -3,6 +3,7 @@
 library(reshape2)
 library(stringr)
 library(svglite)
+library(ape)
 
 
 # detach("package:layermap", unload = TRUE)
@@ -13,7 +14,9 @@ library(layermap)
 source("00-functions.R")
 
 get_meta.df <- function() {
-  meta_file = file.path("/Volumes/YASMA/master_table.xlsx")
+  # meta_file = file.path("/Volumes/YASMA/master_table.xlsx")
+  meta_file = file.path("master_table.xlsx")
+  
   
   # if (! file.exists(meta_file)) {
   #   message("/Volumes/YASMA/master_table.xlsx not found!")
@@ -87,9 +90,16 @@ species.df <- get_species.df()
 
 
 project.df <- get_project.df()
-project.df <- filter_projects()
+project.df <- filter_projects(project.df)
 
 library.df <- get_library.df()
+
+scale.df <- get_peak_scales(filter=F)
+
+annotation.df <- get_annotation.df()
+annotation.df <- filter_loci(annotation.df)
+
+peak.df <- get_peak.df()
 
 
 # Color sets --------------------------------------------------------------
@@ -109,8 +119,18 @@ host_colors <- c('Plant'= 'mediumseagreen',
                  'Worm'='orange')
 
 
+passing_abbv   = project.df$abbv[project.df$f_pass]
+passing_genera = species.df$genus[species.df$abbv %in% unique(passing_abbv)]
+
+phylogeny <- ape::read.tree("../phylogenies/18s.raxml.bestTree")
+phylogeny$tip.label <- str_split_fixed(phylogeny$tip.label, "_", 3)[,1]
 
 
+phylogeny$tip.label[which(!phylogeny$tip.label %in% passing_genera)]
+
+
+phylogeny <- drop.tip(phylogeny, which(!phylogeny$tip.label %in% passing_genera))
+phylogeny <- drop.tip(phylogeny, which(duplicated(phylogeny$tip.label)))
 
 
 
