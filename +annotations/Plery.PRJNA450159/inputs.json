@@ -1,0 +1,28 @@
+{
+  "project_name": "Plery.PRJNA450159",
+  "srrs": [
+    "SRR7003643"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR7003643.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR7003643.t.fa.gz"
+  ],
+  "adapter": "CTGTAGGC",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR7003643"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Plery.GCA_029467805.1_ASM2946780v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_A/loci.gff3"
+}

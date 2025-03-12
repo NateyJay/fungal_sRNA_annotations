@@ -1,0 +1,33 @@
+#!/bin/bash
+
+mkdir ../annotations/Scpom.PRJNA438370
+cd ../annotations/Scpom.PRJNA438370
+
+echo Scpom.PRJNA438370
+
+
+echo "
+making inputs..."
+yasma.py inputs \
+-o . \
+--srrs SRR6837113 SRR6837121 SRR6837116 SRR6837112 SRR6837117 SRR6837119 SRR6837120 SRR6837118 SRR6837128 SRR6837130 SRR6837132 SRR6837131 SRR6837126 SRR6837125 SRR6837124 SRR6837127 SRR6837122 SRR6837129 SRR6837123 SRR6837133 SRR6837115 SRR6837114 \
+--conditions SRR6837113:? SRR6837121:? SRR6837116:? SRR6837112:? SRR6837117:? SRR6837119:? SRR6837120:? SRR6837118:? SRR6837128:? SRR6837130:? SRR6837132:? SRR6837131:? SRR6837126:? SRR6837125:? SRR6837124:? SRR6837127:? SRR6837122:? SRR6837129:? SRR6837123:? SRR6837133:? SRR6837115:? SRR6837114:? \
+--genome_file ../../Genomes/Scpom.GCA_000002945.2_ASM294v2_genomic.fa
+
+echo "
+downloading..."
+yasma.py download -o .
+
+echo "
+finding adapters..."
+yasma.py adapter -o .
+
+echo "
+trimming..."
+yasma.py trim -o . --cores 28
+
+echo "
+aligning..."
+yasma.py align -o . --cores 28
+
+

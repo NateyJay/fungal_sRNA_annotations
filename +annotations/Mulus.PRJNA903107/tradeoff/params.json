@@ -1,0 +1,109 @@
+{
+  "output_directory": "/home2/njohnson/fungi_annotations/annotations/Mulus.PRJNA903107",
+  "annotation_conditions": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "S"
+  ],
+  "conditions": {
+    "A": [
+      "SRR22390019"
+    ],
+    "B": [
+      "SRR22390021"
+    ],
+    "C": [
+      "SRR22390022"
+    ],
+    "D": [
+      "SRR22390023"
+    ],
+    "E": [
+      "SRR22390024"
+    ],
+    "F": [
+      "SRR22390035"
+    ],
+    "G": [
+      "SRR22390036"
+    ],
+    "H": [
+      "SRR22390037"
+    ],
+    "I": [
+      "SRR22390038"
+    ],
+    "J": [
+      "SRR22390039"
+    ],
+    "K": [
+      "SRR22390041"
+    ],
+    "L": [
+      "SRR22390042"
+    ],
+    "M": [
+      "SRR22390043"
+    ],
+    "N": [
+      "SRR22390044"
+    ],
+    "O": [
+      "SRR22390045"
+    ],
+    "P": [
+      "SRR22390046"
+    ],
+    "Q": [
+      "SRR22390047"
+    ],
+    "R": [
+      "SRR22390048"
+    ],
+    "S": [
+      "SRR22390049"
+    ]
+  },
+  "alignment_file": "/scratch/njohnson/Mulus.PRJNA903107.bam",
+  "name": null,
+  "coverage_window": 250,
+  "kernel_window": 100,
+  "genome_scaling_factor": 0.4,
+  "merge_dist": 500,
+  "merge_strand_similarity": 0.5,
+  "min_length": 15,
+  "max_length": 30,
+  "filter_skew": false,
+  "max_skew": 0.9,
+  "filter_complexity": true,
+  "min_complexity": 10,
+  "filter_abundance": true,
+  "min_abundance": 50,
+  "filter_abundance_density": true,
+  "min_abundance_density": 100,
+  "bigwig": false,
+  "time_test": false,
+  "dont_revise_regions": false,
+  "dont_trim_loci": false,
+  "debug": false,
+  "test_mode": false,
+  "override": false,
+  "project_name": "Mulus.PRJNA903107",
+  "tool": "tradeoff"
+}

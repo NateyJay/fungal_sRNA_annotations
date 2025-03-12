@@ -1,0 +1,78 @@
+{
+  "project_name": "Zytri.PRJNA480952",
+  "srrs": [
+    "SRR7550260",
+    "SRR7550250",
+    "SRR7550251",
+    "SRR7550275",
+    "SRR7550277",
+    "SRR7550276",
+    "SRR7550272",
+    "SRR7550273",
+    "SRR7550274",
+    "SRR7550270",
+    "SRR7550271",
+    "SRR7550279"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR7550260.fasta",
+    "untrimmed/SRR7550250.fasta",
+    "untrimmed/SRR7550251.fasta",
+    "untrimmed/SRR7550275.fasta",
+    "untrimmed/SRR7550277.fasta",
+    "untrimmed/SRR7550276.fasta",
+    "untrimmed/SRR7550272.fasta",
+    "untrimmed/SRR7550273.fasta",
+    "untrimmed/SRR7550274.fasta",
+    "untrimmed/SRR7550270.fasta",
+    "untrimmed/SRR7550271.fasta",
+    "untrimmed/SRR7550279.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR7550260.t.fa.gz",
+    "trim/SRR7550250.t.fa.gz",
+    "trim/SRR7550251.t.fa.gz",
+    "trim/SRR7550275.t.fa.gz",
+    "trim/SRR7550277.t.fa.gz",
+    "trim/SRR7550276.t.fa.gz",
+    "trim/SRR7550272.t.fa.gz",
+    "trim/SRR7550273.t.fa.gz",
+    "trim/SRR7550274.t.fa.gz",
+    "trim/SRR7550270.t.fa.gz",
+    "trim/SRR7550271.t.fa.gz",
+    "trim/SRR7550279.t.fa.gz"
+  ],
+  "adapter": "TGGAATTC",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR7550260",
+      "SRR7550250",
+      "SRR7550251"
+    ],
+    "B": [
+      "SRR7550275",
+      "SRR7550277",
+      "SRR7550276"
+    ],
+    "C": [
+      "SRR7550272",
+      "SRR7550273",
+      "SRR7550274"
+    ],
+    "D": [
+      "SRR7550270",
+      "SRR7550271",
+      "SRR7550279"
+    ]
+  },
+  "annotation_conditions": [
+    "B"
+  ],
+  "genome_file": "../../Genomes/Zytri.GCA_000219625.1_MYCGR_v2.0_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_B/loci.gff3"
+}

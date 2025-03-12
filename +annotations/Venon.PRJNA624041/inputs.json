@@ -1,0 +1,56 @@
+{
+  "project_name": "Venon.PRJNA624041",
+  "srrs": [
+    "SRR11514758",
+    "SRR11514754",
+    "SRR11514755",
+    "SRR11514759",
+    "SRR11514756",
+    "SRR11514760",
+    "SRR11514757",
+    "SRR11514761"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR11514758.fasta",
+    "untrimmed/SRR11514754.fasta",
+    "untrimmed/SRR11514755.fasta",
+    "untrimmed/SRR11514759.fasta",
+    "untrimmed/SRR11514756.fasta",
+    "untrimmed/SRR11514760.fasta",
+    "untrimmed/SRR11514757.fasta",
+    "untrimmed/SRR11514761.fasta"
+  ],
+  "trimmed_libraries": [
+    "untrimmed/SRR11514758.fasta",
+    "untrimmed/SRR11514754.fasta",
+    "untrimmed/SRR11514755.fasta",
+    "untrimmed/SRR11514759.fasta",
+    "untrimmed/SRR11514756.fasta",
+    "untrimmed/SRR11514760.fasta",
+    "untrimmed/SRR11514757.fasta",
+    "untrimmed/SRR11514761.fasta"
+  ],
+  "adapter": "PRE-TRIMMED",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR11514758",
+      "SRR11514754",
+      "SRR11514755",
+      "SRR11514759",
+      "SRR11514756",
+      "SRR11514760",
+      "SRR11514757",
+      "SRR11514761"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Venon.GCA_003724135.2_ASM372413v2_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff/loci.gff3"
+}

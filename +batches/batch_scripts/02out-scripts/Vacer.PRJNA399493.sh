@@ -1,0 +1,25 @@
+#!/bin/bash
+
+mkdir ../annotations/Vacer.PRJNA399493
+cd ../annotations/Vacer.PRJNA399493
+
+echo Vacer.PRJNA399493
+
+
+echo "
+copying alignment to scratch..."
+cp ./align/alignment.bam /scratch/njohnson/Vacer.PRJNA399493.bam
+
+echo "
+annotating..."
+yasma.py tradeoff -o . -ac ? -c SRR5989925:? SRR5989924:? SRR5989929:? SRR5989920:? SRR5989948:? SRR5989934:? SRR5989955:? SRR5989941:? SRR5989935:? SRR5989939:? SRR5989947:? SRR5989951:? SRR5989942:? SRR5989950:? SRR5989938:? SRR5989930:? SRR5989923:? SRR5989943:? SRR5989954:? SRR5989932:? SRR5989926:? SRR5989945:? SRR5989940:? SRR5989952:? SRR5989933:? SRR5989953:? SRR5989927:? SRR5989944:? SRR5989921:? SRR5989936:? SRR5989937:? SRR5989922:? SRR5989949:? SRR5989928:? SRR5989946:? SRR5989931:? SRR5967148:? SRR5967146:? SRR5967145:? SRR5967142:? SRR5967147:? SRR5967144:? SRR5967150:? SRR5967143:? SRR5967152:? SRR5967141:? SRR5967149:? SRR5967151:? -a /scratch/njohnson/Vacer.PRJNA399493.bam
+
+
+echo "
+deleting scratch alignment..."
+rm /scratch/njohnson/Vacer.PRJNA399493.bam
+rm /scratch/njohnson/Vacer.PRJNA399493.bam.bai
+rm /scratch/njohnson/Vacer.PRJNA399493.depth.txt
+
+
+

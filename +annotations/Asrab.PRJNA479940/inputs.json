@@ -1,0 +1,72 @@
+{
+  "project_name": "Asrab.PRJNA479940",
+  "srrs": [
+    "SRR12847934",
+    "SRR12847935",
+    "SRR12847938",
+    "SRR12847939",
+    "SRR12847941",
+    "SRR12847940",
+    "SRR12847945",
+    "SRR12847944",
+    "SRR12847949",
+    "SRR12847948"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR12847934.fasta",
+    "untrimmed/SRR12847935.fasta",
+    "untrimmed/SRR12847938.fasta",
+    "untrimmed/SRR12847939.fasta",
+    "untrimmed/SRR12847941.fasta",
+    "untrimmed/SRR12847940.fasta",
+    "untrimmed/SRR12847945.fasta",
+    "untrimmed/SRR12847944.fasta",
+    "untrimmed/SRR12847949.fasta",
+    "untrimmed/SRR12847948.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR12847934.t.fa.gz",
+    "trim/SRR12847935.t.fa.gz",
+    "trim/SRR12847938.t.fa.gz",
+    "trim/SRR12847939.t.fa.gz",
+    "trim/SRR12847941.t.fa.gz",
+    "trim/SRR12847940.t.fa.gz",
+    "trim/SRR12847945.t.fa.gz",
+    "trim/SRR12847944.t.fa.gz",
+    "trim/SRR12847949.t.fa.gz",
+    "trim/SRR12847948.t.fa.gz"
+  ],
+  "adapter": "TGGAATTC",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR12847934",
+      "SRR12847935"
+    ],
+    "B": [
+      "SRR12847938",
+      "SRR12847939"
+    ],
+    "C": [
+      "SRR12847941",
+      "SRR12847940"
+    ],
+    "D": [
+      "SRR12847945",
+      "SRR12847944"
+    ],
+    "E": [
+      "SRR12847949",
+      "SRR12847948"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Asrab.GCA_004011695.2_ASM401169v2_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_A/loci.gff3"
+}

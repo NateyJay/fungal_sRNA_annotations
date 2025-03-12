@@ -1,0 +1,50 @@
+{
+  "project_name": "Nocer.PRJNA562787",
+  "srrs": [
+    "SRR10034571",
+    "SRR10034573",
+    "SRR10034572",
+    "SRR10034578",
+    "SRR10034570",
+    "SRR10034579"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR10034571.fasta",
+    "untrimmed/SRR10034573.fasta",
+    "untrimmed/SRR10034572.fasta",
+    "untrimmed/SRR10034578.fasta",
+    "untrimmed/SRR10034570.fasta",
+    "untrimmed/SRR10034579.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR10034571.t.fa.gz",
+    "trim/SRR10034573.t.fa.gz",
+    "trim/SRR10034572.t.fa.gz",
+    "trim/SRR10034578.t.fa.gz",
+    "trim/SRR10034570.t.fa.gz",
+    "trim/SRR10034579.t.fa.gz"
+  ],
+  "adapter": "CTGTAGGC",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR10034571",
+      "SRR10034573",
+      "SRR10034572"
+    ],
+    "B": [
+      "SRR10034578",
+      "SRR10034570",
+      "SRR10034579"
+    ]
+  },
+  "annotation_conditions": [
+    "B"
+  ],
+  "genome_file": "../../Genomes/Nocer.GCF_000988165.1_ASM98816v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_B/loci.gff3"
+}

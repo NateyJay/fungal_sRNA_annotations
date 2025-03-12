@@ -1,0 +1,78 @@
+{
+  "project_name": "Mabru.PRJNA731035",
+  "srrs": [
+    "SRR14586322",
+    "SRR14586326",
+    "SRR14586325",
+    "SRR14586319",
+    "SRR14586320",
+    "SRR14586321",
+    "SRR14586318",
+    "SRR14586317",
+    "SRR14586316",
+    "SRR14586315",
+    "SRR14586324",
+    "SRR14586323"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR14586322.fasta",
+    "untrimmed/SRR14586326.fasta",
+    "untrimmed/SRR14586325.fasta",
+    "untrimmed/SRR14586319.fasta",
+    "untrimmed/SRR14586320.fasta",
+    "untrimmed/SRR14586321.fasta",
+    "untrimmed/SRR14586318.fasta",
+    "untrimmed/SRR14586317.fasta",
+    "untrimmed/SRR14586316.fasta",
+    "untrimmed/SRR14586315.fasta",
+    "untrimmed/SRR14586324.fasta",
+    "untrimmed/SRR14586323.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR14586322.t.fa.gz",
+    "trim/SRR14586326.t.fa.gz",
+    "trim/SRR14586325.t.fa.gz",
+    "trim/SRR14586319.t.fa.gz",
+    "trim/SRR14586320.t.fa.gz",
+    "trim/SRR14586321.t.fa.gz",
+    "trim/SRR14586318.t.fa.gz",
+    "trim/SRR14586317.t.fa.gz",
+    "trim/SRR14586316.t.fa.gz",
+    "trim/SRR14586315.t.fa.gz",
+    "trim/SRR14586324.t.fa.gz",
+    "trim/SRR14586323.t.fa.gz"
+  ],
+  "adapter": "AGATCGGA",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR14586322",
+      "SRR14586326",
+      "SRR14586325"
+    ],
+    "B": [
+      "SRR14586319",
+      "SRR14586320",
+      "SRR14586321"
+    ],
+    "C": [
+      "SRR14586318",
+      "SRR14586317",
+      "SRR14586316"
+    ],
+    "D": [
+      "SRR14586315",
+      "SRR14586324",
+      "SRR14586323"
+    ]
+  },
+  "annotation_conditions": [
+    "D"
+  ],
+  "genome_file": "../../Genomes/Mabru.GCA_000298775.1_ASM29877v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_D/loci.gff3"
+}

@@ -1,0 +1,28 @@
+{
+  "project_name": "Vealb.PRJNA213313",
+  "srrs": [
+    "SRR943043"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR943043.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR943043.t.fa.gz"
+  ],
+  "adapter": "ATCTCGTA",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR943043"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Vealb.GCA_002851705.1_ASM285170v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_A/loci.gff3"
+}

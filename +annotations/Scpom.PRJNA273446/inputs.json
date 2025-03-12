@@ -1,0 +1,28 @@
+{
+  "project_name": "Scpom.PRJNA273446",
+  "srrs": [
+    "SRR1770409"
+  ],
+  "untrimmed_libraries": [
+    "/home2/njohnson/fungi_annotations/annotations/Scpom.PRJNA273446/untrimmed/SRR1770409.fasta"
+  ],
+  "trimmed_libraries": [
+    "/home2/njohnson/fungi_annotations/annotations/Scpom.PRJNA273446/trim/SRR1770409.t.fa.gz"
+  ],
+  "adapter": "CTGTAGGC",
+  "alignment_file": "/home2/njohnson/fungi_annotations/annotations/Scpom.PRJNA273446/align/alignment.bam",
+  "conditions": {
+    "Z.d1": [
+      "SRR1770409"
+    ]
+  },
+  "annotation_conditions": [
+    "-c"
+  ],
+  "genome_file": "/home2/njohnson/fungi_annotations/annotations/Scpom.PRJNA273446/../../Genomes/Scpom.GCA_000002945.2_ASM294v2_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 50,
+  "annotation_file": null
+}

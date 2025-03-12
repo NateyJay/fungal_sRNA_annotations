@@ -1,0 +1,46 @@
+{
+  "project_name": "Bodot.PRJNA511629",
+  "srrs": [
+    "SRR8374850",
+    "SRR8374847",
+    "SRR8374848",
+    "SRR8374849"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR8374850.fasta",
+    "untrimmed/SRR8374847.fasta",
+    "untrimmed/SRR8374848.fasta",
+    "untrimmed/SRR8374849.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR8374850.t.fa.gz",
+    "trim/SRR8374847.t.fa.gz",
+    "trim/SRR8374848.t.fa.gz",
+    "trim/SRR8374849.t.fa.gz"
+  ],
+  "adapter": "AGATCGGA",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR8374850"
+    ],
+    "B": [
+      "SRR8374847"
+    ],
+    "C": [
+      "SRR8374848"
+    ],
+    "D": [
+      "SRR8374849"
+    ]
+  },
+  "annotation_conditions": [
+    "C"
+  ],
+  "genome_file": "../../Genomes/Bodot.GCA_011503125.2_ASM1150312v2_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_C/loci.gff3"
+}

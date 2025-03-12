@@ -1,0 +1,33 @@
+#!/bin/bash
+
+mkdir ../annotations/Nobom.PRJNA953616
+cd ../annotations/Nobom.PRJNA953616
+
+echo Nobom.PRJNA953616
+
+
+echo "
+making inputs..."
+yasma.py inputs \
+-o . \
+--srrs SRR24111183 SRR24111185 SRR24111184 SRR24165928 SRR24165927 SRR24111180 SRR24111182 SRR24111181 SRR24165926 SRR24111176 SRR24111178 SRR24111179 SRR24165923 SRR24165925 SRR24111174 SRR24111173 SRR24111175 SRR24165922 \
+--conditions SRR24111183:A SRR24111185:A SRR24111184:A SRR24165928:A SRR24165927:A SRR24111180:B SRR24111182:B SRR24111181:B SRR24165926:B SRR24111176:C SRR24111178:C SRR24111179:C SRR24165923:C SRR24165925:C SRR24111174:D SRR24111173:D SRR24111175:D SRR24165922:D \
+--genome_file ../../Genomes/Nobom.GCA_000383075.1_NosBomCQ1_v1.0_genomic.fa
+
+echo "
+downloading..."
+yasma.py download -o .
+
+echo "
+finding adapters..."
+yasma.py adapter -o .
+
+echo "
+trimming..."
+yasma.py trim -o . --cores 28
+
+echo "
+aligning..."
+yasma.py align -o . --cores 28
+
+

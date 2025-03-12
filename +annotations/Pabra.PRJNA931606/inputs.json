@@ -1,0 +1,50 @@
+{
+  "project_name": "Pabra.PRJNA931606",
+  "srrs": [
+    "SRR23341104",
+    "SRR23341105",
+    "SRR23341106",
+    "SRR23341107",
+    "SRR23341108",
+    "SRR23341109"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR23341104.fasta",
+    "untrimmed/SRR23341105.fasta",
+    "untrimmed/SRR23341106.fasta",
+    "untrimmed/SRR23341107.fasta",
+    "untrimmed/SRR23341108.fasta",
+    "untrimmed/SRR23341109.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR23341104.t.fa.gz",
+    "trim/SRR23341105.t.fa.gz",
+    "trim/SRR23341106.t.fa.gz",
+    "trim/SRR23341107.t.fa.gz",
+    "trim/SRR23341108.t.fa.gz",
+    "trim/SRR23341109.t.fa.gz"
+  ],
+  "adapter": "AGATCGGA",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR23341104",
+      "SRR23341105",
+      "SRR23341106"
+    ],
+    "B": [
+      "SRR23341107",
+      "SRR23341108",
+      "SRR23341109"
+    ]
+  },
+  "annotation_conditions": [
+    "B"
+  ],
+  "genome_file": "../../Genomes/Pabra.GCA_000150735.2_Paracocci_br_Pb18_V2_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_B/loci.gff3"
+}

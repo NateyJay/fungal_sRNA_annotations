@@ -1,0 +1,64 @@
+{
+  "project_name": "Asfum.PRJNA926984",
+  "srrs": [
+    "SRR23205001",
+    "SRR23205002",
+    "SRR23205000",
+    "SRR23204997",
+    "SRR23204998",
+    "SRR23204999",
+    "SRR23204996",
+    "SRR23204994",
+    "SRR23204995"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR23205001.fasta",
+    "untrimmed/SRR23205002.fasta",
+    "untrimmed/SRR23205000.fasta",
+    "untrimmed/SRR23204997.fasta",
+    "untrimmed/SRR23204998.fasta",
+    "untrimmed/SRR23204999.fasta",
+    "untrimmed/SRR23204996.fasta",
+    "untrimmed/SRR23204994.fasta",
+    "untrimmed/SRR23204995.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR23205001.t.fa.gz",
+    "trim/SRR23205002.t.fa.gz",
+    "trim/SRR23205000.t.fa.gz",
+    "trim/SRR23204997.t.fa.gz",
+    "trim/SRR23204998.t.fa.gz",
+    "trim/SRR23204999.t.fa.gz",
+    "trim/SRR23204996.t.fa.gz",
+    "trim/SRR23204994.t.fa.gz",
+    "trim/SRR23204995.t.fa.gz"
+  ],
+  "adapter": "AGATCGGA",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR23205001",
+      "SRR23205002",
+      "SRR23205000"
+    ],
+    "B": [
+      "SRR23204997",
+      "SRR23204998",
+      "SRR23204999"
+    ],
+    "C": [
+      "SRR23204996",
+      "SRR23204994",
+      "SRR23204995"
+    ]
+  },
+  "annotation_conditions": [
+    "B"
+  ],
+  "genome_file": "../../Genomes/Asfum.GCF_000002655.1_ASM265v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_B/loci.gff3"
+}

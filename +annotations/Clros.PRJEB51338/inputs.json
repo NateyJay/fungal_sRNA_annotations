@@ -1,0 +1,16 @@
+{
+  "project_name": "Clros.PRJEB51338",
+  "srrs": null,
+  "untrimmed_libraries": null,
+  "trimmed_libraries": null,
+  "adapter": null,
+  "alignment_file": "align/alignment.bam",
+  "conditions": null,
+  "annotation_conditions": null,
+  "genome_file": "../../Genomes/Clros.GCA_902827195.2_C_rosea_IK726_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "annotation_file": null,
+  "min_length": null,
+  "max_length": 300
+}

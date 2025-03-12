@@ -1,0 +1,83 @@
+{
+  "project_name": "Cohig.PRJNA264848",
+  "srrs": [
+    "SRR1630053",
+    "SRR1630052",
+    "SRR1630051",
+    "SRR1630050",
+    "SRR1630049",
+    "SRR1630048",
+    "SRR1630047",
+    "SRR1630046",
+    "SRR1630045",
+    "SRR1630044",
+    "SRR1630043",
+    "SRR1630042",
+    "SRR1630071",
+    "SRR1630069",
+    "SRR1630070",
+    "SRR1630068",
+    "SRR1630067",
+    "SRR1630066"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR1630053.fasta",
+    "untrimmed/SRR1630052.fasta",
+    "untrimmed/SRR1630051.fasta",
+    "untrimmed/SRR1630050.fasta",
+    "untrimmed/SRR1630049.fasta",
+    "untrimmed/SRR1630048.fasta",
+    "untrimmed/SRR1630047.fasta",
+    "untrimmed/SRR1630046.fasta",
+    "untrimmed/SRR1630045.fasta",
+    "untrimmed/SRR1630044.fasta",
+    "untrimmed/SRR1630043.fasta",
+    "untrimmed/SRR1630042.fasta",
+    "untrimmed/SRR1630071.fasta",
+    "untrimmed/SRR1630069.fasta",
+    "untrimmed/SRR1630070.fasta",
+    "untrimmed/SRR1630068.fasta",
+    "untrimmed/SRR1630067.fasta",
+    "untrimmed/SRR1630066.fasta"
+  ],
+  "trimmed_libraries": null,
+  "adapter": null,
+  "alignment_file": null,
+  "conditions": {
+    "Z.d1d2": [
+      "SRR1630053",
+      "SRR1630052",
+      "SRR1630051",
+      "SRR1630050"
+    ],
+    "Y.d2": [
+      "SRR1630049",
+      "SRR1630048",
+      "SRR1630047",
+      "SRR1630046"
+    ],
+    "X.d1": [
+      "SRR1630045",
+      "SRR1630044",
+      "SRR1630043",
+      "SRR1630042"
+    ],
+    "A": [
+      "SRR1630071",
+      "SRR1630069",
+      "SRR1630070"
+    ],
+    "B": [
+      "SRR1630068",
+      "SRR1630067",
+      "SRR1630066"
+    ]
+  },
+  "annotation_conditions": null,
+  "genome_file": "../../Genomes/Cohig.GCA_001672515.1_ASM167251v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 50,
+  "annotation_file": null
+}

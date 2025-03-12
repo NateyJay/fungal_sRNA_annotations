@@ -1,0 +1,28 @@
+{
+  "project_name": "Trasp.PRJNA638238",
+  "srrs": [
+    "SRR11961845"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR11961845.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR11961845.t.fa.gz"
+  ],
+  "adapter": "TGGAATTC",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR11961845"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Trasp.GCA_003025105.1_Trias_v._1.0_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_A/loci.gff3"
+}

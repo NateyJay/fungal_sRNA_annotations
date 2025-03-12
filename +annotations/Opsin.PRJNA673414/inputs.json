@@ -1,0 +1,64 @@
+{
+  "project_name": "Opsin.PRJNA673414",
+  "srrs": [
+    "SRR12952906",
+    "SRR12952905",
+    "SRR12952904",
+    "SRR12952902",
+    "SRR12952903",
+    "SRR12952901",
+    "SRR12952900",
+    "SRR12952899",
+    "SRR12952898"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR12952906.fasta",
+    "untrimmed/SRR12952905.fasta",
+    "untrimmed/SRR12952904.fasta",
+    "untrimmed/SRR12952902.fasta",
+    "untrimmed/SRR12952903.fasta",
+    "untrimmed/SRR12952901.fasta",
+    "untrimmed/SRR12952900.fasta",
+    "untrimmed/SRR12952899.fasta",
+    "untrimmed/SRR12952898.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR12952906.t.fa.gz",
+    "trim/SRR12952905.t.fa.gz",
+    "trim/SRR12952904.t.fa.gz",
+    "trim/SRR12952902.t.fa.gz",
+    "trim/SRR12952903.t.fa.gz",
+    "trim/SRR12952901.t.fa.gz",
+    "trim/SRR12952900.t.fa.gz",
+    "trim/SRR12952899.t.fa.gz",
+    "trim/SRR12952898.t.fa.gz"
+  ],
+  "adapter": "AGATCGGA",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR12952906",
+      "SRR12952905",
+      "SRR12952904"
+    ],
+    "B": [
+      "SRR12952902",
+      "SRR12952903",
+      "SRR12952901"
+    ],
+    "C": [
+      "SRR12952900",
+      "SRR12952899",
+      "SRR12952898"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Opsin.GCA_012934285.1_ASM1293428v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff/loci.gff3"
+}

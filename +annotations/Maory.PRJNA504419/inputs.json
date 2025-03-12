@@ -1,0 +1,41 @@
+{
+  "project_name": "Maory.PRJNA504419",
+  "srrs": [
+    "SRR8170848",
+    "SRR8170849",
+    "SRR8170850",
+    "SRR8170852"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR8170848.fasta",
+    "untrimmed/SRR8170849.fasta",
+    "untrimmed/SRR8170850.fasta",
+    "untrimmed/SRR8170852.fasta"
+  ],
+  "trimmed_libraries": null,
+  "adapter": "None",
+  "alignment_file": null,
+  "conditions": {
+    "A": [
+      "SRR8170848",
+      "SRR8170849"
+    ],
+    "B": [
+      "SRR8170850",
+      "SRR8170852"
+    ]
+  },
+  "annotation_conditions": null,
+  "genome_file": "../../Genomes/Maory.GCF_000002495.2_MG8_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 50,
+  "annotation_file": null,
+  "adapters": {
+    "SRR8170848.fasta": "None",
+    "SRR8170849.fasta": "None",
+    "SRR8170850.fasta": "None",
+    "SRR8170852.fasta": "None"
+  }
+}

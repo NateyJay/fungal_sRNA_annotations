@@ -1,0 +1,34 @@
+{
+  "project_name": "Trrub.PRJNA483837",
+  "srrs": [
+    "SRR7630467",
+    "SRR7630468"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR7630467.fasta",
+    "untrimmed/SRR7630468.fasta"
+  ],
+  "trimmed_libraries": [
+    "untrimmed/SRR7630467.fasta",
+    "untrimmed/SRR7630468.fasta"
+  ],
+  "adapter": "PRE-TRIMMED",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR7630467"
+    ],
+    "B": [
+      "SRR7630468"
+    ]
+  },
+  "annotation_conditions": [
+    "B"
+  ],
+  "genome_file": "../../Genomes/Trrub.GCA_000151425.1_ASM15142v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_B/loci.gff3"
+}

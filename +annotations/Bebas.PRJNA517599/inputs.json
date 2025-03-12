@@ -1,0 +1,40 @@
+{
+  "project_name": "Bebas.PRJNA517599",
+  "srrs": [
+    "SRR8501350",
+    "SRR8501349",
+    "SRR8501348"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR8501350.fasta",
+    "untrimmed/SRR8501349.fasta",
+    "untrimmed/SRR8501348.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR8501350.t.fa.gz",
+    "trim/SRR8501349.t.fa.gz",
+    "trim/SRR8501348.t.fa.gz"
+  ],
+  "adapter": "TGGAATTC",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR8501350"
+    ],
+    "B": [
+      "SRR8501349"
+    ],
+    "C": [
+      "SRR8501348"
+    ]
+  },
+  "annotation_conditions": [
+    "B"
+  ],
+  "genome_file": "../../Genomes/Bebas.GCA_000280675.1_ASM28067v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_B/loci.gff3"
+}

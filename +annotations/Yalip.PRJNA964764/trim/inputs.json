@@ -1,0 +1,13 @@
+{
+  "project_name": "trim",
+  "srrs": [],
+  "untrimmed_libraries": null,
+  "trimmed_libraries": null,
+  "adapter": null,
+  "alignment_file": null,
+  "conditions": null,
+  "annotation_conditions": null,
+  "genome_file": null,
+  "jbrowse_directory": null,
+  "gene_annotation_file": null
+}

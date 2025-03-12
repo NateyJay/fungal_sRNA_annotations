@@ -1,0 +1,16 @@
+{
+  "project_name": "Pyory.PRJNA322180",
+  "srrs": null,
+  "untrimmed_libraries": null,
+  "trimmed_libraries": null,
+  "adapter": null,
+  "alignment_file": null,
+  "conditions": null,
+  "annotation_conditions": null,
+  "genome_file": null,
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 50,
+  "annotation_file": null
+}

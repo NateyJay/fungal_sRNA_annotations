@@ -1,0 +1,90 @@
+{
+  "project_name": "Asfum.PRJNA317629",
+  "srrs": [
+    "SRR3344727",
+    "SRR3344728",
+    "SRR3344697",
+    "SRR3344698",
+    "SRR3344714",
+    "SRR3344713",
+    "SRR3344682",
+    "SRR3344681",
+    "SRR3344690",
+    "SRR3344689",
+    "SRR3344719",
+    "SRR3344720",
+    "SRR3344706",
+    "SRR3344705",
+    "SRR3344674",
+    "SRR3344673"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR3344727.fasta",
+    "untrimmed/SRR3344728.fasta",
+    "untrimmed/SRR3344697.fasta",
+    "untrimmed/SRR3344698.fasta",
+    "untrimmed/SRR3344714.fasta",
+    "untrimmed/SRR3344713.fasta",
+    "untrimmed/SRR3344682.fasta",
+    "untrimmed/SRR3344681.fasta",
+    "untrimmed/SRR3344690.fasta",
+    "untrimmed/SRR3344689.fasta",
+    "untrimmed/SRR3344719.fasta",
+    "untrimmed/SRR3344720.fasta",
+    "untrimmed/SRR3344706.fasta",
+    "untrimmed/SRR3344705.fasta",
+    "untrimmed/SRR3344674.fasta",
+    "untrimmed/SRR3344673.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR3344727.t.fa.gz",
+    "trim/SRR3344728.t.fa.gz",
+    "trim/SRR3344697.t.fa.gz",
+    "trim/SRR3344698.t.fa.gz",
+    "trim/SRR3344714.t.fa.gz",
+    "trim/SRR3344713.t.fa.gz",
+    "trim/SRR3344682.t.fa.gz",
+    "trim/SRR3344681.t.fa.gz",
+    "trim/SRR3344690.t.fa.gz",
+    "trim/SRR3344689.t.fa.gz",
+    "trim/SRR3344719.t.fa.gz",
+    "trim/SRR3344720.t.fa.gz",
+    "trim/SRR3344706.t.fa.gz",
+    "trim/SRR3344705.t.fa.gz",
+    "trim/SRR3344674.t.fa.gz",
+    "trim/SRR3344673.t.fa.gz"
+  ],
+  "adapter": "TGGAATTC",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR3344727",
+      "SRR3344728",
+      "SRR3344697",
+      "SRR3344698",
+      "SRR3344714",
+      "SRR3344713",
+      "SRR3344682",
+      "SRR3344681"
+    ],
+    "B": [
+      "SRR3344690",
+      "SRR3344689",
+      "SRR3344719",
+      "SRR3344720",
+      "SRR3344706",
+      "SRR3344705",
+      "SRR3344674",
+      "SRR3344673"
+    ]
+  },
+  "annotation_conditions": [
+    "B"
+  ],
+  "genome_file": "../../Genomes/Asfum.GCF_000002655.1_ASM265v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_B/loci.gff3"
+}

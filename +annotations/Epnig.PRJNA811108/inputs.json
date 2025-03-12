@@ -1,0 +1,36 @@
+{
+  "project_name": "Epnig.PRJNA811108",
+  "srrs": [
+    "SRR18163558",
+    "SRR18163560",
+    "SRR18163559"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR18163558.fasta",
+    "untrimmed/SRR18163560.fasta",
+    "untrimmed/SRR18163559.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR18163558.t.fa.gz",
+    "trim/SRR18163560.t.fa.gz",
+    "trim/SRR18163559.t.fa.gz"
+  ],
+  "adapter": "TGGAATTC",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR18163558",
+      "SRR18163560",
+      "SRR18163559"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Epnig.GCA_002116315.1_ASM211631v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_A/loci.gff3"
+}

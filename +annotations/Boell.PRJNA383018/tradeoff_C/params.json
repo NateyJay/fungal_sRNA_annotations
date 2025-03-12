@@ -1,0 +1,43 @@
+{
+  "output_directory": "/home2/njohnson/fungi_annotations/annotations/Boell.PRJNA383018",
+  "annotation_conditions": [
+    "C"
+  ],
+  "conditions": {
+    "A": [
+      "SRR5450818"
+    ],
+    "B": [
+      "SRR5450817"
+    ],
+    "C": [
+      "SRR5450816"
+    ]
+  },
+  "alignment_file": "/home2/njohnson/fungi_annotations/annotations/Boell.PRJNA383018/align/alignment.bam",
+  "name": "C",
+  "coverage_window": 250,
+  "kernel_window": 100,
+  "genome_scaling_factor": 0.4,
+  "merge_dist": 500,
+  "merge_strand_similarity": 0.5,
+  "min_length": 15,
+  "max_length": 30,
+  "filter_skew": false,
+  "max_skew": 0.9,
+  "filter_complexity": true,
+  "min_complexity": 10,
+  "filter_abundance": true,
+  "min_abundance": 50,
+  "filter_abundance_density": true,
+  "min_abundance_density": 100,
+  "bigwig": false,
+  "time_test": false,
+  "dont_revise_regions": false,
+  "dont_trim_loci": false,
+  "debug": false,
+  "test_mode": false,
+  "override": false,
+  "project_name": "Boell.PRJNA383018",
+  "tool": "tradeoff"
+}

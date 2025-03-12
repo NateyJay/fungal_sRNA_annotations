@@ -1,0 +1,36 @@
+{
+  "project_name": "Pugra.PRJNA960906",
+  "srrs": [
+    "SRR24282674",
+    "SRR24282673",
+    "SRR24282675"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR24282674.fasta",
+    "untrimmed/SRR24282673.fasta",
+    "untrimmed/SRR24282675.fasta"
+  ],
+  "trimmed_libraries": [
+    "untrimmed/SRR24282674.fasta",
+    "untrimmed/SRR24282673.fasta",
+    "untrimmed/SRR24282675.fasta"
+  ],
+  "adapter": "PRE-TRIMMED",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR24282674",
+      "SRR24282673",
+      "SRR24282675"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Pugra.GCA_000149925.1_ASM14992v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff/loci.gff3"
+}

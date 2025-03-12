@@ -1,0 +1,40 @@
+{
+  "project_name": "Boell.PRJNA383018",
+  "srrs": [
+    "SRR5450818",
+    "SRR5450817",
+    "SRR5450816"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR5450818.fasta",
+    "untrimmed/SRR5450817.fasta",
+    "untrimmed/SRR5450816.fasta"
+  ],
+  "trimmed_libraries": [
+    "untrimmed/SRR5450818.fasta",
+    "untrimmed/SRR5450817.fasta",
+    "untrimmed/SRR5450816.fasta"
+  ],
+  "adapter": "PRE-TRIMMED",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR5450818"
+    ],
+    "B": [
+      "SRR5450817"
+    ],
+    "C": [
+      "SRR5450816"
+    ]
+  },
+  "annotation_conditions": [
+    "C"
+  ],
+  "genome_file": "../../Genomes/Boell.GCA_024478385.1_BOTELL_9401_1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_C/loci.gff3"
+}

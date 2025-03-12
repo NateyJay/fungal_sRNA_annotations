@@ -1,0 +1,49 @@
+{
+  "output_directory": "/home2/njohnson/fungi_annotations/annotations/Plcor.PRJNA944818",
+  "annotation_conditions": [
+    "B"
+  ],
+  "conditions": {
+    "A": [
+      "SRR23874486",
+      "SRR23874487",
+      "SRR23874485"
+    ],
+    "B": [
+      "SRR23874488",
+      "SRR23874489",
+      "SRR23874490"
+    ],
+    "C": [
+      "SRR23874493",
+      "SRR23874491",
+      "SRR23874492"
+    ]
+  },
+  "alignment_file": "/home2/njohnson/fungi_annotations/annotations/Plcor.PRJNA944818/align/alignment.bam",
+  "name": "B",
+  "coverage_window": 250,
+  "kernel_window": 100,
+  "genome_scaling_factor": 0.4,
+  "merge_dist": 500,
+  "merge_strand_similarity": 0.5,
+  "min_length": 15,
+  "max_length": 30,
+  "filter_skew": false,
+  "max_skew": 0.9,
+  "filter_complexity": true,
+  "min_complexity": 10,
+  "filter_abundance": true,
+  "min_abundance": 50,
+  "filter_abundance_density": true,
+  "min_abundance_density": 100,
+  "bigwig": false,
+  "time_test": false,
+  "dont_revise_regions": false,
+  "dont_trim_loci": false,
+  "debug": false,
+  "test_mode": false,
+  "override": false,
+  "project_name": "Plcor.PRJNA944818",
+  "tool": "tradeoff"
+}

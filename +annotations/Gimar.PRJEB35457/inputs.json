@@ -1,0 +1,36 @@
+{
+  "project_name": "Gimar.PRJEB35457",
+  "srrs": [
+    "ERR3671191",
+    "ERR3671189",
+    "ERR3671190"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/ERR3671191.fasta",
+    "untrimmed/ERR3671189.fasta",
+    "untrimmed/ERR3671190.fasta"
+  ],
+  "trimmed_libraries": [
+    "untrimmed/ERR3671191.fasta",
+    "untrimmed/ERR3671189.fasta",
+    "untrimmed/ERR3671190.fasta"
+  ],
+  "adapter": "PRE-TRIMMED",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "ERR3671191",
+      "ERR3671189",
+      "ERR3671190"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Gimar.GCA_009809945.1_UNITO_GmarBEG34_1.0_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": null
+}

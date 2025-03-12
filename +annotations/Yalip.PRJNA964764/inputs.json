@@ -1,0 +1,50 @@
+{
+  "project_name": "Yalip.PRJNA964764",
+  "srrs": [
+    "SRR24386479",
+    "SRR24386478",
+    "SRR24386477",
+    "SRR24386483",
+    "SRR24386485",
+    "SRR24386484"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR24386479.fasta",
+    "untrimmed/SRR24386478.fasta",
+    "untrimmed/SRR24386477.fasta",
+    "untrimmed/SRR24386483.fasta",
+    "untrimmed/SRR24386485.fasta",
+    "untrimmed/SRR24386484.fasta"
+  ],
+  "trimmed_libraries": [
+    "untrimmed/SRR24386479.fasta",
+    "untrimmed/SRR24386478.fasta",
+    "untrimmed/SRR24386477.fasta",
+    "untrimmed/SRR24386483.fasta",
+    "untrimmed/SRR24386485.fasta",
+    "untrimmed/SRR24386484.fasta"
+  ],
+  "adapter": "PRE-TRIMMED",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR24386479",
+      "SRR24386478",
+      "SRR24386477"
+    ],
+    "B": [
+      "SRR24386483",
+      "SRR24386485",
+      "SRR24386484"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Yalip.GCA_000002525.1_ASM252v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_A/loci.gff3"
+}

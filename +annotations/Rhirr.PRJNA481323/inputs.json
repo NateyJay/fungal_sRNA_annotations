@@ -1,0 +1,56 @@
+{
+  "project_name": "Rhirr.PRJNA481323",
+  "srrs": [
+    "SRR7525701",
+    "SRR7525700",
+    "SRR7525699",
+    "SRR7525692",
+    "SRR7525691",
+    "SRR7525690"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR7525701.fasta",
+    "untrimmed/SRR7525700.fasta",
+    "untrimmed/SRR7525699.fasta",
+    "untrimmed/SRR7525692.fasta",
+    "untrimmed/SRR7525691.fasta",
+    "untrimmed/SRR7525690.fasta"
+  ],
+  "trimmed_libraries": [
+    "untrimmed/SRR7525701.fasta",
+    "untrimmed/SRR7525700.fasta",
+    "untrimmed/SRR7525699.fasta",
+    "untrimmed/SRR7525692.fasta",
+    "untrimmed/SRR7525691.fasta",
+    "untrimmed/SRR7525690.fasta"
+  ],
+  "adapter": null,
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "C": [
+      "SRR7525701",
+      "SRR7525700",
+      "SRR7525699"
+    ],
+    "D": [
+      "SRR7525692",
+      "SRR7525691",
+      "SRR7525690"
+    ]
+  },
+  "annotation_conditions": null,
+  "genome_file": "../../Genomes/Rhirr.GCA_026210795.1_ASM2621079v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "adapters": {
+    "SRR7525701.fasta": "PRE-TRIMMED",
+    "SRR7525700.fasta": "PRE-TRIMMED",
+    "SRR7525699.fasta": "PRE-TRIMMED",
+    "SRR7525692.fasta": "PRE-TRIMMED",
+    "SRR7525691.fasta": "PRE-TRIMMED",
+    "SRR7525690.fasta": "PRE-TRIMMED"
+  }
+}

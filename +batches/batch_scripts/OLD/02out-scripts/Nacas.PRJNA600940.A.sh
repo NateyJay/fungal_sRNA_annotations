@@ -1,0 +1,16 @@
+#!/bin/bash
+
+mkdir ../annotations/Nacas.PRJNA600940
+cd ../annotations/Nacas.PRJNA600940
+
+echo Nacas.PRJNA600940.A
+
+echo "
+annotating..."
+
+cp ./align/alignment.bam /scratch/njohnson/Nacas.PRJNA600940.A.bam
+yasma.py tradeoff -o . -n A -ac A -a /scratch/njohnson/Nacas.PRJNA600940.A.bam
+rm /scratch/njohnson/Nacas.PRJNA600940.A.bam
+
+
+

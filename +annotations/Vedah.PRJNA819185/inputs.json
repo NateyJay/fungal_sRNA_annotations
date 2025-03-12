@@ -1,0 +1,50 @@
+{
+  "project_name": "Vedah.PRJNA819185",
+  "srrs": [
+    "SRR18490847",
+    "SRR18490848",
+    "SRR18490849",
+    "SRR18490853",
+    "SRR18490856",
+    "SRR18490857"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR18490847.fasta",
+    "untrimmed/SRR18490848.fasta",
+    "untrimmed/SRR18490849.fasta",
+    "untrimmed/SRR18490853.fasta",
+    "untrimmed/SRR18490856.fasta",
+    "untrimmed/SRR18490857.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR18490847.t.fa.gz",
+    "trim/SRR18490848.t.fa.gz",
+    "trim/SRR18490849.t.fa.gz",
+    "trim/SRR18490853.t.fa.gz",
+    "trim/SRR18490856.t.fa.gz",
+    "trim/SRR18490857.t.fa.gz"
+  ],
+  "adapter": "AGATCGGA",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR18490847",
+      "SRR18490848",
+      "SRR18490849"
+    ],
+    "B": [
+      "SRR18490853",
+      "SRR18490856",
+      "SRR18490857"
+    ]
+  },
+  "annotation_conditions": [
+    "B"
+  ],
+  "genome_file": "../../Genomes/Vedah.GCA_000150675.2_ASM15067v2_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_B/loci.gff3"
+}

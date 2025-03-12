@@ -1,0 +1,66 @@
+{
+  "project_name": "Masym.PRJNA342612",
+  "srrs": [
+    "SRR4237864",
+    "SRR4237857",
+    "SRR4237858",
+    "SRR4237863",
+    "SRR4237866",
+    "SRR4237862",
+    "SRR4237865",
+    "SRR4237861",
+    "SRR4237859",
+    "SRR4237860"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR4237864.fasta",
+    "untrimmed/SRR4237857.fasta",
+    "untrimmed/SRR4237858.fasta",
+    "untrimmed/SRR4237863.fasta",
+    "untrimmed/SRR4237866.fasta",
+    "untrimmed/SRR4237862.fasta",
+    "untrimmed/SRR4237865.fasta",
+    "untrimmed/SRR4237861.fasta",
+    "untrimmed/SRR4237859.fasta",
+    "untrimmed/SRR4237860.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR4237864.t.fa.gz",
+    "trim/SRR4237857.t.fa.gz",
+    "trim/SRR4237858.t.fa.gz",
+    "trim/SRR4237863.t.fa.gz",
+    "trim/SRR4237866.t.fa.gz",
+    "trim/SRR4237862.t.fa.gz",
+    "trim/SRR4237865.t.fa.gz",
+    "trim/SRR4237861.t.fa.gz",
+    "trim/SRR4237859.t.fa.gz",
+    "trim/SRR4237860.t.fa.gz"
+  ],
+  "adapter": "AGATCGGA",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR4237864",
+      "SRR4237857",
+      "SRR4237858",
+      "SRR4237863",
+      "SRR4237866"
+    ],
+    "B": [
+      "SRR4237862",
+      "SRR4237865",
+      "SRR4237861",
+      "SRR4237859",
+      "SRR4237860"
+    ]
+  },
+  "annotation_conditions": [
+    "B"
+  ],
+  "genome_file": "../../Genomes/Masym.GCA_000349305.2_ASM34930v2_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_B/loci.gff3"
+}

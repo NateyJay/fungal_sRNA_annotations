@@ -1,0 +1,29 @@
+{
+  "project_name": "Asfla.PRJNA816993",
+  "srrs": null,
+  "untrimmed_libraries": null,
+  "trimmed_libraries": null,
+  "adapter": null,
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR24124426",
+      "SRR24124427",
+      "SRR24124425"
+    ],
+    "B": [
+      "SRR24124430",
+      "SRR24124429",
+      "SRR24124428"
+    ]
+  },
+  "annotation_conditions": [
+    "B"
+  ],
+  "genome_file": "../../Genomes/Asfla.GCA_014117465.1_ASM1411746v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "annotation_file": null,
+  "min_length": 15,
+  "max_length": 300
+}

@@ -1,0 +1,70 @@
+{
+  "output_directory": "/home2/njohnson/fungi_annotations/annotations/Scpom.PRJNA350403",
+  "annotation_conditions": [
+    "A"
+  ],
+  "conditions": {
+    "A": [
+      "SRR4449649",
+      "SRR4449648",
+      "SRR4449647",
+      "SRR4449646"
+    ],
+    "B": [
+      "SRR4449653",
+      "SRR4449652",
+      "SRR4449651",
+      "SRR4449650"
+    ],
+    "C": [
+      "SRR4449657",
+      "SRR4449656",
+      "SRR4449655",
+      "SRR4449654"
+    ],
+    "D": [
+      "SRR4449661",
+      "SRR4449660",
+      "SRR4449659",
+      "SRR4449658"
+    ],
+    "E": [
+      "SRR4449662",
+      "SRR4449665",
+      "SRR4449664",
+      "SRR4449663"
+    ],
+    "F": [
+      "SRR4449669",
+      "SRR4449668",
+      "SRR4449667",
+      "SRR4449666"
+    ]
+  },
+  "alignment_file": "/home2/njohnson/fungi_annotations/annotations/Scpom.PRJNA350403/align/alignment.bam",
+  "name": "A",
+  "coverage_window": 250,
+  "kernel_window": 100,
+  "genome_scaling_factor": 0.4,
+  "merge_dist": 500,
+  "merge_strand_similarity": 0.5,
+  "min_length": 15,
+  "max_length": 30,
+  "filter_skew": false,
+  "max_skew": 0.9,
+  "filter_complexity": true,
+  "min_complexity": 10,
+  "filter_abundance": true,
+  "min_abundance": 50,
+  "filter_abundance_density": true,
+  "min_abundance_density": 100,
+  "bigwig": false,
+  "time_test": false,
+  "dont_revise_regions": false,
+  "dont_trim_loci": false,
+  "debug": false,
+  "test_mode": false,
+  "override": false,
+  "project_name": "Scpom.PRJNA350403",
+  "tool": "tradeoff"
+}

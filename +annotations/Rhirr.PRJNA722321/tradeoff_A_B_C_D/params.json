@@ -1,0 +1,65 @@
+{
+  "output_directory": "/home2/njohnson/fungi_annotations/annotations/Rhirr.PRJNA722321",
+  "annotation_conditions": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "conditions": {
+    "A": [
+      "SRR14251176",
+      "SRR14251177",
+      "SRR14251175",
+      "SRR14251174"
+    ],
+    "B": [
+      "SRR14251179",
+      "SRR14251181",
+      "SRR14251180",
+      "SRR14251178"
+    ],
+    "C": [
+      "SRR14251182",
+      "SRR14251183",
+      "SRR14251184"
+    ],
+    "D": [
+      "SRR14251185",
+      "SRR14251187",
+      "SRR14251186"
+    ]
+  },
+  "alignment_file": "/scratch/njohnson/Rhirr.PRJNA722321.bam",
+  "name": null,
+  "coverage_window": 250,
+  "kernel_window": 250,
+  "subsample": null,
+  "subsample_seed": 0,
+  "subsample_n": 0,
+  "subsample_keep_max": 1,
+  "genome_weight": 1,
+  "read_weight": 2,
+  "target_genome_perc": 0.0,
+  "target_read_perc": 0.0,
+  "tradeoff_round": 4,
+  "merge_dist": 500,
+  "merge_strand_similarity": 0.7,
+  "min_locus_length": 30,
+  "min_read_length": 15,
+  "max_read_length": 30,
+  "filter_skew": false,
+  "max_skew": 0.9,
+  "filter_complexity": false,
+  "min_complexity": 10,
+  "filter_abundance": true,
+  "min_abundance": 50,
+  "filter_abundance_density": true,
+  "min_abundance_density": 100,
+  "force": false,
+  "debug": false,
+  "test_mode": false,
+  "override": false,
+  "project_name": "Rhirr.PRJNA722321",
+  "tool": "tradeoff"
+}

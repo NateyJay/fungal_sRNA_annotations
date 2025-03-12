@@ -1,0 +1,36 @@
+{
+  "project_name": "Coglo.PRJNA490143",
+  "srrs": [
+    "SRR7814092",
+    "SRR7814094",
+    "SRR7814093"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR7814092.fasta",
+    "untrimmed/SRR7814094.fasta",
+    "untrimmed/SRR7814093.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR7814092.t.fa.gz",
+    "trim/SRR7814094.t.fa.gz",
+    "trim/SRR7814093.t.fa.gz"
+  ],
+  "adapter": "TGGAATTC",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR7814092",
+      "SRR7814094",
+      "SRR7814093"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Coglo.GCA_011800055.1_NFU_CgLc1_1.0_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_A/loci.gff3"
+}

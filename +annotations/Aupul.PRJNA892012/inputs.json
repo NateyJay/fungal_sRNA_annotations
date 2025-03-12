@@ -1,0 +1,36 @@
+{
+  "project_name": "Aupul.PRJNA892012",
+  "srrs": [
+    "SRR21969908",
+    "SRR21969907",
+    "SRR21969906"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR21969908.fasta",
+    "untrimmed/SRR21969907.fasta",
+    "untrimmed/SRR21969906.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR21969908.t.fa.gz",
+    "trim/SRR21969907.t.fa.gz",
+    "trim/SRR21969906.t.fa.gz"
+  ],
+  "adapter": "AGATCGGA",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR21969908",
+      "SRR21969907",
+      "SRR21969906"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Aupul.GCA_000721785.1_Aureobasidium_pullulans_var._pullulans_EXF-150_assembly_version_1.0_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_A/loci.gff3"
+}

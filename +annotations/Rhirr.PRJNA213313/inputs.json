@@ -1,0 +1,29 @@
+{
+  "project_name": "Rhirr.PRJNA213313",
+  "srrs": [
+    "SRR943039"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR943039.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR943039.t.fa.gz"
+  ],
+  "adapter": null,
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "C": [
+      "SRR943039"
+    ]
+  },
+  "annotation_conditions": null,
+  "genome_file": "../../Genomes/Rhirr.GCA_026210795.1_ASM2621079v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "adapters": {
+    "SRR943039.fasta": "TCGTATGC"
+  }
+}

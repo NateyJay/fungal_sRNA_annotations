@@ -1,0 +1,50 @@
+{
+  "project_name": "Cec01.PRJNA873516",
+  "srrs": [
+    "SRR21284932",
+    "SRR21285828",
+    "SRR21284931",
+    "SRR21284929",
+    "SRR21284928",
+    "SRR21284930"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR21284932.fasta",
+    "untrimmed/SRR21285828.fasta",
+    "untrimmed/SRR21284931.fasta",
+    "untrimmed/SRR21284929.fasta",
+    "untrimmed/SRR21284928.fasta",
+    "untrimmed/SRR21284930.fasta"
+  ],
+  "trimmed_libraries": [
+    "untrimmed/SRR21284932.fasta",
+    "untrimmed/SRR21285828.fasta",
+    "untrimmed/SRR21284931.fasta",
+    "untrimmed/SRR21284929.fasta",
+    "untrimmed/SRR21284928.fasta",
+    "untrimmed/SRR21284930.fasta"
+  ],
+  "adapter": "PRE-TRIMMED",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR21284932",
+      "SRR21285828",
+      "SRR21284931"
+    ],
+    "B": [
+      "SRR21284929",
+      "SRR21284928",
+      "SRR21284930"
+    ]
+  },
+  "annotation_conditions": [
+    "B"
+  ],
+  "genome_file": "../../Genomes/Cec01.GCA_025200755.1_ASM2520075v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff/loci.gff3"
+}

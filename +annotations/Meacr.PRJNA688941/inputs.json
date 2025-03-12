@@ -1,0 +1,50 @@
+{
+  "project_name": "Meacr.PRJNA688941",
+  "srrs": [
+    "SRR13347136",
+    "SRR13347133",
+    "SRR13347135",
+    "SRR13347134",
+    "SRR13347131",
+    "SRR13347132"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR13347136.fasta",
+    "untrimmed/SRR13347133.fasta",
+    "untrimmed/SRR13347135.fasta",
+    "untrimmed/SRR13347134.fasta",
+    "untrimmed/SRR13347131.fasta",
+    "untrimmed/SRR13347132.fasta"
+  ],
+  "trimmed_libraries": [
+    "untrimmed/SRR13347136.fasta",
+    "untrimmed/SRR13347133.fasta",
+    "untrimmed/SRR13347135.fasta",
+    "untrimmed/SRR13347134.fasta",
+    "untrimmed/SRR13347131.fasta",
+    "untrimmed/SRR13347132.fasta"
+  ],
+  "adapter": "PRE-TRIMMED",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR13347136",
+      "SRR13347133",
+      "SRR13347135"
+    ],
+    "B": [
+      "SRR13347134",
+      "SRR13347131",
+      "SRR13347132"
+    ]
+  },
+  "annotation_conditions": [
+    "B"
+  ],
+  "genome_file": "../../Genomes/Meacr.GCA_000187405.1_MetAcr_May2010_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_B/loci.gff3"
+}

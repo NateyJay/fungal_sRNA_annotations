@@ -1,0 +1,60 @@
+{
+  "project_name": "Fugra.PRJNA900007",
+  "srrs": [
+    "SRR22252427",
+    "SRR22252441",
+    "SRR22252442",
+    "SRR22252443",
+    "SRR22252435",
+    "SRR22252436",
+    "SRR22252437",
+    "SRR22252438",
+    "SRR22252439",
+    "SRR22252440"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR22252427.fasta",
+    "untrimmed/SRR22252441.fasta",
+    "untrimmed/SRR22252442.fasta",
+    "untrimmed/SRR22252443.fasta",
+    "untrimmed/SRR22252435.fasta",
+    "untrimmed/SRR22252436.fasta",
+    "untrimmed/SRR22252437.fasta",
+    "untrimmed/SRR22252438.fasta",
+    "untrimmed/SRR22252439.fasta",
+    "untrimmed/SRR22252440.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR22252427.t.fa.gz",
+    "trim/SRR22252441.t.fa.gz",
+    "trim/SRR22252442.t.fa.gz",
+    "trim/SRR22252443.t.fa.gz",
+    "trim/SRR22252435.t.fa.gz",
+    "trim/SRR22252436.t.fa.gz",
+    "trim/SRR22252437.t.fa.gz",
+    "trim/SRR22252438.t.fa.gz",
+    "trim/SRR22252439.t.fa.gz",
+    "trim/SRR22252440.t.fa.gz"
+  ],
+  "adapter": "AGATCGGA",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR22252427",
+      "SRR22252443"
+    ],
+    "F": [
+      "SRR22252441",
+      "SRR22252442"
+    ]
+  },
+  "annotation_conditions": [
+    "F"
+  ],
+  "genome_file": "../../Genomes/Fugra.GCF_000240135.3_ASM24013v3_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_F/loci.gff3"
+}

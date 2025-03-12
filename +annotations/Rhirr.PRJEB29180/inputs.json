@@ -1,0 +1,56 @@
+{
+  "project_name": "Rhirr.PRJEB29180",
+  "srrs": [
+    "ERR2841782",
+    "ERR2841783",
+    "ERR2841784",
+    "ERR2841786",
+    "ERR2841787",
+    "ERR2841785"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/ERR2841782.fasta",
+    "untrimmed/ERR2841783.fasta",
+    "untrimmed/ERR2841784.fasta",
+    "untrimmed/ERR2841786.fasta",
+    "untrimmed/ERR2841787.fasta",
+    "untrimmed/ERR2841785.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/ERR2841782.t.fa.gz",
+    "trim/ERR2841783.t.fa.gz",
+    "trim/ERR2841784.t.fa.gz",
+    "trim/ERR2841786.t.fa.gz",
+    "trim/ERR2841787.t.fa.gz",
+    "trim/ERR2841785.t.fa.gz"
+  ],
+  "adapter": null,
+  "alignment_file": null,
+  "conditions": {
+    "A": [
+      "ERR2841782",
+      "ERR2841783",
+      "ERR2841784"
+    ],
+    "B": [
+      "ERR2841786",
+      "ERR2841787",
+      "ERR2841785"
+    ]
+  },
+  "annotation_conditions": null,
+  "genome_file": "../../Genomes/Rhirr.GCA_026210795.1_ASM2621079v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "annotation_file": null,
+  "min_length": 15,
+  "max_length": 50,
+  "adapters": {
+    "ERR2841782.fasta": "TGGAATTC",
+    "ERR2841783.fasta": "TGGAATTC",
+    "ERR2841784.fasta": "TGGAATTC",
+    "ERR2841786.fasta": "TGGAATTC",
+    "ERR2841787.fasta": "TGGAATTC",
+    "ERR2841785.fasta": "TGGAATTC"
+  }
+}

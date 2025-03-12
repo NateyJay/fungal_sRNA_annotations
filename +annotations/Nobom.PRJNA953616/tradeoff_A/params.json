@@ -1,0 +1,60 @@
+{
+  "output_directory": "/home2/njohnson/fungi_annotations/annotations/Nobom.PRJNA953616",
+  "annotation_conditions": [
+    "A"
+  ],
+  "conditions": {
+    "A": [
+      "SRR24111183",
+      "SRR24111185",
+      "SRR24111184",
+      "SRR24165928",
+      "SRR24165927"
+    ],
+    "B": [
+      "SRR24111180",
+      "SRR24111182",
+      "SRR24111181",
+      "SRR24165926"
+    ],
+    "C": [
+      "SRR24111176",
+      "SRR24111178",
+      "SRR24111179",
+      "SRR24165923",
+      "SRR24165925"
+    ],
+    "D": [
+      "SRR24111174",
+      "SRR24111173",
+      "SRR24111175",
+      "SRR24165922"
+    ]
+  },
+  "alignment_file": "/home2/njohnson/fungi_annotations/annotations/Nobom.PRJNA953616/align/alignment.bam",
+  "name": "A",
+  "coverage_window": 250,
+  "kernel_window": 100,
+  "genome_scaling_factor": 0.4,
+  "merge_dist": 500,
+  "merge_strand_similarity": 0.5,
+  "min_length": 15,
+  "max_length": 30,
+  "filter_skew": false,
+  "max_skew": 0.9,
+  "filter_complexity": true,
+  "min_complexity": 10,
+  "filter_abundance": true,
+  "min_abundance": 50,
+  "filter_abundance_density": true,
+  "min_abundance_density": 100,
+  "bigwig": false,
+  "time_test": false,
+  "dont_revise_regions": false,
+  "dont_trim_loci": false,
+  "debug": false,
+  "test_mode": false,
+  "override": false,
+  "project_name": "Nobom.PRJNA953616",
+  "tool": "tradeoff"
+}

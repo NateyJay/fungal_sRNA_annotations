@@ -1,0 +1,32 @@
+{
+  "project_name": "Gasin.PRJNA42807",
+  "srrs": [
+    "SRR929280",
+    "SRR1562261"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR929280.fasta",
+    "untrimmed/SRR1562261.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR929280.t.fa.gz",
+    "trim/SRR1562261.t.fa.gz"
+  ],
+  "adapter": "TGGAATTC",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR929280",
+      "SRR1562261"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Gasin.GCA_002760635.1_GanSi1.6_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_A/loci.gff3"
+}

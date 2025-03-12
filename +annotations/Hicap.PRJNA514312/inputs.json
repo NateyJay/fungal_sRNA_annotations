@@ -1,0 +1,42 @@
+{
+  "project_name": "Hicap.PRJNA514312",
+  "srrs": [
+    "SRR8428949",
+    "SRR8428948",
+    "SRR8428944",
+    "SRR8428943"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR8428949.fasta",
+    "untrimmed/SRR8428948.fasta",
+    "untrimmed/SRR8428944.fasta",
+    "untrimmed/SRR8428943.fasta"
+  ],
+  "trimmed_libraries": [
+    "untrimmed/SRR8428949.fasta",
+    "untrimmed/SRR8428948.fasta",
+    "untrimmed/SRR8428944.fasta",
+    "untrimmed/SRR8428943.fasta"
+  ],
+  "adapter": "PRE-TRIMMED",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR8428949",
+      "SRR8428948"
+    ],
+    "B": [
+      "SRR8428944",
+      "SRR8428943"
+    ]
+  },
+  "annotation_conditions": [
+    "B"
+  ],
+  "genome_file": "../../Genomes/Hicap.GCA_000150115.1_ASM15011v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_B/loci.gff3"
+}

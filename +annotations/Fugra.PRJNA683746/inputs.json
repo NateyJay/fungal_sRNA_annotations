@@ -1,0 +1,50 @@
+{
+  "project_name": "Fugra.PRJNA683746",
+  "srrs": [
+    "SRR13222421",
+    "SRR13222412",
+    "SRR13222420",
+    "SRR13222416",
+    "SRR13222417",
+    "SRR13222418"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR13222421.fasta",
+    "untrimmed/SRR13222412.fasta",
+    "untrimmed/SRR13222420.fasta",
+    "untrimmed/SRR13222416.fasta",
+    "untrimmed/SRR13222417.fasta",
+    "untrimmed/SRR13222418.fasta"
+  ],
+  "trimmed_libraries": [
+    "untrimmed/SRR13222421.fasta",
+    "untrimmed/SRR13222412.fasta",
+    "untrimmed/SRR13222420.fasta",
+    "untrimmed/SRR13222416.fasta",
+    "untrimmed/SRR13222417.fasta",
+    "untrimmed/SRR13222418.fasta"
+  ],
+  "adapter": "PRE-TRIMMED",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR13222421",
+      "SRR13222412",
+      "SRR13222420"
+    ],
+    "B": [
+      "SRR13222416",
+      "SRR13222417",
+      "SRR13222418"
+    ]
+  },
+  "annotation_conditions": [
+    "B"
+  ],
+  "genome_file": "../../Genomes/Fugra.GCF_000240135.3_ASM24013v3_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_B/loci.gff3"
+}

@@ -1,0 +1,35 @@
+{
+  "project_name": "Scscl.PRJNA315516",
+  "srrs": [
+    "SRR3383805",
+    "SRR3383815",
+    "SRR3383816"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR3383805.fasta",
+    "untrimmed/SRR3383815.fasta",
+    "untrimmed/SRR3383816.fasta"
+  ],
+  "trimmed_libraries": null,
+  "adapter": "None",
+  "alignment_file": null,
+  "conditions": {
+    "A": [
+      "SRR3383805",
+      "SRR3383815",
+      "SRR3383816"
+    ]
+  },
+  "annotation_conditions": null,
+  "genome_file": "../../Genomes/Scscl.GCA_000146945.2_ASM14694v2_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 50,
+  "annotation_file": null,
+  "adapters": {
+    "SRR3383805.fasta": "None",
+    "SRR3383815.fasta": "None",
+    "SRR3383816.fasta": "None"
+  }
+}

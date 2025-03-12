@@ -1,0 +1,46 @@
+{
+  "output_directory": "/home2/njohnson/fungi_annotations/annotations/Artha.PRJEB7523",
+  "conditions": {
+    "wt": [
+      "ERR654970",
+      "ERR654975",
+      "ERR654972"
+    ],
+    "dcl24": [
+      "ERR654968",
+      "ERR654973",
+      "ERR654974"
+    ]
+  },
+  "annotation_conditions": [
+    "wt"
+  ],
+  "alignment_file": "/home2/njohnson/fungi_annotations/annotations/Artha.PRJEB7523/align/alignment.bam",
+  "name": null,
+  "coverage_window": 250,
+  "kernel_window": 250,
+  "genome_weight": 1,
+  "read_weight": 2,
+  "target_genome_perc": 0.0,
+  "target_read_perc": 0.0,
+  "tradeoff_round": 4,
+  "merge_dist": 500,
+  "merge_strand_similarity": 0.5,
+  "min_length": 15,
+  "max_length": 30,
+  "filter_skew": false,
+  "max_skew": 0.9,
+  "filter_complexity": false,
+  "min_complexity": 10,
+  "filter_abundance": true,
+  "min_abundance": 50,
+  "filter_abundance_density": true,
+  "min_abundance_density": 100,
+  "dont_revise_regions": false,
+  "dont_trim_loci": false,
+  "debug": false,
+  "test_mode": false,
+  "override": false,
+  "project_name": "Artha.PRJEB7523",
+  "tool": "tradeoff"
+}

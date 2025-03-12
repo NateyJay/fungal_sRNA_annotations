@@ -1,0 +1,78 @@
+{
+  "project_name": "Blhor.PRJNA809109",
+  "srrs": [
+    "SRR18094628",
+    "SRR18094629",
+    "SRR18094630",
+    "SRR18094632",
+    "SRR18094633",
+    "SRR18094631",
+    "SRR18094644",
+    "SRR18094643",
+    "SRR18094634",
+    "SRR18094637",
+    "SRR18094636",
+    "SRR18094635"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR18094628.fasta",
+    "untrimmed/SRR18094629.fasta",
+    "untrimmed/SRR18094630.fasta",
+    "untrimmed/SRR18094632.fasta",
+    "untrimmed/SRR18094633.fasta",
+    "untrimmed/SRR18094631.fasta",
+    "untrimmed/SRR18094644.fasta",
+    "untrimmed/SRR18094643.fasta",
+    "untrimmed/SRR18094634.fasta",
+    "untrimmed/SRR18094637.fasta",
+    "untrimmed/SRR18094636.fasta",
+    "untrimmed/SRR18094635.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR18094628.t.fa.gz",
+    "trim/SRR18094629.t.fa.gz",
+    "trim/SRR18094630.t.fa.gz",
+    "trim/SRR18094632.t.fa.gz",
+    "trim/SRR18094633.t.fa.gz",
+    "trim/SRR18094631.t.fa.gz",
+    "trim/SRR18094644.t.fa.gz",
+    "trim/SRR18094643.t.fa.gz",
+    "trim/SRR18094634.t.fa.gz",
+    "trim/SRR18094637.t.fa.gz",
+    "trim/SRR18094636.t.fa.gz",
+    "trim/SRR18094635.t.fa.gz"
+  ],
+  "adapter": "TGGAATTC",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR18094628",
+      "SRR18094629",
+      "SRR18094630"
+    ],
+    "B": [
+      "SRR18094632",
+      "SRR18094633",
+      "SRR18094631"
+    ],
+    "C": [
+      "SRR18094644",
+      "SRR18094643",
+      "SRR18094634"
+    ],
+    "D": [
+      "SRR18094637",
+      "SRR18094636",
+      "SRR18094635"
+    ]
+  },
+  "annotation_conditions": [
+    "C"
+  ],
+  "genome_file": "../../Genomes/Blhor.GCA_900239735.1_BGH_DH14_v4_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_B/loci.gff3"
+}

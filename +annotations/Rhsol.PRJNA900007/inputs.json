@@ -1,0 +1,68 @@
+{
+  "project_name": "Rhsol.PRJNA900007",
+  "srrs": [
+    "SRR22252428",
+    "SRR22252429",
+    "SRR22252430",
+    "SRR22252431",
+    "SRR22252432",
+    "SRR22252433",
+    "SRR22252434",
+    "SRR22252445",
+    "SRR22252444"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR22252428.fasta",
+    "untrimmed/SRR22252429.fasta",
+    "untrimmed/SRR22252430.fasta",
+    "untrimmed/SRR22252431.fasta",
+    "untrimmed/SRR22252432.fasta",
+    "untrimmed/SRR22252433.fasta",
+    "untrimmed/SRR22252434.fasta",
+    "untrimmed/SRR22252445.fasta",
+    "untrimmed/SRR22252444.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR22252428.t.fa.gz",
+    "trim/SRR22252429.t.fa.gz",
+    "trim/SRR22252430.t.fa.gz",
+    "trim/SRR22252431.t.fa.gz",
+    "trim/SRR22252432.t.fa.gz",
+    "trim/SRR22252433.t.fa.gz",
+    "trim/SRR22252434.t.fa.gz",
+    "trim/SRR22252445.t.fa.gz",
+    "trim/SRR22252444.t.fa.gz"
+  ],
+  "adapter": "GATCGTCG",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "B": [
+      "SRR22252428",
+      "SRR22252429"
+    ],
+    "C": [
+      "SRR22252430",
+      "SRR22252431"
+    ],
+    "D": [
+      "SRR22252432"
+    ],
+    "E": [
+      "SRR22252433",
+      "SRR22252434"
+    ],
+    "H": [
+      "SRR22252445",
+      "SRR22252444"
+    ]
+  },
+  "annotation_conditions": [
+    "H"
+  ],
+  "genome_file": "../../Genomes/Rhsol.GCA_016906535.1_ASM1690653v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_H/loci.gff3"
+}

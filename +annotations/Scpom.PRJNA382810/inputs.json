@@ -1,0 +1,30 @@
+{
+  "project_name": "Scpom.PRJNA382810",
+  "srrs": [
+    "SRR5445684",
+    "SRR5445683",
+    "SRR5445672"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR5445684.fasta",
+    "untrimmed/SRR5445683.fasta",
+    "untrimmed/SRR5445672.fasta"
+  ],
+  "trimmed_libraries": null,
+  "adapter": null,
+  "alignment_file": null,
+  "conditions": {
+    "A": [
+      "SRR5445684",
+      "SRR5445683",
+      "SRR5445672"
+    ]
+  },
+  "annotation_conditions": null,
+  "genome_file": "../../Genomes/Scpom.GCA_000002945.2_ASM294v2_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 50,
+  "annotation_file": null
+}

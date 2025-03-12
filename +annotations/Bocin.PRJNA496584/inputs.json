@@ -1,0 +1,124 @@
+{
+  "project_name": "Bocin.PRJNA496584",
+  "srrs": [
+    "SRR19161648",
+    "SRR19161649",
+    "SRR19161650",
+    "SRR19164837",
+    "SRR19164836",
+    "SRR8074932",
+    "SRR8074933",
+    "SRR8074934",
+    "SRR8074930",
+    "SRR8074931",
+    "SRR8074936",
+    "SRR8074935",
+    "SRR8074937",
+    "SRR8074938",
+    "SRR8074939",
+    "SRR8074949",
+    "SRR8074941",
+    "SRR8074948"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR19161648.fasta",
+    "untrimmed/SRR19161649.fasta",
+    "untrimmed/SRR19161650.fasta",
+    "untrimmed/SRR19164837.fasta",
+    "untrimmed/SRR19164836.fasta",
+    "untrimmed/SRR8074932.fasta",
+    "untrimmed/SRR8074933.fasta",
+    "untrimmed/SRR8074934.fasta",
+    "untrimmed/SRR8074930.fasta",
+    "untrimmed/SRR8074931.fasta",
+    "untrimmed/SRR8074936.fasta",
+    "untrimmed/SRR8074935.fasta",
+    "untrimmed/SRR8074937.fasta",
+    "untrimmed/SRR8074938.fasta",
+    "untrimmed/SRR8074939.fasta",
+    "untrimmed/SRR8074949.fasta",
+    "untrimmed/SRR8074941.fasta",
+    "untrimmed/SRR8074948.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR19161649.t.fa.gz",
+    "trim/SRR19164837.t.fa.gz",
+    "trim/SRR19164836.t.fa.gz",
+    "trim/SRR8074932.t.fa.gz",
+    "trim/SRR8074933.t.fa.gz",
+    "trim/SRR8074934.t.fa.gz",
+    "trim/SRR8074930.t.fa.gz",
+    "trim/SRR8074931.t.fa.gz",
+    "trim/SRR8074936.t.fa.gz",
+    "trim/SRR8074935.t.fa.gz",
+    "trim/SRR8074937.t.fa.gz",
+    "trim/SRR8074938.t.fa.gz",
+    "trim/SRR8074939.t.fa.gz",
+    "trim/SRR8074949.t.fa.gz",
+    "trim/SRR8074941.t.fa.gz",
+    "trim/SRR8074948.t.fa.gz"
+  ],
+  "adapter": "None",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "Z.d1d2": [
+      "SRR19161648",
+      "SRR19161649",
+      "SRR19161650"
+    ],
+    "A": [
+      "SRR19164837",
+      "SRR8074934"
+    ],
+    "B": [
+      "SRR19164836",
+      "SRR8074933"
+    ],
+    "C": [
+      "SRR8074932",
+      "SRR8074930",
+      "SRR8074931"
+    ],
+    "D": [
+      "SRR8074936",
+      "SRR8074935"
+    ],
+    "E": [
+      "SRR8074937",
+      "SRR8074938",
+      "SRR8074939"
+    ],
+    "G": [
+      "SRR8074949",
+      "SRR8074941",
+      "SRR8074948"
+    ]
+  },
+  "annotation_conditions": null,
+  "genome_file": "../../Genomes/Bocin.GCF_000143535.2_ASM14353v4_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": null,
+  "adapters": {
+    "SRR19161648.fasta": "None",
+    "SRR19161649.fasta": "AGATCGGA",
+    "SRR19161650.fasta": "None",
+    "SRR19164837.fasta": "AGATCGGA",
+    "SRR19164836.fasta": "AGATCGGA",
+    "SRR8074932.fasta": "AGATCGGA",
+    "SRR8074933.fasta": "AGATCGGA",
+    "SRR8074934.fasta": "AGATCGGA",
+    "SRR8074930.fasta": "AGATCGGA",
+    "SRR8074931.fasta": "AGATCGGA",
+    "SRR8074936.fasta": "AGATCGGA",
+    "SRR8074935.fasta": "AGATCGGA",
+    "SRR8074937.fasta": "AGATCGGA",
+    "SRR8074938.fasta": "AGATCGGA",
+    "SRR8074939.fasta": "AGATCGGA",
+    "SRR8074949.fasta": "AGATCGGA",
+    "SRR8074941.fasta": "AGATCGGA",
+    "SRR8074948.fasta": "AGATCGGA"
+  }
+}

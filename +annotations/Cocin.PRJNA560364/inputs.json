@@ -1,0 +1,64 @@
+{
+  "project_name": "Cocin.PRJNA560364",
+  "srrs": [
+    "SRR9972093",
+    "SRR9972091",
+    "SRR9972092",
+    "SRR9972088",
+    "SRR9972090",
+    "SRR9972089",
+    "SRR9972086",
+    "SRR9972087",
+    "SRR9972094"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR9972093.fasta",
+    "untrimmed/SRR9972091.fasta",
+    "untrimmed/SRR9972092.fasta",
+    "untrimmed/SRR9972088.fasta",
+    "untrimmed/SRR9972090.fasta",
+    "untrimmed/SRR9972089.fasta",
+    "untrimmed/SRR9972086.fasta",
+    "untrimmed/SRR9972087.fasta",
+    "untrimmed/SRR9972094.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR9972093.t.fa.gz",
+    "trim/SRR9972091.t.fa.gz",
+    "trim/SRR9972092.t.fa.gz",
+    "trim/SRR9972088.t.fa.gz",
+    "trim/SRR9972090.t.fa.gz",
+    "trim/SRR9972089.t.fa.gz",
+    "trim/SRR9972086.t.fa.gz",
+    "trim/SRR9972087.t.fa.gz",
+    "trim/SRR9972094.t.fa.gz"
+  ],
+  "adapter": "AGTCGGAG",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR9972093",
+      "SRR9972091",
+      "SRR9972092"
+    ],
+    "B": [
+      "SRR9972088",
+      "SRR9972090",
+      "SRR9972089"
+    ],
+    "C": [
+      "SRR9972086",
+      "SRR9972087",
+      "SRR9972094"
+    ]
+  },
+  "annotation_conditions": [
+    "C"
+  ],
+  "genome_file": "../../Genomes/Cocin.GCA_000182895.1_CC3_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_A/loci.gff3"
+}

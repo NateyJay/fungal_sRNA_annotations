@@ -1,0 +1,60 @@
+{
+  "project_name": "Maory.PRJNA856435",
+  "srrs": [
+    "SRR20012924",
+    "SRR20012936",
+    "SRR20012922",
+    "SRR20012932",
+    "SRR20012935",
+    "SRR20012925"
+  ],
+  "untrimmed_libraries": [
+    "/home2/njohnson/fungi_annotations/annotations/Maory.PRJNA856435/untrimmed/SRR20012924.fasta",
+    "/home2/njohnson/fungi_annotations/annotations/Maory.PRJNA856435/untrimmed/SRR20012936.fasta",
+    "/home2/njohnson/fungi_annotations/annotations/Maory.PRJNA856435/untrimmed/SRR20012922.fasta",
+    "/home2/njohnson/fungi_annotations/annotations/Maory.PRJNA856435/untrimmed/SRR20012932.fasta",
+    "/home2/njohnson/fungi_annotations/annotations/Maory.PRJNA856435/untrimmed/SRR20012935.fasta",
+    "/home2/njohnson/fungi_annotations/annotations/Maory.PRJNA856435/untrimmed/SRR20012925.fasta"
+  ],
+  "trimmed_libraries": [
+    "/home2/njohnson/fungi_annotations/annotations/Maory.PRJNA856435/trim/SRR20012924.t.fa.gz",
+    "/home2/njohnson/fungi_annotations/annotations/Maory.PRJNA856435/trim/SRR20012936.t.fa.gz",
+    "/home2/njohnson/fungi_annotations/annotations/Maory.PRJNA856435/trim/SRR20012922.t.fa.gz",
+    "/home2/njohnson/fungi_annotations/annotations/Maory.PRJNA856435/trim/SRR20012932.t.fa.gz",
+    "/home2/njohnson/fungi_annotations/annotations/Maory.PRJNA856435/trim/SRR20012935.t.fa.gz",
+    "/home2/njohnson/fungi_annotations/annotations/Maory.PRJNA856435/trim/SRR20012925.t.fa.gz"
+  ],
+  "adapter": "TGGAATTC",
+  "alignment_file": "/home2/njohnson/fungi_annotations/annotations/Maory.PRJNA856435/align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR20012924"
+    ],
+    "B": [
+      "SRR20012936"
+    ],
+    "C": [
+      "SRR20012922"
+    ],
+    "Z.d1": [
+      "SRR20012932"
+    ],
+    "Y.d1d2": [
+      "SRR20012935"
+    ],
+    "X.d2": [
+      "SRR20012925"
+    ]
+  },
+  "annotation_conditions": [
+    "A",
+    "B",
+    "C"
+  ],
+  "genome_file": "/home2/njohnson/fungi_annotations/annotations/Maory.PRJNA856435/../../Genomes/Maory.GCF_000002495.2_MG8_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 50,
+  "annotation_file": "/home2/njohnson/fungi_annotations/annotations/Maory.PRJNA856435/tradeoff/loci.gff3"
+}

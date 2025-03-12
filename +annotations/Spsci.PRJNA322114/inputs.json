@@ -1,0 +1,32 @@
+{
+  "project_name": "Spsci.PRJNA322114",
+  "srrs": [
+    "SRR3546731",
+    "SRR3546721"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR3546731.fasta",
+    "untrimmed/SRR3546721.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR3546731.t.fa.gz",
+    "trim/SRR3546721.t.fa.gz"
+  ],
+  "adapter": "TCGTATGC",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR3546731",
+      "SRR3546721"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Spsci.GCA_001010845.1_ASM101084v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_A/loci.gff3"
+}

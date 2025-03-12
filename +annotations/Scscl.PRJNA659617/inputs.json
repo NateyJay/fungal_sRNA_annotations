@@ -1,0 +1,52 @@
+{
+  "project_name": "Scscl.PRJNA659617",
+  "srrs": [
+    "SRR12527895",
+    "SRR12527894",
+    "SRR12527896",
+    "SRR12527897",
+    "SRR12527899",
+    "SRR12527898"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR12527895.fasta",
+    "untrimmed/SRR12527894.fasta",
+    "untrimmed/SRR12527896.fasta",
+    "untrimmed/SRR12527897.fasta",
+    "untrimmed/SRR12527899.fasta",
+    "untrimmed/SRR12527898.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR12527895.t.fa.gz",
+    "trim/SRR12527894.t.fa.gz",
+    "trim/SRR12527896.t.fa.gz",
+    "trim/SRR12527897.t.fa.gz",
+    "trim/SRR12527899.t.fa.gz",
+    "trim/SRR12527898.t.fa.gz"
+  ],
+  "adapter": "CTGTAGGC",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR12527895",
+      "SRR12527894"
+    ],
+    "B": [
+      "SRR12527896",
+      "SRR12527897"
+    ],
+    "C": [
+      "SRR12527899",
+      "SRR12527898"
+    ]
+  },
+  "annotation_conditions": [
+    "C"
+  ],
+  "genome_file": "../../Genomes/Scscl.GCA_000146945.2_ASM14694v2_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_C/loci.gff3"
+}

@@ -1,0 +1,27 @@
+{
+  "project_name": "Vapol.PRJNA140091",
+  "srrs": [
+    "SRR202951"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR202951.fasta"
+  ],
+  "trimmed_libraries": null,
+  "adapter": "None",
+  "alignment_file": null,
+  "conditions": {
+    "A": [
+      "SRR202951"
+    ]
+  },
+  "annotation_conditions": null,
+  "genome_file": "../../Genomes/Vapol.GCA_000150035.1_ASM15003v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 50,
+  "annotation_file": null,
+  "adapters": {
+    "SRR202951.fasta": "None"
+  }
+}

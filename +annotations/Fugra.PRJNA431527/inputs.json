@@ -1,0 +1,16 @@
+{
+  "project_name": "Fugra.PRJNA431527",
+  "srrs": null,
+  "untrimmed_libraries": null,
+  "trimmed_libraries": null,
+  "adapter": null,
+  "alignment_file": "align/alignment.bam",
+  "conditions": null,
+  "annotation_conditions": null,
+  "genome_file": "../../Genomes/Fugra.GCF_000240135.3_ASM24013v3_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "annotation_file": null,
+  "min_length": null,
+  "max_length": 300
+}

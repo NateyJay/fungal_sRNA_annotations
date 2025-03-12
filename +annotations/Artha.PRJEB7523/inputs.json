@@ -1,0 +1,49 @@
+{
+  "project_name": "Artha.PRJEB7523",
+  "srrs": [
+    "ERR654970",
+    "ERR654975",
+    "ERR654972",
+    "ERR654968",
+    "ERR654973",
+    "ERR654974"
+  ],
+  "untrimmed_libraries": [
+    "/home2/njohnson/fungi_annotations/annotations/Artha.PRJEB7523/untrimmed/ERR654970.fq.gz",
+    "/home2/njohnson/fungi_annotations/annotations/Artha.PRJEB7523/untrimmed/ERR654975.fq.gz",
+    "/home2/njohnson/fungi_annotations/annotations/Artha.PRJEB7523/untrimmed/ERR654972.fq.gz",
+    "/home2/njohnson/fungi_annotations/annotations/Artha.PRJEB7523/untrimmed/ERR654968.fq.gz",
+    "/home2/njohnson/fungi_annotations/annotations/Artha.PRJEB7523/untrimmed/ERR654973.fq.gz",
+    "/home2/njohnson/fungi_annotations/annotations/Artha.PRJEB7523/untrimmed/ERR654974.fq.gz"
+  ],
+  "trimmed_libraries": [
+    "/home2/njohnson/fungi_annotations/annotations/Artha.PRJEB7523/trim/ERR654970.t.fq.gz",
+    "/home2/njohnson/fungi_annotations/annotations/Artha.PRJEB7523/trim/ERR654975.t.fq.gz",
+    "/home2/njohnson/fungi_annotations/annotations/Artha.PRJEB7523/trim/ERR654972.t.fq.gz",
+    "/home2/njohnson/fungi_annotations/annotations/Artha.PRJEB7523/trim/ERR654968.t.fq.gz",
+    "/home2/njohnson/fungi_annotations/annotations/Artha.PRJEB7523/trim/ERR654973.t.fq.gz",
+    "/home2/njohnson/fungi_annotations/annotations/Artha.PRJEB7523/trim/ERR654974.t.fq.gz"
+  ],
+  "adapter": "TGGAATTC",
+  "alignment_file": "/home2/njohnson/fungi_annotations/annotations/Artha.PRJEB7523/align/alignment.bam",
+  "conditions": {
+    "wt": [
+      "ERR654970",
+      "ERR654975",
+      "ERR654972"
+    ],
+    "dcl24": [
+      "ERR654968",
+      "ERR654973",
+      "ERR654974"
+    ]
+  },
+  "annotation_conditions": [
+    "wt"
+  ],
+  "genome_file": "/home2/njohnson/fungi_annotations/annotations/Artha.PRJEB7523/../../Genomes/Artha.GCA_000001735.2_TAIR10.1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 30
+}

@@ -1,0 +1,70 @@
+{
+  "project_name": "Maory.PRJNA310070",
+  "srrs": [
+    "SRR3130367",
+    "SRR3130368",
+    "SRR3130369",
+    "SRR3130370",
+    "SRR3130371",
+    "SRR3130372",
+    "SRR3130373",
+    "SRR3130374"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR3130367.fasta",
+    "untrimmed/SRR3130368.fasta",
+    "untrimmed/SRR3130369.fasta",
+    "untrimmed/SRR3130370.fasta",
+    "untrimmed/SRR3130371.fasta",
+    "untrimmed/SRR3130372.fasta",
+    "untrimmed/SRR3130373.fasta",
+    "untrimmed/SRR3130374.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR3130367.t.fa.gz",
+    "trim/SRR3130368.t.fa.gz",
+    "trim/SRR3130369.t.fa.gz",
+    "trim/SRR3130370.t.fa.gz",
+    "trim/SRR3130371.t.fa.gz",
+    "trim/SRR3130372.t.fa.gz",
+    "trim/SRR3130373.t.fa.gz",
+    "trim/SRR3130374.t.fa.gz"
+  ],
+  "adapter": "TCGTATGC",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR3130367"
+    ],
+    "B": [
+      "SRR3130368"
+    ],
+    "C": [
+      "SRR3130369"
+    ],
+    "D": [
+      "SRR3130370"
+    ],
+    "E": [
+      "SRR3130371"
+    ],
+    "F": [
+      "SRR3130372"
+    ],
+    "G": [
+      "SRR3130373"
+    ],
+    "H": [
+      "SRR3130374"
+    ]
+  },
+  "annotation_conditions": [
+    "E"
+  ],
+  "genome_file": "../../Genomes/Maory.GCF_000002495.2_MG8_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_E/loci.gff3"
+}

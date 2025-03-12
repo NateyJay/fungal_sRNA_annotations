@@ -1,0 +1,38 @@
+{
+  "project_name": "Scjap.PRJNA770349",
+  "srrs": [
+    "SRR16291984",
+    "SRR16291985",
+    "SRR16291982",
+    "SRR16291983"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR16291984.fasta",
+    "untrimmed/SRR16291985.fasta",
+    "untrimmed/SRR16291982.fasta",
+    "untrimmed/SRR16291983.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR16291984.t.fa.gz",
+    "trim/SRR16291985.t.fa.gz",
+    "trim/SRR16291982.t.fa.gz",
+    "trim/SRR16291983.t.fa.gz"
+  ],
+  "adapter": "TGGAATTC",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR16291984",
+      "SRR16291985"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Scjap.GCA_000149845.2_SJ5_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_A/loci.gff3"
+}

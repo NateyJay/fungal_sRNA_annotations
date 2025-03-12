@@ -1,0 +1,92 @@
+{
+  "project_name": "Blgra.PRJNA476756",
+  "srrs": [
+    "SRR7363329",
+    "SRR7363330",
+    "SRR7363328",
+    "SRR7363332",
+    "SRR7363333",
+    "SRR7363331",
+    "SRR7363334",
+    "SRR7363336",
+    "SRR7363335",
+    "SRR7363339",
+    "SRR7363337",
+    "SRR7363338",
+    "SRR7363340",
+    "SRR7363341",
+    "SRR7363342"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR7363329.fasta",
+    "untrimmed/SRR7363330.fasta",
+    "untrimmed/SRR7363328.fasta",
+    "untrimmed/SRR7363332.fasta",
+    "untrimmed/SRR7363333.fasta",
+    "untrimmed/SRR7363331.fasta",
+    "untrimmed/SRR7363334.fasta",
+    "untrimmed/SRR7363336.fasta",
+    "untrimmed/SRR7363335.fasta",
+    "untrimmed/SRR7363339.fasta",
+    "untrimmed/SRR7363337.fasta",
+    "untrimmed/SRR7363338.fasta",
+    "untrimmed/SRR7363340.fasta",
+    "untrimmed/SRR7363341.fasta",
+    "untrimmed/SRR7363342.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR7363329.t.fa.gz",
+    "trim/SRR7363330.t.fa.gz",
+    "trim/SRR7363328.t.fa.gz",
+    "trim/SRR7363332.t.fa.gz",
+    "trim/SRR7363333.t.fa.gz",
+    "trim/SRR7363331.t.fa.gz",
+    "trim/SRR7363334.t.fa.gz",
+    "trim/SRR7363336.t.fa.gz",
+    "trim/SRR7363335.t.fa.gz",
+    "trim/SRR7363339.t.fa.gz",
+    "trim/SRR7363337.t.fa.gz",
+    "trim/SRR7363338.t.fa.gz",
+    "trim/SRR7363340.t.fa.gz",
+    "trim/SRR7363341.t.fa.gz",
+    "trim/SRR7363342.t.fa.gz"
+  ],
+  "adapter": "TGGAATTC",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR7363329",
+      "SRR7363330",
+      "SRR7363328"
+    ],
+    "B": [
+      "SRR7363332",
+      "SRR7363333",
+      "SRR7363331"
+    ],
+    "C": [
+      "SRR7363334",
+      "SRR7363336",
+      "SRR7363335"
+    ],
+    "D": [
+      "SRR7363339",
+      "SRR7363337",
+      "SRR7363338"
+    ],
+    "E": [
+      "SRR7363340",
+      "SRR7363341",
+      "SRR7363342"
+    ]
+  },
+  "annotation_conditions": [
+    "C"
+  ],
+  "genome_file": "../../Genomes/Blgra.GCA_905067625.1_Bgtriticale_THUN12_genome_v1_2_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff/loci.gff3"
+}

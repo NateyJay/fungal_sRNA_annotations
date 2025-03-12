@@ -1,0 +1,63 @@
+{
+  "project_name": "Fubra.PRJNA510758",
+  "srrs": [
+    "SRR8362135",
+    "SRR8362142",
+    "SRR8362136",
+    "SRR8362137",
+    "SRR8362133",
+    "SRR8362138",
+    "SRR8362145",
+    "SRR8362134",
+    "SRR8362146"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR8362135.fasta",
+    "untrimmed/SRR8362142.fasta",
+    "untrimmed/SRR8362136.fasta",
+    "untrimmed/SRR8362137.fasta",
+    "untrimmed/SRR8362133.fasta",
+    "untrimmed/SRR8362138.fasta",
+    "untrimmed/SRR8362145.fasta",
+    "untrimmed/SRR8362134.fasta",
+    "untrimmed/SRR8362146.fasta"
+  ],
+  "trimmed_libraries": null,
+  "adapter": "None",
+  "alignment_file": null,
+  "conditions": {
+    "A": [
+      "SRR8362135",
+      "SRR8362142",
+      "SRR8362136"
+    ],
+    "B": [
+      "SRR8362137",
+      "SRR8362133",
+      "SRR8362138"
+    ],
+    "C": [
+      "SRR8362145",
+      "SRR8362134",
+      "SRR8362146"
+    ]
+  },
+  "annotation_conditions": null,
+  "genome_file": "../../Genomes/Fubra.GCA_018886245.1_Fb-HN-1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 50,
+  "annotation_file": null,
+  "adapters": {
+    "SRR8362135.fasta": "None",
+    "SRR8362142.fasta": "None",
+    "SRR8362136.fasta": "None",
+    "SRR8362137.fasta": "None",
+    "SRR8362133.fasta": "None",
+    "SRR8362138.fasta": "None",
+    "SRR8362145.fasta": "None",
+    "SRR8362134.fasta": "None",
+    "SRR8362146.fasta": "None"
+  }
+}

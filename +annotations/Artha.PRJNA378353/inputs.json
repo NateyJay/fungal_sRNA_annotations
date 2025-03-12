@@ -1,0 +1,28 @@
+{
+  "project_name": "Artha.PRJNA378353",
+  "srrs": [
+    "SRR5318050",
+    "SRR5318051",
+    "SRR5318054",
+    "SRR5318055"
+  ],
+  "untrimmed_libraries": [
+    "/home2/njohnson/fungi_annotations/annotations/Artha.PRJNA378353/untrimmed/SRR5318050.fq.gz",
+    "/home2/njohnson/fungi_annotations/annotations/Artha.PRJNA378353/untrimmed/SRR5318051.fq.gz",
+    "/home2/njohnson/fungi_annotations/annotations/Artha.PRJNA378353/untrimmed/SRR5318054.fq.gz",
+    "/home2/njohnson/fungi_annotations/annotations/Artha.PRJNA378353/untrimmed/SRR5318055.fq.gz"
+  ],
+  "trimmed_libraries": [
+    "/home2/njohnson/fungi_annotations/annotations/Artha.PRJNA378353/trim/SRR5318050.t.fq.gz",
+    "/home2/njohnson/fungi_annotations/annotations/Artha.PRJNA378353/trim/SRR5318051.t.fq.gz",
+    "/home2/njohnson/fungi_annotations/annotations/Artha.PRJNA378353/trim/SRR5318054.t.fq.gz",
+    "/home2/njohnson/fungi_annotations/annotations/Artha.PRJNA378353/trim/SRR5318055.t.fq.gz"
+  ],
+  "adapter": "TGGAATTC",
+  "alignment_file": null,
+  "conditions": null,
+  "annotation_conditions": null,
+  "genome_file": null,
+  "jbrowse_directory": null,
+  "gene_annotation_file": null
+}

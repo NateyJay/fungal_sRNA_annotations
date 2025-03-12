@@ -1,0 +1,92 @@
+{
+  "project_name": "Scscl.PRJNA477286",
+  "srrs": [
+    "SRR7407892",
+    "SRR7407904",
+    "SRR7407905",
+    "SRR7407908",
+    "SRR7407907",
+    "SRR7407906",
+    "SRR7407903",
+    "SRR7407909",
+    "SRR7407902",
+    "SRR7407896",
+    "SRR7407899",
+    "SRR7407898",
+    "SRR7407900",
+    "SRR7407901",
+    "SRR7407893"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR7407892.fasta",
+    "untrimmed/SRR7407904.fasta",
+    "untrimmed/SRR7407905.fasta",
+    "untrimmed/SRR7407908.fasta",
+    "untrimmed/SRR7407907.fasta",
+    "untrimmed/SRR7407906.fasta",
+    "untrimmed/SRR7407903.fasta",
+    "untrimmed/SRR7407909.fasta",
+    "untrimmed/SRR7407902.fasta",
+    "untrimmed/SRR7407896.fasta",
+    "untrimmed/SRR7407899.fasta",
+    "untrimmed/SRR7407898.fasta",
+    "untrimmed/SRR7407900.fasta",
+    "untrimmed/SRR7407901.fasta",
+    "untrimmed/SRR7407893.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR7407892.t.fa.gz",
+    "trim/SRR7407904.t.fa.gz",
+    "trim/SRR7407905.t.fa.gz",
+    "trim/SRR7407908.t.fa.gz",
+    "trim/SRR7407907.t.fa.gz",
+    "trim/SRR7407906.t.fa.gz",
+    "trim/SRR7407903.t.fa.gz",
+    "trim/SRR7407909.t.fa.gz",
+    "trim/SRR7407902.t.fa.gz",
+    "trim/SRR7407896.t.fa.gz",
+    "trim/SRR7407899.t.fa.gz",
+    "trim/SRR7407898.t.fa.gz",
+    "trim/SRR7407900.t.fa.gz",
+    "trim/SRR7407901.t.fa.gz",
+    "trim/SRR7407893.t.fa.gz"
+  ],
+  "adapter": "TGGAATTC",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR7407892",
+      "SRR7407904",
+      "SRR7407905"
+    ],
+    "B": [
+      "SRR7407908",
+      "SRR7407907",
+      "SRR7407906"
+    ],
+    "C": [
+      "SRR7407903",
+      "SRR7407909",
+      "SRR7407902"
+    ],
+    "D": [
+      "SRR7407896",
+      "SRR7407899",
+      "SRR7407898"
+    ],
+    "E": [
+      "SRR7407900",
+      "SRR7407901",
+      "SRR7407893"
+    ]
+  },
+  "annotation_conditions": [
+    "B"
+  ],
+  "genome_file": "../../Genomes/Scscl.GCA_000146945.2_ASM14694v2_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_B/loci.gff3"
+}

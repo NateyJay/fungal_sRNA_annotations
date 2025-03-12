@@ -1,0 +1,40 @@
+{
+  "project_name": "Scpom.PRJNA278408",
+  "srrs": [
+    "SRR1916774",
+    "SRR1916773",
+    "SRR1916772",
+    "SRR1916771"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR1916774.fasta",
+    "untrimmed/SRR1916773.fasta",
+    "untrimmed/SRR1916772.fasta",
+    "untrimmed/SRR1916771.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR1916774.t.fa.gz",
+    "trim/SRR1916773.t.fa.gz",
+    "trim/SRR1916772.t.fa.gz",
+    "trim/SRR1916771.t.fa.gz"
+  ],
+  "adapter": "TGGAATTC",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR1916774",
+      "SRR1916773",
+      "SRR1916772",
+      "SRR1916771"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Scpom.GCA_000002945.2_ASM294v2_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_A/loci.gff3"
+}

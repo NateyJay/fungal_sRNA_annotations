@@ -1,0 +1,96 @@
+{
+  "project_name": "Scscl.PRJNA348385",
+  "srrs": [
+    "SRR7407892",
+    "SRR7407904",
+    "SRR7407905",
+    "SRR7407900",
+    "SRR7407901",
+    "SRR7407893",
+    "SRR7407896",
+    "SRR7407899",
+    "SRR7407898",
+    "SRR7407903",
+    "SRR7407909",
+    "SRR7407902",
+    "SRR7407908",
+    "SRR7407907",
+    "SRR7407906"
+  ],
+  "untrimmed_libraries": [
+    "/home2/njohnson/fungi_annotations/annotations/Scscl.PRJNA348385/untrimmed/SRR7407892.fasta",
+    "/home2/njohnson/fungi_annotations/annotations/Scscl.PRJNA348385/untrimmed/SRR7407904.fasta",
+    "/home2/njohnson/fungi_annotations/annotations/Scscl.PRJNA348385/untrimmed/SRR7407905.fasta",
+    "/home2/njohnson/fungi_annotations/annotations/Scscl.PRJNA348385/untrimmed/SRR7407900.fasta",
+    "/home2/njohnson/fungi_annotations/annotations/Scscl.PRJNA348385/untrimmed/SRR7407901.fasta",
+    "/home2/njohnson/fungi_annotations/annotations/Scscl.PRJNA348385/untrimmed/SRR7407893.fasta",
+    "/home2/njohnson/fungi_annotations/annotations/Scscl.PRJNA348385/untrimmed/SRR7407896.fasta",
+    "/home2/njohnson/fungi_annotations/annotations/Scscl.PRJNA348385/untrimmed/SRR7407899.fasta",
+    "/home2/njohnson/fungi_annotations/annotations/Scscl.PRJNA348385/untrimmed/SRR7407898.fasta",
+    "/home2/njohnson/fungi_annotations/annotations/Scscl.PRJNA348385/untrimmed/SRR7407903.fasta",
+    "/home2/njohnson/fungi_annotations/annotations/Scscl.PRJNA348385/untrimmed/SRR7407909.fasta",
+    "/home2/njohnson/fungi_annotations/annotations/Scscl.PRJNA348385/untrimmed/SRR7407902.fasta",
+    "/home2/njohnson/fungi_annotations/annotations/Scscl.PRJNA348385/untrimmed/SRR7407908.fasta",
+    "/home2/njohnson/fungi_annotations/annotations/Scscl.PRJNA348385/untrimmed/SRR7407907.fasta",
+    "/home2/njohnson/fungi_annotations/annotations/Scscl.PRJNA348385/untrimmed/SRR7407906.fasta"
+  ],
+  "trimmed_libraries": [
+    "/home2/njohnson/fungi_annotations/annotations/Scscl.PRJNA348385/trim/SRR7407892.t.fq.gz",
+    "/home2/njohnson/fungi_annotations/annotations/Scscl.PRJNA348385/trim/SRR7407904.t.fq.gz",
+    "/home2/njohnson/fungi_annotations/annotations/Scscl.PRJNA348385/trim/SRR7407905.t.fq.gz",
+    "/home2/njohnson/fungi_annotations/annotations/Scscl.PRJNA348385/trim/SRR7407900.t.fq.gz",
+    "/home2/njohnson/fungi_annotations/annotations/Scscl.PRJNA348385/trim/SRR7407901.t.fq.gz",
+    "/home2/njohnson/fungi_annotations/annotations/Scscl.PRJNA348385/trim/SRR7407893.t.fq.gz",
+    "/home2/njohnson/fungi_annotations/annotations/Scscl.PRJNA348385/trim/SRR7407896.t.fq.gz",
+    "/home2/njohnson/fungi_annotations/annotations/Scscl.PRJNA348385/trim/SRR7407899.t.fq.gz",
+    "/home2/njohnson/fungi_annotations/annotations/Scscl.PRJNA348385/trim/SRR7407898.t.fq.gz",
+    "/home2/njohnson/fungi_annotations/annotations/Scscl.PRJNA348385/trim/SRR7407903.t.fq.gz",
+    "/home2/njohnson/fungi_annotations/annotations/Scscl.PRJNA348385/trim/SRR7407909.t.fq.gz",
+    "/home2/njohnson/fungi_annotations/annotations/Scscl.PRJNA348385/trim/SRR7407902.t.fq.gz",
+    "/home2/njohnson/fungi_annotations/annotations/Scscl.PRJNA348385/trim/SRR7407908.t.fq.gz",
+    "/home2/njohnson/fungi_annotations/annotations/Scscl.PRJNA348385/trim/SRR7407907.t.fq.gz",
+    "/home2/njohnson/fungi_annotations/annotations/Scscl.PRJNA348385/trim/SRR7407906.t.fq.gz"
+  ],
+  "adapter": "TGGAATTC",
+  "alignment_file": "/scratch/njohnson/Scscl.PRJNA348385.bam",
+  "conditions": {
+    "A": [
+      "SRR7407892",
+      "SRR7407904",
+      "SRR7407905"
+    ],
+    "B": [
+      "SRR7407900",
+      "SRR7407901",
+      "SRR7407893"
+    ],
+    "C": [
+      "SRR7407896",
+      "SRR7407899",
+      "SRR7407898"
+    ],
+    "D": [
+      "SRR7407903",
+      "SRR7407909",
+      "SRR7407902"
+    ],
+    "E": [
+      "SRR7407908",
+      "SRR7407907",
+      "SRR7407906"
+    ]
+  },
+  "annotation_conditions": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+  ],
+  "genome_file": "/home2/njohnson/fungi_annotations/annotations/Scscl.PRJNA348385/../../Genomes/Scscl.GCA_000146945.2_ASM14694v2_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 30,
+  "annotation_file": "/home2/njohnson/fungi_annotations/annotations/Scscl.PRJNA348385/tradeoff/loci.gff3"
+}

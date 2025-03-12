@@ -1,0 +1,28 @@
+{
+  "project_name": "Sacer.PRJNA154129",
+  "srrs": [
+    "SRR332256"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR332256.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR332256.t.fa.gz"
+  ],
+  "adapter": "TCGTATGC",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR332256"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Sacer.GCA_000146045.2_R64_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_A/loci.gff3"
+}

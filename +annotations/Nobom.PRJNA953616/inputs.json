@@ -1,0 +1,102 @@
+{
+  "project_name": "Nobom.PRJNA953616",
+  "srrs": [
+    "SRR24111183",
+    "SRR24111185",
+    "SRR24111184",
+    "SRR24165928",
+    "SRR24165927",
+    "SRR24111180",
+    "SRR24111182",
+    "SRR24111181",
+    "SRR24165926",
+    "SRR24111176",
+    "SRR24111178",
+    "SRR24111179",
+    "SRR24165923",
+    "SRR24165925",
+    "SRR24111174",
+    "SRR24111173",
+    "SRR24111175",
+    "SRR24165922"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR24111183.fasta",
+    "untrimmed/SRR24111185.fasta",
+    "untrimmed/SRR24111184.fasta",
+    "untrimmed/SRR24165928.fasta",
+    "untrimmed/SRR24165927.fasta",
+    "untrimmed/SRR24111180.fasta",
+    "untrimmed/SRR24111182.fasta",
+    "untrimmed/SRR24111181.fasta",
+    "untrimmed/SRR24165926.fasta",
+    "untrimmed/SRR24111176.fasta",
+    "untrimmed/SRR24111178.fasta",
+    "untrimmed/SRR24111179.fasta",
+    "untrimmed/SRR24165923.fasta",
+    "untrimmed/SRR24165925.fasta",
+    "untrimmed/SRR24111174.fasta",
+    "untrimmed/SRR24111173.fasta",
+    "untrimmed/SRR24111175.fasta",
+    "untrimmed/SRR24165922.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR24111183.t.fa.gz",
+    "trim/SRR24111185.t.fa.gz",
+    "trim/SRR24111184.t.fa.gz",
+    "trim/SRR24165928.t.fa.gz",
+    "trim/SRR24165927.t.fa.gz",
+    "trim/SRR24111180.t.fa.gz",
+    "trim/SRR24111182.t.fa.gz",
+    "trim/SRR24111181.t.fa.gz",
+    "trim/SRR24165926.t.fa.gz",
+    "trim/SRR24111176.t.fa.gz",
+    "trim/SRR24111178.t.fa.gz",
+    "trim/SRR24111179.t.fa.gz",
+    "trim/SRR24165923.t.fa.gz",
+    "trim/SRR24165925.t.fa.gz",
+    "trim/SRR24111174.t.fa.gz",
+    "trim/SRR24111173.t.fa.gz",
+    "trim/SRR24111175.t.fa.gz",
+    "trim/SRR24165922.t.fa.gz"
+  ],
+  "adapter": "TGGAATTC",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR24111183",
+      "SRR24111185",
+      "SRR24111184",
+      "SRR24165928",
+      "SRR24165927"
+    ],
+    "B": [
+      "SRR24111180",
+      "SRR24111182",
+      "SRR24111181",
+      "SRR24165926"
+    ],
+    "C": [
+      "SRR24111176",
+      "SRR24111178",
+      "SRR24111179",
+      "SRR24165923",
+      "SRR24165925"
+    ],
+    "D": [
+      "SRR24111174",
+      "SRR24111173",
+      "SRR24111175",
+      "SRR24165922"
+    ]
+  },
+  "annotation_conditions": [
+    "D"
+  ],
+  "genome_file": "../../Genomes/Nobom.GCA_000383075.1_NosBomCQ1_v1.0_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_D/loci.gff3"
+}

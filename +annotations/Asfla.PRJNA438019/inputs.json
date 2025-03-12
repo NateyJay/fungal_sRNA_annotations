@@ -1,0 +1,42 @@
+{
+  "project_name": "Asfla.PRJNA438019",
+  "srrs": [
+    "SRR6828228",
+    "SRR6828236",
+    "SRR6828243",
+    "SRR6828241"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR6828228.fasta",
+    "untrimmed/SRR6828236.fasta",
+    "untrimmed/SRR6828243.fasta",
+    "untrimmed/SRR6828241.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR6828228.t.fa.gz",
+    "trim/SRR6828236.t.fa.gz",
+    "trim/SRR6828243.t.fa.gz",
+    "trim/SRR6828241.t.fa.gz"
+  ],
+  "adapter": "TCGTATGC",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR6828228",
+      "SRR6828236"
+    ],
+    "B": [
+      "SRR6828243",
+      "SRR6828241"
+    ]
+  },
+  "annotation_conditions": [
+    "B"
+  ],
+  "genome_file": "../../Genomes/Asfla.GCA_014117465.1_ASM1411746v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_B/loci.gff3"
+}

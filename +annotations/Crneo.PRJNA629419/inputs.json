@@ -1,0 +1,28 @@
+{
+  "project_name": "Crneo.PRJNA629419",
+  "srrs": [
+    "SRR11648392"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR11648392.fasta"
+  ],
+  "trimmed_libraries": [
+    "untrimmed/SRR11648392.fasta"
+  ],
+  "adapter": "PRE-TRIMMED",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR11648392"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Crneo.GCA_000091045.1_ASM9104v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff/loci.gff3"
+}

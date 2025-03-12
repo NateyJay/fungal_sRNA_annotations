@@ -1,0 +1,28 @@
+{
+  "project_name": "Pltuo.PRJNA450159",
+  "srrs": [
+    "SRR7003639"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR7003639.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR7003639.t.fa.gz"
+  ],
+  "adapter": "CTGTAGGC",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "B": [
+      "SRR7003639"
+    ]
+  },
+  "annotation_conditions": [
+    "B"
+  ],
+  "genome_file": "../../Genomes/Pltuo.GCA_036872985.1_ASM3687298v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_B/loci.gff3"
+}

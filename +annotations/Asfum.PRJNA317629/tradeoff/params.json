@@ -1,0 +1,55 @@
+{
+  "output_directory": "/home2/njohnson/fungi_annotations/annotations/Asfum.PRJNA317629",
+  "annotation_conditions": [
+    "A",
+    "B"
+  ],
+  "conditions": {
+    "A": [
+      "SRR3344727",
+      "SRR3344728",
+      "SRR3344697",
+      "SRR3344698",
+      "SRR3344714",
+      "SRR3344713",
+      "SRR3344682",
+      "SRR3344681"
+    ],
+    "B": [
+      "SRR3344690",
+      "SRR3344689",
+      "SRR3344719",
+      "SRR3344720",
+      "SRR3344706",
+      "SRR3344705",
+      "SRR3344674",
+      "SRR3344673"
+    ]
+  },
+  "alignment_file": "/scratch/njohnson/Asfum.PRJNA317629.bam",
+  "name": null,
+  "coverage_window": 250,
+  "kernel_window": 100,
+  "genome_scaling_factor": 0.4,
+  "merge_dist": 500,
+  "merge_strand_similarity": 0.5,
+  "min_length": 15,
+  "max_length": 30,
+  "filter_skew": false,
+  "max_skew": 0.9,
+  "filter_complexity": true,
+  "min_complexity": 10,
+  "filter_abundance": true,
+  "min_abundance": 50,
+  "filter_abundance_density": true,
+  "min_abundance_density": 100,
+  "bigwig": false,
+  "time_test": false,
+  "dont_revise_regions": false,
+  "dont_trim_loci": false,
+  "debug": false,
+  "test_mode": false,
+  "override": false,
+  "project_name": "Asfum.PRJNA317629",
+  "tool": "tradeoff"
+}

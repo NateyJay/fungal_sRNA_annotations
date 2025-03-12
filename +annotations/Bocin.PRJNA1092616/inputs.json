@@ -1,0 +1,36 @@
+{
+  "project_name": "Bocin.PRJNA1092616",
+  "srrs": [
+    "SRR28472517",
+    "SRR28472519",
+    "SRR28472518"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR28472517.fasta",
+    "untrimmed/SRR28472519.fasta",
+    "untrimmed/SRR28472518.fasta"
+  ],
+  "trimmed_libraries": [
+    "untrimmed/SRR28472517.fasta",
+    "untrimmed/SRR28472519.fasta",
+    "untrimmed/SRR28472518.fasta"
+  ],
+  "adapter": "PRE-TRIMMED",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR28472517",
+      "SRR28472519",
+      "SRR28472518"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Bocin.GCF_000143535.2_ASM14353v4_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_A/loci.gff3"
+}

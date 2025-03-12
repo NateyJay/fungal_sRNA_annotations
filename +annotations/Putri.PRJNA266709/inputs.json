@@ -1,0 +1,32 @@
+{
+  "project_name": "Putri.PRJNA266709",
+  "srrs": [
+    "SRR1646809",
+    "SRR1646807"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR1646809.fasta",
+    "untrimmed/SRR1646807.fasta"
+  ],
+  "trimmed_libraries": [
+    "untrimmed/SRR1646809.fasta",
+    "untrimmed/SRR1646807.fasta"
+  ],
+  "adapter": "PRE-TRIMMED",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR1646809",
+      "SRR1646807"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Putri.GCF_026914185.1_ASM2691418v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff/loci.gff3"
+}

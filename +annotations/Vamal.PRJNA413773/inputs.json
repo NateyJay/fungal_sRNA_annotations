@@ -1,0 +1,32 @@
+{
+  "project_name": "Vamal.PRJNA413773",
+  "srrs": [
+    "SRR6153307",
+    "SRR6153308"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR6153307.fasta",
+    "untrimmed/SRR6153308.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR6153307.t.fa.gz",
+    "trim/SRR6153308.t.fa.gz"
+  ],
+  "adapter": "AGATCGGA",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR6153307",
+      "SRR6153308"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Vamal.GCA_025426655.1_ASM2542665v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_A/loci.gff3"
+}

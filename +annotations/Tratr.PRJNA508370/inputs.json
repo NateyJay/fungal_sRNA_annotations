@@ -1,0 +1,78 @@
+{
+  "project_name": "Tratr.PRJNA508370",
+  "srrs": [
+    "SRR8280354",
+    "SRR8280352",
+    "SRR8280353",
+    "SRR8280361",
+    "SRR8280363",
+    "SRR8280362",
+    "SRR8280359",
+    "SRR8280360",
+    "SRR8280358",
+    "SRR8280356",
+    "SRR8280357",
+    "SRR8280355"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR8280354.fasta",
+    "untrimmed/SRR8280352.fasta",
+    "untrimmed/SRR8280353.fasta",
+    "untrimmed/SRR8280361.fasta",
+    "untrimmed/SRR8280363.fasta",
+    "untrimmed/SRR8280362.fasta",
+    "untrimmed/SRR8280359.fasta",
+    "untrimmed/SRR8280360.fasta",
+    "untrimmed/SRR8280358.fasta",
+    "untrimmed/SRR8280356.fasta",
+    "untrimmed/SRR8280357.fasta",
+    "untrimmed/SRR8280355.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR8280354.t.fa.gz",
+    "trim/SRR8280352.t.fa.gz",
+    "trim/SRR8280353.t.fa.gz",
+    "trim/SRR8280361.t.fa.gz",
+    "trim/SRR8280363.t.fa.gz",
+    "trim/SRR8280362.t.fa.gz",
+    "trim/SRR8280359.t.fa.gz",
+    "trim/SRR8280360.t.fa.gz",
+    "trim/SRR8280358.t.fa.gz",
+    "trim/SRR8280356.t.fa.gz",
+    "trim/SRR8280357.t.fa.gz",
+    "trim/SRR8280355.t.fa.gz"
+  ],
+  "adapter": "TGGAATTC",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR8280354",
+      "SRR8280352",
+      "SRR8280353"
+    ],
+    "B": [
+      "SRR8280361",
+      "SRR8280363",
+      "SRR8280362"
+    ],
+    "C": [
+      "SRR8280359",
+      "SRR8280360",
+      "SRR8280358"
+    ],
+    "D": [
+      "SRR8280356",
+      "SRR8280357",
+      "SRR8280355"
+    ]
+  },
+  "annotation_conditions": [
+    "D"
+  ],
+  "genome_file": "../../Genomes/Tratr.GCA_000171015.2_TRIAT_v2.0_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_D/loci.gff3"
+}

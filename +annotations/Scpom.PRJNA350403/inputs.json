@@ -1,0 +1,130 @@
+{
+  "project_name": "Scpom.PRJNA350403",
+  "srrs": [
+    "SRR4449649",
+    "SRR4449648",
+    "SRR4449647",
+    "SRR4449646",
+    "SRR4449653",
+    "SRR4449652",
+    "SRR4449651",
+    "SRR4449650",
+    "SRR4449657",
+    "SRR4449656",
+    "SRR4449655",
+    "SRR4449654",
+    "SRR4449661",
+    "SRR4449660",
+    "SRR4449659",
+    "SRR4449658",
+    "SRR4449662",
+    "SRR4449665",
+    "SRR4449664",
+    "SRR4449663",
+    "SRR4449669",
+    "SRR4449668",
+    "SRR4449667",
+    "SRR4449666"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR4449649.fasta",
+    "untrimmed/SRR4449648.fasta",
+    "untrimmed/SRR4449647.fasta",
+    "untrimmed/SRR4449646.fasta",
+    "untrimmed/SRR4449653.fasta",
+    "untrimmed/SRR4449652.fasta",
+    "untrimmed/SRR4449651.fasta",
+    "untrimmed/SRR4449650.fasta",
+    "untrimmed/SRR4449657.fasta",
+    "untrimmed/SRR4449656.fasta",
+    "untrimmed/SRR4449655.fasta",
+    "untrimmed/SRR4449654.fasta",
+    "untrimmed/SRR4449661.fasta",
+    "untrimmed/SRR4449660.fasta",
+    "untrimmed/SRR4449659.fasta",
+    "untrimmed/SRR4449658.fasta",
+    "untrimmed/SRR4449662.fasta",
+    "untrimmed/SRR4449665.fasta",
+    "untrimmed/SRR4449664.fasta",
+    "untrimmed/SRR4449663.fasta",
+    "untrimmed/SRR4449669.fasta",
+    "untrimmed/SRR4449668.fasta",
+    "untrimmed/SRR4449667.fasta",
+    "untrimmed/SRR4449666.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR4449649.t.fa.gz",
+    "trim/SRR4449648.t.fa.gz",
+    "trim/SRR4449647.t.fa.gz",
+    "trim/SRR4449646.t.fa.gz",
+    "trim/SRR4449653.t.fa.gz",
+    "trim/SRR4449652.t.fa.gz",
+    "trim/SRR4449651.t.fa.gz",
+    "trim/SRR4449650.t.fa.gz",
+    "trim/SRR4449657.t.fa.gz",
+    "trim/SRR4449656.t.fa.gz",
+    "trim/SRR4449655.t.fa.gz",
+    "trim/SRR4449654.t.fa.gz",
+    "trim/SRR4449661.t.fa.gz",
+    "trim/SRR4449660.t.fa.gz",
+    "trim/SRR4449659.t.fa.gz",
+    "trim/SRR4449658.t.fa.gz",
+    "trim/SRR4449662.t.fa.gz",
+    "trim/SRR4449665.t.fa.gz",
+    "trim/SRR4449664.t.fa.gz",
+    "trim/SRR4449663.t.fa.gz",
+    "trim/SRR4449669.t.fa.gz",
+    "trim/SRR4449668.t.fa.gz",
+    "trim/SRR4449667.t.fa.gz",
+    "trim/SRR4449666.t.fa.gz"
+  ],
+  "adapter": "TGGAATTC",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR4449649",
+      "SRR4449648",
+      "SRR4449647",
+      "SRR4449646"
+    ],
+    "B": [
+      "SRR4449653",
+      "SRR4449652",
+      "SRR4449651",
+      "SRR4449650"
+    ],
+    "C": [
+      "SRR4449657",
+      "SRR4449656",
+      "SRR4449655",
+      "SRR4449654"
+    ],
+    "D": [
+      "SRR4449661",
+      "SRR4449660",
+      "SRR4449659",
+      "SRR4449658"
+    ],
+    "E": [
+      "SRR4449662",
+      "SRR4449665",
+      "SRR4449664",
+      "SRR4449663"
+    ],
+    "F": [
+      "SRR4449669",
+      "SRR4449668",
+      "SRR4449667",
+      "SRR4449666"
+    ]
+  },
+  "annotation_conditions": [
+    "F"
+  ],
+  "genome_file": "../../Genomes/Scpom.GCA_000002945.2_ASM294v2_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_F/loci.gff3"
+}

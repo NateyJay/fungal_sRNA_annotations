@@ -1,0 +1,100 @@
+{
+  "project_name": "Rhirr.PRJNA722321",
+  "srrs": [
+    "SRR14251176",
+    "SRR14251177",
+    "SRR14251175",
+    "SRR14251174",
+    "SRR14251179",
+    "SRR14251181",
+    "SRR14251180",
+    "SRR14251178",
+    "SRR14251182",
+    "SRR14251183",
+    "SRR14251184",
+    "SRR14251185",
+    "SRR14251187",
+    "SRR14251186"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR14251176.fasta",
+    "untrimmed/SRR14251177.fasta",
+    "untrimmed/SRR14251175.fasta",
+    "untrimmed/SRR14251174.fasta",
+    "untrimmed/SRR14251179.fasta",
+    "untrimmed/SRR14251181.fasta",
+    "untrimmed/SRR14251180.fasta",
+    "untrimmed/SRR14251178.fasta",
+    "untrimmed/SRR14251182.fasta",
+    "untrimmed/SRR14251183.fasta",
+    "untrimmed/SRR14251184.fasta",
+    "untrimmed/SRR14251185.fasta",
+    "untrimmed/SRR14251187.fasta",
+    "untrimmed/SRR14251186.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR14251176.t.fa.gz",
+    "trim/SRR14251177.t.fa.gz",
+    "trim/SRR14251175.t.fa.gz",
+    "trim/SRR14251174.t.fa.gz",
+    "trim/SRR14251179.t.fa.gz",
+    "trim/SRR14251181.t.fa.gz",
+    "trim/SRR14251180.t.fa.gz",
+    "trim/SRR14251178.t.fa.gz",
+    "trim/SRR14251182.t.fa.gz",
+    "trim/SRR14251183.t.fa.gz",
+    "trim/SRR14251184.t.fa.gz",
+    "trim/SRR14251185.t.fa.gz",
+    "trim/SRR14251187.t.fa.gz",
+    "trim/SRR14251186.t.fa.gz"
+  ],
+  "adapter": null,
+  "alignment_file": null,
+  "conditions": {
+    "A": [
+      "SRR14251176",
+      "SRR14251177",
+      "SRR14251175",
+      "SRR14251174"
+    ],
+    "B": [
+      "SRR14251179",
+      "SRR14251181",
+      "SRR14251180",
+      "SRR14251178"
+    ],
+    "C": [
+      "SRR14251182",
+      "SRR14251183",
+      "SRR14251184"
+    ],
+    "D": [
+      "SRR14251185",
+      "SRR14251187",
+      "SRR14251186"
+    ]
+  },
+  "annotation_conditions": null,
+  "genome_file": "../../Genomes/Rhirr.GCA_026210795.1_ASM2621079v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "annotation_file": null,
+  "min_length": 15,
+  "max_length": 50,
+  "adapters": {
+    "SRR14251176.fasta": "TGGAATTC",
+    "SRR14251177.fasta": "TGGAATTC",
+    "SRR14251175.fasta": "TGGAATTC",
+    "SRR14251174.fasta": "TGGAATTC",
+    "SRR14251179.fasta": "TGGAATTC",
+    "SRR14251181.fasta": "TGGAATTC",
+    "SRR14251180.fasta": "TGGAATTC",
+    "SRR14251178.fasta": "TGGAATTC",
+    "SRR14251182.fasta": "TGGAATTC",
+    "SRR14251183.fasta": "TGGAATTC",
+    "SRR14251184.fasta": "TGGAATTC",
+    "SRR14251185.fasta": "TGGAATTC",
+    "SRR14251187.fasta": "TGGAATTC",
+    "SRR14251186.fasta": "TGGAATTC"
+  }
+}

@@ -286,7 +286,10 @@ cython_debug/
 # large files not suitable for git
 
 *.fa
+*.fa.fai
 *.fasta
+*.fna
+*.fna.fai
 *.fq
 *.fastq
 *.bam
@@ -298,3 +301,14 @@ cython_debug/
 *.bigwig
 *.gz
 *.txt
+*.gff3
+*.gff
+*.ps
+*.eps
+*.bam.bai
+*.ebwt
+*.sra
+*.sralite
+*.sra.tmp
+*.cm
+*.cm.*

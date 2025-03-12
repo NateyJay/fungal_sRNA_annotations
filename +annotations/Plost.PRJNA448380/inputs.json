@@ -1,0 +1,106 @@
+{
+  "project_name": "Plost.PRJNA448380",
+  "srrs": [
+    "SRR6926089",
+    "SRR6926090",
+    "SRR6926088",
+    "SRR6926082",
+    "SRR6926081",
+    "SRR6926080",
+    "SRR6926073",
+    "SRR6926072",
+    "SRR6926071",
+    "SRR6926055",
+    "SRR6926054",
+    "SRR6926053",
+    "SRR6926045",
+    "SRR6926046",
+    "SRR6926044",
+    "SRR6926063",
+    "SRR6926064",
+    "SRR6926062"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR6926089.fasta",
+    "untrimmed/SRR6926090.fasta",
+    "untrimmed/SRR6926088.fasta",
+    "untrimmed/SRR6926082.fasta",
+    "untrimmed/SRR6926081.fasta",
+    "untrimmed/SRR6926080.fasta",
+    "untrimmed/SRR6926073.fasta",
+    "untrimmed/SRR6926072.fasta",
+    "untrimmed/SRR6926071.fasta",
+    "untrimmed/SRR6926055.fasta",
+    "untrimmed/SRR6926054.fasta",
+    "untrimmed/SRR6926053.fasta",
+    "untrimmed/SRR6926045.fasta",
+    "untrimmed/SRR6926046.fasta",
+    "untrimmed/SRR6926044.fasta",
+    "untrimmed/SRR6926063.fasta",
+    "untrimmed/SRR6926064.fasta",
+    "untrimmed/SRR6926062.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR6926089.t.fa.gz",
+    "trim/SRR6926090.t.fa.gz",
+    "trim/SRR6926088.t.fa.gz",
+    "trim/SRR6926082.t.fa.gz",
+    "trim/SRR6926081.t.fa.gz",
+    "trim/SRR6926080.t.fa.gz",
+    "trim/SRR6926073.t.fa.gz",
+    "trim/SRR6926072.t.fa.gz",
+    "trim/SRR6926071.t.fa.gz",
+    "trim/SRR6926055.t.fa.gz",
+    "trim/SRR6926054.t.fa.gz",
+    "trim/SRR6926053.t.fa.gz",
+    "trim/SRR6926045.t.fa.gz",
+    "trim/SRR6926046.t.fa.gz",
+    "trim/SRR6926044.t.fa.gz",
+    "trim/SRR6926063.t.fa.gz",
+    "trim/SRR6926064.t.fa.gz",
+    "trim/SRR6926062.t.fa.gz"
+  ],
+  "adapter": "TGGAATTC",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR6926089",
+      "SRR6926090",
+      "SRR6926088"
+    ],
+    "B": [
+      "SRR6926082",
+      "SRR6926081",
+      "SRR6926080"
+    ],
+    "C": [
+      "SRR6926073",
+      "SRR6926072",
+      "SRR6926071"
+    ],
+    "D": [
+      "SRR6926055",
+      "SRR6926054",
+      "SRR6926053"
+    ],
+    "E": [
+      "SRR6926045",
+      "SRR6926046",
+      "SRR6926044"
+    ],
+    "F": [
+      "SRR6926063",
+      "SRR6926064",
+      "SRR6926062"
+    ]
+  },
+  "annotation_conditions": [
+    "F"
+  ],
+  "genome_file": "../../Genomes/Plost.GCA_014466165.1_ASM1446616v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_F/loci.gff3"
+}

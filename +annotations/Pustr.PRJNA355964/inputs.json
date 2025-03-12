@@ -1,0 +1,32 @@
+{
+  "project_name": "Pustr.PRJNA355964",
+  "srrs": [
+    "SRR5082569",
+    "SRR5078242"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR5082569.fasta",
+    "untrimmed/SRR5078242.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR5082569.t.fa.gz",
+    "trim/SRR5078242.t.fa.gz"
+  ],
+  "adapter": "TCGTATGC",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR5082569",
+      "SRR5078242"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Pustr.GCF_021901695.1_Pst134E36_v1_pri_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff/loci.gff3"
+}

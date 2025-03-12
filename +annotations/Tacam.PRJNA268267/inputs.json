@@ -1,0 +1,33 @@
+{
+  "project_name": "Tacam.PRJNA268267",
+  "srrs": [
+    "SRR1662192",
+    "SRR1662191"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR1662192.fasta",
+    "untrimmed/SRR1662191.fasta"
+  ],
+  "trimmed_libraries": null,
+  "adapter": "None",
+  "alignment_file": null,
+  "conditions": {
+    "A": [
+      "SRR1662192"
+    ],
+    "B": [
+      "SRR1662191"
+    ]
+  },
+  "annotation_conditions": null,
+  "genome_file": "../../Genomes/Tacam.GCA_003999685.1_ASM399968v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 50,
+  "annotation_file": null,
+  "adapters": {
+    "SRR1662192.fasta": "None",
+    "SRR1662191.fasta": "None"
+  }
+}

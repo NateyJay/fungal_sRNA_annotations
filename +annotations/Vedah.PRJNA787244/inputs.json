@@ -1,0 +1,32 @@
+{
+  "project_name": "Vedah.PRJNA787244",
+  "srrs": [
+    "SRR17168772",
+    "SRR17168773"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR17168772.fasta",
+    "untrimmed/SRR17168773.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR17168772.t.fa.gz",
+    "trim/SRR17168773.t.fa.gz"
+  ],
+  "adapter": "AGATCGGA",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR17168772",
+      "SRR17168773"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Vedah.GCA_000150675.2_ASM15067v2_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_A/loci.gff3"
+}

@@ -1,0 +1,56 @@
+{
+  "project_name": "Rhirr.PRJNA429556",
+  "srrs": [
+    "SRR6473125",
+    "SRR6473120",
+    "SRR6473126",
+    "SRR6473123",
+    "SRR6473122",
+    "SRR6473124"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR6473125.fasta",
+    "untrimmed/SRR6473120.fasta",
+    "untrimmed/SRR6473126.fasta",
+    "untrimmed/SRR6473123.fasta",
+    "untrimmed/SRR6473122.fasta",
+    "untrimmed/SRR6473124.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR6473125.t.fa.gz",
+    "trim/SRR6473120.t.fa.gz",
+    "trim/SRR6473126.t.fa.gz",
+    "trim/SRR6473123.t.fa.gz",
+    "trim/SRR6473122.t.fa.gz",
+    "trim/SRR6473124.t.fa.gz"
+  ],
+  "adapter": null,
+  "alignment_file": null,
+  "conditions": {
+    "A": [
+      "SRR6473125",
+      "SRR6473120",
+      "SRR6473126"
+    ],
+    "B": [
+      "SRR6473123",
+      "SRR6473122",
+      "SRR6473124"
+    ]
+  },
+  "annotation_conditions": null,
+  "genome_file": "../../Genomes/Rhirr.GCA_026210795.1_ASM2621079v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "annotation_file": null,
+  "min_length": 15,
+  "max_length": 50,
+  "adapters": {
+    "SRR6473125.fasta": "TGGAATTC",
+    "SRR6473120.fasta": "TGGAATTC",
+    "SRR6473126.fasta": "TGGAATTC",
+    "SRR6473123.fasta": "TGGAATTC",
+    "SRR6473122.fasta": "TGGAATTC",
+    "SRR6473124.fasta": "TGGAATTC"
+  }
+}

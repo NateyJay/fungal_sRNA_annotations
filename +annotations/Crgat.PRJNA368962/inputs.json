@@ -1,0 +1,27 @@
+{
+  "project_name": "Crgat.PRJNA368962",
+  "srrs": [
+    "SRR5209175"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR5209175.fasta"
+  ],
+  "trimmed_libraries": null,
+  "adapter": "None",
+  "alignment_file": null,
+  "conditions": {
+    "A": [
+      "SRR5209175"
+    ]
+  },
+  "annotation_conditions": null,
+  "genome_file": "../../Genomes/Crgat.GCA_000185945.1_ASM18594v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 50,
+  "annotation_file": null,
+  "adapters": {
+    "SRR5209175.fasta": "None"
+  }
+}

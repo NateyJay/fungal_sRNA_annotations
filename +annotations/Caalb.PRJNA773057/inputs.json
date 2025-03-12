@@ -1,0 +1,28 @@
+{
+  "project_name": "Caalb.PRJNA773057",
+  "srrs": [
+    "SRR16501716"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR16501716.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR16501716.t.fa.gz"
+  ],
+  "adapter": "TGGAATTC",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR16501716"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Caalb.GCF_000182965.3_ASM18296v3_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_A/loci.gff3"
+}

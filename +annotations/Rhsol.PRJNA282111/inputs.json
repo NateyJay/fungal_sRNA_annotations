@@ -1,0 +1,64 @@
+{
+  "project_name": "Rhsol.PRJNA282111",
+  "srrs": [
+    "SRR1994871",
+    "SRR1994872",
+    "SRR1994873",
+    "SRR1994874",
+    "SRR1994875",
+    "SRR1994876",
+    "SRR1994877"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR1994871.fasta",
+    "untrimmed/SRR1994872.fasta",
+    "untrimmed/SRR1994873.fasta",
+    "untrimmed/SRR1994874.fasta",
+    "untrimmed/SRR1994875.fasta",
+    "untrimmed/SRR1994876.fasta",
+    "untrimmed/SRR1994877.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR1994871.t.fa.gz",
+    "trim/SRR1994872.t.fa.gz",
+    "trim/SRR1994873.t.fa.gz",
+    "trim/SRR1994874.t.fa.gz",
+    "trim/SRR1994875.t.fa.gz",
+    "trim/SRR1994876.t.fa.gz",
+    "trim/SRR1994877.t.fa.gz"
+  ],
+  "adapter": "ATCTCGTA",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR1994871"
+    ],
+    "B": [
+      "SRR1994872"
+    ],
+    "C": [
+      "SRR1994873"
+    ],
+    "D": [
+      "SRR1994874"
+    ],
+    "E": [
+      "SRR1994875"
+    ],
+    "F": [
+      "SRR1994876"
+    ],
+    "G": [
+      "SRR1994877"
+    ]
+  },
+  "annotation_conditions": [
+    "B"
+  ],
+  "genome_file": "../../Genomes/Rhsol.GCA_016906535.1_ASM1690653v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_B/loci.gff3"
+}

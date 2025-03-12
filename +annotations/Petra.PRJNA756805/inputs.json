@@ -1,0 +1,36 @@
+{
+  "project_name": "Petra.PRJNA756805",
+  "srrs": [
+    "SRR15607207",
+    "SRR15607208",
+    "SRR15607209"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR15607207.fasta",
+    "untrimmed/SRR15607208.fasta",
+    "untrimmed/SRR15607209.fasta"
+  ],
+  "trimmed_libraries": [
+    "untrimmed/SRR15607207.fasta",
+    "untrimmed/SRR15607208.fasta",
+    "untrimmed/SRR15607209.fasta"
+  ],
+  "adapter": "PRE-TRIMMED",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR15607207",
+      "SRR15607208",
+      "SRR15607209"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Petra.GCA_000516985.1_PFICI_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": null
+}

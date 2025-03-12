@@ -1,0 +1,50 @@
+{
+  "project_name": "Comil.PRJNA496418",
+  "srrs": [
+    "SRR8054055",
+    "SRR8054060",
+    "SRR8054056",
+    "SRR8054057",
+    "SRR8054058",
+    "SRR8054059"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR8054055.fasta",
+    "untrimmed/SRR8054060.fasta",
+    "untrimmed/SRR8054056.fasta",
+    "untrimmed/SRR8054057.fasta",
+    "untrimmed/SRR8054058.fasta",
+    "untrimmed/SRR8054059.fasta"
+  ],
+  "trimmed_libraries": [
+    "untrimmed/SRR8054055.fasta",
+    "untrimmed/SRR8054060.fasta",
+    "untrimmed/SRR8054056.fasta",
+    "untrimmed/SRR8054057.fasta",
+    "untrimmed/SRR8054058.fasta",
+    "untrimmed/SRR8054059.fasta"
+  ],
+  "adapter": "PRE-TRIMMED",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR8054055",
+      "SRR8054060",
+      "SRR8054056"
+    ],
+    "B": [
+      "SRR8054057",
+      "SRR8054058",
+      "SRR8054059"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Comil.GCA_000225605.1_CmilitarisCM01_v01_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_A/loci.gff3"
+}

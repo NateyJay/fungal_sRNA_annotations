@@ -1,0 +1,64 @@
+{
+  "project_name": "Plcor.PRJNA944818",
+  "srrs": [
+    "SRR23874486",
+    "SRR23874487",
+    "SRR23874485",
+    "SRR23874488",
+    "SRR23874489",
+    "SRR23874490",
+    "SRR23874493",
+    "SRR23874491",
+    "SRR23874492"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR23874486.fasta",
+    "untrimmed/SRR23874487.fasta",
+    "untrimmed/SRR23874485.fasta",
+    "untrimmed/SRR23874488.fasta",
+    "untrimmed/SRR23874489.fasta",
+    "untrimmed/SRR23874490.fasta",
+    "untrimmed/SRR23874493.fasta",
+    "untrimmed/SRR23874491.fasta",
+    "untrimmed/SRR23874492.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR23874486.t.fa.gz",
+    "trim/SRR23874487.t.fa.gz",
+    "trim/SRR23874485.t.fa.gz",
+    "trim/SRR23874488.t.fa.gz",
+    "trim/SRR23874489.t.fa.gz",
+    "trim/SRR23874490.t.fa.gz",
+    "trim/SRR23874493.t.fa.gz",
+    "trim/SRR23874491.t.fa.gz",
+    "trim/SRR23874492.t.fa.gz"
+  ],
+  "adapter": "AGATCGGA",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR23874486",
+      "SRR23874487",
+      "SRR23874485"
+    ],
+    "B": [
+      "SRR23874488",
+      "SRR23874489",
+      "SRR23874490"
+    ],
+    "C": [
+      "SRR23874493",
+      "SRR23874491",
+      "SRR23874492"
+    ]
+  },
+  "annotation_conditions": [
+    "C"
+  ],
+  "genome_file": "../../Genomes/Plcor.GCA_019677325.2_ASM1967732v2_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_C/loci.gff3"
+}

@@ -1,0 +1,41 @@
+{
+  "project_name": "Nacas.PRJNA354404",
+  "srrs": [
+    "SRR8838457",
+    "SRR8838456",
+    "SRR8838455",
+    "SRR8838454"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR8838457.fasta",
+    "untrimmed/SRR8838456.fasta",
+    "untrimmed/SRR8838455.fasta",
+    "untrimmed/SRR8838454.fasta"
+  ],
+  "trimmed_libraries": null,
+  "adapter": "None",
+  "alignment_file": null,
+  "conditions": {
+    "Z.d1": [
+      "SRR8838457",
+      "SRR8838456"
+    ],
+    "A": [
+      "SRR8838455",
+      "SRR8838454"
+    ]
+  },
+  "annotation_conditions": null,
+  "genome_file": "../../Genomes/Nacas.GCA_000237345.1_ASM23734v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 50,
+  "annotation_file": null,
+  "adapters": {
+    "SRR8838457.fasta": "None",
+    "SRR8838456.fasta": "None",
+    "SRR8838455.fasta": "None",
+    "SRR8838454.fasta": "None"
+  }
+}

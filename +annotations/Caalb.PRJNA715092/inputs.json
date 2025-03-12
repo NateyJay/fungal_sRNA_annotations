@@ -1,0 +1,50 @@
+{
+  "project_name": "Caalb.PRJNA715092",
+  "srrs": [
+    "SRR14535487",
+    "SRR14535484",
+    "SRR14535488",
+    "SRR14535480",
+    "SRR14535479",
+    "SRR14535478"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR14535487.fasta",
+    "untrimmed/SRR14535484.fasta",
+    "untrimmed/SRR14535488.fasta",
+    "untrimmed/SRR14535480.fasta",
+    "untrimmed/SRR14535479.fasta",
+    "untrimmed/SRR14535478.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR14535487.t.fa.gz",
+    "trim/SRR14535484.t.fa.gz",
+    "trim/SRR14535488.t.fa.gz",
+    "trim/SRR14535480.t.fa.gz",
+    "trim/SRR14535479.t.fa.gz",
+    "trim/SRR14535478.t.fa.gz"
+  ],
+  "adapter": "AGATCGGA",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR14535487",
+      "SRR14535484",
+      "SRR14535488"
+    ],
+    "B": [
+      "SRR14535480",
+      "SRR14535479",
+      "SRR14535478"
+    ]
+  },
+  "annotation_conditions": [
+    "B"
+  ],
+  "genome_file": "../../Genomes/Caalb.GCF_000182965.3_ASM18296v3_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_B/loci.gff3"
+}

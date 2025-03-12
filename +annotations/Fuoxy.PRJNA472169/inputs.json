@@ -1,0 +1,78 @@
+{
+  "project_name": "Fuoxy.PRJNA472169",
+  "srrs": [
+    "SRR7187364",
+    "SRR7187367",
+    "SRR7187371",
+    "SRR7187368",
+    "SRR7187372",
+    "SRR7187365",
+    "SRR7187369",
+    "SRR7187360",
+    "SRR7187373",
+    "SRR7187374",
+    "SRR7187361",
+    "SRR7187362"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR7187364.fasta",
+    "untrimmed/SRR7187367.fasta",
+    "untrimmed/SRR7187371.fasta",
+    "untrimmed/SRR7187368.fasta",
+    "untrimmed/SRR7187372.fasta",
+    "untrimmed/SRR7187365.fasta",
+    "untrimmed/SRR7187369.fasta",
+    "untrimmed/SRR7187360.fasta",
+    "untrimmed/SRR7187373.fasta",
+    "untrimmed/SRR7187374.fasta",
+    "untrimmed/SRR7187361.fasta",
+    "untrimmed/SRR7187362.fasta"
+  ],
+  "trimmed_libraries": [
+    "untrimmed/SRR7187364.fasta",
+    "untrimmed/SRR7187367.fasta",
+    "untrimmed/SRR7187371.fasta",
+    "untrimmed/SRR7187368.fasta",
+    "untrimmed/SRR7187372.fasta",
+    "untrimmed/SRR7187365.fasta",
+    "untrimmed/SRR7187369.fasta",
+    "untrimmed/SRR7187360.fasta",
+    "untrimmed/SRR7187373.fasta",
+    "untrimmed/SRR7187374.fasta",
+    "untrimmed/SRR7187361.fasta",
+    "untrimmed/SRR7187362.fasta"
+  ],
+  "adapter": "PRE-TRIMMED",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR7187364",
+      "SRR7187367",
+      "SRR7187371"
+    ],
+    "B": [
+      "SRR7187368",
+      "SRR7187372",
+      "SRR7187365"
+    ],
+    "C": [
+      "SRR7187369",
+      "SRR7187360",
+      "SRR7187373"
+    ],
+    "D": [
+      "SRR7187374",
+      "SRR7187361",
+      "SRR7187362"
+    ]
+  },
+  "annotation_conditions": [
+    "D"
+  ],
+  "genome_file": "../../Genomes/Fuoxy.GCA_013085055.1_ASM1308505v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": null
+}

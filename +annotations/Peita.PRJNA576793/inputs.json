@@ -1,0 +1,54 @@
+{
+  "project_name": "Peita.PRJNA576793",
+  "srrs": [
+    "SRR10257020",
+    "SRR10257021",
+    "SRR10257022",
+    "SRR10257028",
+    "SRR10257027",
+    "SRR10257026",
+    "SRR10257025",
+    "SRR10257024",
+    "SRR10257023"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR10257020.fasta",
+    "untrimmed/SRR10257021.fasta",
+    "untrimmed/SRR10257022.fasta",
+    "untrimmed/SRR10257028.fasta",
+    "untrimmed/SRR10257027.fasta",
+    "untrimmed/SRR10257026.fasta",
+    "untrimmed/SRR10257025.fasta",
+    "untrimmed/SRR10257024.fasta",
+    "untrimmed/SRR10257023.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR10257020.t.fa.gz",
+    "trim/SRR10257021.t.fa.gz",
+    "trim/SRR10257022.t.fa.gz",
+    "trim/SRR10257028.t.fa.gz",
+    "trim/SRR10257027.t.fa.gz",
+    "trim/SRR10257026.t.fa.gz",
+    "trim/SRR10257025.t.fa.gz",
+    "trim/SRR10257024.t.fa.gz",
+    "trim/SRR10257023.t.fa.gz"
+  ],
+  "adapter": "AGATCGGA",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR10257020",
+      "SRR10257021",
+      "SRR10257022"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Peita.GCA_002116305.1_ASM211630v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_A/loci.gff3"
+}

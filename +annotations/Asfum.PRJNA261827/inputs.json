@@ -1,0 +1,102 @@
+{
+  "project_name": "Asfum.PRJNA261827",
+  "srrs": [
+    "SRR1583968",
+    "SRR1583967",
+    "SRR1583964",
+    "SRR1583963",
+    "SRR1583960",
+    "SRR1583959",
+    "SRR1583956",
+    "SRR1583955",
+    "SRR1583970",
+    "SRR1583969",
+    "SRR1583966",
+    "SRR1583965",
+    "SRR1583961",
+    "SRR1583962",
+    "SRR1583957",
+    "SRR1583958"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR1583968.fasta",
+    "untrimmed/SRR1583967.fasta",
+    "untrimmed/SRR1583964.fasta",
+    "untrimmed/SRR1583963.fasta",
+    "untrimmed/SRR1583960.fasta",
+    "untrimmed/SRR1583959.fasta",
+    "untrimmed/SRR1583956.fasta",
+    "untrimmed/SRR1583955.fasta",
+    "untrimmed/SRR1583970.fasta",
+    "untrimmed/SRR1583969.fasta",
+    "untrimmed/SRR1583966.fasta",
+    "untrimmed/SRR1583965.fasta",
+    "untrimmed/SRR1583961.fasta",
+    "untrimmed/SRR1583962.fasta",
+    "untrimmed/SRR1583957.fasta",
+    "untrimmed/SRR1583958.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR1583968.t.fa.gz",
+    "trim/SRR1583967.t.fa.gz",
+    "trim/SRR1583964.t.fa.gz",
+    "trim/SRR1583963.t.fa.gz",
+    "trim/SRR1583960.t.fa.gz",
+    "trim/SRR1583959.t.fa.gz",
+    "trim/SRR1583956.t.fa.gz",
+    "trim/SRR1583955.t.fa.gz",
+    "trim/SRR1583970.t.fa.gz",
+    "trim/SRR1583969.t.fa.gz",
+    "trim/SRR1583966.t.fa.gz",
+    "trim/SRR1583965.t.fa.gz",
+    "trim/SRR1583961.t.fa.gz",
+    "trim/SRR1583962.t.fa.gz",
+    "trim/SRR1583957.t.fa.gz",
+    "trim/SRR1583958.t.fa.gz"
+  ],
+  "adapter": "AGATCGGA",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR1583968",
+      "SRR1583967"
+    ],
+    "B": [
+      "SRR1583964",
+      "SRR1583963"
+    ],
+    "C": [
+      "SRR1583960",
+      "SRR1583959"
+    ],
+    "D": [
+      "SRR1583956",
+      "SRR1583955"
+    ],
+    "E": [
+      "SRR1583970",
+      "SRR1583969"
+    ],
+    "F": [
+      "SRR1583966",
+      "SRR1583965"
+    ],
+    "G": [
+      "SRR1583961",
+      "SRR1583962"
+    ],
+    "H": [
+      "SRR1583957",
+      "SRR1583958"
+    ]
+  },
+  "annotation_conditions": [
+    "G"
+  ],
+  "genome_file": "../../Genomes/Asfum.GCF_000002655.1_ASM265v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_G/loci.gff3"
+}

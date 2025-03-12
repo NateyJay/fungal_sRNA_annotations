@@ -1,0 +1,74 @@
+{
+  "project_name": "Scpom.PRJNA350506",
+  "srrs": [
+    "SRR4449756",
+    "SRR4449757",
+    "SRR4449760",
+    "SRR4449761",
+    "SRR4449764",
+    "SRR4449765",
+    "SRR4449758",
+    "SRR4449759",
+    "SRR4449762",
+    "SRR4449763",
+    "SRR4449766",
+    "SRR4449767"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR4449756.fasta",
+    "untrimmed/SRR4449757.fasta",
+    "untrimmed/SRR4449760.fasta",
+    "untrimmed/SRR4449761.fasta",
+    "untrimmed/SRR4449764.fasta",
+    "untrimmed/SRR4449765.fasta",
+    "untrimmed/SRR4449758.fasta",
+    "untrimmed/SRR4449759.fasta",
+    "untrimmed/SRR4449762.fasta",
+    "untrimmed/SRR4449763.fasta",
+    "untrimmed/SRR4449766.fasta",
+    "untrimmed/SRR4449767.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR4449756.t.fa.gz",
+    "trim/SRR4449757.t.fa.gz",
+    "trim/SRR4449760.t.fa.gz",
+    "trim/SRR4449761.t.fa.gz",
+    "trim/SRR4449764.t.fa.gz",
+    "trim/SRR4449765.t.fa.gz",
+    "trim/SRR4449758.t.fa.gz",
+    "trim/SRR4449759.t.fa.gz",
+    "trim/SRR4449762.t.fa.gz",
+    "trim/SRR4449763.t.fa.gz",
+    "trim/SRR4449766.t.fa.gz",
+    "trim/SRR4449767.t.fa.gz"
+  ],
+  "adapter": "CTGTAGGC",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR4449756",
+      "SRR4449757",
+      "SRR4449760",
+      "SRR4449761",
+      "SRR4449764",
+      "SRR4449765"
+    ],
+    "B": [
+      "SRR4449758",
+      "SRR4449759",
+      "SRR4449762",
+      "SRR4449763",
+      "SRR4449766",
+      "SRR4449767"
+    ]
+  },
+  "annotation_conditions": [
+    "B"
+  ],
+  "genome_file": "../../Genomes/Scpom.GCA_000002945.2_ASM294v2_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_B/loci.gff3"
+}

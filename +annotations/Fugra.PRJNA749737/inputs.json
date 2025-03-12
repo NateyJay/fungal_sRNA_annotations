@@ -1,0 +1,28 @@
+{
+  "project_name": "Fugra.PRJNA749737",
+  "srrs": [
+    "SRR15248620"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR15248620.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR15248620.t.fa.gz"
+  ],
+  "adapter": "AGATCGGA",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR15248620"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Fugra.GCF_000240135.3_ASM24013v3_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_A/loci.gff3"
+}

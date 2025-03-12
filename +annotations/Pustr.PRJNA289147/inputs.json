@@ -1,0 +1,68 @@
+{
+  "project_name": "Pustr.PRJNA289147",
+  "srrs": [
+    "SRR19441421",
+    "SRR19441424",
+    "SRR19441423",
+    "SRR19441422",
+    "SRR2094581",
+    "SRR2094580",
+    "SRR2094579",
+    "SRR2094492",
+    "SRR2094565",
+    "SRR2094566"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR19441421.fasta",
+    "untrimmed/SRR19441424.fasta",
+    "untrimmed/SRR19441423.fasta",
+    "untrimmed/SRR19441422.fasta",
+    "untrimmed/SRR2094581.fasta",
+    "untrimmed/SRR2094580.fasta",
+    "untrimmed/SRR2094579.fasta",
+    "untrimmed/SRR2094492.fasta",
+    "untrimmed/SRR2094565.fasta",
+    "untrimmed/SRR2094566.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR19441421.t.fa.gz",
+    "trim/SRR19441424.t.fa.gz",
+    "trim/SRR19441423.t.fa.gz",
+    "trim/SRR19441422.t.fa.gz",
+    "trim/SRR2094581.t.fa.gz",
+    "trim/SRR2094580.t.fa.gz",
+    "trim/SRR2094579.t.fa.gz",
+    "trim/SRR2094492.t.fa.gz",
+    "trim/SRR2094565.t.fa.gz",
+    "trim/SRR2094566.t.fa.gz"
+  ],
+  "adapter": "TGGAATTC",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR19441421",
+      "SRR19441424",
+      "SRR19441423",
+      "SRR19441422"
+    ],
+    "C": [
+      "SRR2094581",
+      "SRR2094580",
+      "SRR2094579"
+    ],
+    "D": [
+      "SRR2094492",
+      "SRR2094565",
+      "SRR2094566"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Pustr.GCF_021901695.1_Pst134E36_v1_pri_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_D/loci.gff3"
+}

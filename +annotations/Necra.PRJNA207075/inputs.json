@@ -1,0 +1,28 @@
+{
+  "project_name": "Necra.PRJNA207075",
+  "srrs": [
+    "SRR882074"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR882074.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR882074.t.fa.gz"
+  ],
+  "adapter": "TCGTATGC",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR882074"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Necra.GCF_000182925.2_NC12_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_A/loci.gff3"
+}

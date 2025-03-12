@@ -1,0 +1,36 @@
+{
+  "project_name": "Scscl.PRJNA607657",
+  "srrs": [
+    "SRR11117983",
+    "SRR11117991",
+    "SRR11117992"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR11117983.fasta",
+    "untrimmed/SRR11117991.fasta",
+    "untrimmed/SRR11117992.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR11117983.t.fa.gz",
+    "trim/SRR11117991.t.fa.gz",
+    "trim/SRR11117992.t.fa.gz"
+  ],
+  "adapter": "TGGAATTC",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR11117983",
+      "SRR11117991",
+      "SRR11117992"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Scscl.GCA_000146945.2_ASM14694v2_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_A/loci.gff3"
+}

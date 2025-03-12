@@ -1,0 +1,66 @@
+{
+  "project_name": "Clros.PRJEB43636",
+  "srrs": [
+    "ERR5960091",
+    "ERR5960110",
+    "ERR5960111",
+    "ERR5961147",
+    "ERR5950791",
+    "ERR5950921",
+    "ERR5950930",
+    "ERR5950932",
+    "ERR5950923",
+    "ERR5950927"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/ERR5960091.fasta",
+    "untrimmed/ERR5960110.fasta",
+    "untrimmed/ERR5960111.fasta",
+    "untrimmed/ERR5961147.fasta",
+    "untrimmed/ERR5950791.fasta",
+    "untrimmed/ERR5950921.fasta",
+    "untrimmed/ERR5950930.fasta",
+    "untrimmed/ERR5950932.fasta",
+    "untrimmed/ERR5950923.fasta",
+    "untrimmed/ERR5950927.fasta"
+  ],
+  "trimmed_libraries": [
+    "untrimmed/ERR5960091.fasta",
+    "untrimmed/ERR5960110.fasta",
+    "untrimmed/ERR5960111.fasta",
+    "untrimmed/ERR5961147.fasta",
+    "untrimmed/ERR5950791.fasta",
+    "untrimmed/ERR5950921.fasta",
+    "untrimmed/ERR5950930.fasta",
+    "untrimmed/ERR5950932.fasta",
+    "untrimmed/ERR5950923.fasta",
+    "untrimmed/ERR5950927.fasta"
+  ],
+  "adapter": "PRE-TRIMMED",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "C": [
+      "ERR5960091",
+      "ERR5960110",
+      "ERR5960111",
+      "ERR5961147"
+    ],
+    "F": [
+      "ERR5950791",
+      "ERR5950921",
+      "ERR5950930",
+      "ERR5950932",
+      "ERR5950923",
+      "ERR5950927"
+    ]
+  },
+  "annotation_conditions": [
+    "F"
+  ],
+  "genome_file": "../../Genomes/Clros.GCA_902827195.2_C_rosea_IK726_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff/loci.gff3"
+}

@@ -1,0 +1,44 @@
+{
+  "output_directory": "/home2/njohnson/fungi_annotations/annotations/Yalip.PRJNA964764",
+  "annotation_conditions": [
+    "A"
+  ],
+  "conditions": {
+    "A": [
+      "SRR24386479",
+      "SRR24386478",
+      "SRR24386477"
+    ],
+    "B": [
+      "SRR24386483",
+      "SRR24386485",
+      "SRR24386484"
+    ]
+  },
+  "alignment_file": "/home2/njohnson/fungi_annotations/annotations/Yalip.PRJNA964764/align/alignment.bam",
+  "name": "A",
+  "coverage_window": 250,
+  "kernel_window": 100,
+  "genome_scaling_factor": 0.4,
+  "merge_dist": 500,
+  "merge_strand_similarity": 0.5,
+  "min_length": 15,
+  "max_length": 30,
+  "filter_skew": false,
+  "max_skew": 0.9,
+  "filter_complexity": true,
+  "min_complexity": 10,
+  "filter_abundance": true,
+  "min_abundance": 50,
+  "filter_abundance_density": true,
+  "min_abundance_density": 100,
+  "bigwig": false,
+  "time_test": false,
+  "dont_revise_regions": false,
+  "dont_trim_loci": false,
+  "debug": false,
+  "test_mode": false,
+  "override": false,
+  "project_name": "Yalip.PRJNA964764",
+  "tool": "tradeoff"
+}

@@ -1,0 +1,28 @@
+{
+  "project_name": "Agbis.PRJNA770841",
+  "srrs": [
+    "SRR16308470"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR16308470.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR16308470.t.fa.gz"
+  ],
+  "adapter": "AGATCGGA",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR16308470"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Agbis.GCA_000300575.2_ASM30057v2_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_A/loci.gff3"
+}

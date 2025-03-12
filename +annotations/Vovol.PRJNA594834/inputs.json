@@ -1,0 +1,95 @@
+{
+  "project_name": "Vovol.PRJNA594834",
+  "srrs": [
+    "SRR10727288",
+    "SRR10727296",
+    "SRR10727297",
+    "SRR10727289",
+    "SRR10727290",
+    "SRR10727291",
+    "SRR10727292",
+    "SRR10727293",
+    "SRR10727294",
+    "SRR10727299",
+    "SRR10727298",
+    "SRR10727295"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR10727288.fasta",
+    "untrimmed/SRR10727296.fasta",
+    "untrimmed/SRR10727297.fasta",
+    "untrimmed/SRR10727289.fasta",
+    "untrimmed/SRR10727290.fasta",
+    "untrimmed/SRR10727291.fasta",
+    "untrimmed/SRR10727292.fasta",
+    "untrimmed/SRR10727293.fasta",
+    "untrimmed/SRR10727294.fasta",
+    "untrimmed/SRR10727299.fasta",
+    "untrimmed/SRR10727298.fasta",
+    "untrimmed/SRR10727295.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR10727288.t.fa.gz",
+    "trim/SRR10727296.t.fa.gz",
+    "trim/SRR10727297.t.fa.gz",
+    "trim/SRR10727289.t.fa.gz",
+    "trim/SRR10727290.t.fa.gz",
+    "trim/SRR10727291.t.fa.gz",
+    "trim/SRR10727292.t.fa.gz",
+    "trim/SRR10727293.t.fa.gz",
+    "trim/SRR10727294.t.fa.gz",
+    "trim/SRR10727299.t.fa.gz",
+    "trim/SRR10727298.t.fa.gz",
+    "trim/SRR10727295.t.fa.gz"
+  ],
+  "adapter": "AGATCGGA",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR10727288",
+      "SRR10727296",
+      "SRR10727297"
+    ],
+    "B": [
+      "SRR10727289",
+      "SRR10727290",
+      "SRR10727291"
+    ],
+    "C": [
+      "SRR10727292",
+      "SRR10727293",
+      "SRR10727294"
+    ],
+    "D": [
+      "SRR10727299",
+      "SRR10727298",
+      "SRR10727295"
+    ]
+  },
+  "annotation_conditions": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "genome_file": "../../Genomes/Vovol.GCA_000349905.1_VVO_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff/loci.gff3",
+  "adapters": {
+    "SRR10727288.fasta": "AGATCGGA",
+    "SRR10727296.fasta": "AGATCGGA",
+    "SRR10727297.fasta": "AGATCGGA",
+    "SRR10727289.fasta": "AGATCGGA",
+    "SRR10727290.fasta": "AGATCGGA",
+    "SRR10727291.fasta": "AGATCGGA",
+    "SRR10727292.fasta": "AGATCGGA",
+    "SRR10727293.fasta": "AGATCGGA",
+    "SRR10727294.fasta": "AGATCGGA",
+    "SRR10727299.fasta": "AGATCGGA",
+    "SRR10727298.fasta": "AGATCGGA",
+    "SRR10727295.fasta": "AGATCGGA"
+  }
+}

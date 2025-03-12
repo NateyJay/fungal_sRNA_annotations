@@ -1,0 +1,1 @@
+rsync -narv njohnson@darwin:/home2/njohnson/fungi_annotations/Genomes/*.gff* ./

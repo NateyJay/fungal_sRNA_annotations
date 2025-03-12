@@ -1,0 +1,50 @@
+{
+  "project_name": "Labic.PRJNA481323",
+  "srrs": [
+    "SRR7525707",
+    "SRR7525706",
+    "SRR7525705",
+    "SRR7525697",
+    "SRR7525698",
+    "SRR7525696"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR7525707.fasta",
+    "untrimmed/SRR7525706.fasta",
+    "untrimmed/SRR7525705.fasta",
+    "untrimmed/SRR7525697.fasta",
+    "untrimmed/SRR7525698.fasta",
+    "untrimmed/SRR7525696.fasta"
+  ],
+  "trimmed_libraries": [
+    "untrimmed/SRR7525707.fasta",
+    "untrimmed/SRR7525706.fasta",
+    "untrimmed/SRR7525705.fasta",
+    "untrimmed/SRR7525697.fasta",
+    "untrimmed/SRR7525698.fasta",
+    "untrimmed/SRR7525696.fasta"
+  ],
+  "adapter": "PRE-TRIMMED",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR7525707",
+      "SRR7525706",
+      "SRR7525705"
+    ],
+    "B": [
+      "SRR7525697",
+      "SRR7525698",
+      "SRR7525696"
+    ]
+  },
+  "annotation_conditions": [
+    "B"
+  ],
+  "genome_file": "../../Genomes/Labic.GCA_000143565.1_V1.0_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_B/loci.gff3"
+}

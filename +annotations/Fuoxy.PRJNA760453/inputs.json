@@ -1,0 +1,50 @@
+{
+  "project_name": "Fuoxy.PRJNA760453",
+  "srrs": [
+    "SRR15712226",
+    "SRR15712225",
+    "SRR15712227",
+    "SRR15712232",
+    "SRR15712233",
+    "SRR15712234"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR15712226.fasta",
+    "untrimmed/SRR15712225.fasta",
+    "untrimmed/SRR15712227.fasta",
+    "untrimmed/SRR15712232.fasta",
+    "untrimmed/SRR15712233.fasta",
+    "untrimmed/SRR15712234.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR15712226.t.fa.gz",
+    "trim/SRR15712225.t.fa.gz",
+    "trim/SRR15712227.t.fa.gz",
+    "trim/SRR15712232.t.fa.gz",
+    "trim/SRR15712233.t.fa.gz",
+    "trim/SRR15712234.t.fa.gz"
+  ],
+  "adapter": "AGATCGGA",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "B": [
+      "SRR15712226",
+      "SRR15712225",
+      "SRR15712227"
+    ],
+    "C": [
+      "SRR15712232",
+      "SRR15712233",
+      "SRR15712234"
+    ]
+  },
+  "annotation_conditions": [
+    "B"
+  ],
+  "genome_file": "../../Genomes/Fuoxy.GCA_013085055.1_ASM1308505v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_B/loci.gff3"
+}

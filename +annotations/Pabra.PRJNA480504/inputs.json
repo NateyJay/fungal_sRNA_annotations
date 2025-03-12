@@ -1,0 +1,62 @@
+{
+  "project_name": "Pabra.PRJNA480504",
+  "srrs": [
+    "SRR7505891",
+    "SRR7505892",
+    "SRR7505893",
+    "SRR7505894",
+    "SRR7505895",
+    "SRR7505896",
+    "SRR7505897",
+    "SRR7505898",
+    "SRR7505899"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR7505891.fasta",
+    "untrimmed/SRR7505892.fasta",
+    "untrimmed/SRR7505893.fasta",
+    "untrimmed/SRR7505894.fasta",
+    "untrimmed/SRR7505895.fasta",
+    "untrimmed/SRR7505896.fasta",
+    "untrimmed/SRR7505897.fasta",
+    "untrimmed/SRR7505898.fasta",
+    "untrimmed/SRR7505899.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR7505891.t.fa.gz",
+    "trim/SRR7505892.t.fa.gz",
+    "trim/SRR7505893.t.fa.gz",
+    "trim/SRR7505894.t.fa.gz",
+    "trim/SRR7505895.t.fa.gz",
+    "trim/SRR7505896.t.fa.gz",
+    "trim/SRR7505897.t.fa.gz",
+    "trim/SRR7505898.t.fa.gz",
+    "trim/SRR7505899.t.fa.gz"
+  ],
+  "adapter": "AGATCGGA",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "B": [
+      "SRR7505891",
+      "SRR7505892",
+      "SRR7505893",
+      "SRR7505894",
+      "SRR7505895",
+      "SRR7505899"
+    ],
+    "A": [
+      "SRR7505896",
+      "SRR7505897",
+      "SRR7505898"
+    ]
+  },
+  "annotation_conditions": [
+    "B"
+  ],
+  "genome_file": "../../Genomes/Pabra.GCA_000150735.2_Paracocci_br_Pb18_V2_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_A/loci.gff3"
+}

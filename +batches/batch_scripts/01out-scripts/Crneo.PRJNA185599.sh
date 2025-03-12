@@ -1,0 +1,33 @@
+#!/bin/bash
+
+mkdir ../annotations/Crneo.PRJNA185599
+cd ../annotations/Crneo.PRJNA185599
+
+echo Crneo.PRJNA185599
+
+
+echo "
+making inputs..."
+yasma.py inputs \
+-o . \
+--srrs SRR646636 \
+--conditions SRR646636:A \
+--genome_file ../../Genomes/Crneo.GCA_000091045.1_ASM9104v1_genomic.fa
+
+echo "
+downloading..."
+yasma.py download -o .
+
+echo "
+finding adapters..."
+yasma.py adapter -o .
+
+echo "
+trimming..."
+yasma.py trim -o . --cores 28
+
+echo "
+aligning..."
+yasma.py align -o . --cores 28
+
+

@@ -1,0 +1,23 @@
+#!/bin/bash
+
+mkdir ../annotations/Necra.PRJNA190099
+cd ../annotations/Necra.PRJNA190099
+
+echo Necra.PRJNA190099.C
+
+
+echo "
+size_profile..."
+yasma.py size-profile -o . -a ./align/alignment.bam
+
+# echo "
+hairpin..."
+# yasma.py hairpin -o . -n C -a tradeoff_C
+
+
+echo "
+"
+
+
+
+

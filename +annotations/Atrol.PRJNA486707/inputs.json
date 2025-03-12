@@ -1,0 +1,28 @@
+{
+  "project_name": "Atrol.PRJNA486707",
+  "srrs": [
+    "SRR7754484"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR7754484.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR7754484.t.fa.gz"
+  ],
+  "adapter": "CTGTAGGC",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR7754484"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Atrol.GCA_018343915.1_ASM1834391v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff_A/loci.gff3"
+}

@@ -1,0 +1,28 @@
+{
+  "project_name": "Rasol.PRJNA213313",
+  "srrs": [
+    "SRR943041"
+  ],
+  "untrimmed_libraries": [
+    "/home2/njohnson/fungi_annotations/annotations/Rasol.PRJNA213313/untrimmed/SRR943041.fasta"
+  ],
+  "trimmed_libraries": [
+    "/home2/njohnson/fungi_annotations/annotations/Rasol.PRJNA213313/trim/SRR943041.t.fq.gz"
+  ],
+  "adapter": "TCGTATGC",
+  "alignment_file": "/scratch/njohnson/Rasol.PRJNA213313.bam",
+  "conditions": {
+    "B": [
+      "SRR943041"
+    ]
+  },
+  "annotation_conditions": [
+    "B"
+  ],
+  "genome_file": "/home2/njohnson/fungi_annotations/annotations/Rasol.PRJNA213313/../../Genomes/Rasol.GCF_021117135.1_ASM2111713v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 30,
+  "annotation_file": "/home2/njohnson/fungi_annotations/annotations/Rasol.PRJNA213313/tradeoff/loci.gff3"
+}
