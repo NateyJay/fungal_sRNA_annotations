@@ -3,84 +3,6 @@
 metaloci.df <- get_metaloci.df()
 
 
-get_conservation_df <- function() {
-  
-  conservation.df <- data.frame()
-  gr.ls = list()
-  for (a in unique(metaloci.df$abbv)) {
-    gr <- readGFFAsGRanges(file.path("../metaloci", paste(a, ".meta.gff3", sep='')))
-    gr$name <- str_replace(gr$ID, "metalocus", a)
-    gr.ls[[a]] <- gr
-  }
-  
-  for (a in unique(metaloci.df$abbv)) {
-    
-    for (b in unique(metaloci.df$abbv)) {
-      
-      if (a == b) next
-      
-      message(paste(a, "x", b))
-      
-      # a.gr <- gr.ls[[a]]
-      # b.gr <- gr.ls[[b]]
-      intersection_file = file.path("../conservation/02out-gffs", paste(a, '_to_', b, '.gff3', sep=''))
-      
-      if (!file.exists(intersection_file)) {next}
-      
-      i.gr <- readGFFAsGRanges(intersection_file)
-      
-      i.df <- as.data.frame(findOverlaps(i.gr, gr.ls[[b]]))
-      
-      i.df$a = i.gr$ID[i.df$queryHits]
-      
-      f = match(i.df$a, gr.ls[[a]]$ID)
-      
-      i.df$a_type     <- gr.ls[[a]]$type[f]
-      i.df$a          <- gr.ls[[a]]$name[f]
-      i.df$a_contig   <- as.data.frame(gr.ls[[a]])$seqnames[f]
-      i.df$a_start    <- gr.ls[[a]]@ranges@start[f]
-      i.df$a_length   <- gr.ls[[a]]@ranges@width[f]
-      i.df$a_members  <- gr.ls[[a]]$member_loci[f]
-      i.df$a_projects <- gr.ls[[a]]$member_projects[f]
-        
-      
-      i.df$b = gr.ls[[b]]$ID[i.df$subjectHits]
-      
-      f = match(i.df$b, gr.ls[[b]]$ID)
-      
-      i.df$b_type     <- gr.ls[[b]]$type[f]
-      i.df$b          <- gr.ls[[b]]$name[f]
-      i.df$b_contig   <- as.data.frame(gr.ls[[b]])$seqnames[f]
-      i.df$b_start    <- gr.ls[[b]]@ranges@start[f]
-      i.df$b_length   <- gr.ls[[b]]@ranges@width[f]
-      i.df$b_members  <- gr.ls[[b]]$member_loci[f]
-      i.df$b_projects <- gr.ls[[b]]$member_projects[f]
-      
-      
-      i.df$pident    <- i.gr$pident[i.df$queryHits]
-      i.df$evalue    <- i.gr$evalue[i.df$queryHits]
-      
-      
-      if (any(is.na(i.df$a_type))) stop()
-      
-      conservation.df <- rbind(conservation.df, i.df)
-      
-    }
-  }
-  
-  for (c in c('evalue','pident','a_members','b_members','a_length','b_length')) {
-    conservation.df[[c]] <- as.numeric(conservation.df[[c]])
-  }
-  
-  return(conservation.df)
-}
-
-conservation.df <- get_conservation_df()
-
-
-
-
-
 # super plot --------------------------------------------------------------
 
 # meta.df <- get_meta.df()
@@ -94,6 +16,10 @@ conservation.df <- get_conservation_df()
 superplot <- function(edge.df, main='') {
   ## superplot expects a edge.df that contains organism metaloci in 'a' and 'b' with lwd and col attributes
   
+  par()$din
+  ## looks great at 6.5, 6.5
+  
+  
   genome.df <- get_genome.df()
   g.df <- genome.df
   g.df$center = g.df$tot_pos + g.df$length / 2
@@ -102,12 +28,14 @@ superplot <- function(edge.df, main='') {
   rownames(g.df) <- g.df$contig
   
   
-  gagg.df <- dcast(genome.df, abbv ~ 'length', value.var='length', fun.aggregate = sum)
+  gagg.df <- dcast(genome.df, abbv + genbank + has_annotation ~ 'length', value.var='length', fun.aggregate = sum)
+  gagg.df[!gagg.df$has_annotation & gagg.df$abbv %in% metaloci.df$abbv,]
+  
   
   gagg.df <- merge(gagg.df, species.df[,c('abbv','phylum','class','order', 'family','genus','taxid')], by='abbv')
   rownames(gagg.df) <- gagg.df$abbv
   
-  gagg.df        <- gagg.df[gagg.df$abbv %in% metaloci.df$abbv,]
+  gagg.df        <- gagg.df[gagg.df$abbv %in% unique(metaloci.df$abbv),]
   
   gagg.df <- gagg.df[order(gagg.df$genus),]
   gagg.df <- gagg.df[order(gagg.df$family),]
@@ -125,35 +53,11 @@ superplot <- function(edge.df, main='') {
   gagg.df$to      <- gagg.df$cum_gen
   gagg.df$to      <- gagg.df$to / max(gagg.df$to) * 2*pi
   
-  # gagg.df$from    <- gagg.df$cum_gen - gagg.df$length
   gagg.df$from    <- gagg.df$cum_start / max(gagg.df$cum_gen) * 2*pi
   gagg.df$center  <- (gagg.df$cum_start + gagg.df$length / 2 ) / max(gagg.df$cum_gen) * 2*pi
   gagg.df$center.x <- sqrt(text_radius) * cos(gagg.df$center)
   gagg.df$center.y <- sqrt(text_radius) * sin(gagg.df$center)
   
-  
-  
-  # e.df <- edge.df
-  # 
-  # if (is.null(e.df$col)) e.df$col = 'black'
-  # if (is.null(e.df$lwd)) e.df$lwd = 1
-  
-
-  # e.df$a_radians <- (g.df$center[match(e.df$a_contig, g.df$contig)] + gagg.df$cum_start[match(e.df$a, gagg.df$abbv)]) / max(gagg.df$cum_gen) * 2*pi
-  # e.df$b_radians <- (g.df$center[match(e.df$b_contig, g.df$contig)] + gagg.df$cum_start[match(e.df$b, gagg.df$abbv)]) / max(gagg.df$cum_gen) * 2*pi
-  # 
-  # e.df$ax <- cos(e.df$a_radians)
-  # e.df$ay <- sin(e.df$a_radians)
-  # 
-  # e.df$bx <- cos(e.df$b_radians)
-  # e.df$by <- sin(e.df$b_radians)
-  
-  
-
-  
-  # e.df$cont_radians = apply(e.df[,c("a_radians", 'b_radians')], 1, mean)
-  # e.df$cx <- sqrt(0.25) * cos(e.df$cont_radians)
-  # e.df$cy <- sqrt(0.25) * sin(e.df$cont_radians)
   
   
   contig_lines <- function(a_contig, b_contig, lwd=NULL, col=NULL, tn=100, crad=0.25) {
@@ -189,30 +93,28 @@ superplot <- function(edge.df, main='') {
       lines(bezier::bezier(t, mat), lwd=df$lwd[i], col=df$col[i])
       
     }
-    # contig_lines(a_contigs="JAYMDH010000005.1", b_contigs='WWBZ02000016.1', lwd=3, col='green')
     
   }
   
-  # segments(e.df$ax, e.df$ay, e.df$bx, e.df$by, lwd =e.df$lwd)
-  
-  par(mar=c(1,1,1,1))
+  par(mar=c(1,1,1,1), mfrow=c(1,1))
   plot(1,1, type='n', xlim=c(-1.2,1.2), ylim=c(-1.2,1.2), axes=F,
        main=main)
   
-  # for (i in 1:nrow(e.df)) {
-  #   mat = matrix(c(e.df$ax[i], e.df$cx[i], e.df$bx[i], e.df$ay[i], e.df$cy[i], e.df$by[i]), ncol=2, byrow = F)
-  #   lines(bezier::bezier(t, mat), lwd=e.df$lwd[i], col=e.df$col[i])
-  # }
-  # mat = matrix(c(e.df$))
-  # bezier()
   
-  draw_arcs <- function() {
+  draw_arcs <- function(show_annotation=T) {
+    
+    gagg.df$lwd = 10
+    if (show_annotation) {
+      gagg.df$lwd <- ifelse(gagg.df$has_annotation, 10, 3)
+    }
+    
     for (gi in 1:nrow(gagg.df)) {
-      plotrix::draw.arc(x=0, y=0, radius = 1, gagg.df$from[gi], gagg.df$to[gi], lwd=10, col= phylum_colors[gagg.df$phylum[gi]])
+      plotrix::draw.arc(x=0, y=0, radius = 1, gagg.df$from[gi], gagg.df$to[gi], 
+                        lwd=gagg.df$lwd[gi], col=phylum_colors[gagg.df$phylum[gi]])
     }
   }
   
-  # f = gagg.df$center.x < 0
+  
   
   gagg.df$adj.y <- 1-(gagg.df$center.y+sqrt(text_radius)) / (sqrt(text_radius)*2)
   gagg.df$adj.x <- 1-(gagg.df$center.x+sqrt(text_radius)) / (sqrt(text_radius)*2)
@@ -302,7 +204,7 @@ sp = superplot(e.df, main='View 2 - only replicated metaloci')
 
 sp$contig_lines(e.df$a_contig, e.df$b_contig, lwd=e.df$lwd, col='black')
 # sp$contig_lines(a_contig="JAYMDH010000005.1", b_contig='WWBZ02000016.1', lwd=3, col='orange')
-sp$draw_arcs()
+sp$draw_arcs(show_annotation = T)
 
 
 ## View 3 - RNA_20-24 ------------------------------------------------------
@@ -313,6 +215,7 @@ e.df <- conservation.df
 e.df <- e.df[e.df$a_type != "OtherRNA" & e.df$b_type != "OtherRNA",]
 e.df <- e.df[e.df$a != e.df$b,]
 
+
 e.df <- e.df[e.df$a_members > 1 | e.df$b_members > 1,]
 
 candidates = str_glue("RNA_{make_dicer_sizes(20:24)}")
@@ -320,6 +223,9 @@ candidates = str_glue("RNA_{make_dicer_sizes(20:24)}")
 e.df <- e.df[e.df$a_type %in% candidates & e.df$b_type %in% candidates,]
 
 e.df
+
+
+
 
 
 e.df <- dcast(e.df, a + a_contig + b + b_contig ~ 'count', fun.aggregate = length)
@@ -415,9 +321,9 @@ sp$draw_arcs()
 
 ## View 6 - non-genic ------------------------------------------------------
 
-context.df <- get_context.df()
-c.df <- context.df
-c.df$name <- str_replace(c.df$ID, "metalocus", c.df$abbv)
+# context.df <- get_context.df()
+# c.df <- context.df
+# c.df$name <- str_replace(c.df$ID, "metalocus", c.df$abbv)
 
 
 e.df <- conservation.df
@@ -431,8 +337,12 @@ e.df <- e.df[e.df$a_members > 1 | e.df$b_members > 1,]
 
 e.df
 
-e.df$a_context <- c.df$category[match(e.df$a, c.df$name)]
-e.df$b_context <- c.df$category[match(e.df$b, c.df$name)]
+
+e.df$a_context <- metaloci.df$context[match(e.df$a, metaloci.df$name)]
+e.df$b_context <- metaloci.df$context[match(e.df$b, metaloci.df$name)]
+#
+# e.df$a_context <- c.df$category[match(e.df$a, c.df$name)]
+# e.df$b_context <- c.df$category[match(e.df$b, c.df$name)]
 
 e.df <- e.df[e.df$a_context %in% c('intergenic','near-genic'),]
 e.df <- e.df[e.df$b_context %in% c('intergenic','near-genic'),]
@@ -449,8 +359,10 @@ e.df$lwd[e.df$count > 50] <- 0.75
 e.df$lwd[e.df$count > 100] <- 1
 
 
+abbv_with_context <- unique(metaloci.df$abbv[!is.na(metaloci.df$context)])
+abbv_no_context = unique(metaloci.df$abbv[!metaloci.df$abbv %in% abbv_with_context])
 
-sp = superplot(e.df, main='View 6 - non-genic loci')
+sp = superplot(e.df, main='View 6 - non-genic loci', hides=abbv_no_context)
 
 sp$contig_lines(e.df$a_contig, e.df$b_contig, lwd=e.df$lwd, col='black')
 # sp$contig_lines(a_contig="JAYMDH010000005.1", b_contig='WWBZ02000016.1', lwd=3, col='orange')
@@ -458,99 +370,285 @@ sp$draw_arcs()
 
 
 
-# View 7 - hairpins -------------------------------------------------------
+## View 7 - hairpins -------------------------------------------------------
 
 e.df <- conservation.df
 e.df <- e.df[e.df$a_type != "OtherRNA" & e.df$b_type != "OtherRNA",]
 e.df <- e.df[e.df$a != e.df$b,]
 
-na.df <- new_annotation.df
-na.df$key <- str_c(na.df$project, na.df$annotation, na.df$ID, sep='.')
-na.df$ml_name <- str_replace(na.df$metalocus, "metalocus", na.df$abbv)
-  
-  
-hp.df <- hairpin.df
-hp.df$key <- str_c(hp.df$project, hp.df$cond, hp.df$name, sep='.')
-hp.df$metalocus <- na.df$ml_name[match(hp.df$key, na.df$key)]
-
-hp.df <- hp.df[!is.na(hp.df$metalocus),]
-
-hp.df$ruling_desc[hp.df$ruling == 'x x xx xx x -'] <- "near_miRNA"
-hp.df$ruling_desc[hp.df$ruling == 'x x xx xx x x'] <- "miRNA"
-
-e.df$a_ruling <- hp.df$ruling_desc[match(e.df$a, hp.df$metalocus)]
-e.df$b_ruling <- hp.df$ruling_desc[match(e.df$b, hp.df$metalocus)]
+e.df$a_ruling <- metaloci.df$hp_cat[match(e.df$a, metaloci.df$name)]
+e.df$b_ruling <- metaloci.df$hp_cat[match(e.df$b, metaloci.df$name)]
 
 
-e.df$a_ruling[is.na(e.df$a_ruling)] <- '-'
-e.df$b_ruling[is.na(e.df$b_ruling)] <- '-'
+table(e.df$a_ruling)
+table(e.df$b_ruling)
+
+# na.df <- new_annotation.df
+# na.df$key <- str_c(na.df$project, na.df$annotation, na.df$ID, sep='.')
+# na.df$ml_name <- str_replace(na.df$metalocus, "metalocus", na.df$abbv)
+#   
+#   
+# hp.df <- hairpin.df
+# hp.df$key <- str_c(hp.df$project, hp.df$cond, hp.df$name, sep='.')
+# hp.df$metalocus <- na.df$ml_name[match(hp.df$key, na.df$key)]
+# 
+# hp.df <- hp.df[!is.na(hp.df$metalocus),]
+# 
+# hp.df$ruling_desc[hp.df$ruling == 'x x xx xx x -'] <- "near_miRNA"
+# hp.df$ruling_desc[hp.df$ruling == 'x x xx xx x x'] <- "miRNA"
+# 
+# e.df$a_ruling <- hp.df$ruling_desc[match(e.df$a, hp.df$metalocus)]
+# e.df$b_ruling <- hp.df$ruling_desc[match(e.df$b, hp.df$metalocus)]
+
+
+# e.df$a_ruling[is.na(e.df$a_ruling)] <- '-'
+# e.df$b_ruling[is.na(e.df$b_ruling)] <- '-'
+
+
 
 resolve_ruling <- function(x) {
   if (length(unique(x)) == 1) return(unique(x))
   
+  
+  # if ("(insufficient)" %in% x & "-" %in% x) return('(insufficient)')
+  
+  if ("bad_duplex" %in% x) return("bad_duplex")
+  if ("bad_hairpin" %in% x) return("bad_hairpin")
+  if ("(overruled)" %in% x) return('(overruled)')
   if ("miRNA" %in% x) return("miRNA")
   if ("near_miRNA" %in% x) return("near_miRNA")
   return("-")
 }
 
-
+e.df <- e.df[!(e.df$a_ruling == '(undescribed)' & e.df$b_ruling == '(undescribed)'),]
 
 e.df$ruling <- apply(e.df[,c('a_ruling','b_ruling')], 1, resolve_ruling)
 e.df <- e.df[e.df$ruling != '-',]
 
-e.df <- e.df[e.df$ruling == 'miRNA',]
+# e.df <- e.df[e.df$ruling == 'miRNA',]
+
+e.df <- e.df[!e.df$ruling %in% c('bad_hairpin')]
 
 table(e.df$a)
 table(e.df$b)
+table(e.df$ruling)
+
+e.df$lwd = 1
+e.df$lwd[e.df$ruling == 'miRNA'] <- 4
+
+e.df$col = 'grey'
+e.df$col[e.df$ruling == 'bad_duplex'] <- 'gold'
+e.df$col[e.df$ruling == 'imprecise'] <- 'purple'
+e.df$col[e.df$ruling == 'miRNA'] <- 'red'
+
 
 sp = superplot(e.df, main='View 7 - miRNAs')
+
+sp$contig_lines(e.df$a_contig, e.df$b_contig, lwd=e.df$lwd, col=e.df$col)
+# sp$contig_lines(a_contig="JAYMDH010000005.1", b_contig='WWBZ02000016.1', lwd=3, col='orange')
+sp$draw_arcs()
+
+
+
+
+# View 8 - struc RNAs -----------------------------------------------------
+
+
+
+# context.df <- get_context.df()
+# c.df <- context.df
+# c.df$name <- str_replace(c.df$ID, "metalocus", c.df$abbv)
+
+
+e.df <- conservation.df
+
+e.df <- e.df[e.df$a_type != "OtherRNA" & e.df$b_type != "OtherRNA",]
+e.df <- e.df[e.df$a != e.df$b,]
+
+e.df <- e.df[e.df$a_members > 1 | e.df$b_members > 1,]
+
+
+
+
+e.df$a_context <- metaloci.df$context[match(e.df$a, metaloci.df$name)]
+e.df$b_context <- metaloci.df$context[match(e.df$b, metaloci.df$name)]
+#
+# e.df$a_context <- c.df$category[match(e.df$a, c.df$name)]
+# e.df$b_context <- c.df$category[match(e.df$b, c.df$name)]
+
+e.df <- e.df[!e.df$a_context %in% c('intergenic','near-genic'),]
+e.df <- e.df[!e.df$b_context %in% c('intergenic','near-genic'),]
+
+e.df <- e.df[!str_detect(e.df$a_context, "mRNA"),]
+e.df <- e.df[!str_detect(e.df$b_context, "mRNA"),]
+
+
+e.df <- dcast(e.df, a + a_contig + b + b_contig ~ 'count', fun.aggregate = length)
+
+e.df <- e.df[order(e.df$count),]
+
+e.df$lwd = 0.15
+e.df$lwd[e.df$count > 5] <- 0.25
+e.df$lwd[e.df$count > 25] <- 0.5
+e.df$lwd[e.df$count > 50] <- 0.75
+e.df$lwd[e.df$count > 100] <- 1
+
+
+
+sp = superplot(e.df, main='View 7 - tRNA and rRNA loci')
 
 sp$contig_lines(e.df$a_contig, e.df$b_contig, lwd=e.df$lwd, col='black')
 # sp$contig_lines(a_contig="JAYMDH010000005.1", b_contig='WWBZ02000016.1', lwd=3, col='orange')
 sp$draw_arcs()
 
 
-get_eps_file = function(ml) {
-  abbv = str_sub(ml, 1, 5)
-  # ml = str_replace(ml, abbv, "metalocus")
+
+# View 9 - RNA_20-24 not struc -------------------------------------------
+
+
+e.df <- conservation.df
+
+e.df <- e.df[e.df$a_type != "OtherRNA" & e.df$b_type != "OtherRNA",]
+e.df <- e.df[e.df$a != e.df$b,]
+
+
+# e.df <- e.df[e.df$a_projects > 1 | e.df$b_projects > 1,]
+e.df <- e.df[e.df$a_members > 1 | e.df$b_members > 1,]
+
+candidates = str_glue("RNA_{make_dicer_sizes(20:24)}")
+
+e.df <- e.df[e.df$a_type %in% candidates & e.df$b_type %in% candidates,]
+
+e.df
+
+
+e.df$a_context <- metaloci.df$context[match(e.df$a, metaloci.df$name)]
+e.df$b_context <- metaloci.df$context[match(e.df$b, metaloci.df$name)]
+
+for (feature in c("tRNA","rRNA", 'spliceosomal',"mRNA", "near-genic", "intergenic")) {
+  e.df$context[str_detect(e.df$a_context, feature) | str_detect(e.df$b_context, feature)] <- feature
+}
+table(e.df$context)
+
+
+
+
+plot_edges <- function(key, col, lwd=NULL) {
   
-  na.df <- new_annotation.df[new_annotation.df$name == ml,]
-  na.df$key <- str_c(na.df$project, na.df$annotation, na.df$ID, sep='.')
+  e.df <- e.df[str_detect(e.df$context, key),]
   
+  e.df <- dcast(e.df, a + a_contig + b + b_contig ~ 'count')
   
-  hp.df <- hairpin.df
-  hp.df$key <- str_c(hp.df$project, hp.df$cond, hp.df$name, sep='.')
+  e.df <- e.df[order(e.df$count),]
   
-  hp.df[hp.df$key %in% na.df$key,]
+  if (is.null(lwd)) {
+    e.df$lwd = 0.25
+    # e.df$lwd[e.df$count > 5] <- 0.25
+    e.df$lwd[e.df$count > 25] <- 0.5
+    e.df$lwd[e.df$count > 50] <- 0.75
+    e.df$lwd[e.df$count > 100] <- 1
+  } else {
+    e.df$lwd = lwd
+  }
   
-  hp.df <- hairpin.df[hairpin.df$project %in%]
+  sp$contig_lines(e.df$a_contig, e.df$b_contig, lwd=e.df$lwd, col=col)
   
 }
 
-# cytoscape ---------------------------------------------------------------
+sp = superplot(e.df, main=str_glue('View9a - RNA_20-24'))
+plot_edges("tRNA", 'blue')
+plot_edges("mRNA", 'seagreen')
+plot_edges("rRNA", 'red')
+plot_edges("spliceosomal", 'purple3')
+sp$draw_arcs()
+
+sp = superplot(e.df, main=str_glue('View9b - RNA_20-24'))
+plot_edges("near-genic", 'goldenrod')
+plot_edges("intergenic", 'black')
+sp$draw_arcs()
 
 
-library(RCy3)
-cytoscapePing ()
-cytoscapeVersionInfo ()
 
 
-node.df <- species.df
-node.df <- node.df[node.df$abbv %in% metaloci.df$abbv,]
-node.df$id <- node.df$abbv
+plot(1,1, type='n', xlim=c(0,3), ylim=c(0,5), axes=F)
+segments(rep(1,4), 1:4, rep(2,4), 1:4, lwd=c(0.25,0.5, 0.75, 1))
+text(2, 1:4, c("[0,25)", "[25,50)", "[50,100)", "[100,)"), pos=4)
 
 
-edge.df <- c.df
-head(edge.df)
 
-edge.df$source <- str_sub(edge.df$a, 1,5)
-edge.df$target <- str_sub(edge.df$b, 1,5)
-edge.df <- dcast(edge.df, source + target ~ 'weight', fun.aggregate = length)
-edge.df$weight <- edge.df$weight / 300
-edge.df$weight[edge.df$weight > 300] <- 300
+# View 10 - hairpins again ------------------------------------------------
 
-createNetworkFromDataFrames(node.df,edge.df, title="all edges")
 
-layoutNetwork('attributes-layout')
 
-?layoutNetwork
+e.df <- conservation.df
+# e.df <- e.df[e.df$a_type != "OtherRNA" & e.df$b_type != "OtherRNA",]
+e.df <- e.df[e.df$a != e.df$b,]
+
+e.df$a_cat <- metaloci.df$hp_cat[match(e.df$a, metaloci.df$name)]
+e.df$b_cat <- metaloci.df$hp_cat[match(e.df$b, metaloci.df$name)]
+
+e.df$a_context <- metaloci.df$context[match(e.df$a, metaloci.df$name)]
+e.df$b_context <- metaloci.df$context[match(e.df$b, metaloci.df$name)]
+
+e.df <- e.df[e.df$a_context %in% c('intergenic','near-genic') | e.df$b_context %in% c('intergenic','near-genic'),]
+
+table(e.df$a_cat)
+table(e.df$b_cat)
+
+# e.df <- e.df[e.df$a_cat == 'miRNA',]
+
+
+sp = superplot(e.df, main=str_glue('Hairpin-derived RNAs'))
+
+f = e.df$a_cat == 'imprecise' | e.df$b_cat == 'imprecise'
+sp$contig_lines(e.df$a_contig[f], e.df$b_contig[f], col=hairpin_colors['imprecise'], lwd=0.5)
+
+
+# f = e.df$a_cat == 'miRNA' | e.df$b_cat == 'miRNA'
+# sp$contig_lines(e.df$a_contig[f], e.df$b_contig[f], col=hairpin_colors['miRNA'], lwd=3.5)
+
+
+
+sp$draw_arcs()
+
+
+
+### non visualized
+
+
+e.df <- conservation.df
+e.df$a_cat <- metaloci.df$hp_cat[match(e.df$a, metaloci.df$name)]
+e.df$b_cat <- metaloci.df$hp_cat[match(e.df$b, metaloci.df$name)]
+
+
+e.df <- e.df[e.df$a_cat == 'miRNA',]
+
+
+
+
+# assessing annotations ---------------------------------------------------
+
+get_gff.df <- function() {
+  gff.df <- data.frame()
+  for (gff_file in Sys.glob('../+genomes/*.gff')) {
+    message(gff_file)
+    g.df <- readGFF(gff_file)
+    
+    abbv = str_sub(basename(gff_file), 1, 5)
+    
+    tab = as.data.frame(table(g.df$type))
+    names(tab) <- c('type','count')
+    tab$abbv = abbv
+    
+    gff.df = rbind(gff.df, tab)
+    
+  }
+}
+
+g.df <- gff.df
+g.df <- dcast(g.df, abbv ~ type, value.var='count')
+g.df[is.na(g.df)] <- 0
+rownames(g.df) <- g.df$abbv
+
+g.df[c('Scscl', 'Bocin'),]
+g.df

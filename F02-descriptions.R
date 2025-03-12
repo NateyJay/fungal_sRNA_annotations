@@ -512,11 +512,11 @@ lp_plot_values(lp)
 
 
 
-# barplots of metaloci ----------------------------------------------------
+# 02-A counts of metaloci ----------------------------------------------------
 
-metaloci.df <- get_metaloci.df()
+# metaloci.df <- get_metaloci.df()
 
-make_metalocus_bars <- function() {
+make_metalocus_bars <- function(save=F) {
   ml.df <- metaloci.df
   # ml.df$degradation_product <- ifelse(metaloci.df$type == 'OtherRNA', "OtherRNA", "sRNA")
   ml.df$clustered <- ifelse(ml.df$meta_defined_locus == 'True', "clustered", "solitary")
@@ -544,7 +544,10 @@ make_metalocus_bars <- function() {
   
   col = c('darkslategrey', 'lavenderblush2')
   
-  par(mfrow=c(1,2))
+  file_name = "F02-metalocus_replication.svg"
+  if (save) svglite(file_name, 4.7, 6.0)
+  
+  par(mfrow=c(1,3))
   par(mar=c(4,6,4,1.5))
   par(mgp=c(2,0.75,0))
   
@@ -556,14 +559,21 @@ make_metalocus_bars <- function() {
   text(1.2, 1:nrow(tab)*1.2-0.6, tab$rep_count)
   par(xpd=F)
   
-  par(mar=c(4,0.5,4,6))
+  par(mar=c(4,0.5,4,2))
   barplot(t(tab[,c('clustered', 'solitary')]), horiz=T,
           names.arg = rep("", nrow(ptab)),
           xlab='Meta Loci',
           col = col)
+  
+  plot.new()
+  
+  legend('left', c('replicated', 'only one'), fill=col, inset=0.01)
+  
+  if (save) dev.off()
+  if (save) ADsvg(file_name)
 }
 
-make_metalocus_bars()
+make_metalocus_bars(T)
 
 
 ## Just the passing ones
@@ -583,6 +593,9 @@ ml.df$clustered <- ifelse(ml.df$meta_defined_locus == 'True', "clustered", "soli
 ml.df <- ml.df[ml.df$type != 'OtherRNA',]
 ml.df$pstrand <- abs(ml.df$fracTop -0.5) * 2
 
+ml.df$abbv <- factor(ml.df$abbv, levels=rev(unique(ml.df$abbv)))
+
+
 
 par(mar=c(4,5,5,2), mfrow=c(1,1))
 boxplot(ml.df$pstrand ~ ml.df$abbv, horizontal=T, las=1, outline=F,
@@ -591,6 +604,27 @@ boxplot(ml.df$pstrand ~ ml.df$abbv, horizontal=T, las=1, outline=F,
 tab = table(ml.df$strand, ml.df$abbv)
 tab
 
+
+
+
+# checking lengths --------------------------------------------------------
+
+
+ml.df <- metaloci.df
+# ml.df$degradation_product <- ifelse(metaloci.df$type == 'OtherRNA', "OtherRNA", "sRNA")
+ml.df$clustered <- ifelse(ml.df$meta_defined_locus == 'True', "clustered", "solitary")
+ml.df <- ml.df[ml.df$type != 'OtherRNA',]
+
+ml.df$abbv <- factor(ml.df$abbv, levels=rev(unique(ml.df$abbv)))
+
+
+
+par(mar=c(4,5,5,2), mfrow=c(1,1))
+boxplot(ml.df$length ~ ml.df$abbv, horizontal=T, las=1, outline=F,
+        ylab='', xlab='Meta locus length', ylim = c(0,5000))
+
+tab = table(ml.df$strand, ml.df$abbv)
+tab
 
 
 
@@ -630,36 +664,33 @@ p.df <- project.df
 # ml.df <- ml.df[ml.df$type != 'OtherRNA',]
 
 
-ml.df <- get_context.df()
 
 
-plot_context_bars <- function() {
-  colors = c(intergenic='grey',
-             `near-genic`= 'gold',
-             unstranded_genic = 'cyan',
-             antisense_genic = 'purple',
-             sense_genic = 'firebrick')
+plot_context_bars <- function(save=F) {
   
-  # tab = table(ml.df$abbv, ml.df$category)
-  # tab = tab / rowSums(tab)
-  # tab <- tab[,names(colors)]
-  # barplot(t(tab), horiz=T, las=1, col=colors, main='all')
-  # 
-  f = ml.df$type != 'OtherRNA' & as.numeric(ml.df$member_loci) > 1
-  # 
-  # 
-  # tab = table(ml.df$abbv[f], ml.df$category[f])
-  # tab = tab / rowSums(tab)
-  # tab <- tab[,names(colors)]
-  # barplot(t(tab), horiz=T, las=1, col=colors, main='sRNAs only')
+  ml.df <- metaloci.df
+  colors = context_colors
+  
+  f = ml.df$type != 'OtherRNA'
+  # f = ml.df$type != 'OtherRNA' & as.numeric(ml.df$member_loci) > 1
+  
+  ml.df$context <- str_replace(ml.df$context, "mRNA|tRNA|rRNA|spliceosomal", 'genic')
+  ml.df <- ml.df[f,]
   
   
-  tab = table(ml.df$abbv[f], ml.df$category[f])
+  tab = table(ml.df$abbv, ml.df$context)
+  tab <- tab[rowSums(tab) > 0,]
+  
+  tab = tab[rev(rownames(tab)),]
   
   
   y = 1:nrow(tab) - 0.5
-  
+  xmax = 2500
   # par()$din 5.14, 7.3
+  
+  
+  file_name="F02-metaloci_contexts.svg"
+  if (save) svglite(file_name, 4.11, 6.47)
   
   layout(matrix(c(3,2,1,5,4), nrow=1), widths=c(0.5,0.2,1,0.2,1))
   par(mar=c(4,5,4,0))
@@ -667,13 +698,15 @@ plot_context_bars <- function() {
   
   par(mar=c(4,0.2,4,2))
   b=barplot(t(tab[,c("intergenic","near-genic")]), horiz=T, las=1, col=colors, main='intergenic',
-          xlim=c(0,1300), names.arg = rep("", nrow(tab)), space=0.5)
+          xlim=c(0,xmax), names.arg = rep("", nrow(tab)), space=0.5)
   
   par(mar=c(4,0,4,0))
   plot(1,1,type='n', xlim=c(0,1), ylim=c(0.5, max(b)+0.5), axes=F, xlab='', ylab='')
   
   for (t in 1:nrow(tab)) {
-    plotrix::floating.pie(0.5, b[t], x=unlist(tab[t,c('intergenic','near-genic')]), radius=0.3,
+    vals = unlist(tab[t,c('intergenic','near-genic')])
+    if (sum(vals) == 0) next
+    plotrix::floating.pie(0.5, b[t], x=vals, radius=0.3,
                           col=colors[1:2])
   }
   
@@ -685,25 +718,60 @@ plot_context_bars <- function() {
   
   par(mar=c(4,0.2,4,2))
   b = barplot(t(tab[,c("unstranded_genic", "antisense_genic", "sense_genic")]), horiz=T, las=1, col=colors[3:5], main='genic', 
-          xlim=c(0,1300),names.arg = rep("", nrow(tab)), space=0.5)
+          xlim=c(0,xmax),names.arg = rep("", nrow(tab)), space=0.5)
   
   
   par(mar=c(4,0,4,0))
   plot(1,1,type='n', xlim=c(0,1), ylim=c(0.5, max(b)+0.5), axes=F, xlab='', ylab='')
   
   for (t in 1:nrow(tab)) {
+    vals = unlist(tab[t,c("unstranded_genic", "antisense_genic", "sense_genic")])
+    if (sum(vals) == 0) next
     plotrix::floating.pie(0.5, b[t], 
-                          x=unlist(tab[t,c("unstranded_genic", "antisense_genic", "sense_genic")]), 
+                          x=vals, 
                           radius=0.3,
                           col=colors[3:5])
   }
 
+  if (save) dev.off()
+  if (save) ADsvg(file_name)
+  
 }
-plot_context_bars()
+plot_context_bars(F)
+
+plot.new()
+legend('topleft', names(context_colors), fill=context_colors, title='context')
 
 
+# what gene types? --------------------------------------------------------
 
+plot_gene_types <- function() {
+  
+  ml.df <- metaloci.df
+  ml.df <- ml.df[ml.df$member_loci > 1,]
+  ml.df <- ml.df[ml.df$sizecall != "N",]
+  
+  ml.df$context <- str_replace(ml.df$context, "sense_|antisense_|unstranded_", "")
+  
+  table(ml.df$context)
+  
+  
+  tab <- table(ml.df$abbv, ml.df$context)
+  # tab[,c('intergenic', 'near-genic', 'rRNA','tRNA','mRNA','spliceosomal')]
+  tab <- tab[,names(deep_context_colors)]
+  ptab <- tab / rowSums(tab)
+  
+  par(mar=c(5,10,4,10), mfrow=c(1,1))
+  barplot(t(ptab), horiz=T, las=1, col=deep_context_colors, xlab='Prop.')
+  par(xpd=T)
+  legend('topright', names(deep_context_colors), fill=deep_context_colors, cex=0.8,
+         inset=c(-0.9,0))
+  par(xpd=F)
+  
+  
+}
 
+plot_gene_types()
 
 # What sizes? -------------------------------------------------------------
 
@@ -731,3 +799,4 @@ lp <- layermap(val.df, palette='reds',
                zlim=c(0, 0.25))
 lp <- lp_names(lp, 2)
 lp <- lp_names(lp, 3)
+

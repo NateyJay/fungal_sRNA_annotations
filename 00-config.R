@@ -7,6 +7,7 @@ library(ape)
 library(GenomicRanges)
 library(rtracklayer)
 library(Rsamtools)
+library(genesectR)
 
 
 # detach("package:layermap", unload = TRUE)
@@ -34,6 +35,19 @@ host_colors <- c('Plant'= 'mediumseagreen',
                  'Worm'='orange')
 
 
+context_colors <- c(intergenic='grey',
+                    `near-genic`= 'gold',
+                    unstranded_genic = 'cyan',
+                    antisense_genic = 'purple',
+                    sense_genic = 'firebrick')
+
+
+deep_context_colors <- c(intergenic='grey',
+                    `near-genic`= 'gold',
+                    rRNA = 'lightblue2',
+                    tRNA = 'darkseagreen1',
+                    mRNA = 'snow',
+                    spliceosomal='orange')
 
 
 size_colors = c(
@@ -46,6 +60,7 @@ size_colors = c(
   `25` = "darkred"
 )
 
+hairpin_colors = setNames(c('black','slateblue','red','gold','seagreen'), c('miRNA', 'near_miRNA', 'imprecise','bad_duplex','bad_hairpin'))
 
 
 # Loading metadata from master --------------------------------------------
@@ -95,6 +110,7 @@ get_species.df <- function() {
   
   m.df$species <- str_replace(m.df$species, "Pyricularia", "Magnaporthe")
   
+  
   return(m.df)  
 }
 
@@ -113,40 +129,35 @@ library.df <- get_library.df()
 
 scale.df <- get_peak_scales(filter=F)
 
-annotation.df <- get_annotation.df()
+# annotation.df <- get_annotation.df()
 # annotation.df <- filter_loci(annotation.df)
 
-new_annotation.df <- get_new_annotation.df()
+annotation.df <- get_new_annotation.df()
 
 peak.df <- get_peak.df()
-hairpin.df <- get_hairpin.df()
 
+ml_lookup <- get_ml_lookup()
 metaloci.df <- get_metaloci.df()
 
-m = match(metaloci.df$rep_locus, hairpin.df$key)
-metaloci.df$ruling <- hairpin.df$ruling[m]
-metaloci.df$ruling[is.na(metaloci.df$ruling)] <- '-'
-metaloci.df$ruling[metaloci.df$ruling == 'x x xx xx x -'] <- 'near_miRNA'
-metaloci.df$ruling[metaloci.df$ruling == 'x x xx xx x x'] <- 'miRNA'
-metaloci.df$ruling[metaloci.df$type == 'OtherRNA'] <- '-'
+hairpin.df <- get_hairpin.df()
 
-metaloci.df$rep_project <- str_split_fixed(metaloci.df$rep_locus, "-", 3)[,2]
-metaloci.df$hairpin_name <- str_c(hairpin.df$name[m], hairpin.df$sub_name[m], "eps", sep='.')
-metaloci.df$hairpin_name <- str_replace(metaloci.df$hairpin_name, "\\.\\.", "\\.")
-metaloci.df$hairpin_name <- str_c("njohnson@darwin:/home2/njohnson/fungi_annotations/annotations", 
-                                  str_split_fixed(metaloci.df$rep_locus, "-", 3)[,2],
-                                  "hairpin", 
-                                  str_split_fixed(metaloci.df$rep_locus, "-", 3)[,3],
-                                  "folds", 
-                                  metaloci.df$hairpin_name, sep='/')
-metaloci.df$hairpin_name[is.na(metaloci.df$hairpin_name)] <- ''
+metaloci.df <- get_contexts(metaloci.df)
+# metaloci.df <- get_rulings(metaloci.df)
+metaloci.df$hp_cat <- hairpin.df$hp_cat[match(metaloci.df$rep_locus, hairpin.df$key)]
+metaloci.df$hp_cat[is.na(metaloci.df$hp_cat)] <- "(undescribed)"
 
-View(metaloci.df[metaloci.df$type %in% str_glue("RNA_{make_dicer_sizes(19:25)}") &
-                   metaloci.df$ruling != '-',])
+conservation.df <- get_conservation_df()
 
-metaloci.df$hairpin_length <- hairpin.df$length[m]
+# hairpin.df$ml_name <- metaloci.df$name[match(hairpin.df$key, metaloci.df$rep_locus)]
 
-table(metaloci.df$ruling)
+
+
+
+# View(metaloci.df[metaloci.df$type %in% str_glue("RNA_{make_dicer_sizes(19:25)}") &
+#                    metaloci.df$ruling != '-',])
+
+
+# table(metaloci.df$ruling)
 
 # Trimming phylogeny ------------------------------------------------------
 
