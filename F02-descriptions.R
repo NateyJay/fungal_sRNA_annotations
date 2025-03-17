@@ -522,12 +522,12 @@ make_metalocus_bars <- function(save=F) {
   ml.df$clustered <- ifelse(ml.df$meta_defined_locus == 'True', "clustered", "solitary")
   ml.df <- ml.df[ml.df$type != 'OtherRNA',]
   
-  p.df <- project.df[!is.na(p.df$f_pass) & p.df$f_pass,]
+  p.df <- project.df
   p.df$annotation_count <- str_count(p.df$conditions, ",") + 1
   proj_tab <- table(p.df$abbv)
   rep_tab <- dcast(p.df, abbv ~ 'annotation_count', value.var='annotation_count', fun.aggregate = sum)
   
-  ml.df <- ml.df[ml.df$abbv %in% p.df$abbv,]
+  
   tab <-table(abbv=ml.df$abbv, clust=ml.df$clustered)
   tab = data.frame(tab)
   tab <- dcast(tab, abbv ~ clust)
@@ -573,7 +573,7 @@ make_metalocus_bars <- function(save=F) {
   if (save) ADsvg(file_name)
 }
 
-make_metalocus_bars(F)
+make_metalocus_bars(T)
 
 
 ## Just the passing ones
@@ -669,7 +669,6 @@ p.df <- project.df
 plot_context_bars <- function(save=F) {
   
   ml.df <- metaloci.df
-  ml.df <- ml.df[ml.df$member_loci > 1,]
   colors = context_colors
   
   f = ml.df$type != 'OtherRNA'
@@ -686,8 +685,7 @@ plot_context_bars <- function(save=F) {
   
   
   y = 1:nrow(tab) - 0.5
-  # xmax = 2500
-  xmax=1500
+  xmax = 2500
   # par()$din 5.14, 7.3
   
   
@@ -739,7 +737,7 @@ plot_context_bars <- function(save=F) {
   if (save) ADsvg(file_name)
   
 }
-plot_context_bars(T)
+plot_context_bars(F)
 
 plot.new()
 legend('topleft', names(context_colors), fill=context_colors, title='context')
@@ -747,13 +745,11 @@ legend('topleft', names(context_colors), fill=context_colors, title='context')
 
 # what gene types? --------------------------------------------------------
 
-plot_gene_types <- function(save=F) {
-  
-  
+plot_gene_types <- function() {
   
   ml.df <- metaloci.df
-  ml.df <- ml.df[ml.df$sizecall != "N",]
   ml.df <- ml.df[ml.df$member_loci > 1,]
+  ml.df <- ml.df[ml.df$sizecall != "N",]
   
   ml.df$context <- str_replace(ml.df$context, "sense_|antisense_|unstranded_", "")
   
@@ -761,28 +757,21 @@ plot_gene_types <- function(save=F) {
   
   
   tab <- table(ml.df$abbv, ml.df$context)
-  tab <- tab[rev(unique(ml.df$abbv)),]
-  tab <- tab[rowSums(tab) > 0,]
   # tab[,c('intergenic', 'near-genic', 'rRNA','tRNA','mRNA','spliceosomal')]
   tab <- tab[,names(deep_context_colors)]
   ptab <- tab / rowSums(tab)
   
-  file_name="F02-metaloci_gene_types.svg"
-  if (save) svglite(file_name, 4.11, 6.47)
-  
-  par(mar=c(5,5,4,10), mfrow=c(1,1))
+  par(mar=c(5,10,4,10), mfrow=c(1,1))
   barplot(t(ptab), horiz=T, las=1, col=deep_context_colors, xlab='Prop.')
   par(xpd=T)
   legend('topright', names(deep_context_colors), fill=deep_context_colors, cex=0.8,
-         inset=c(-1.3,0))
+         inset=c(-0.9,0))
   par(xpd=F)
   
-  if (save) dev.off()
-  if (save) ADsvg(file_name)
   
 }
 
-plot_gene_types(T)
+plot_gene_types()
 
 # What sizes? -------------------------------------------------------------
 

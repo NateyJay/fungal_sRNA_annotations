@@ -29,6 +29,13 @@ phylum_colors = c(
 )
 
 
+lifestyle_colors <- c('Plant pathogen'= 'grey20',
+                 'Human pathogen'= 'purple',
+                 'Insect pathogen'= 'firebrick',
+                 'Carnivore'='orange',
+                 'Endophyte'='seagreen',
+                 'Saprotroph'='lemonchiffon3')
+
 host_colors <- c('Plant'= 'mediumseagreen',
                  'Human'= 'purple',
                  'Insect'= 'firebrick',
@@ -91,7 +98,7 @@ get_species.df <- function() {
   t.df <- t.df[!duplicated(t.df$abbv),]
   head(t.df)
   
-  m.df <- merge(t.df, s.df[,c('abbv','AKA','Common Name or Disease', 'Model', "Importance", "Pathogen", "Mutualist")], 
+  m.df <- merge(t.df, s.df[,c('abbv','AKA','Common Name or Disease', 'Model', "Importance", "Pathogen", "Mutualist", "clean_lifestyle")], 
         by.x='abbv', all.x=T)
   
   rownames(m.df) <- m.df$abbv

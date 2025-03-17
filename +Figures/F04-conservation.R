@@ -525,6 +525,11 @@ e.df
 e.df$a_context <- metaloci.df$context[match(e.df$a, metaloci.df$name)]
 e.df$b_context <- metaloci.df$context[match(e.df$b, metaloci.df$name)]
 
+passing_metaloci = metaloci.df$name[metaloci.df$member_loci > 1]
+
+
+e.df <- e.df[e.df$a %in% passing_metaloci | e.df$b %in% passing_metaloci ,]
+
 for (feature in c("tRNA","rRNA", 'spliceosomal',"mRNA", "near-genic", "intergenic")) {
   e.df$context[str_detect(e.df$a_context, feature) | str_detect(e.df$b_context, feature)] <- feature
 }
@@ -555,14 +560,14 @@ plot_edges <- function(key, col, lwd=NULL) {
   
 }
 
-sp = superplot(e.df, main=str_glue('View9a - RNA_20-24'))
-plot_edges("tRNA", 'blue')
-plot_edges("mRNA", 'seagreen')
+sp = superplot(e.df, main='Genic') #main=str_glue('View9a - RNA_20-24'))
 plot_edges("rRNA", 'red')
 plot_edges("spliceosomal", 'purple3')
+plot_edges("tRNA", 'blue')
+plot_edges("mRNA", 'seagreen')
 sp$draw_arcs()
 
-sp = superplot(e.df, main=str_glue('View9b - RNA_20-24'))
+sp = superplot(e.df, main='Non-genic') # main=str_glue('View9b - RNA_20-24'))
 plot_edges("near-genic", 'goldenrod')
 plot_edges("intergenic", 'black')
 sp$draw_arcs()
@@ -596,6 +601,11 @@ table(e.df$a_cat)
 table(e.df$b_cat)
 
 # e.df <- e.df[e.df$a_cat == 'miRNA',]
+
+passing_metaloci = metaloci.df$name[metaloci.df$member_loci > 1]
+
+
+e.df <- e.df[e.df$a %in% passing_metaloci | e.df$b %in% passing_metaloci ,]
 
 
 sp = superplot(e.df, main=str_glue('Hairpin-derived RNAs'))

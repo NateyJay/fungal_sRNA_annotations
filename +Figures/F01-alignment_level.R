@@ -164,6 +164,7 @@ scaled_heatmap <- function(save = F) {
   row.df$class   <- species.df$class[match(row.df$abbv, species.df$abbv)]
   row.df$phylum  <- species.df$phylum[match(row.df$abbv, species.df$abbv)]
   row.df$host    <- species.df$Pathogen[match(row.df$abbv, species.df$abbv)]
+  row.df$lifestyle    <- species.df$clean_lifestyle[match(row.df$abbv, species.df$abbv)]
   row.df$species <- species.df$species[match(row.df$abbv, species.df$abbv)]
   
   row.df$class[is.na(row.df$class)] <- "MISSING"
@@ -172,7 +173,7 @@ scaled_heatmap <- function(save = F) {
   
   
   file_name = "F01-scaled_abundance.svg"
-  if (save) svglite(file_name, 5.3, 6.1)
+  if (save) svglite(file_name, 7, 6.1)
   
   par(mar=c(5,23,5,5))
   lp <- layermap(s.df,
@@ -193,8 +194,8 @@ scaled_heatmap <- function(save = F) {
   # lp <- lp_names(lp, 4, 'center')
   # lp <- lp_names(lp, 4, 'width')
   
-  lp <- lp_names(lp, 3)
-  lp <- lp_annotate(lp, 4, 'host', col=host_colors, type='p')
+  lp <- lp_names(lp, 3, cex=0.7)
+  lp <- lp_annotate(lp, 4, 'lifestyle', col=lifestyle_colors, type='p')
   
   
   s.df$max <- apply(s.df, 1, max)
@@ -205,7 +206,7 @@ scaled_heatmap <- function(save = F) {
   if (save) dev.off()
   if (save) ADsvg(file_name)
 }
-scaled_heatmap(F)
+scaled_heatmap(T)
 
 
 
@@ -257,6 +258,74 @@ s.df <- s.df[order(s.df$phylum),]
 
 
 
+
+
+# Lifestyle to profile ----------------------------------------------------
+
+
+s.df <- scale.df
+s.df <- s.df[s.df$project %in% project.df$project[project.df$f_pass],]
+s.df$i <- NULL
+
+
+s.df$genus <- species.df$genus[match(s.df$abbv, species.df$abbv)]
+
+
+s.df <- dcast(s.df, project ~ size, value.var='zmed')
+# s.df <- dcast(s.df, project ~ size, value.var='prop')
+
+rownames(s.df) <- s.df$project
+s.df$project <- NULL
+
+s.df[str_detect(rownames(s.df), "Bocin"),]
+
+sizes = as.character(15:29)
+s.df <- s.df[,sizes]
+
+
+## merging by abbv
+s.df$abbv <- str_sub(row.names(s.df), 1, 5)
+s.df <- melt(s.df)
+s.df <- dcast(s.df, abbv ~ variable, value.var='value', fun.aggregate = mean)
+
+rownames(s.df) <- s.df$abbv
+s.df$abbv <- NULL
+
+lf.df <- data.frame(abbv = rownames(s.df),
+                    peak = apply(s.df, 1, function(x) names(s.df)[which.max(x)]),
+                    lifestyle = species.df$clean_lifestyle[match(rownames(s.df), species.df$abbv)])
+lf.df$peak <- as.numeric(lf.df$peak)
+
+par(mar=c(4,10,4,2))
+boxplot(lf.df$peak ~ lf.df$lifestyle, horizontal=T, las=1, xlab="Peak size",
+        ylab='',
+        main=)
+
+
+row.df <- s.df
+# row.df$abbv <- str_sub(rownames(row.df), 1, 5)
+row.df$abbv <- rownames(row.df)
+row.df$genus <- species.df$genus[match(row.df$abbv, species.df$abbv)]
+# row.df$center = peak.df$center[match(rownames(row.df), peak.df$project)]
+# row.df$width = peak.df$width[match(rownames(row.df), peak.df$project)]
+
+
+# row.df$cluster <- 'unclustered'
+# row.df$cluster[row.df$genus %in% c('Ophiocordyceps','Beauveria','Clonostachys','Trichoderma','Fusarium')] <- 'cluster 1'
+# row.df$cluster[row.df$genus %in% c('Ceratobasidium','Coprinopsis','Pleurotus','Athelia','Rhizoctonia','Sanghuangporus')] <- 'cluster 2'
+# row.df$cluster[row.df$genus %in% c("Saccharomyces", "Naumovozyma", "Candida")] <- 'cluster 3'
+# row.df$cluster[row.df$genus %in% c("Taloromyces", "Trichophyton", "Penicillium", "Aspergillus")] <- 'cluster 4'
+# 
+# row.df$cluster[row.df$genus %in% c("Taloromyces", "Trichophyton", "Penicillium", "Aspergillus")] <- 'cluster 4'
+
+row.df$class   <- species.df$class[match(row.df$abbv, species.df$abbv)]
+row.df$phylum  <- species.df$phylum[match(row.df$abbv, species.df$abbv)]
+row.df$host    <- species.df$Pathogen[match(row.df$abbv, species.df$abbv)]
+row.df$lifestyle    <- species.df$clean_lifestyle[match(row.df$abbv, species.df$abbv)]
+row.df$species <- species.df$species[match(row.df$abbv, species.df$abbv)]
+
+row.df$class[is.na(row.df$class)] <- "MISSING"
+row.df$class[row.df$abbv %in% c('Nocer', 'Nobom')] <- "Microsporidia"
 
 
 
