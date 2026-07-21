@@ -1,0 +1,75 @@
+{
+  "project_name": "Asapi.PRJNA565629",
+  "srrs": [
+    "SRR10123041",
+    "SRR10123056",
+    "SRR10123055",
+    "SRR10123054",
+    "SRR10123053",
+    "SRR10123052",
+    "SRR10123051",
+    "SRR10123050",
+    "SRR10123049"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR10123041.fasta",
+    "untrimmed/SRR10123056.fasta",
+    "untrimmed/SRR10123055.fasta",
+    "untrimmed/SRR10123054.fasta",
+    "untrimmed/SRR10123053.fasta",
+    "untrimmed/SRR10123052.fasta",
+    "untrimmed/SRR10123051.fasta",
+    "untrimmed/SRR10123050.fasta",
+    "untrimmed/SRR10123049.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR10123041.t.fa.gz",
+    "trim/SRR10123056.t.fa.gz",
+    "trim/SRR10123055.t.fa.gz",
+    "trim/SRR10123054.t.fa.gz",
+    "trim/SRR10123053.t.fa.gz",
+    "trim/SRR10123052.t.fa.gz",
+    "trim/SRR10123051.t.fa.gz",
+    "trim/SRR10123050.t.fa.gz",
+    "trim/SRR10123049.t.fa.gz"
+  ],
+  "adapter": null,
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR10123041",
+      "SRR10123056",
+      "SRR10123055"
+    ],
+    "B": [
+      "SRR10123054",
+      "SRR10123053",
+      "SRR10123052"
+    ],
+    "C": [
+      "SRR10123051",
+      "SRR10123050",
+      "SRR10123049"
+    ]
+  },
+  "annotation_conditions": [
+    "C"
+  ],
+  "genome_file": "../../Genomes/Asapi.GCA_001636715.1_AAP_1.0_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "annotation_file": "tradeoff_C/loci.gff3",
+  "min_length": 15,
+  "max_length": 30,
+  "adapters": {
+    "SRR10123041.fasta": "CTGTAGGC",
+    "SRR10123056.fasta": "CTGTAGGC",
+    "SRR10123055.fasta": "CTGTAGGC",
+    "SRR10123054.fasta": "CTGTAGGC",
+    "SRR10123053.fasta": "CTGTAGGC",
+    "SRR10123052.fasta": "CTGTAGGC",
+    "SRR10123051.fasta": "CTGTAGGC",
+    "SRR10123050.fasta": "CTGTAGGC",
+    "SRR10123049.fasta": "CTGTAGGC"
+  }
+}

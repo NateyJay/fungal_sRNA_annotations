@@ -1,0 +1,120 @@
+{
+"apiVersion": "V2",
+"assemblies": [
+{
+  "files": [
+    {
+      "filePath": "assembly_data_report.jsonl",
+      "fileType": "DATA_REPORT",
+      "uncompressedLengthBytes": "46318"
+    }
+  ]
+},{
+  "accession": "GCF_000001215.4",
+  "files": [
+    {
+      "filePath": "GCF_000001215.4/genomic.gff",
+      "fileType": "GFF3",
+      "uncompressedLengthBytes": "164988613"
+    }
+  ]
+},{
+  "accession": "GCF_000001405.40",
+  "files": [
+    {
+      "filePath": "GCF_000001405.40/genomic.gff",
+      "fileType": "GFF3",
+      "uncompressedLengthBytes": "1596800025"
+    }
+  ]
+},{
+  "accession": "GCF_000001635.27",
+  "files": [
+    {
+      "filePath": "GCF_000001635.27/genomic.gff",
+      "fileType": "GFF3",
+      "uncompressedLengthBytes": "921533202"
+    }
+  ]
+},{
+  "accession": "GCF_000001735.4",
+  "files": [
+    {
+      "filePath": "GCF_000001735.4/genomic.gff",
+      "fileType": "GFF3",
+      "uncompressedLengthBytes": "456064451"
+    }
+  ]
+},{
+  "accession": "GCF_000002425.5",
+  "files": [
+    {
+      "filePath": "GCF_000002425.5/genomic.gff",
+      "fileType": "GFF3",
+      "uncompressedLengthBytes": "245203475"
+    }
+  ]
+},{
+  "accession": "GCF_002127325.2",
+  "files": [
+    {
+      "filePath": "GCF_002127325.2/genomic.gff",
+      "fileType": "GFF3",
+      "uncompressedLengthBytes": "393004750"
+    }
+  ]
+},{
+  "accession": "GCF_003254395.2",
+  "files": [
+    {
+      "filePath": "GCF_003254395.2/genomic.gff",
+      "fileType": "GFF3",
+      "uncompressedLengthBytes": "152741106"
+    }
+  ]
+},{
+  "accession": "GCF_016699485.2",
+  "files": [
+    {
+      "filePath": "GCF_016699485.2/genomic.gff",
+      "fileType": "GFF3",
+      "uncompressedLengthBytes": "691053434"
+    }
+  ]
+},{
+  "accession": "GCF_017654675.1",
+  "files": [
+    {
+      "filePath": "GCF_017654675.1/genomic.gff",
+      "fileType": "GFF3",
+      "uncompressedLengthBytes": "683489588"
+    }
+  ]
+},{
+  "accession": "GCF_034140825.1",
+  "files": [
+    {
+      "filePath": "GCF_034140825.1/genomic.gff",
+      "fileType": "GFF3",
+      "uncompressedLengthBytes": "211862599"
+    }
+  ]
+},{
+  "accession": "GCF_036512215.1",
+  "files": [
+    {
+      "filePath": "GCF_036512215.1/genomic.gff",
+      "fileType": "GFF3",
+      "uncompressedLengthBytes": "223330660"
+    }
+  ]
+},{
+  "accession": "GCF_042453785.1",
+  "files": [
+    {
+      "filePath": "GCF_042453785.1/genomic.gff",
+      "fileType": "GFF3",
+      "uncompressedLengthBytes": "308059528"
+    }
+  ]
+}]}

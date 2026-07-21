@@ -1,0 +1,10 @@
+"displays": [
+        {
+          "type": "LinearBasicDisplay",
+          "displayId": "Bocin.PRJNA193537_A_loci",
+          "renderer": {
+            "type": "SvgFeatureRenderer",
+            "color1": "jexl:customColor(feature)"
+          }
+        }
+      ]

@@ -1,0 +1,50 @@
+{
+  "output_directory": "/home2/njohnson/fungi_annotations/annotations/Clros.PRJEB64581",
+  "annotation_conditions": [
+    "B"
+  ],
+  "conditions": {
+    "A": [
+      "ERR11768311",
+      "ERR11768315",
+      "ERR11768334",
+      "ERR11768361",
+      "ERR11768375",
+      "ERR11768401"
+    ],
+    "B": [
+      "ERR11768670",
+      "ERR11768709",
+      "ERR11768743",
+      "ERR11768766",
+      "ERR11769064",
+      "ERR11769092"
+    ]
+  },
+  "alignment_file": "/home2/njohnson/fungi_annotations/annotations/Clros.PRJEB64581/align/alignment.bam",
+  "name": "B",
+  "coverage_window": 250,
+  "kernel_window": 100,
+  "genome_scaling_factor": 0.4,
+  "merge_dist": 500,
+  "merge_strand_similarity": 0.5,
+  "min_length": 15,
+  "max_length": 30,
+  "filter_skew": false,
+  "max_skew": 0.9,
+  "filter_complexity": true,
+  "min_complexity": 10,
+  "filter_abundance": true,
+  "min_abundance": 50,
+  "filter_abundance_density": true,
+  "min_abundance_density": 100,
+  "bigwig": false,
+  "time_test": false,
+  "dont_revise_regions": false,
+  "dont_trim_loci": false,
+  "debug": false,
+  "test_mode": false,
+  "override": false,
+  "project_name": "Clros.PRJEB64581",
+  "tool": "tradeoff"
+}

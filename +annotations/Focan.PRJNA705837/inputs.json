@@ -1,0 +1,31 @@
+{
+  "project_name": "Focan.PRJNA705837",
+  "srrs": [
+    "SRR13823661"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR13823661.fasta"
+  ],
+  "trimmed_libraries": [
+    "untrimmed/SRR13823661.fasta"
+  ],
+  "adapter": "PRE-TRIMMED",
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR13823661"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Focan.GCA_002217175.1_ASM221717v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "min_length": 15,
+  "max_length": 300,
+  "annotation_file": "tradeoff/loci.gff3",
+  "adapters": {
+    "SRR13823661.fasta": "PRE-TRIMMED"
+  }
+}

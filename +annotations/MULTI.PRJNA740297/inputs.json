@@ -1,0 +1,117 @@
+{
+  "project_name": "MULTI.PRJNA740297",
+  "srrs": [
+    "SRR15685446",
+    "SRR15685442",
+    "SRR15685445",
+    "SRR15685443",
+    "SRR15685467",
+    "SRR15685455",
+    "SRR15685466",
+    "SRR15685444",
+    "SRR15685451",
+    "SRR15685454",
+    "SRR15685453",
+    "SRR15685452",
+    "SRR15685465",
+    "SRR15685463",
+    "SRR15685461",
+    "SRR15685462",
+    "SRR15685464"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR15685446.fasta",
+    "untrimmed/SRR15685442.fasta",
+    "untrimmed/SRR15685445.fasta",
+    "untrimmed/SRR15685443.fasta",
+    "untrimmed/SRR15685467.fasta",
+    "untrimmed/SRR15685455.fasta",
+    "untrimmed/SRR15685466.fasta",
+    "untrimmed/SRR15685444.fasta",
+    "untrimmed/SRR15685451.fasta",
+    "untrimmed/SRR15685454.fasta",
+    "untrimmed/SRR15685453.fasta",
+    "untrimmed/SRR15685452.fasta",
+    "untrimmed/SRR15685465.fasta",
+    "untrimmed/SRR15685463.fasta",
+    "untrimmed/SRR15685461.fasta",
+    "untrimmed/SRR15685462.fasta",
+    "untrimmed/SRR15685464.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR15685446.t.fa.gz",
+    "trim/SRR15685442.t.fa.gz",
+    "trim/SRR15685445.t.fa.gz",
+    "trim/SRR15685443.t.fa.gz",
+    "trim/SRR15685467.t.fa.gz",
+    "trim/SRR15685455.t.fa.gz",
+    "trim/SRR15685466.t.fa.gz",
+    "trim/SRR15685444.t.fa.gz",
+    "trim/SRR15685451.t.fa.gz",
+    "trim/SRR15685454.t.fa.gz",
+    "trim/SRR15685453.t.fa.gz",
+    "trim/SRR15685452.t.fa.gz",
+    "trim/SRR15685465.t.fa.gz",
+    "trim/SRR15685463.t.fa.gz",
+    "trim/SRR15685461.t.fa.gz",
+    "trim/SRR15685462.t.fa.gz",
+    "trim/SRR15685464.t.fa.gz"
+  ],
+  "adapter": null,
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR15685446",
+      "SRR15685442",
+      "SRR15685445",
+      "SRR15685443"
+    ],
+    "B": [
+      "SRR15685467",
+      "SRR15685455",
+      "SRR15685466",
+      "SRR15685444"
+    ],
+    "C": [
+      "SRR15685451",
+      "SRR15685454",
+      "SRR15685453",
+      "SRR15685452"
+    ],
+    "D": [
+      "SRR15685465",
+      "SRR15685463",
+      "SRR15685461",
+      "SRR15685462",
+      "SRR15685464"
+    ]
+  },
+  "annotation_conditions": [
+    "D"
+  ],
+  "genome_file": "../../Genomes/MULTI.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "annotation_file": "tradeoff_D/loci.gff3",
+  "min_length": 15,
+  "max_length": 30,
+  "adapters": {
+    "SRR15685446.fasta": "AGATCGGA",
+    "SRR15685442.fasta": "AGATCGGA",
+    "SRR15685445.fasta": "AGATCGGA",
+    "SRR15685443.fasta": "AGATCGGA",
+    "SRR15685467.fasta": "AGATCGGA",
+    "SRR15685455.fasta": "AGATCGGA",
+    "SRR15685466.fasta": "AGATCGGA",
+    "SRR15685444.fasta": "AGATCGGA",
+    "SRR15685451.fasta": "AGATCGGA",
+    "SRR15685454.fasta": "AGATCGGA",
+    "SRR15685453.fasta": "AGATCGGA",
+    "SRR15685452.fasta": "AGATCGGA",
+    "SRR15685465.fasta": "AGATCGGA",
+    "SRR15685463.fasta": "AGATCGGA",
+    "SRR15685461.fasta": "AGATCGGA",
+    "SRR15685462.fasta": "AGATCGGA",
+    "SRR15685464.fasta": "AGATCGGA"
+  }
+}

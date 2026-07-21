@@ -1,0 +1,31 @@
+{
+  "project_name": "Usmay.PRJNA843565",
+  "srrs": [
+    "SRR19443762"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR19443762.fasta"
+  ],
+  "trimmed_libraries": [
+    "untrimmed/SRR19443762.fasta"
+  ],
+  "adapter": null,
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR19443762"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Usmay.GCA_000328475.2_Umaydis521_2.0_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "annotation_file": "tradeoff_A/loci.gff3",
+  "min_length": 15,
+  "max_length": 30,
+  "adapters": {
+    "SRR19443762.fasta": "PRE-TRIMMED"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "output_directory": "/home2/njohnson/fungi_annotations/annotations/Crneo.PRJNA1138746",
+  "annotation_conditions": [
+    "C"
+  ],
+  "conditions": {
+    "A": [
+      "SRR30010669",
+      "SRR30010667"
+    ],
+    "B": [
+      "SRR30010647",
+      "SRR30010689"
+    ],
+    "C": [
+      "SRR30010651"
+    ],
+    "D": [
+      "SRR30010650"
+    ],
+    "E": [
+      "SRR30010649"
+    ],
+    "F": [
+      "SRR30010657"
+    ],
+    "G": [
+      "SRR30010684",
+      "SRR30010683"
+    ],
+    "H": [
+      "SRR30010688",
+      "SRR30010687"
+    ],
+    "I": [
+      "SRR30010691",
+      "SRR30010690",
+      "SRR30010662",
+      "SRR30010661"
+    ],
+    "J": [
+      "SRR30010648"
+    ],
+    "K": [
+      "SRR30010686",
+      "SRR30010685"
+    ],
+    "L": [
+      "SRR30010658",
+      "SRR30010656"
+    ],
+    "M": [
+      "SRR30010655",
+      "SRR30010654"
+    ],
+    "N": [
+      "SRR30010653",
+      "SRR30010652"
+    ],
+    "O": [
+      "SRR30010673",
+      "SRR30010672"
+    ]
+  },
+  "alignment_file": "/home2/njohnson/fungi_annotations/annotations/Crneo.PRJNA1138746/align/alignment.bam",
+  "name": "C",
+  "coverage_window": 250,
+  "kernel_window": 100,
+  "genome_scaling_factor": 0.4,
+  "merge_dist": 500,
+  "merge_strand_similarity": 0.5,
+  "min_length": 15,
+  "max_length": 30,
+  "filter_skew": false,
+  "max_skew": 0.9,
+  "filter_complexity": true,
+  "min_complexity": 10,
+  "filter_abundance": true,
+  "min_abundance": 50,
+  "filter_abundance_density": true,
+  "min_abundance_density": 100,
+  "bigwig": false,
+  "time_test": false,
+  "dont_revise_regions": false,
+  "dont_trim_loci": false,
+  "debug": false,
+  "test_mode": false,
+  "override": false,
+  "project_name": "Crneo.PRJNA1138746",
+  "tool": "tradeoff"
+}

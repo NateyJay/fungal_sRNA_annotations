@@ -1,0 +1,92 @@
+{
+  "project_name": "Fuoxy.PRJNA1159741",
+  "srrs": [
+    "SRR30661941",
+    "SRR30661942",
+    "SRR30661940",
+    "SRR30661950",
+    "SRR30661949",
+    "SRR30661946",
+    "SRR30661945",
+    "SRR30661944",
+    "SRR30661943",
+    "SRR30661939",
+    "SRR30661948",
+    "SRR30661947"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR30661941.fasta",
+    "untrimmed/SRR30661942.fasta",
+    "untrimmed/SRR30661940.fasta",
+    "untrimmed/SRR30661950.fasta",
+    "untrimmed/SRR30661949.fasta",
+    "untrimmed/SRR30661946.fasta",
+    "untrimmed/SRR30661945.fasta",
+    "untrimmed/SRR30661944.fasta",
+    "untrimmed/SRR30661943.fasta",
+    "untrimmed/SRR30661939.fasta",
+    "untrimmed/SRR30661948.fasta",
+    "untrimmed/SRR30661947.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR30661941.t.fa.gz",
+    "trim/SRR30661942.t.fa.gz",
+    "trim/SRR30661940.t.fa.gz",
+    "trim/SRR30661950.t.fa.gz",
+    "trim/SRR30661949.t.fa.gz",
+    "trim/SRR30661946.t.fa.gz",
+    "trim/SRR30661945.t.fa.gz",
+    "trim/SRR30661944.t.fa.gz",
+    "trim/SRR30661943.t.fa.gz",
+    "trim/SRR30661939.t.fa.gz",
+    "trim/SRR30661948.t.fa.gz",
+    "trim/SRR30661947.t.fa.gz"
+  ],
+  "adapter": null,
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR30661941",
+      "SRR30661942",
+      "SRR30661940"
+    ],
+    "B": [
+      "SRR30661950",
+      "SRR30661949",
+      "SRR30661946"
+    ],
+    "C": [
+      "SRR30661945",
+      "SRR30661944",
+      "SRR30661943"
+    ],
+    "D": [
+      "SRR30661939",
+      "SRR30661948",
+      "SRR30661947"
+    ]
+  },
+  "annotation_conditions": [
+    "D"
+  ],
+  "genome_file": "../../Genomes/Fuoxy.GCA_013085055.1_ASM1308505v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "annotation_file": "tradeoff_D/loci.gff3",
+  "min_length": 15,
+  "max_length": 30,
+  "adapters": {
+    "SRR30661941.fasta": "AGATCGGA",
+    "SRR30661942.fasta": "AGATCGGA",
+    "SRR30661940.fasta": "AGATCGGA",
+    "SRR30661950.fasta": "AGATCGGA",
+    "SRR30661949.fasta": "AGATCGGA",
+    "SRR30661946.fasta": "AGATCGGA",
+    "SRR30661945.fasta": "AGATCGGA",
+    "SRR30661944.fasta": "AGATCGGA",
+    "SRR30661943.fasta": "AGATCGGA",
+    "SRR30661939.fasta": "AGATCGGA",
+    "SRR30661948.fasta": "AGATCGGA",
+    "SRR30661947.fasta": "AGATCGGA"
+  }
+}

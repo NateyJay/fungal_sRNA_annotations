@@ -1,0 +1,75 @@
+{
+  "project_name": "Meani.PRJNA981300",
+  "srrs": [
+    "SRR27011698",
+    "SRR27011697",
+    "SRR27011696",
+    "SRR27011695",
+    "SRR27011704",
+    "SRR27011703",
+    "SRR27011701",
+    "SRR27011700",
+    "SRR27011699"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR27011698.fasta",
+    "untrimmed/SRR27011697.fasta",
+    "untrimmed/SRR27011696.fasta",
+    "untrimmed/SRR27011695.fasta",
+    "untrimmed/SRR27011704.fasta",
+    "untrimmed/SRR27011703.fasta",
+    "untrimmed/SRR27011701.fasta",
+    "untrimmed/SRR27011700.fasta",
+    "untrimmed/SRR27011699.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR27011698.t.fa.gz",
+    "trim/SRR27011697.t.fa.gz",
+    "trim/SRR27011696.t.fa.gz",
+    "trim/SRR27011695.t.fa.gz",
+    "trim/SRR27011704.t.fa.gz",
+    "trim/SRR27011703.t.fa.gz",
+    "trim/SRR27011701.t.fa.gz",
+    "trim/SRR27011700.t.fa.gz",
+    "trim/SRR27011699.t.fa.gz"
+  ],
+  "adapter": null,
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "B": [
+      "SRR27011698",
+      "SRR27011697",
+      "SRR27011696"
+    ],
+    "C": [
+      "SRR27011695",
+      "SRR27011704",
+      "SRR27011703"
+    ],
+    "A": [
+      "SRR27011701",
+      "SRR27011700",
+      "SRR27011699"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Meani.GCA_013305495.1_ASM1330549v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "annotation_file": "tradeoff_A/loci.gff3",
+  "min_length": 15,
+  "max_length": 30,
+  "adapters": {
+    "SRR27011698.fasta": "AGATCGGA",
+    "SRR27011697.fasta": "AGATCGGA",
+    "SRR27011696.fasta": "AGATCGGA",
+    "SRR27011695.fasta": "AGATCGGA",
+    "SRR27011704.fasta": "AGATCGGA",
+    "SRR27011703.fasta": "AGATCGGA",
+    "SRR27011701.fasta": "AGATCGGA",
+    "SRR27011700.fasta": "AGATCGGA",
+    "SRR27011699.fasta": "AGATCGGA"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "project_name": "Bebas.PRJNA871939",
+  "srrs": [
+    "SRR21155485",
+    "SRR21155486",
+    "SRR21155487"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR21155485.fasta",
+    "untrimmed/SRR21155486.fasta",
+    "untrimmed/SRR21155487.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR21155485.t.fa.gz",
+    "trim/SRR21155486.t.fa.gz",
+    "trim/SRR21155487.t.fa.gz"
+  ],
+  "adapter": null,
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR21155485",
+      "SRR21155486",
+      "SRR21155487"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Bebas.GCA_000280675.1_ASM28067v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "annotation_file": "tradeoff_A/loci.gff3",
+  "min_length": 15,
+  "max_length": 30,
+  "adapters": {
+    "SRR21155485.fasta": "AGATCGGA",
+    "SRR21155486.fasta": "AGATCGGA",
+    "SRR21155487.fasta": "AGATCGGA"
+  }
+}

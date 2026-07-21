@@ -1,0 +1,72 @@
+{
+  "project_name": "Isfum.PRJNA1051778",
+  "srrs": [
+    "SRR27194045",
+    "SRR27194046",
+    "SRR27194047",
+    "SRR27194048",
+    "SRR27194049",
+    "SRR27194050",
+    "SRR27194051",
+    "SRR27194052"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR27194045.fasta",
+    "untrimmed/SRR27194046.fasta",
+    "untrimmed/SRR27194047.fasta",
+    "untrimmed/SRR27194048.fasta",
+    "untrimmed/SRR27194049.fasta",
+    "untrimmed/SRR27194050.fasta",
+    "untrimmed/SRR27194051.fasta",
+    "untrimmed/SRR27194052.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR27194045.t.fa.gz",
+    "trim/SRR27194046.t.fa.gz",
+    "trim/SRR27194047.t.fa.gz",
+    "trim/SRR27194048.t.fa.gz",
+    "trim/SRR27194049.t.fa.gz",
+    "trim/SRR27194050.t.fa.gz",
+    "trim/SRR27194051.t.fa.gz",
+    "trim/SRR27194052.t.fa.gz"
+  ],
+  "adapter": null,
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "C": [
+      "SRR27194045"
+    ],
+    "B": [
+      "SRR27194046"
+    ],
+    "A": [
+      "SRR27194047",
+      "SRR27194048",
+      "SRR27194049"
+    ],
+    "D": [
+      "SRR27194050",
+      "SRR27194051",
+      "SRR27194052"
+    ]
+  },
+  "annotation_conditions": [
+    "D"
+  ],
+  "genome_file": "../../Genomes/Isfum.GCA_001636725.1_ISF_1.0_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "annotation_file": "tradeoff_D/loci.gff3",
+  "min_length": 15,
+  "max_length": 30,
+  "adapters": {
+    "SRR27194045.fasta": "TGGAATTC",
+    "SRR27194046.fasta": "TGGAATTC",
+    "SRR27194047.fasta": "TGGAATTC",
+    "SRR27194048.fasta": "TGGAATTC",
+    "SRR27194049.fasta": "TGGAATTC",
+    "SRR27194050.fasta": "TGGAATTC",
+    "SRR27194051.fasta": "TGGAATTC",
+    "SRR27194052.fasta": "TGGAATTC"
+  }
+}

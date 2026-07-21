@@ -1,0 +1,74 @@
+{
+  "project_name": "Pyory.PRJNA856435",
+  "srrs": [
+    "SRR20012938",
+    "SRR20012922",
+    "SRR20012936",
+    "SRR20012924",
+    "SRR20012937",
+    "SRR20012932",
+    "SRR20012935",
+    "SRR20012929",
+    "SRR20012925",
+    "SRR20012933"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR20012938.fasta",
+    "untrimmed/SRR20012922.fasta",
+    "untrimmed/SRR20012936.fasta",
+    "untrimmed/SRR20012924.fasta",
+    "untrimmed/SRR20012937.fasta",
+    "untrimmed/SRR20012932.fasta",
+    "untrimmed/SRR20012935.fasta",
+    "untrimmed/SRR20012929.fasta",
+    "untrimmed/SRR20012925.fasta",
+    "untrimmed/SRR20012933.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR20012938.t.fa.gz",
+    "trim/SRR20012922.t.fa.gz",
+    "trim/SRR20012936.t.fa.gz",
+    "trim/SRR20012924.t.fa.gz",
+    "trim/SRR20012937.t.fa.gz",
+    "trim/SRR20012932.t.fa.gz",
+    "trim/SRR20012935.t.fa.gz",
+    "trim/SRR20012929.t.fa.gz",
+    "trim/SRR20012925.t.fa.gz",
+    "trim/SRR20012933.t.fa.gz"
+  ],
+  "adapter": null,
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "C": [
+      "SRR20012938",
+      "SRR20012922"
+    ],
+    "B": [
+      "SRR20012936"
+    ],
+    "A": [
+      "SRR20012924"
+    ]
+  },
+  "annotation_conditions": [
+    "C"
+  ],
+  "genome_file": "../../Genomes/Pyory.GCA_000002495.2_MG8_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "annotation_file": "tradeoff_C/loci.gff3",
+  "min_length": 15,
+  "max_length": 30,
+  "adapters": {
+    "SRR20012938.fasta": "TGGAATTC",
+    "SRR20012922.fasta": "TGGAATTC",
+    "SRR20012936.fasta": "TGGAATTC",
+    "SRR20012924.fasta": "TGGAATTC",
+    "SRR20012937.fasta": "TGGAATTC",
+    "SRR20012932.fasta": "TGGAATTC",
+    "SRR20012935.fasta": "TGGAATTC",
+    "SRR20012929.fasta": "TGGAATTC",
+    "SRR20012925.fasta": "TGGAATTC",
+    "SRR20012933.fasta": "TGGAATTC"
+  }
+}

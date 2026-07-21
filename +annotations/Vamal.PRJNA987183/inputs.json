@@ -1,0 +1,75 @@
+{
+  "project_name": "Vamal.PRJNA987183",
+  "srrs": [
+    "SRR25015516",
+    "SRR25015515",
+    "SRR25015524",
+    "SRR25015523",
+    "SRR25015522",
+    "SRR25015521",
+    "SRR25015520",
+    "SRR25015519",
+    "SRR25015518"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR25015516.fasta",
+    "untrimmed/SRR25015515.fasta",
+    "untrimmed/SRR25015524.fasta",
+    "untrimmed/SRR25015523.fasta",
+    "untrimmed/SRR25015522.fasta",
+    "untrimmed/SRR25015521.fasta",
+    "untrimmed/SRR25015520.fasta",
+    "untrimmed/SRR25015519.fasta",
+    "untrimmed/SRR25015518.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR25015516.t.fa.gz",
+    "trim/SRR25015515.t.fa.gz",
+    "trim/SRR25015524.t.fa.gz",
+    "trim/SRR25015523.t.fa.gz",
+    "trim/SRR25015522.t.fa.gz",
+    "trim/SRR25015521.t.fa.gz",
+    "trim/SRR25015520.t.fa.gz",
+    "trim/SRR25015519.t.fa.gz",
+    "trim/SRR25015518.t.fa.gz"
+  ],
+  "adapter": null,
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "B": [
+      "SRR25015516",
+      "SRR25015515",
+      "SRR25015524"
+    ],
+    "C": [
+      "SRR25015523",
+      "SRR25015522",
+      "SRR25015521"
+    ],
+    "A": [
+      "SRR25015520",
+      "SRR25015519",
+      "SRR25015518"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Vamal.GCA_025426655.1_ASM2542665v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "annotation_file": "tradeoff_A/loci.gff3",
+  "min_length": 15,
+  "max_length": 30,
+  "adapters": {
+    "SRR25015516.fasta": "TGGAATTC",
+    "SRR25015515.fasta": "TGGAATTC",
+    "SRR25015524.fasta": "TGGAATTC",
+    "SRR25015523.fasta": "TGGAATTC",
+    "SRR25015522.fasta": "TGGAATTC",
+    "SRR25015521.fasta": "TGGAATTC",
+    "SRR25015520.fasta": "TGGAATTC",
+    "SRR25015519.fasta": "TGGAATTC",
+    "SRR25015518.fasta": "TGGAATTC"
+  }
+}

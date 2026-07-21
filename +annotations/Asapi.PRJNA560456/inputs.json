@@ -1,0 +1,38 @@
+{
+  "project_name": "Asapi.PRJNA560456",
+  "srrs": [
+    "SRR9983043",
+    "SRR9983044"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR9983043.fasta",
+    "untrimmed/SRR9983044.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR9983043.t.fa.gz",
+    "trim/SRR9983044.t.fa.gz"
+  ],
+  "adapter": null,
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR9983043"
+    ],
+    "B": [
+      "SRR9983044"
+    ]
+  },
+  "annotation_conditions": [
+    "B"
+  ],
+  "genome_file": "../../Genomes/Asapi.GCA_001636715.1_AAP_1.0_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "annotation_file": "tradeoff_B/loci.gff3",
+  "min_length": 15,
+  "max_length": 30,
+  "adapters": {
+    "SRR9983043.fasta": "CTGTAGGC",
+    "SRR9983044.fasta": "CTGTAGGC"
+  }
+}

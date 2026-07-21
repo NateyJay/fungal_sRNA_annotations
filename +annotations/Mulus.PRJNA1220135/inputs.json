@@ -1,0 +1,58 @@
+{
+  "project_name": "Mulus.PRJNA1220135",
+  "srrs": [
+    "SRR32258784",
+    "SRR32258785",
+    "SRR32258786",
+    "SRR32258787",
+    "SRR32258788",
+    "SRR32258789"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR32258784.fasta",
+    "untrimmed/SRR32258785.fasta",
+    "untrimmed/SRR32258786.fasta",
+    "untrimmed/SRR32258787.fasta",
+    "untrimmed/SRR32258788.fasta",
+    "untrimmed/SRR32258789.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR32258784.t.fa.gz",
+    "trim/SRR32258785.t.fa.gz",
+    "trim/SRR32258786.t.fa.gz",
+    "trim/SRR32258787.t.fa.gz",
+    "trim/SRR32258788.t.fa.gz",
+    "trim/SRR32258789.t.fa.gz"
+  ],
+  "adapter": null,
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR32258784",
+      "SRR32258785",
+      "SRR32258786"
+    ],
+    "B": [
+      "SRR32258787",
+      "SRR32258788",
+      "SRR32258789"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Mulus.GCA_040256725.1_ASM4025672v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "annotation_file": "tradeoff_A/loci.gff3",
+  "min_length": 15,
+  "max_length": 30,
+  "adapters": {
+    "SRR32258784.fasta": "AGATCGGA",
+    "SRR32258785.fasta": "AGATCGGA",
+    "SRR32258786.fasta": "AGATCGGA",
+    "SRR32258787.fasta": "AGATCGGA",
+    "SRR32258788.fasta": "AGATCGGA",
+    "SRR32258789.fasta": "AGATCGGA"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "project_name": "Crneo.PRJNA749953",
+  "srrs": [
+    "SRR19537938",
+    "SRR19537937",
+    "SRR19537935"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR19537938.fasta",
+    "untrimmed/SRR19537937.fasta",
+    "untrimmed/SRR19537935.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR19537938.t.fa.gz",
+    "trim/SRR19537937.t.fa.gz",
+    "trim/SRR19537935.t.fa.gz"
+  ],
+  "adapter": null,
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR19537938"
+    ],
+    "B": [
+      "SRR19537937"
+    ],
+    "C": [
+      "SRR19537935"
+    ]
+  },
+  "annotation_conditions": [
+    "C"
+  ],
+  "genome_file": "../../Genomes/Crneo.GCA_000091045.1_ASM9104v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "annotation_file": "tradeoff_C/loci.gff3",
+  "min_length": 15,
+  "max_length": 30,
+  "adapters": {
+    "SRR19537938.fasta": "AGATCGGA",
+    "SRR19537937.fasta": "AGATCGGA",
+    "SRR19537935.fasta": "AGATCGGA"
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "project_name": "Fugra.PRJNA1183537",
+  "srrs": [
+    "SRR31278692",
+    "SRR31278691",
+    "SRR31278682",
+    "SRR31278681",
+    "SRR31278680",
+    "SRR31278679",
+    "SRR31278678",
+    "SRR31278677",
+    "SRR31278676",
+    "SRR31278675",
+    "SRR31278690",
+    "SRR31278689",
+    "SRR31278688",
+    "SRR31278687",
+    "SRR31278686",
+    "SRR31278685",
+    "SRR31278684",
+    "SRR31278683"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR31278692.fasta",
+    "untrimmed/SRR31278691.fasta",
+    "untrimmed/SRR31278682.fasta",
+    "untrimmed/SRR31278681.fasta",
+    "untrimmed/SRR31278680.fasta",
+    "untrimmed/SRR31278679.fasta",
+    "untrimmed/SRR31278678.fasta",
+    "untrimmed/SRR31278677.fasta",
+    "untrimmed/SRR31278676.fasta",
+    "untrimmed/SRR31278675.fasta",
+    "untrimmed/SRR31278690.fasta",
+    "untrimmed/SRR31278689.fasta",
+    "untrimmed/SRR31278688.fasta",
+    "untrimmed/SRR31278687.fasta",
+    "untrimmed/SRR31278686.fasta",
+    "untrimmed/SRR31278685.fasta",
+    "untrimmed/SRR31278684.fasta",
+    "untrimmed/SRR31278683.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR31278692.t.fa.gz",
+    "trim/SRR31278691.t.fa.gz",
+    "trim/SRR31278682.t.fa.gz",
+    "trim/SRR31278681.t.fa.gz",
+    "trim/SRR31278680.t.fa.gz",
+    "trim/SRR31278679.t.fa.gz",
+    "trim/SRR31278678.t.fa.gz",
+    "trim/SRR31278677.t.fa.gz",
+    "trim/SRR31278676.t.fa.gz",
+    "trim/SRR31278675.t.fa.gz",
+    "trim/SRR31278690.t.fa.gz",
+    "trim/SRR31278689.t.fa.gz",
+    "trim/SRR31278688.t.fa.gz",
+    "trim/SRR31278687.t.fa.gz",
+    "trim/SRR31278686.t.fa.gz",
+    "trim/SRR31278685.t.fa.gz",
+    "trim/SRR31278684.t.fa.gz",
+    "trim/SRR31278683.t.fa.gz"
+  ],
+  "adapter": null,
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR31278692",
+      "SRR31278691",
+      "SRR31278682"
+    ],
+    "B": [
+      "SRR31278681",
+      "SRR31278680",
+      "SRR31278679"
+    ],
+    "C": [
+      "SRR31278678",
+      "SRR31278677",
+      "SRR31278676"
+    ],
+    "D": [
+      "SRR31278675",
+      "SRR31278690",
+      "SRR31278689"
+    ],
+    "E": [
+      "SRR31278688",
+      "SRR31278687",
+      "SRR31278686"
+    ],
+    "F": [
+      "SRR31278685",
+      "SRR31278684",
+      "SRR31278683"
+    ]
+  },
+  "annotation_conditions": [
+    "F"
+  ],
+  "genome_file": "../../Genomes/Fugra.GCF_000240135.3_ASM24013v3_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "annotation_file": "tradeoff_F/loci.gff3",
+  "min_length": 15,
+  "max_length": 30,
+  "adapters": {
+    "SRR31278692.fasta": "AGATCGGA",
+    "SRR31278691.fasta": "AGATCGGA",
+    "SRR31278682.fasta": "AGATCGGA",
+    "SRR31278681.fasta": "AGATCGGA",
+    "SRR31278680.fasta": "AGATCGGA",
+    "SRR31278679.fasta": "AGATCGGA",
+    "SRR31278678.fasta": "AGATCGGA",
+    "SRR31278677.fasta": "AGATCGGA",
+    "SRR31278676.fasta": "AGATCGGA",
+    "SRR31278675.fasta": "AGATCGGA",
+    "SRR31278690.fasta": "AGATCGGA",
+    "SRR31278689.fasta": "AGATCGGA",
+    "SRR31278688.fasta": "AGATCGGA",
+    "SRR31278687.fasta": "AGATCGGA",
+    "SRR31278686.fasta": "AGATCGGA",
+    "SRR31278685.fasta": "AGATCGGA",
+    "SRR31278684.fasta": "AGATCGGA",
+    "SRR31278683.fasta": "AGATCGGA"
+  }
+}

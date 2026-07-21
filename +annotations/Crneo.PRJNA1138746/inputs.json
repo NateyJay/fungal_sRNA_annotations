@@ -1,0 +1,189 @@
+{
+  "project_name": "Crneo.PRJNA1138746",
+  "srrs": [
+    "SRR30010669",
+    "SRR30010667",
+    "SRR30010647",
+    "SRR30010689",
+    "SRR30010651",
+    "SRR30010650",
+    "SRR30010649",
+    "SRR30010657",
+    "SRR30010684",
+    "SRR30010683",
+    "SRR30010688",
+    "SRR30010687",
+    "SRR30010691",
+    "SRR30010690",
+    "SRR30010662",
+    "SRR30010661",
+    "SRR30010648",
+    "SRR30010686",
+    "SRR30010685",
+    "SRR30010658",
+    "SRR30010656",
+    "SRR30010655",
+    "SRR30010654",
+    "SRR30010653",
+    "SRR30010652",
+    "SRR30010673",
+    "SRR30010672"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR30010669.fasta",
+    "untrimmed/SRR30010667.fasta",
+    "untrimmed/SRR30010647.fasta",
+    "untrimmed/SRR30010689.fasta",
+    "untrimmed/SRR30010651.fasta",
+    "untrimmed/SRR30010650.fasta",
+    "untrimmed/SRR30010649.fasta",
+    "untrimmed/SRR30010657.fasta",
+    "untrimmed/SRR30010684.fasta",
+    "untrimmed/SRR30010683.fasta",
+    "untrimmed/SRR30010688.fasta",
+    "untrimmed/SRR30010687.fasta",
+    "untrimmed/SRR30010691.fasta",
+    "untrimmed/SRR30010690.fasta",
+    "untrimmed/SRR30010662.fasta",
+    "untrimmed/SRR30010661.fasta",
+    "untrimmed/SRR30010648.fasta",
+    "untrimmed/SRR30010686.fasta",
+    "untrimmed/SRR30010685.fasta",
+    "untrimmed/SRR30010658.fasta",
+    "untrimmed/SRR30010656.fasta",
+    "untrimmed/SRR30010655.fasta",
+    "untrimmed/SRR30010654.fasta",
+    "untrimmed/SRR30010653.fasta",
+    "untrimmed/SRR30010652.fasta",
+    "untrimmed/SRR30010673.fasta",
+    "untrimmed/SRR30010672.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR30010669.t.fa.gz",
+    "trim/SRR30010667.t.fa.gz",
+    "trim/SRR30010647.t.fa.gz",
+    "trim/SRR30010689.t.fa.gz",
+    "trim/SRR30010651.t.fa.gz",
+    "trim/SRR30010650.t.fa.gz",
+    "trim/SRR30010649.t.fa.gz",
+    "trim/SRR30010657.t.fa.gz",
+    "trim/SRR30010684.t.fa.gz",
+    "trim/SRR30010683.t.fa.gz",
+    "trim/SRR30010688.t.fa.gz",
+    "trim/SRR30010687.t.fa.gz",
+    "trim/SRR30010691.t.fa.gz",
+    "trim/SRR30010690.t.fa.gz",
+    "trim/SRR30010662.t.fa.gz",
+    "trim/SRR30010661.t.fa.gz",
+    "trim/SRR30010648.t.fa.gz",
+    "trim/SRR30010686.t.fa.gz",
+    "trim/SRR30010685.t.fa.gz",
+    "trim/SRR30010658.t.fa.gz",
+    "trim/SRR30010656.t.fa.gz",
+    "trim/SRR30010655.t.fa.gz",
+    "trim/SRR30010654.t.fa.gz",
+    "trim/SRR30010653.t.fa.gz",
+    "trim/SRR30010652.t.fa.gz",
+    "trim/SRR30010673.t.fa.gz",
+    "trim/SRR30010672.t.fa.gz"
+  ],
+  "adapter": null,
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR30010669",
+      "SRR30010667"
+    ],
+    "B": [
+      "SRR30010647",
+      "SRR30010689"
+    ],
+    "C": [
+      "SRR30010651"
+    ],
+    "D": [
+      "SRR30010650"
+    ],
+    "E": [
+      "SRR30010649"
+    ],
+    "F": [
+      "SRR30010657"
+    ],
+    "G": [
+      "SRR30010684",
+      "SRR30010683"
+    ],
+    "H": [
+      "SRR30010688",
+      "SRR30010687"
+    ],
+    "I": [
+      "SRR30010691",
+      "SRR30010690",
+      "SRR30010662",
+      "SRR30010661"
+    ],
+    "J": [
+      "SRR30010648"
+    ],
+    "K": [
+      "SRR30010686",
+      "SRR30010685"
+    ],
+    "L": [
+      "SRR30010658",
+      "SRR30010656"
+    ],
+    "M": [
+      "SRR30010655",
+      "SRR30010654"
+    ],
+    "N": [
+      "SRR30010653",
+      "SRR30010652"
+    ],
+    "O": [
+      "SRR30010673",
+      "SRR30010672"
+    ]
+  },
+  "annotation_conditions": [
+    "O"
+  ],
+  "genome_file": "../../Genomes/Crneo.GCA_000091045.1_ASM9104v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "annotation_file": "tradeoff_O/loci.gff3",
+  "min_length": 15,
+  "max_length": 30,
+  "adapters": {
+    "SRR30010669.fasta": "AGATCGGA",
+    "SRR30010667.fasta": "AGATCGGA",
+    "SRR30010647.fasta": "AGATCGGA",
+    "SRR30010689.fasta": "AGATCGGA",
+    "SRR30010651.fasta": "AGATCGGA",
+    "SRR30010650.fasta": "AGATCGGA",
+    "SRR30010649.fasta": "AGATCGGA",
+    "SRR30010657.fasta": "AGATCGGA",
+    "SRR30010684.fasta": "AGATCGGA",
+    "SRR30010683.fasta": "AGATCGGA",
+    "SRR30010688.fasta": "AGATCGGA",
+    "SRR30010687.fasta": "AGATCGGA",
+    "SRR30010691.fasta": "AGATCGGA",
+    "SRR30010690.fasta": "AGATCGGA",
+    "SRR30010662.fasta": "AGATCGGA",
+    "SRR30010661.fasta": "AGATCGGA",
+    "SRR30010648.fasta": "AGATCGGA",
+    "SRR30010686.fasta": "AGATCGGA",
+    "SRR30010685.fasta": "AGATCGGA",
+    "SRR30010658.fasta": "AGATCGGA",
+    "SRR30010656.fasta": "AGATCGGA",
+    "SRR30010655.fasta": "AGATCGGA",
+    "SRR30010654.fasta": "AGATCGGA",
+    "SRR30010653.fasta": "AGATCGGA",
+    "SRR30010652.fasta": "AGATCGGA",
+    "SRR30010673.fasta": "AGATCGGA",
+    "SRR30010672.fasta": "AGATCGGA"
+  }
+}

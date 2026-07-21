@@ -1,0 +1,49 @@
+{
+  "project_name": "Fuoxy.PRJNA1123906",
+  "srrs": [
+    "SRR29423013",
+    "SRR29423014",
+    "SRR29423015",
+    "SRR29423016",
+    "SRR29423017",
+    "SRR29423018"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR29423013.fasta",
+    "untrimmed/SRR29423014.fasta",
+    "untrimmed/SRR29423015.fasta",
+    "untrimmed/SRR29423016.fasta",
+    "untrimmed/SRR29423017.fasta",
+    "untrimmed/SRR29423018.fasta"
+  ],
+  "trimmed_libraries": null,
+  "adapter": null,
+  "alignment_file": null,
+  "conditions": {
+    "B": [
+      "SRR29423013",
+      "SRR29423014",
+      "SRR29423015"
+    ],
+    "A": [
+      "SRR29423016",
+      "SRR29423017",
+      "SRR29423018"
+    ]
+  },
+  "annotation_conditions": null,
+  "genome_file": "../../Genomes/Fuoxy.GCA_013085055.1_ASM1308505v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "annotation_file": null,
+  "min_length": 15,
+  "max_length": 50,
+  "adapters": {
+    "SRR29423013.fasta": "None",
+    "SRR29423014.fasta": "None",
+    "SRR29423015.fasta": "None",
+    "SRR29423016.fasta": "None",
+    "SRR29423017.fasta": "None",
+    "SRR29423018.fasta": "None"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "project_name": "Caalb.PRJNA1074533",
+  "srrs": [
+    "SRR27911726",
+    "SRR27911616",
+    "SRR27911615",
+    "SRR27911613",
+    "SRR27911485",
+    "SRR27911484",
+    "SRR27911450",
+    "SRR27911443",
+    "SRR27911427",
+    "SRR27911426"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR27911726.fasta",
+    "untrimmed/SRR27911616.fasta",
+    "untrimmed/SRR27911615.fasta",
+    "untrimmed/SRR27911613.fasta",
+    "untrimmed/SRR27911485.fasta",
+    "untrimmed/SRR27911484.fasta",
+    "untrimmed/SRR27911450.fasta",
+    "untrimmed/SRR27911443.fasta",
+    "untrimmed/SRR27911427.fasta",
+    "untrimmed/SRR27911426.fasta"
+  ],
+  "trimmed_libraries": [
+    "untrimmed/SRR27911726.fasta",
+    "untrimmed/SRR27911616.fasta",
+    "untrimmed/SRR27911615.fasta",
+    "untrimmed/SRR27911613.fasta",
+    "untrimmed/SRR27911485.fasta",
+    "untrimmed/SRR27911484.fasta",
+    "untrimmed/SRR27911450.fasta",
+    "untrimmed/SRR27911443.fasta",
+    "untrimmed/SRR27911427.fasta",
+    "untrimmed/SRR27911426.fasta"
+  ],
+  "adapter": null,
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR27911726",
+      "SRR27911616",
+      "SRR27911615",
+      "SRR27911613"
+    ],
+    "B": [
+      "SRR27911485",
+      "SRR27911484",
+      "SRR27911450",
+      "SRR27911443",
+      "SRR27911427",
+      "SRR27911426"
+    ]
+  },
+  "annotation_conditions": [
+    "B"
+  ],
+  "genome_file": "../../Genomes/Caalb.GCF_000182965.3_ASM18296v3_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "annotation_file": "tradeoff_B/loci.gff3",
+  "min_length": 15,
+  "max_length": 30,
+  "adapters": {
+    "SRR27911726.fasta": "PRE-TRIMMED",
+    "SRR27911616.fasta": "PRE-TRIMMED",
+    "SRR27911615.fasta": "PRE-TRIMMED",
+    "SRR27911613.fasta": "PRE-TRIMMED",
+    "SRR27911485.fasta": "PRE-TRIMMED",
+    "SRR27911484.fasta": "PRE-TRIMMED",
+    "SRR27911450.fasta": "PRE-TRIMMED",
+    "SRR27911443.fasta": "PRE-TRIMMED",
+    "SRR27911427.fasta": "PRE-TRIMMED",
+    "SRR27911426.fasta": "PRE-TRIMMED"
+  }
+}

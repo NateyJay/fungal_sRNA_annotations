@@ -1,0 +1,58 @@
+{
+  "project_name": "Sacer.PRJEB59224",
+  "srrs": [
+    "ERR10806392",
+    "ERR10806391",
+    "ERR10806390",
+    "ERR10806386",
+    "ERR10806385",
+    "ERR10806384"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/ERR10806392.fasta",
+    "untrimmed/ERR10806391.fasta",
+    "untrimmed/ERR10806390.fasta",
+    "untrimmed/ERR10806386.fasta",
+    "untrimmed/ERR10806385.fasta",
+    "untrimmed/ERR10806384.fasta"
+  ],
+  "trimmed_libraries": [
+    "untrimmed/ERR10806392.fasta",
+    "untrimmed/ERR10806391.fasta",
+    "untrimmed/ERR10806390.fasta",
+    "untrimmed/ERR10806386.fasta",
+    "untrimmed/ERR10806385.fasta",
+    "untrimmed/ERR10806384.fasta"
+  ],
+  "adapter": null,
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "ERR10806392",
+      "ERR10806391",
+      "ERR10806390"
+    ],
+    "C": [
+      "ERR10806386",
+      "ERR10806385",
+      "ERR10806384"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Sacer.GCA_000146045.2_R64_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "annotation_file": "tradeoff_A/loci.gff3",
+  "min_length": 15,
+  "max_length": 30,
+  "adapters": {
+    "ERR10806392.fasta": "PRE-TRIMMED",
+    "ERR10806391.fasta": "PRE-TRIMMED",
+    "ERR10806390.fasta": "PRE-TRIMMED",
+    "ERR10806386.fasta": "PRE-TRIMMED",
+    "ERR10806385.fasta": "PRE-TRIMMED",
+    "ERR10806384.fasta": "PRE-TRIMMED"
+  }
+}

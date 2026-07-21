@@ -1,0 +1,69 @@
+{
+  "project_name": "Asfla.PRJNA355201",
+  "srrs": [
+    "SRR5066026",
+    "SRR5066032",
+    "SRR5066030",
+    "SRR5066035",
+    "SRR5066021",
+    "SRR5066024",
+    "SRR5066027",
+    "SRR5066028"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR5066026.fasta",
+    "untrimmed/SRR5066032.fasta",
+    "untrimmed/SRR5066030.fasta",
+    "untrimmed/SRR5066035.fasta",
+    "untrimmed/SRR5066021.fasta",
+    "untrimmed/SRR5066024.fasta",
+    "untrimmed/SRR5066027.fasta",
+    "untrimmed/SRR5066028.fasta"
+  ],
+  "trimmed_libraries": null,
+  "adapter": null,
+  "alignment_file": null,
+  "conditions": {
+    "A": [
+      "SRR5066026"
+    ],
+    "B": [
+      "SRR5066032"
+    ],
+    "C": [
+      "SRR5066030"
+    ],
+    "D": [
+      "SRR5066035"
+    ],
+    "E": [
+      "SRR5066021"
+    ],
+    "F": [
+      "SRR5066024"
+    ],
+    "G": [
+      "SRR5066027"
+    ],
+    "H": [
+      "SRR5066028"
+    ]
+  },
+  "annotation_conditions": null,
+  "genome_file": "../../Genomes/Asfla.GCF_009017415.1_ASM901741v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "annotation_file": null,
+  "min_length": 15,
+  "max_length": 50,
+  "adapters": {
+    "SRR5066026.fasta": "None",
+    "SRR5066032.fasta": "None",
+    "SRR5066030.fasta": "None",
+    "SRR5066035.fasta": "None",
+    "SRR5066021.fasta": "None",
+    "SRR5066024.fasta": "None",
+    "SRR5066027.fasta": "None",
+    "SRR5066028.fasta": "None"
+  }
+}

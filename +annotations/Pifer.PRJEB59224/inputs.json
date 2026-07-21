@@ -1,0 +1,41 @@
+{
+  "project_name": "Pifer.PRJEB59224",
+  "srrs": [
+    "ERR10806389",
+    "ERR10806388",
+    "ERR10806387"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/ERR10806389.fasta",
+    "untrimmed/ERR10806388.fasta",
+    "untrimmed/ERR10806387.fasta"
+  ],
+  "trimmed_libraries": [
+    "untrimmed/ERR10806389.fasta",
+    "untrimmed/ERR10806388.fasta",
+    "untrimmed/ERR10806387.fasta"
+  ],
+  "adapter": null,
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "B": [
+      "ERR10806389",
+      "ERR10806388",
+      "ERR10806387"
+    ]
+  },
+  "annotation_conditions": [
+    "B"
+  ],
+  "genome_file": "../../Genomes/Pifer.GCA_035610515.1_ASM3561051v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "annotation_file": "tradeoff_B/loci.gff3",
+  "min_length": 15,
+  "max_length": 30,
+  "adapters": {
+    "ERR10806389.fasta": "PRE-TRIMMED",
+    "ERR10806388.fasta": "PRE-TRIMMED",
+    "ERR10806387.fasta": "PRE-TRIMMED"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "project_name": "Tratr.PRJNA1037012",
+  "srrs": [
+    "SRR26717486",
+    "SRR26717487",
+    "SRR26717488"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR26717486.fasta",
+    "untrimmed/SRR26717487.fasta",
+    "untrimmed/SRR26717488.fasta"
+  ],
+  "trimmed_libraries": [
+    "untrimmed/SRR26717486.fasta",
+    "untrimmed/SRR26717487.fasta",
+    "untrimmed/SRR26717488.fasta"
+  ],
+  "adapter": null,
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR26717486",
+      "SRR26717487",
+      "SRR26717488"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Tratr.GCA_020647795.1_ASM2064779v1_genomic.fa",
+  "jbrowse_directory": null,
+  "gene_annotation_file": null,
+  "annotation_file": "tradeoff_A/loci.gff3",
+  "min_length": 15,
+  "max_length": 30,
+  "adapters": {
+    "SRR26717486.fasta": "PRE-TRIMMED",
+    "SRR26717487.fasta": "PRE-TRIMMED",
+    "SRR26717488.fasta": "PRE-TRIMMED"
+  }
+}
