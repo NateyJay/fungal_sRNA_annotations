@@ -1,179 +1,53 @@
 
 
 
-get_meta.df <- function() {
-  meta_file = file.path("/Volumes/YASMA/master_table.xlsx")
-  # meta_file = file.path(path)
+
+get_aspect_ratio <- function() {
   
+  xrang = (par()$usr[2] - par()$usr[1])
+  yrang = (par()$usr[4] - par()$usr[3]) 
+  xp    = (par()$plt[2] - par()$plt[1])
+  yp    = (par()$plt[4] - par()$plt[3])
   
+  ar = (yrang / yp) / (xrang / xp) * par()$din[1] / par()$din[2]
+  return(ar)
+}
+
+get_dir_paths <- function() {
   
+  ann_dir = '/Users/jax/fungal_annotations/annotations/'
+  gen_dir = '/Users/jax/fungal_annotations/Genomes/'
   
-  if (file.exists(meta_file)) {
-    meta.df <- readxl::read_excel(meta_file, skip=1)
-    
-  } else {
-    message("/Volumes/YASMA/master_table.xlsx not found!")
-    message("  -> working from backup file")
-    # scp njohnson@darwin:/home2/njohnson/fungi_annotations/batch_scripts/master_table.xlsx ./backup.xlsx
-    meta.df <- readxl::read_excel("backup.xlsx", skip=1)
-    
-  }
+  if (dir.exists(ann_dir) & dir.exists(gen_dir)) return(list(ann=ann_dir, gen=gen_dir))
   
-  meta.df <- as.data.frame(meta.df)
-  meta.df <- meta.df[!is.na(meta.df$`project-rg`),]
+  gen_dir = '/Volumes/fungal_srnas/Genomes/'
+  ann_dir = '/Volumes/fungal_srnas/Annotations/'
   
-  meta.df$abbv <- str_c(str_sub(meta.df$fungi_species, 1,2),
-                        str_sub(str_split_fixed(meta.df$fungi_species, " ", 2)[,2], 1,3),
-                        sep='')
+  if (dir.exists(ann_dir) & dir.exists(gen_dir)) return(list(ann=ann_dir, gen=gen_dir))
   
-  # unique(meta.df$`Replicate group`)
-  
-  meta.df$has_dicer_mutant <- str_detect(meta.df$`Replicate group`, "\\.")
-  head(meta.df)
-  
-  return(meta.df)
+  stop("sRNA directories not found! Are you connected to the NAS or sshfs?")
 }
 
 
-get_project.df <- function(filter = T, annotations_dir = "../+annotations") {
-  m.df <- meta.df
-  m.df$project <- paste(m.df$abbv, m.df$bioproject, sep='.')
+get_gff_files <- function(abbv) {
+  dirs = get_dir_paths()
   
-  head(m.df)  
+  ncbi_gff = Sys.glob(paste0(dirs$gen, abbv, "*_genomic.gff3"))[1]
+  rfam_gff = str_glue("../rfam/02out-rfam_gffs/{abbv}.rfam.gff3")
+  te_gff = str_glue("../TE_annotations/eg_out/{abbv}_EarlGrey/{abbv}_summaryFiles/{abbv}.filteredRepeats.gff")
   
-  comma_paste <- function(x) {
-    x <- x[!duplicated(x)]
-    x <- x[order(x)]
-    paste(x, collapse=',')
-  }
-  rg.df <- m.df[,c('project', 'Replicate group')]
-  rg.df <- dcast(rg.df, project ~ ., fun.aggregate = comma_paste)
-  
-  m.df <- m.df[,c('fungi_abbv','project')]  
-  names(m.df) <- c('abbv','project')
-  m.df$conditions <- rg.df$`.`[match(m.df$project, rg.df$project)]
-  
-  
-  m.df$abbv[m.df$project == 'Vacer.PRJNA399493'] <- "Nocer"
-  m.df$project[m.df$project == 'Vacer.PRJNA399493'] <- "Nocer.PRJNA399493"
-  
-  # m.df$project <- str_c(m.df$abbv, m.df$bioproject, sep='.')
-  m.df <- m.df[!duplicated(m.df$project),]
-  
-  rownames(m.df) <- m.df$project
-  
-  
-  
-  
-  
-  aln.df <- data.frame()
-  for (p in m.df$project) {
-    
-    project_file = file.path(annotations_dir, p, "align/project_stats.txt")
-    
-    if (!file.exists(project_file)) next
-    
-    df <- read.delim(project_file)
-    
-    if (!"xmap_fr" %in% names(df))  df$xmap_fr = 0
-    
-    aln.df <- rbind(aln.df, df)
-  }
-  
-  
-  m.df <- merge(m.df, aln.df, by='project', all.x=T)
-  
-  m.df$abbv <- str_sub(m.df$project, 1, 5)
-  
-  # if (filter) m.df <- filter_projects(m.df)
-  return(m.df)
-  
+  return(list(ncbi=ncbi_gff,
+              rfam=rfam_gff,
+              te=te_gff))
 }
-# project.df <- get_project.df()
 
-
-
-get_library.df <- function() {
-  m.df <- meta.df
-  
-  head(m.df)
-  names(m.df)
-  
-  m.df <- m.df[,c('fungi_abbv','bioproject', 'Replicate group','srr')]  
-  names(m.df) <- c('abbv','bioproject', 'rg','srr')
-  
-  m.df[duplicated(m.df$srr),]
-  
-  rownames(m.df) <- m.df$srr
-  
-  
-  return(m.df)
-}
 
 # library.df <- get_library.df()
 
 
-get_peak.df <- function() {
-  p.df <- project.df
-  
-  out.df <- data.frame()
-  
-  for (project in p.df$project) {
-    message(project)
-    # peak_file = file.path("../+annotations", project, "align/alignment.peak_table.txt")
-    peak_file = file.path("../+annotations", project, "align/alignment.peak_summary.txt")
-    
-    if (!file.exists(peak_file)) {
-      message("  ^^^ peak_file not found")
-      next
-    }
-    
-    # stop()
-    df <- read.delim(peak_file)
-    df <- df[df$peak != 'none',]
-    df$abbv <- str_sub(df$project, 1, 5)
-    out.df <- rbind(out.df, df)
-    
-  }
-  
-  return(out.df)
-  
-}
 
 
-get_peak_scales <- function(filter=F) {
-  p.df <- project.df
-  
-  out.df <- data.frame()
-  
-  for (project in p.df$project) {
-    message(project)
-    peak_file = file.path("../+annotations", project, "align/alignment.peak_table.txt")
-    
-    if (!file.exists(peak_file)) {
-      message("  ^^^ peak_file not found")
-      next
-    }
-    
-    df <- read.delim(peak_file)
-    
-    if (filter) {
-      
-      if (length(unique(df$peak)) == 1) {message('  xxx filtered'); next}
-      
-      slope_peaks = unique(df$peak[df$size %in% 15:18])
-      if (length(slope_peaks) > 1) {message('  xxx filtered'); next}
-      if (slope_peaks != "None") {message('  xxx filtered'); next}
-    }
-    
-    out.df <- rbind(out.df, df)
-    
-  }
-  
-  out.df$abbv <- str_sub(out.df$project, 1, 5)
-  
-  return(out.df)
-}
+
 # scale.df <- get_peak_scales(filter=F)
 
 
@@ -225,454 +99,116 @@ get_profile.df <- function() {
 }
 # profile.df <- get_profile.df()
 
-filter_projects <- function(p.df) {
-  
-  # p.df <- project.df
-  
-  rownames(p.df) <- p.df$project
-  
-  p.df <- p.df[complete.cases(p.df),]
-  p.df$total_aligned <- rowSums(p.df[,c('umap', 'mmap_wg', 'mmap_nw')])
-  p.df$alignment_rate <- p.df$total_aligned / rowSums(p.df[,c('umap', 'mmap_wg', 'mmap_nw', 'xmap_nw', 'xmap_ma', 'xmap_nv')])
-  
-  # absolute alignment >= 1M reads
-  p.df$f_abs_alignment <- p.df$total_aligned >= 1000000
-  table(p.df$f_abs_alignment)
-  
-  # relative alignment >= 0.05
-  p.df$f_rel_alignment <- p.df$alignment_rate >= 0.05
-  table(p.df$f_rel_alignment)
-  
-  table(`abs`=p.df$f_abs_alignment, `rel`=p.df$f_rel_alignment)
-  
-  k.df <- get_peak_scales()
-  k.df <- k.df[k.df$peak != "None", c('project','size','peak')]
-  
-  
-  # has a peak
-  p.df$f_has_peak <- p.df$project %in% k.df$project
-  table(p.df$f_has_peak)
-  
-  k.df <- k.df[k.df$size < 18 | k.df$size > 32,]
-  # no slope
-  p.df$f_no_slope <- !p.df$project %in% k.df$project & p.df$f_has_peak
-  table(p.df$f_no_slope)
-  
-  head(p.df)
-  
-  
-  f.df <- p.df[,c('f_abs_alignment', 'f_rel_alignment', 'f_has_peak', 'f_no_slope')]
-  f.df <- as.data.frame(t(apply(f.df, 1, as.numeric)))
-  
-  p.df$filter_str <- apply(f.df, 1, paste, collapse='')
-  p.df$f_pass <- apply(f.df, 1, sum) == 4
-  
-  write.table(p.df, "../+tables/projects.filtered.txt", quote=F, sep='\t', row.names = F)
-  
-  return(p.df) 
-}
-
-filter_loci <- function(annotation.df) {
-  a.df <- annotation.df
-  s.df <- scale.df
-  s.df <- s.df[s.df$peak != "None",]
-  
-  
-  a.df$f_sizecall <- a.df$sizecall != "N"
-  table(a.df$project, a.df$f_sizecall)
-  
-  for (p in unique(a.df$project)){
-    sizes = s.df$size[s.df$project == p]
-    
-    f = a.df$project == p & a.df$f_sizecall
-    
-    
-    a.df$f_peak_size[f] <- as.numeric(str_sub(a.df$size_1n[f],2,3)) %in% sizes
-    
-  }
-  
-  table(a.df$project, a.df$f_peak_size)
-  
-  
-  a.df$f_abs_abundance <-  a.df$Reads > 100
-  
-  table(a.df$f_abs_abundance)
-  
-  a.df$f_all <- a.df$f_sizecall & a.df$f_peak_size & a.df$f_abs_abundance
-  
-  table(a.df$f_all)
-  table(p.df$project %in% a.df$project[a.df$f_all])
-  
-  write.table(a.df, "../+tables/loci.filtered.txt", quote=F, sep='\t', row.names = F)
-  
-  return(a.df)
-  
-}
-
-get_annotation.df <- function(filter=T) {
-  
-  p.df <- project.df
-  
-  out.df <- data.frame()
-  
-  for (p in p.df$project) {
-    message(p)
-    
-    ann_file = file.path("../+annotations", p, "tradeoff/loci.txt")
-    
-    if (!file.exists(ann_file)) {message("   ^^^ annotation file not found"); next}
-    
-    a.df <- read.delim(ann_file)
-    
-    if ('condition' %in% names(a.df)) a.df$condition <- NULL
-    
-    if (nrow(a.df) == 0 ) {message("   ^^^ annotation empty"); next}
-    
-    
-    a.df$project = p
-    a.df$abbv    = str_sub(p, 1, 5)
-    
-    out.df <- rbind(out.df, a.df)
-    
-  }
-  
-  
-  # if (filter) filter_loci()
-  
-  return(out.df) 
-}
-
-# annotation.df <- get_annotation.df()
 
 
 
 
+
+
+# get_metaloci.df <- function() {
+#   out.df <- data.frame()
+#   
+#   # for (gff_file in Sys.glob("../metaloci/*.meta.gff3")) {
+#   #   abbv = str_split
+#   for (abbv in unique(project.df$abbv)) {
+#     message(abbv)
 # 
-# annotation.df <- filter_loci()
-
-
-get_metaloci.df <- function() {
-  out.df <- data.frame()
-  
-  # for (gff_file in Sys.glob("../metaloci/*.meta.gff3")) {
-  #   abbv = str_split
-  for (abbv in unique(project.df$abbv)) {
-    message(abbv)
-
-    gff_file = str_glue("../metaloci/{abbv}.meta.gff3")
-
-    if (!file.exists(gff_file)) {message("^^^ meta ann not found"); next}
-    
-    df <- readGFF(gff_file)
-    df <- as.data.frame(df)
-    
-    if (nrow(df) == 0) next
-    
-    df$length <- df$end - df$start
-    df$abbv <- abbv
-    df$name <- str_replace(df$ID, "metalocus", abbv)
-    
-    
-    out.df <- rbind(out.df, df)
-  }
-  
-  for (c in c('fracTop', 'rpm', 'depth', 'member_loci', 'member_projects')) {
-    out.df[[c]] <- as.numeric(out.df[[c]])
-  }
-  
-  return(out.df)
-}
-
-get_ml_lookup <- function() {
-  out.df <- data.frame()
-  
-  # for (gff_file in Sys.glob("../metaloci/*.meta.gff3")) {
-  #   abbv = str_split
-  for (abbv in unique(project.df$abbv)) {
-    message(abbv)
-    
-    gff_file = str_glue("../metaloci/{abbv}.gff3")
-    
-    if (!file.exists(gff_file)) {message("^^^ meta ann not found"); next}
-    
-    df <- readGFF(gff_file)
-    df <- as.data.frame(df)
-    
-    if (nrow(df) == 0) next
-    
-    df$key = str_c(df$ID, df$project, df$annotation, sep='-')
-    
-    df$abbv <- abbv
-    df$ml_name <- str_replace(df$metalocus, "metalocus", df$abbv)
-    
-    out.df <- rbind(out.df, df)
-  }
-  
-  
-  return(out.df)
-    
-  
-}
-
-get_conservation_df <- function() {
-  
-  conservation.df <- data.frame()
-  gr.ls = list()
-  for (a in unique(metaloci.df$abbv)) {
-    gr <- readGFFAsGRanges(file.path("../metaloci", paste(a, ".meta.gff3", sep='')))
-    gr$name <- str_replace(gr$ID, "metalocus", a)
-    gr.ls[[a]] <- gr
-  }
-  
-  for (a in unique(metaloci.df$abbv)) {
-    
-    for (b in unique(metaloci.df$abbv)) {
-      
-      if (a == b) next
-      
-      message(paste(a, "x", b))
-      
-      # a.gr <- gr.ls[[a]]
-      # b.gr <- gr.ls[[b]]
-      intersection_file = file.path("../conservation/02out-gffs", paste(a, '_to_', b, '.gff3', sep=''))
-      
-      if (!file.exists(intersection_file)) {next}
-      
-      i.gr <- readGFFAsGRanges(intersection_file)
-      
-      i.df <- as.data.frame(findOverlaps(i.gr, gr.ls[[b]]))
-      
-      i.df$a = i.gr$ID[i.df$queryHits]
-      
-      f = match(i.df$a, gr.ls[[a]]$ID)
-      
-      i.df$a_type     <- gr.ls[[a]]$type[f]
-      i.df$a          <- gr.ls[[a]]$name[f]
-      i.df$a_contig   <- as.data.frame(gr.ls[[a]])$seqnames[f]
-      i.df$a_start    <- gr.ls[[a]]@ranges@start[f]
-      i.df$a_length   <- gr.ls[[a]]@ranges@width[f]
-      i.df$a_members  <- gr.ls[[a]]$member_loci[f]
-      i.df$a_projects <- gr.ls[[a]]$member_projects[f]
-      
-      
-      i.df$b = gr.ls[[b]]$ID[i.df$subjectHits]
-      
-      f = match(i.df$b, gr.ls[[b]]$ID)
-      
-      i.df$b_type     <- gr.ls[[b]]$type[f]
-      i.df$b          <- gr.ls[[b]]$name[f]
-      i.df$b_contig   <- as.data.frame(gr.ls[[b]])$seqnames[f]
-      i.df$b_start    <- gr.ls[[b]]@ranges@start[f]
-      i.df$b_length   <- gr.ls[[b]]@ranges@width[f]
-      i.df$b_members  <- gr.ls[[b]]$member_loci[f]
-      i.df$b_projects <- gr.ls[[b]]$member_projects[f]
-      
-      
-      i.df$pident    <- i.gr$pident[i.df$queryHits]
-      i.df$evalue    <- i.gr$evalue[i.df$queryHits]
-      
-      
-      if (any(is.na(i.df$a_type))) stop()
-      
-      conservation.df <- rbind(conservation.df, i.df)
-      
-    }
-  }
-  
-  for (c in c('evalue','pident','a_members','b_members','a_length','b_length')) {
-    conservation.df[[c]] <- as.numeric(conservation.df[[c]])
-  }
-  
-  return(conservation.df)
-}
-
-
-get_new_annotation.df <- function() {
-  out.df <- data.frame()
-  for (abbv in unique(project.df$abbv)) {
-    
-    gff_file = str_glue("../metaloci/{abbv}.gff3")
-    
-    if (!file.exists(gff_file)) next
-    # stop()
-    
-    df <- readGFF(gff_file)
-    df <- as.data.frame(df)
-    
-    if (nrow(df) == 0) next
-    
-    df$abbv <- abbv
-    
-    
-    out.df <- rbind(out.df, df)
-  }
-  
-  for (c in c('fracTop', 'rpm', 'depth')) {
-    out.df[[c]] <- as.numeric(out.df[[c]])
-  }
-  
-  out.df$name <- str_replace(out.df$metalocus, 'metalocus', out.df$abbv)
-  
-  return(out.df)
-}
+#     gff_file = str_glue("../metaloci/01out-meta_gffs/{abbv}.meta.gff3")
+# 
+#     if (!file.exists(gff_file)) {message("^^^ meta ann not found"); next}
+#     
+#     df <- readGFF(gff_file)
+#     df <- as.data.frame(df)
+#     
+#     if (nrow(df) == 0) next
+#     
+#     df$length <- df$end - df$start
+#     df$abbv <- abbv
+#     df$name <- str_replace(df$ID, "metalocus", abbv)
+#     
+#     
+#     out.df <- rbind(out.df, df)
+#   }
+#   
+#   for (c in c('fracTop', 'rpm', 'depth', 'member_loci', 'member_projects')) {
+#     out.df[[c]] <- as.numeric(out.df[[c]])
+#   }
+#   
+#   return(out.df)
+# }
+# 
+# get_ml_lookup <- function() {
+#   out.df <- data.frame()
+#   
+#   # for (gff_file in Sys.glob("../metaloci/*.meta.gff3")) {
+#   #   abbv = str_split
+#   for (abbv in unique(project.df$abbv)) {
+#     message(abbv)
+#     
+#     gff_file = str_glue("../metaloci/{abbv}.gff3")
+#     
+#     if (!file.exists(gff_file)) {message("^^^ meta ann not found"); next}
+#     
+#     df <- readGFF(gff_file)
+#     df <- as.data.frame(df)
+#     
+#     if (nrow(df) == 0) next
+#     
+#     df$key = str_c(df$ID, df$project, df$annotation, sep='-')
+#     
+#     df$abbv <- abbv
+#     df$ml_name <- str_replace(df$metalocus, "metalocus", df$abbv)
+#     
+#     out.df <- rbind(out.df, df)
+#   }
+#   
+#   
+#   return(out.df)
+#     
+#   
+# }
 
 
 
 
-get_hairpin.df <- function() {
-  hp.df <- data.frame()
-  
-  for (project in project.df$project) {
-    for (cond in unlist(str_split(project.df$conditions[project.df$project == project], ","))) {
-      
-      message(str_glue("{project}.{cond}"))
-      
-      hp_file = file.path("../+annotations", project, "hairpin", cond, "hairpins.txt")
-      
-      
-      if (!file.exists(hp_file)) {message("^^^ hp file not found"); next}
-      
-      df <- read.delim(hp_file)
-      if (nrow(df) == 0) {message("^^^ hp file empty"); next}
-      
-      df$abbv    <- str_sub(project, 1,5)
-      df$project <- project
-      df$cond    <- cond
-      
-      table(df$ruling)
-      
-      # passing_rulings = c('x x xx xx x -',
-      #                     'x x xx xx x x')
-      # 
-      # df <- df[df$ruling %in% passing_rulings,]
-      
-      df$pass_sum <- str_count(df$ruling, "x")
-      df <- df[df$pass_sum > 4,]
-      
-      
-      hp.df = rbind(hp.df, df)
-      
-    }
-    
-  }
-  
-  boolean_columns <- c('stranded','no_mas_structures', 'no_star_structures', 'star_found')
-  for (c in boolean_columns) {
-    hp.df[[c]] <- as.logical(hp.df[[c]])
-  }
-  
-  
-  numeric_columns <- c('mfe_per_nt')
-  for (c in numeric_columns) {
-    hp.df[[c]] <- as.numeric(hp.df[[c]])
-  }
-  
-  # stranded
-  # ┋ mfe_per_nt
-  # ┋ ┋ mismatches_total
-  # ┋ ┋ ┋mismatches_asymm
-  # ┋ ┋ ┋┋largest_loop
-  # ┋ ┋ ┋┋┋ mas_duplex_structure
-  # ┋ ┋ ┋┋┋ ┋star_duplex_structure
-  # ┋ ┋ ┋┋┋ ┋┋ constellation precision
-  # ┋ ┋ ┋┋┋ ┋┋ ┋tight precision
-  # ┋ ┋ ┋┋┋ ┋┋ ┋┋ star_found
-  # ┋ ┋ ┋┋┋ ┋┋ ┋┋ ┋star_above_background
-  # v v vvv vv vv vv
-  
-  # x x xxx xx xx xx
-  # 0000000001111111
-  # 1 3 567 90 23 56
-  
-  
-  hp.df$hp_cat <- "(undescribed)"
-  
-  
-  hp.df$hp_cat[str_detect(str_sub(hp.df$ruling, 12,14), '-')] <- 'imprecise'
-  hp.df$hp_cat[str_detect(str_sub(hp.df$ruling, 16,17), '-')] <- 'imprecise'
-  hp.df$hp_cat[str_detect(str_sub(hp.df$ruling, 5,8), '-')]   <- 'bad_duplex'
-  hp.df$hp_cat[str_detect(str_sub(hp.df$ruling, 3,4), '-')]   <- 'bad_hairpin'
-  hp.df$hp_cat[str_detect(str_sub(hp.df$ruling, 9,11), '-')]  <- 'bad_hairpin'
-  hp.df$hp_cat[str_detect(str_sub(hp.df$ruling, 1,2), '-')]   <- 'unstranded'
-  
-  
-  hp.df$hp_cat[hp.df$ruling == 'x x xxx xx xx xx'] <- "miRNA"
-  hp.df$hp_cat[hp.df$ruling == 'x x xxx xx xx -x'] <- "near_miRNA"
-  hp.df$hp_cat[hp.df$ruling == 'x x xx- xx xx xx' & hp.df$largest_loop <= 6] <- "near_miRNA"
-  hp.df$hp_cat[hp.df$ruling == 'x x -xx xx xx xx' & hp.df$mismatches_total <= 8] <- "near_miRNA"
-  hp.df$hp_cat[hp.df$ruling == 'x x x-x xx xx xx' & hp.df$mismatches_asymm <= 5] <- "near_miRNA"
-  
-  
-  
-  # hp.df[hp.df$hp_cat == '(undescribed)', ]
-  
-  table(hp.df$abbv, hp.df$hp_cat)
-  
-  hp.df$key            <- str_c(hp.df$name, hp.df$project, hp.df$cond, sep='-')
-  hp.df$ml_name        <- ml_lookup$ml_name[match(hp.df$key, ml_lookup$key)]
-  hp.df$type           <- metaloci.df$type[match(hp.df$ml_name, metaloci.df$name)]
-  hp.df$context        <- metaloci.df$context[match(hp.df$ml_name, metaloci.df$name)]
-  hp.df$simple_context <- metaloci.df$simple_context[match(hp.df$ml_name, metaloci.df$name)]
-  hp.df$rpm            <- metaloci.df$rpm[match(hp.df$ml_name, metaloci.df$name)]
-  
-  hp.df$hp_cat[!hp.df$type %in% str_c("RNA_", make_dicer_sizes(19:25))] <- "(atypical-sized-sRNA)"
-  hp.df$hp_cat[hp.df$type == "OtherRNA"] <- "(non-sRNA)"
-  
-  hp.df <- hp.df[!is.na(hp.df$ml_name),]
-  
-  hp.df$star_offset_left  <- as.numeric(hp.df$star_offset_left)
-  hp.df$star_offset_right <- as.numeric(hp.df$star_offset_right)
-  
-  hp.df$hp_cat[hp.df$simple_context %in% c('tRNA', 'rRNA', 'spliceosomal')] <- "(structural RNA)"
-  # hp.df <- hp.df[!hp.df$simple_context %in% c('tRNA', 'rRNA', 'spliceosomal'),]
-  
-  
-  hp.df$p_struc_positions <- 1 - (str_count(hp.df$fold, '\\.') / str_length(hp.df$fold))
-  
-  hp.df$fold <- NULL
-  hp.df$seq  <- NULL
-  
-  
-  hp.df$sub <- 'native'
-  hp.df$sub[str_detect(hp.df$sub_name, 'side')] <- 'side'
-  hp.df$sub[str_detect(hp.df$sub_name, 'sub')] <- 'sub'
-  
-  return(hp.df)
-}
 
-get_contexts <- function(metaloci.df) {
-  ml.df <- metaloci.df
-  # p.df <- project.df
-  context.df <- data.frame()
-  for (abbv in unique(ml.df$abbv)) {
-    message(abbv)
-    
-    context_file = str_glue("../context/01out-intersections/{abbv}.context.txt")
-    if (!file.exists(context_file)) {
-      message('^^^ context file not found')
-      # ml.df <- ml.df[ml.df$abbv != abbv,]
-      next
-    }
-    
-    df <- read.delim(context_file)
-    df$abbv <- abbv
-    
-    context.df <- rbind(context.df, df)
-    
-  }
-  
-  names(context.df)[names(context.df) == 'type'] <- 'closest_type'
-  names(context.df)[names(context.df) == 'distance'] <- 'closest_dist'
-  names(context.df)[names(context.df) == 'category'] <- 'context'
-  
-  ml.df <- merge(ml.df, context.df[,c('cluster','abbv', 'closest_type','closest_dist','context')], by.x=c("abbv", "ID"), by.y=c("abbv",'cluster'), all.x=T)
-  
-  ml.df$simple_context <- str_replace(ml.df$context, "sense_|antisense_|unstranded_|", "")
-  
-  
-  
-  return(ml.df)
-}
+
+
+
+
+# get_contexts <- function(metaloci.df) {
+#   ml.df <- metaloci.df
+#   # p.df <- project.df
+#   context.df <- data.frame()
+#   for (abbv in unique(ml.df$abbv)) {
+#     message(abbv)
+#     
+#     context_file = str_glue("../context/01out-intersections/{abbv}.context.txt")
+#     if (!file.exists(context_file)) {
+#       message('^^^ context file not found')
+#       # ml.df <- ml.df[ml.df$abbv != abbv,]
+#       next
+#     }
+#     
+#     df <- read.delim(context_file)
+#     df$abbv <- abbv
+#     
+#     context.df <- rbind(context.df, df)
+#     
+#   }
+#   
+#   names(context.df)[names(context.df) == 'type'] <- 'closest_type'
+#   names(context.df)[names(context.df) == 'distance'] <- 'closest_dist'
+#   names(context.df)[names(context.df) == 'category'] <- 'context'
+#   
+#   ml.df <- merge(ml.df, context.df[,c('cluster','abbv', 'closest_type','closest_dist','context')], by.x=c("abbv", "ID"), by.y=c("abbv",'cluster'), all.x=T)
+#   
+#   ml.df$simple_context <- str_replace(ml.df$context, "sense_|antisense_|unstranded_|", "")
+#   
+#   
+#   
+#   return(ml.df)
+# }
 
 # get_rulings <- function(metaloci.df) {
 # 
@@ -769,15 +305,17 @@ get_genome.df <- function() {
   
   
   out.df <- data.frame()
-  for (fa_file in Sys.glob("../+genomes/*.fa")) {
+  for (fa_file in Sys.glob("../+genomes/*genomic.fa")) {
     
     base = str_sub(basename(fa_file), 7, -12)
     assembly = strsplit(base, "_")[[1]][3]
     genbank  = str_remove(base, paste("_", assembly, sep=''))
     idx_file = paste(fa_file, ".fai", sep='')
+    
+    
     gff_file = str_replace(fa_file, ".fa", '.gff')
-    # message(idx_file)
-    # if (!file.exists(idx_file)) {message("^^^ not found"); stop()}
+    message(idx_file)
+    if (!file.exists(idx_file)) {message("^^^ not found"); next}
     
     
     
@@ -790,12 +328,368 @@ get_genome.df <- function() {
     df$has_idx = file.exists(idx_file)
     df$has_annotation = file.exists(gff_file)
     df <- df[,c('abbv', 'contig','length', 'tot_pos', 'genbank','assembly','has_idx','has_annotation')]
-  
+    
     out.df <- rbind(out.df, df)
   }
   
   return(out.df)
 }
+
+# genome.df <- get_genome.df()
+
+# metaloci functions ------------------------------------------------------
+
+
+get_metalocus_mats <- function(abbv) {
+  
+  # ml_file = str_glue("../metaloci/01out-meta_gffs/{abbv}.all.gff3")
+  ml_file = str_glue("../metaloci/01out-meta_gffs_2026.02.26/{abbv}.all.gff3")
+  if (!file.exists(ml_file)) return()
+  m.df <- rtracklayer::readGFF(ml_file)
+  m.df$sample <- str_c(str_split_fixed(m.df$project, "\\.", 2)[,2], m.df$annotation, sep='.')
+  
+  ls = list()
+  
+  o.df <- dcast(m.df, metalocus ~ sample, value.var='sample', fun.aggregate = length) 
+  o.df <- o.df[order(as.numeric(str_split_fixed(o.df$metalocus, "-", 2)[,2])),]
+  rownames(o.df) <- o.df$metalocus
+  o.df$metalocus <- NULL
+  o.df <- as.matrix(o.df)
+  
+  ls$annotation <- o.df
+  
+  o.df <- dcast(m.df, metalocus ~ project, value.var='sample', fun.aggregate = length)
+  o.df <- o.df[order(as.numeric(str_split_fixed(o.df$metalocus, "-", 2)[,2])),]
+  rownames(o.df) <- o.df$metalocus
+  o.df$metalocus <- NULL
+  o.df <- as.matrix(o.df)
+  ls$project <- o.df
+  
+  return(ls)
+  
+  barplot(table(rowSums(m.df)))
+  
+  
+  return(m.df)
+}
+
+
+test_metalocus_replication <- function(abbv, padj=0.01) {
+  
+  # This function looks through pres/abs matricies of metaloci across projects and annotations to identify if they are reproducible.  
+  # 
+  # This is a multi-tier test, with significance based on a one-tailed poisson binomial probability, scaled for the likelihood for an annotation to identify a metalocus in its sample (out of all metaloci). Basically: given the number of detects, how likely is it that we find this many annotations by chance? 
+  # 
+  # The first tier (1-overall) uses this test (padj) across all annotations, ignoring inter-project reproducibility, and is probably quite weak. 
+  # 
+  # The second tier ignores the test, and simply identifies loci which are shared between multiple projects. 
+  # 
+  # The third tier, performs poisson binomial tests (padj) on each project, and identifies if a project significantly produces a given metalocus. Subsequently, we aggregate the number of projects which are significant in this regard
+  # 
+  # Tiers are classified (greedily). 
+  # 
+  # A rep-score is calculated based on project detections and significant project detections:
+  #   
+  #   (log2(project_count)/2 + log2(project_p_count+1) ) - 1
+  # 
+  # Scores above 0 show enough replication for us to consider them, and this scales upwards with the strength of evidence (diminishing returns due to log). A minimally passing project (0.5) could have support in 2 projects, but only significant detection in 1 of those projects. 
+  
+  
+  
+  mat.ls <- get_metalocus_mats(abbv)
+  
+  if (is.null(mat.ls)) return()
+  amat = mat.ls$annotation
+  pmat <- mat.ls$project
+  
+  colnames(pmat) <- str_sub(colnames(pmat), 7,-1)
+  pmat[pmat > 1] <- 1
+  amat[amat > 1] <- 1
+  
+  head(pmat)
+  head(amat)
+  
+  
+  background = apply(amat, 2, mean)
+  overall_pval <- ppoisbinom(rowSums(amat), pp=background, lower_tail = F)
+  overall_padj <- p.adjust(overall_pval, method='BH')
+  
+  
+  within_mat = pmat
+  within_mat[] <- NA
+  
+  
+  for (project in colnames(pmat)) {
+    cf = str_detect(colnames(amat), paste0("^", project))
+    rf = pmat[,project] > 0
+    
+    background = colSums(amat[rf,cf, drop=F]) / nrow(pmat)
+    totals = rowSums(amat[rf,cf, drop=F])
+    
+    within_pvals = ppoisbinom(totals, pp=background, lower_tail = F)
+    
+    # within_mat[rf,project] <- within_pvals
+    within_mat[rf,project] <- p.adjust(within_pvals, method = 'BH')
+    
+  }
+  
+  
+  
+  wmat <- within_mat
+  wmat[is.na(wmat)] <- 1
+
+  
+  between = apply(wmat, 1, function(x) sum(x < padj ))
+  # names(between) <- "pass_count"
+  # between_count <- sum(between >= 2)
+  
+  out.ls <- list()
+  out.ls$project_within_p <- wmat
+  out.ls$project <- pmat
+  
+  df <- as.data.frame(apply(wmat, 1, function(x) min(x, na.rm=T)))
+  names(df) <- 'best_within_p'
+  df$project_count <- rowSums(pmat)
+  df$project_p_count <- apply(wmat, 1, function(x) sum(x < padj ))
+  
+  
+  df$overall_pval <- overall_pval
+  df$overall_padj <- overall_padj
+  df$overall_pass <- overall_padj < padj
+
+  table(project=df$project_count >=2,
+        project_p = df$project_p_count >= 2)
+  
+  df$evidence <- as.numeric(df$overall_pass)*0.5 + as.numeric(df$project_count >=2) + as.numeric(df$project_p_count >= 2)
+  df$evidence_strict <- paste0('tier-',as.numeric(df$project_count >=2) + as.numeric(df$project_p_count >= 2))
+  
+  df$evidence = '0-none'
+  if (nrow(amat) > 1) df$evidence[df$overall_pass] <- '1-annotation_pb'
+  df$evidence[df$project_count >= 2] <- '2-project_count'
+  df$evidence[df$project_p_count >= 2] <- '3-project_pb'
+  
+  ## calculating rep score
+  df$rep_score = log2(df$project_count)/2 + log2(df$project_p_count+1)
+  df$rep_score[is.infinite(df$rep_score)] <- 0
+  df$rep_score <- round(df$rep_score, 2)-1
+  df$rep_score[df$rep_score < 0] <- 0
+  
+  out.ls$plot <- function() {
+    par(mfrow=c(2,2))
+    conf = out.ls$summary$project_p_count
+    e = ecdf(conf)
+    plot(e, main=str_glue("{out.ls$abbv} (padj<{out.ls$padj})"), xlim=c(-0.5, out.ls$project_n+0.5), ylim=c(0,1),
+         las=1, xlab='Conf. projects', ylab='Prop.', axes=F)
+    box()
+    axis(2, las=1)
+    axis(1, at=0:out.ls$annotation_n)
+    t = paste0(round(100-e(knots(e))*100,1), 
+               '%\n', 
+               sapply(0:out.ls$project_n, function(x) sum(conf > x)))
+    par(xpd=T)
+    text(knots(e), e(knots(e)), t, pos=2, cex=0.8, col=ifelse(knots(e) >= 2, 'red', 'black'))
+    
+    tab = table(out.ls$summary$evidence_strict)
+    b = barplot(tab, las=1, main='support')
+    text(b, tab, tab, col='red', cex=0.8, pos=3)
+    par(xpd=F)
+    
+    hist(out.ls$summary$rep_score)
+    plot(density(out.ls$summary$rep_score))
+    
+    text(par()$usr[2]*0.15, par()$usr[4]*0.8, paste0("<-",
+                                                     sum(out.ls$summary$rep_score == 0), 
+                                                     "\n", 
+                                                     sum(out.ls$summary$rep_score > 0),
+                                                     "->"), 
+         adj=c(0,0))
+    
+    par(mfrow=c(1,1))
+    
+  }
+  out.ls$summary <- df
+  out.ls$abbv <- abbv
+  out.ls$padj <- padj
+  out.ls$project_n <- ncol(pmat)
+  out.ls$annotation_n <- ncol(amat)
+  
+  return(out.ls)
+  
+}
+
+binom_p <- function(abbv, q=0.5, p=0.05) {
+  
+  ## calculating mean value of lower half of data
+  mat.ls <- get_metalocus_mats(abbv)
+  mat = mat.ls$annotation
+  pmat <- mat.ls$project
+  
+  if (type(mat) == 'character') return(list(plot=function() {return()}))
+  mat[mat > 1] <- 1
+  pmat[pmat > 1] <- 1
+  # mat = pmat
+  
+  # mat = cbind(mat, pmat)
+  
+  # plot(ecdf(rowSums(mat)), xlab='n annotations', main='Annotation replication for loci')
+  # text(par()$usr[2]*0.95, par()$usr[4]*0.05, abbv, font=2, adj=c(1,0))
+  
+  o = order(rowSums(mat))[1:floor(nrow(mat)*q)]
+  f_hat = mean(as.vector(mat[o,]))
+  f_hat_full = mean(as.vector(mat))
+  cat("f value:", f_hat)
+  
+  ## finding pvals from this binary distribution
+  totals <- rowSums(mat, na.rm=TRUE)
+  n_loci <- nrow(mat)
+  n_samp <- ncol(mat)
+  
+  pvals <- rep(0, n_loci)
+  for (i in seq_len(n_loci)) {
+    k <- totals[i]
+    
+    pvals[i] <- pbinom(k, size=n_samp, prob=f_hat, lower.tail=FALSE)
+    
+  }
+  
+  out.df = data.frame(row.names = rownames(mat), total=rowSums(mat), pval=pvals)
+  out.df$padj <- p.adjust(out.df$pval, method="BH")
+  out.df$sig05 <- out.df$padj <= 0.05
+  out.df$sig01 <- out.df$padj <= 0.01
+  
+  
+  thresholds = data.frame()
+  for (padj in c(0.1, 0.05, 0.01, 0.001)) {
+    t = min(c(n_samp+1, out.df$total[out.df$padj <= padj]))
+    select = padj==p
+    thresholds = rbind(thresholds,data.frame(padj=padj, t=t, select=select))
+  }
+  
+  threshold = thresholds$t[thresholds$select]
+  
+  random_dist = rbinom(10000, size=n_samp, prob=f_hat)
+  random = ecdf(random_dist)
+  real   = ecdf(out.df$total)
+  
+  make_plot = function() {
+    par(pch=19, lwd=1.5, font=2, las=1)
+    plot(1,1, type='n', xlab='Replicated projects', ylab='Cumulative Prop.',
+         xlim=c(0.5,n_samp), ylim=c(0,1), main=abbv, axes=F)
+    axis(2)
+    axis(1, at=1:n_samp)
+    box()
+    
+    lines(1:n_samp, random(1:n_samp), type='o', cex=0.5, 'grey75')
+    lines(1:n_samp, real(1:n_samp), type='o', cex=0.5, col='goldenrod')
+    abline(v=threshold-0.5, col='blue', lty=3)
+    
+    text(threshold-0.5, 0.1, 
+         str_c(as.character(sum(out.df$total < threshold)), "\nfail"),
+         pos=2, col='red')
+    text(threshold-0.5, 0.1, 
+         str_c(as.character(sum(out.df$total >= threshold)), "\npass"), 
+         pos=4, col='goldenrod')
+    legend('right', c('samples', 'random'), lwd=2,col=c('goldenrod','black'), inset=0.02, cex=0.6)
+  }
+  
+  ls = list(abbv=abbv, out=out.df,random=random_dist, n_samp=n_samp, n_loci=n_loci, thresholds=thresholds, plot=make_plot)
+  
+  return(ls)
+  
+}
+# 
+res = binom_p('Bocin')
+res$plot()
+# res = binom_p('Scscl')
+# res$plot()
+# res = binom_p('Scpom')
+# res$plot()
+# 
+# res = binom_p('Asapi')
+# res$plot()
+# 
+# res = binom_p('Fugra')
+# res$plot()
+
+
+
+
+poibin_p <- function(abbv) {
+  library(poibin)
+  
+  ## calculating mean value of lower half of data
+  mat.ls <- get_metalocus_mats(abbv)
+  amat = mat.ls$annotation
+  pmat <- mat.ls$project
+  
+  if (type(amat) == 'character') return(list(plot=function() {return()}))
+  
+  amat[amat > 1] <- 1
+  pmat[pmat > 1] <- 1
+  
+  
+  calc_padj <- function(mat) {
+    col_probs = apply(mat, 2, mean)
+    n_loci <- nrow(mat)
+    n_samp <- ncol(mat)
+    
+    
+    method = "DFT-CF"
+    pvals <- rep(0, n_loci)
+    for (i in seq_len(n_loci)) {
+      k <- totals[i]
+      
+      pvals[i] <- 1-ppoibin(k, pp=col_probs, method = method)
+      
+    }
+    
+    
+    out.df = data.frame(row.names = rownames(mat), total=rowSums(mat), pval=pvals)
+    
+    out.df$padj <- p.adjust(out.df$pval, method="BH")
+    out.df$sig05 <- out.df$padj <= 0.05
+    out.df$sig01 <- out.df$padj <= 0.01
+    
+    table(out.df$total, out.df$sig05)
+    
+    plot(ecdf(out.df$total), main=abbv)
+    
+    lines(1:ncol(mat), ppoibin(1:ncol(mat), pp=col_probs, method = method), col='red', lwd=2)
+    return(out.df)
+  }
+  
+  
+  a.df <- calc_padj(amat)
+  p.df <- calc_padj(pmat)
+  
+  a.df$sig01 <- NULL
+  p.df$sig01 <- NULL
+  
+  names(a.df) <- c('an', 'apval', 'apadj','asig05')
+  names(p.df) <- c('pn', 'ppval', 'ppadj','psig05') 
+  
+  out.df <- cbind(a.df, p.df)
+  head(out.df)
+  
+  print(table(project=out.df$psig05, annotation=out.df$asig05))
+  
+  
+  
+}
+
+
+# par(mfrow=c(3,2),
+#     par=c(1,3,0.5,0.5))
+# poibin_p('Bocin')
+# poibin_p('Scscl')
+# poibin_p('Fugra')
+# poibin_p('Necra')
+# poibin_p('Scpom')
+# poibin_p('Nocer')
+# poibin_p('Scpom')
+
+
+
 
 # helpers -----------------------------------------------------------------
 
@@ -811,8 +705,86 @@ make_dicer_sizes <- function(size_range) {
   return(c(ones,twos,threes))
 }
 
+fix_seqlevels <- function(g, seqids) {
+  
+  if (any(seqids %in% lookup.df$genbankAccession)) {
+    target='genbankAccession'
+    source='refseqAccession'
+    
+  } else if (any(seqids %in% lookup.df$refseqAccession)) {
+    target='refseqAccession'
+    source='genbankAccession'
+    
+  } else {
+    return (NULL)
+    stop("Problem with seqlevels... locus does not appear to match any genomic reference names")
+    
+  }
+  
+  if (length(g) == 0) return(g)
+  
+  if (any(seqlevels(g) %in% lookup.df[[source]])) {
+    seqlevels(g) <- lookup.df[[target]][match(seqlevels(g), lookup.df[[source]])]
+    
+  }
+  
+  return(g)
+}
 
 
+
+get_gff_grrs <- function(abbv, refseqids=NULL) {
+  message (abbv)
+  
+
+  dirs <- get_dir_paths()
+  s.df = species.df[species.df$abbv == abbv,]
+  ncbi_gff = str_glue("{dirs$gen}{abbv}.{s.df$accession}_{s.df$assembly_name}_genomic.gff3")
+  
+  ncbi_fasta = str_glue("{dirs$gen}{abbv}.{s.df$accession}_{s.df$assembly_name}_genomic.fa")
+  rfam_gff = str_glue("../rfam/02out-rfam_gffs/{abbv}.rfam.gff3")
+  te_gff   = str_glue("../TE_annotations/eg_out/{abbv}_EarlGrey/{abbv}_summaryFiles/{abbv}.filteredRepeats.gff")
+  
+  for (gff in c(ncbi_gff, rfam_gff, te_gff)) {
+    if (!file.exists(gff)) return(paste("GFF not found:", gff))
+  }
+  
+  out.ls <- list()
+  
+  out.ls$ncbi.gene <- import.gff(ncbi_gff, feature.type	= 'gene')
+  out.ls$ncbi.mRNA <- import.gff(ncbi_gff, feature.type	= 'mRNA')
+  out.ls$ncbi.exon <- import.gff(ncbi_gff, feature.type	= 'exon')
+  out.ls$rfam      <- import.gff(rfam_gff)
+  out.ls$te        <- import.gff(te_gff)
+  out.ls$te <- out.ls$te[out.ls$te$type != 'Simple_repeat',]
+  out.ls$te <- out.ls$te[out.ls$te$type != 'Unknown']
+  
+  ref_seqs = scanFaIndex(ncbi_fasta)
+  tile.gr <- unlist(tile(ref_seqs, width=300))
+  tile.gr <- tile.gr[!overlapsAny(tile.gr, c(out.ls$ncbi.gene, out.ls$rfam, out.ls$te))]
+  tile.gr[sample(1:length(tile.gr),500),]
+  
+  out.ls$rand <- tile.gr
+  
+  ## fixing problems with genbank/refseq chromosome names
+  
+  if (! is.null(refseqids)) {
+    for (n in names(out.ls)) {
+      gffs_to_fix = names(out.ls)
+    }
+  } else {
+    message("  no refseq ids supplied -> normalizing to the ncbi entry seqlevels.")
+    gffs_to_fix = c('te','rfam')
+    refseqids <- seqlevels(ref_seqs)
+  }
+  
+  for (n in gffs_to_fix) {
+    out.ls[[n]] = fix_seqlevels(out.ls[[n]], seqids=refseqids)
+  }
+
+  
+  return(out.ls)
+}
 
 
 # plotting functions ------------------------------------------------------
@@ -998,4 +970,23 @@ pixelPlot <- function(x, y, xlim=NULL, ylim=NULL, zlim=NULL, n = 51,
   # points(x,y, pch=19, col=scales::alpha('black', 0.2), cex=0.2)
   
 }
+
+
+
+# upset plot --------------------------------------------------------------
+
+# 
+# x <- p.df$filter_str
+# 
+# upset <- function(x) {
+#   
+#   x <- str_replace(x, "NA", "0")
+#   
+#   tab = table(x)
+#   
+#   tab <- tab[order(-tab)]
+#   
+# }
+
+
 

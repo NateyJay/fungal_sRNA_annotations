@@ -6,7 +6,7 @@
   "adapter": null,
   "alignment_file": null,
   "conditions": null,
-  "annotation_conditions": [],
+  "annotation_conditions": null,
   "genome_file": null,
   "jbrowse_directory": null,
   "gene_annotation_file": "../+genomes/Putri.GCF_026914185.1_ASM2691418v1_genomic.gff",

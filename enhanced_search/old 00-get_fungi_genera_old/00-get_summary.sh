@@ -1,0 +1,1 @@
+datasets summary genome taxon fungi > 00out-fungi_genomes.json

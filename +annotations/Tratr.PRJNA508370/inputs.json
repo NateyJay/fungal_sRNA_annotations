@@ -42,7 +42,7 @@
     "trim/SRR8280357.t.fa.gz",
     "trim/SRR8280355.t.fa.gz"
   ],
-  "adapter": "TGGAATTC",
+  "adapter": null,
   "alignment_file": "align/alignment.bam",
   "conditions": {
     "A": [
@@ -69,10 +69,24 @@
   "annotation_conditions": [
     "D"
   ],
-  "genome_file": "../../Genomes/Tratr.GCA_000171015.2_TRIAT_v2.0_genomic.fa",
+  "genome_file": "../../Genomes/Tratr.GCA_020647795.1_ASM2064779v1_genomic.fa",
   "jbrowse_directory": null,
   "gene_annotation_file": null,
+  "annotation_file": "tradeoff_D/loci.gff3",
   "min_length": 15,
-  "max_length": 300,
-  "annotation_file": "tradeoff_D/loci.gff3"
+  "max_length": 30,
+  "adapters": {
+    "SRR8280354.fasta": "TGGAATTC",
+    "SRR8280352.fasta": "TGGAATTC",
+    "SRR8280353.fasta": "TGGAATTC",
+    "SRR8280361.fasta": "TGGAATTC",
+    "SRR8280363.fasta": "TGGAATTC",
+    "SRR8280362.fasta": "TGGAATTC",
+    "SRR8280359.fasta": "TGGAATTC",
+    "SRR8280360.fasta": "TGGAATTC",
+    "SRR8280358.fasta": "TGGAATTC",
+    "SRR8280356.fasta": "TGGAATTC",
+    "SRR8280357.fasta": "TGGAATTC",
+    "SRR8280355.fasta": "TGGAATTC"
+  }
 }

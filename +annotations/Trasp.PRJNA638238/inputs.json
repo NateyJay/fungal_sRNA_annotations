@@ -9,7 +9,7 @@
   "trimmed_libraries": [
     "trim/SRR11961845.t.fa.gz"
   ],
-  "adapter": "TGGAATTC",
+  "adapter": null,
   "alignment_file": "align/alignment.bam",
   "conditions": {
     "A": [
@@ -19,10 +19,13 @@
   "annotation_conditions": [
     "A"
   ],
-  "genome_file": "../../Genomes/Trasp.GCA_003025105.1_Trias_v._1.0_genomic.fa",
+  "genome_file": "../../Genomes/Trasp.GCA_020647865.1_ASM2064786v1_genomic.fa",
   "jbrowse_directory": null,
   "gene_annotation_file": null,
+  "annotation_file": "tradeoff_A/loci.gff3",
   "min_length": 15,
-  "max_length": 300,
-  "annotation_file": "tradeoff_A/loci.gff3"
+  "max_length": 30,
+  "adapters": {
+    "SRR11961845.fasta": "TGGAATTC"
+  }
 }

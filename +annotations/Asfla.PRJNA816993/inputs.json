@@ -23,7 +23,7 @@
   "genome_file": "../../Genomes/Asfla.GCA_014117465.1_ASM1411746v1_genomic.fa",
   "jbrowse_directory": null,
   "gene_annotation_file": null,
-  "annotation_file": null,
+  "annotation_file": "tradeoff_B/loci.gff3",
   "min_length": 15,
-  "max_length": 300
+  "max_length": 30
 }

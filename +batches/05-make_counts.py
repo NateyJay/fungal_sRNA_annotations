@@ -41,17 +41,17 @@ for i,row in enumerate(ws.iter_rows(min_row = 3, values_only=True)):
 	if rg:
 		# print(bioproject, srr, rg, sep='\t')
 
-
-		try:
-			bpj_d[project].append((srr,rg))
-		except KeyError:
-			bpj_d[project] = [(srr,rg)]
+		if project in bpj_d:
+			if rg not in bpj_d[project]:
+				bpj_d[project].append(rg)
+		else:
+			bpj_d[project] = [rg]
 
 pprint(bpj_d)
 
 def check_done(project):
 	return(False)
-	log_file = Path("../annotations", project, f"hairpin", "log.txt")
+	log_file = Path("../annotations", project, f"counts", f"tradeoff_deepcounts.txt")
 	if not log_file.is_file():
 		return False
 
@@ -75,12 +75,11 @@ i=0
 projects = list(bpj_d.keys())
 projects.sort()
 
-print(len(projects))
+# print(len(bpj_d))
 
 for project in projects:
 	libraries = bpj_d[project]
 	abbv = project.split(".")[0]
-
 
 	script_file = Path(script_dir, f"{project}.sh")
 	
@@ -88,43 +87,51 @@ for project in projects:
 
 		print(f"""#!/bin/bash
 
+source /home/opt/anaconda3/etc/profile.d/conda.sh
+conda activate nate_env
+
+
 mkdir ../annotations/{project}
 cd ../annotations/{project}
 
 echo {project}
 
 echo "counting..."
-yasma.py count -o .
-
-
+yasma.py count -o . -an */loci.gff3 -an ../../TE/{abbv}.filteredRepeats.gff -an ../../rfam/{abbv}.rfam.gff3 -an ../../metaloci/{abbv}.meta.gff3
 
 """, file=outf)
 
-	i += 1
+		i += 1
 
-	with open(config_file, 'a') as outf:
-		print(i, "NA", str(script_file), project, f"../annotations/{project}", sep='\t', file=outf)
+		with open(config_file, 'a') as outf:
+			print(i, "NA", str(script_file), project, f"../annotations/{project}", sep='\t', file=outf)
+			
+
+		if check_done(project) and not run_all_anyways:
+			continue
 		
-
-	if check_done(project) and not run_all_anyways:
-		continue
-	
-	print(i, project, sep='\t')
-	to_run.append(i)
+		print(i, project,  sep='\t')
+		to_run.append(i)
 
 
 
 
 shuffle(to_run)
+max_jobs = 500
+i=0
+while i <= len(to_run):
+	jobs = to_run[i: i+500]
 
-exec_file = Path("05-command.sh")
-with open(exec_file, 'w') as outf:
-	outf.write(f'''#!/bin/bash
+
+
+	exec_file = Path(f"05-command_{i}.sh")
+	with open(exec_file, 'w') as outf:
+		outf.write(f'''#!/bin/bash
 #SBATCH --cpus-per-task=1
 #SBATCH --ntasks-per-node 5
 #SBATCH --output=05out-batch_outputs/%a.out.txt 
 #SBATCH --error=05out-batch_outputs/%a.err.txt 
-#SBATCH --array {",".join(map(str,to_run))}%50
+#SBATCH --array {",".join(map(str,jobs))}%50
 
 
 config=05-config.txt
@@ -137,6 +144,9 @@ sh $file
 
 
 ''')
+
+	i += max_jobs
+
 
 
 

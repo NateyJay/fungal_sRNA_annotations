@@ -42,7 +42,7 @@
     "trim/SRR14586324.t.fa.gz",
     "trim/SRR14586323.t.fa.gz"
   ],
-  "adapter": "AGATCGGA",
+  "adapter": null,
   "alignment_file": "align/alignment.bam",
   "conditions": {
     "A": [
@@ -69,10 +69,24 @@
   "annotation_conditions": [
     "D"
   ],
-  "genome_file": "../../Genomes/Mabru.GCA_000298775.1_ASM29877v1_genomic.fa",
+  "genome_file": "../../Genomes/Mabru.GCA_022702325.1_ASM2270232v1_genomic.fa",
   "jbrowse_directory": null,
   "gene_annotation_file": null,
+  "annotation_file": "tradeoff_D/loci.gff3",
   "min_length": 15,
-  "max_length": 300,
-  "annotation_file": "tradeoff_D/loci.gff3"
+  "max_length": 30,
+  "adapters": {
+    "SRR14586322.fasta": "AGATCGGA",
+    "SRR14586326.fasta": "AGATCGGA",
+    "SRR14586325.fasta": "AGATCGGA",
+    "SRR14586319.fasta": "AGATCGGA",
+    "SRR14586320.fasta": "AGATCGGA",
+    "SRR14586321.fasta": "AGATCGGA",
+    "SRR14586318.fasta": "AGATCGGA",
+    "SRR14586317.fasta": "AGATCGGA",
+    "SRR14586316.fasta": "AGATCGGA",
+    "SRR14586315.fasta": "AGATCGGA",
+    "SRR14586324.fasta": "AGATCGGA",
+    "SRR14586323.fasta": "AGATCGGA"
+  }
 }

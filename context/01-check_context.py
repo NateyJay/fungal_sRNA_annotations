@@ -13,15 +13,18 @@ from subprocess import Popen, PIPE
 from collections import Counter
 
 
-meta_annotations = list(Path('../metaloci').glob("*.meta.gff3"))
+## listing compiled metalocus annotation files
+meta_annotations = list(Path('../metaloci/01out-meta_gffs/').glob("*.meta.gff3"))
 
-gene_annotations = list(Path('../+genomes/').glob("*genomic.gff"))
+## listing compiled gene annotation files
+gene_annotations = list(Path('../+genomes/').glob("*genomic.gff3"))
 gene_annotation_d = {}
 for g in gene_annotations:
 	abbv = g.name[:5]
 
 	gene_annotation_d[abbv] = g
 
+## listing compiled structural RNA annotation files
 rfam_annotations = list(Path('../rfam/02out-rfam_gffs').glob("*.rfam.gff3"))
 rfam_annotation_d = {}
 for g in rfam_annotations:
@@ -29,7 +32,7 @@ for g in rfam_annotations:
 
 	rfam_annotation_d[abbv] = g
 
-
+## making and formatting output directories
 gff_dir = Path("01out-gffs")
 gff_dir.mkdir(parents=True, exist_ok=True)
 
@@ -37,16 +40,20 @@ inter_dir = Path("01out-intersections")
 inter_dir.mkdir(parents=True, exist_ok=True)
 
 
-
+## constants
 intergenic_distance = 1000
 
+
+## iterating through each metalocus annotation
 for ann_file in meta_annotations:
 
 	print(ann_file)
 	abbv = ann_file.name[:5]
 
+	## checking for supporting annotations. These are required to perform context.
 	try:
 		gene_annotation_file = gene_annotation_d[abbv]
+		print(gene_annotation_file)
 
 	except KeyError:
 		print("   ^^^ gene_annotation_file not found")
@@ -60,6 +67,8 @@ for ann_file in meta_annotations:
 		continue
 
 
+	## some basic counters to quantify inputs from  the annotations
+	## chromosomes -> c and features -> c_ft
 
 	c = Counter()
 	c_ft = Counter()
@@ -73,6 +82,7 @@ for ann_file in meta_annotations:
 			c_ft[line[2]] += 1
 
 
+	## this code helps to identify what is the best annotative source to use for the gene annotation. EMBL and NCBI have different features which describe mRNAs.
 	main_source = c.most_common(1)[0][0]
 
 	if main_source in ['RefSeq', 'Genbank']:
@@ -84,6 +94,7 @@ for ann_file in meta_annotations:
 
 
 	def parse_attributes(x):
+		'''takes attribues field of gff and returns as a dictionary'''
 		if x == '.':
 			return(None)
 		d = {}
@@ -94,6 +105,7 @@ for ann_file in meta_annotations:
 		return(d)
 
 	def sort():
+		'''helper function to sort the temp gff with bedtools'''
 		temp_file = Path("temp_sort.gff3")
 		call = ['bedtools', 'sort', '-i', gene_annotation_file]
 
@@ -107,21 +119,31 @@ for ann_file in meta_annotations:
 		temp_file.rename(gene_annotation_file)
 
 
+	def get_contig_order():
+		order_file = Path(gff_dir, f"{abbv}.order.txt")
+		with open(order_file, 'w') as outf:
+			with open(ann_file, 'r') as f:
+				for line in f:
+					if line.startswith("##sequence-region"):
+						print(line.split()[1], file=outf)
+
+	get_contig_order()
+
+
 	def combine_annotations():
+		'''function to open rfam and gene anotations, merge them, and return as single sorted output'''
+
+		order_file = Path(gff_dir, f"{abbv}.order.txt")
 		comb_file = Path(gff_dir, f"{abbv}.all.gff3")
-		# rfam_file = Path(gff_dir, f'{abbv}.rfam.gff3')
 
-
-		# if not mRNA_file.is_file():# or not exon_file.is_file() or not cds_file.is_file():
-		# 	sort()
-
-
-		def write_file(outf, af, keys):
+		def write_file(outf, af, keys, keep_header = False):
 			lines_written = 0
 
 			with open(af, 'r') as f:
 				for line in f:
 					if line.startswith("#"):
+						if keep_header:
+							print(line.strip(), file=outf)
 						continue
 
 					line = line.strip().split('\t')
@@ -142,28 +164,31 @@ for ann_file in meta_annotations:
 
 		temp_file = Path("temp.gff3")
 		with open(temp_file, 'w') as outf:
-			write_file(outf, gene_annotation_file, selected_features)
+			write_file(outf, gene_annotation_file, selected_features, keep_header=True)
 			write_file(outf, rfam_annotation_file, ['rRNA', 'tRNA', 'spliceosomal'])
 
-		with open(comb_file, 'w') as outf:
-			print("##gff-version 3", file=outf)
-			p = Popen(f'bedtools sort -i {temp_file}', shell=True, stdout=outf)
-			p.wait()
 
+		with open(comb_file, 'w') as outf:
+			p = Popen(f'bedtools sort -i {temp_file} -g {str(order_file)}', shell=True, stdout=outf)
+			p.wait()
 		temp_file.unlink()
 
 
 		
 		return(comb_file)
 
+
+	## combines and sorts gene and rfam annotation files
 	comb_file = combine_annotations()
 
 
 	def closest(file):
+		'''wrapper for bedtools closest, returning stranding and key attributes as a dict'''
 
+		## output is a dictionary of attributes keyed to the names of the metaloci
 		closest_d = {}
 
-		call= ['bedtools', 'closest', '-a', ann_file, '-b', file, '-d']
+		call= ['bedtools', 'closest', '-a', ann_file, '-b', file, '-D', 'b', '-t', 'all']
 
 		print(" ".join(map(str,call)))
 		p = Popen(call, stdout=PIPE, stderr=PIPE, encoding='utf-8')
@@ -174,10 +199,22 @@ for ann_file in meta_annotations:
 
 			o = o.strip().split("\t")
 
-
+			# print(o)
 			s_strand = o[6]
 			sa = parse_attributes(o[8])
 
+
+			if sa['ID'] in closest_d:
+				d = {}
+				d['id'] = "NA"
+				d['type'] = "NA"
+				d['distance'] = "NA"
+				d['orientation'] = "NA"
+				d['s_strand'] = s_strand
+				d['m_strand'] = "NA"
+				d['match'] = "multiple"
+				closest_d[sa['ID']] = d
+				continue
 
 			try:
 				m_strand = o[15]
@@ -207,6 +244,16 @@ for ann_file in meta_annotations:
 			d['type'] = feature_type
 			d['distance'] = int(o[-1])
 
+			if abs(d['distance']) > intergenic_distance:
+				d['orientation'] = 'NA'
+			elif d['distance'] == 0:
+				d['orientation'] = 'NA'
+			elif d['distance'] < 0:
+				d['orientation'] = 'upstream'
+			elif d['distance'] > 0:
+				d['orientation'] = 'downstream'
+
+			d['distance'] = abs(d['distance'])
 
 			if s_strand == '.' or m_strand == '.':
 				match = "?"
@@ -227,6 +274,7 @@ for ann_file in meta_annotations:
 		return(closest_d)
 
 	def intersect(file, ID):
+		'''wrapper for bedtools intersect, returning stranding and key attributes as a dict'''
 
 		inter_d = {}
 
@@ -269,12 +317,10 @@ for ann_file in meta_annotations:
 
 
 	print("Finding intersections for...")
-	# print("   mRNAs")
+
+	## just performs the "closest" analysis. Intersect was removed in this iteration (though the function remains)
 	comb_d = closest(comb_file)
-	# print("   exons")
-	# exon_d = intersect(exon_file, ID='exon')
-	# print("   CDSs")
-	# cds_d = intersect(cds_file, ID='cds')
+
 
 
 	output_file = Path(inter_dir, f"{abbv}.context.txt")
@@ -282,144 +328,151 @@ for ann_file in meta_annotations:
 	print()
 	print(f'Printing to...\n  {output_file}')
 
-	with open(output_file, 'w') as outf:
-		print("\t".join(['cluster','transcript', 'id', 'type', 'distance', 
-			# 'exon_id', 'exon_overlap', 'cds_id', 'cds_overlap', 
-			's_strand','m_strand','match','category']), file=outf)
+	## opening files and writing header to output
+	outf       = open(output_file, 'w')
+	metalocusf = open(ann_file, 'r')
 
-		with open(ann_file, 'r') as f:
+	print("\t".join(['metalocus', 'id', 's_type', 'distance', 
+		# 'exon_id', 'exon_overlap', 'cds_id', 'cds_overlap', 
+		's_strand','m_strand','match','relationship', 'type', "stranding"]), file=outf)
 
-			for line in f:
+	## iterating through each metalocus and looking for interactions in comb_d dictionary
+	for line in metalocusf:
 
-				if line.startswith("#"):
-					continue
+		if line.startswith("#"):
+			continue
 
-				line = line.strip().split("\t")
+		line = line.strip().split("\t")
 
-				cluster = line[8].split(";")[0].split("=")[1]
+		## this is the metalocus name
+		s_type  = line[2]
+		cluster = line[8].split(";")[0].split("=")[1]
 
-				# print(cluster)
+		# print(cluster)
 
-				try:
-					m_d = comb_d[cluster]
-				except KeyError:
-					m_d = {}
-
-
-				# 	i_d = exon_d[cluster]
-				# except KeyError:
-				# 	i_d = {}
-
-				# try:
-				# 	c_d = cds_d[cluster]
-				# except KeyError:
-				# 	c_d = {}
+		## assigning m_d (mrna_dictionary) from the closest analysis
+		try:
+			m_d = comb_d[cluster]
+		except KeyError:
+			m_d = {}
 
 
 
-				# m_d.update(i_d)
-				# m_d.update(c_d)
-				d = m_d
+		out_line = [cluster]
+		for k in ['transcript', 'id', 'type', 'distance',
+		 's_strand','m_strand','match', 'orientation']:
 
-
-				out_line = [cluster]
-				for k in ['transcript', 'id', 'type', 'distance',
-				 # 'exon_id', 'exon_overlap', 'cds_id', 'cds_overlap', 
-				 's_strand','m_strand','match']:
-
-					try:
-						out_line.append(d[k])
-					except KeyError:
-						d[k]= ''
-						out_line.append("")
-
-
-				feature_type = d['type']
-
-
-				## finding gene relationship
-
-				try:
-					if d['distance'] > intergenic_distance:
-						gene_relationship = 'intergenic'
-
-					elif 0 < d['distance'] <= intergenic_distance:
-						gene_relationship = f'near-genic'
-
-					elif d['distance'] == 0:
-						gene_relationship = feature_type
-
-					else:
-						# pprint(d)
-						sys.exit('gene relationship error')
-				except TypeError:
-					gene_relationship="intergenic"
+			try:
+				m_d[k]
+			except KeyError:
+				m_d[k]= ''
 
 
 
-				## finding strand relationship
-
-				if gene_relationship != feature_type:
-					stranding = "NA"
-
-				elif d['match'] == '=':
-					stranding = 'sense'
-					gene_relationship = f"{stranding}_{feature_type}"
-
-				elif d['match'] == '!':
-					stranding = 'antisense'
-					gene_relationship = f"{stranding}_{feature_type}"
-
-				elif d['match'] == '?':
-					stranding = 'unstranded'
-					gene_relationship = f"{stranding}_{feature_type}"
-
-				else:
-					# pprint(d)
-					sys.exit('stranding error')
+		## gathering attributes from closes output where available
 
 
-				## finding intragene context
+		## finding gene relationship (does this overlap or come near to a gene?)
 
-				# if gene_relationship != 'genic':
-				# 	intragene_context = "NA"
+		try:
+			if m_d['distance'] > intergenic_distance:
+				gene_relationship = 'intergenic'
+				feature_type = 'NA'
 
-				# elif d['exon_overlap'] == '':
-				# 	intragene_context = 'intronic'
+			elif 0 < m_d['distance'] <= intergenic_distance:
+				gene_relationship = f"near_{m_d['orientation']}"
+				feature_type = m_d['type']
 
-				# elif d['exon_overlap'] > 0 and d['cds_overlap'] == '':
-				# 	intragene_context = 'exon-UTR'
-
-				# elif d['exon_overlap'] > 0 and d['cds_overlap'] > 0:
-				# 	intragene_context = 'exon-CDS'
-
-				# else:
-				# 	# pprint(d)
-				# 	sys.exit('intragene_context error')
+			elif m_d['distance'] == 0:
+				gene_relationship = 'intersect'
+				feature_type = m_d['type']
 
 
+			else:
+				# pprint(d)
+				sys.exit('gene relationship error')
 
-				# if gene_relationship != 'genic':
-				# 	category = gene_relationship
-
-				# else:
-				# 	category = f"{stranding}_{feature_type}"
-
-
-
-
-				out_line.append(gene_relationship)
+		except TypeError:
+			## catches when there are no annotated genes on a chromosome (there is no closest)
+			gene_relationship="intergenic"
+			feature_type = "NA"
 
 
+		## finding strand relationship
 
-				# print(out_line)
-				out_line = '\t'.join(map(str, out_line))
-				# sys.exit()
+		if gene_relationship == 'intergenic':
+			stranding = "NA"
 
-				# print(out_line, sep='\t')
-				print(out_line, sep='\t', file=outf)
+		elif m_d['match'] == '=':
+			stranding = 'sense'
+
+		elif m_d['match'] == '!':
+			stranding = 'antisense'
+
+		elif m_d['match'] == '?':
+			stranding = 'unstranded'
+
+		else:
+			# pprint(d)
+			sys.exit('stranding error')
 
 
+		## finding intragene context
+
+		# if gene_relationship != 'genic':
+		# 	intragene_context = "NA"
+
+		# elif d['exon_overlap'] == '':
+		# 	intragene_context = 'intronic'
+
+		# elif d['exon_overlap'] > 0 and d['cds_overlap'] == '':
+		# 	intragene_context = 'exon-UTR'
+
+		# elif d['exon_overlap'] > 0 and d['cds_overlap'] > 0:
+		# 	intragene_context = 'exon-CDS'
+
+		# else:
+		# 	# pprint(d)
+		# 	sys.exit('intragene_context error')
+
+
+
+		# if gene_relationship != 'genic':
+		# 	category = gene_relationship
+
+		# else:
+		# 	category = f"{stranding}_{feature_type}"
+
+
+
+		out_line = [
+			cluster,
+			m_d['id'],
+			s_type,
+			m_d['distance'],
+			m_d['s_strand'],
+			m_d['m_strand'], 
+			m_d['match']
+		]
+
+		out_line.append(gene_relationship)
+		out_line.append(feature_type)
+		out_line.append(stranding)
+
+
+
+		# print(out_line)
+		out_line = '\t'.join(map(str, out_line))
+		# sys.exit()
+
+		# print(out_line, sep='\t')
+		print(out_line, sep='\t', file=outf)
+
+		# print(out_line, sep='\t')
+		# input()
+
+	outf.close()
+	metalocusf.close()
 
 
 

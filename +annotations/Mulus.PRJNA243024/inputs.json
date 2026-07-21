@@ -24,7 +24,7 @@
     "trim/SRR1209510.t.fa.gz",
     "trim/SRR1209511.t.fa.gz"
   ],
-  "adapter": "TGGAATTC",
+  "adapter": null,
   "alignment_file": "align/alignment.bam",
   "conditions": {
     "A": [
@@ -41,12 +41,20 @@
     ]
   },
   "annotation_conditions": [
-    "B"
+    "C"
   ],
-  "genome_file": "../../Genomes/Mulus.GCA_010203745.1_Muccir1_3_genomic.fa",
+  "genome_file": "../../Genomes/Mulus.GCA_040256725.1_ASM4025672v1_genomic.fa",
   "jbrowse_directory": null,
   "gene_annotation_file": null,
+  "annotation_file": "tradeoff_C/loci.gff3",
   "min_length": 15,
-  "max_length": 300,
-  "annotation_file": "tradeoff_A/loci.gff3"
+  "max_length": 30,
+  "adapters": {
+    "SRR1209506.fasta": "TGGAATTC",
+    "SRR1209508.fasta": "TGGAATTC",
+    "SRR1209509.fasta": "TGGAATTC",
+    "SRR1209507.fasta": "TGGAATTC",
+    "SRR1209510.fasta": "TGGAATTC",
+    "SRR1209511.fasta": "TGGAATTC"
+  }
 }

@@ -1,0 +1,226 @@
+abbv	organism	accession	assembly_name	assembly_level	refseq_category	paired_accession	submitter	asm_release_date	num_seqs	tot_length	ann_name	ann_release_date	gene_counts
+Agbis	Agaricus bisporus	GCF_000300575.1	Agabi_varbisH97_2	Scaffold	reference genome	GCA_000300575.1	JGI	2012-11-30	29	30233745	Annotation submitted by NCBI RefSeq	2014-01-02	10606
+Agbis	Agaricus bisporus	GCA_000300575.2	ASM30057v2	Chromosome	reference genome		JGI-PSF	2016-07-15	13	30417844			
+Alalt	Alternaria alternata	GCF_001642055.1	Altal1	Scaffold	reference genome	GCA_001642055.1	DOE Joint Genome Institute	2016-05-11	79	32990834	Annotation submitted by NCBI RefSeq	2016-09-26	13577
+Alalt	Alternaria alternata	GCA_001642055.1	Altal1	Scaffold	reference genome	GCF_001642055.1	DOE Joint Genome Institute	2016-05-11	79	32990834	Annotation submitted by DOE Joint Genome Institute	2016-05-11	13577
+Albra	Alternaria brassicicola	GCA_002796735.1	ASM279673v1	Contig	reference genome		IRHS	2017-11-27	29	31036461			
+Albra	Alternaria brassicicola	GCA_023079265.1	ASM2307926v1	Scaffold	None		Shandong Agricultural University	2022-04-21	49	36072007			
+Albra	Alternaria brassicicola	GCA_027569035.1	ASM2756903v1	Contig	None		Northwestern University	2023-01-04	251	30596531			
+Albra	Alternaria brassicicola	GCA_027569655.1	ASM2756965v1	Contig	None		Northwestern University	2023-01-04	1800	32622430			
+Albra	Alternaria brassicicola	GCA_000174375.1	ASM17437v1	Contig	None		Washington University Genome Center (WUGC)	2009-03-10	3280	29536471			
+Asrab	Ascochyta rabiei	GCF_004011695.2	ASM401169v2	Complete Genome	reference genome	GCA_004011695.2	Curtin University	2022-08-25	22	40846718	Annotation submitted by Curtin University	2023-09-19	11642
+Asrab	Ascochyta rabiei	GCA_004011695.2	ASM401169v2	Complete Genome	reference genome	GCF_004011695.2	Curtin University	2022-08-25	22	40846718	Annotation submitted by Curtin University	2022-08-25	11661
+Asapi	Ascosphaera apis	GCA_001636715.1	AAP 1.0	Scaffold	reference genome		Shanghai Institutes for Biological Sciences, CAS	2016-05-02	82	20313079	Annotation submitted by Shanghai Institutes for Biological Sciences, CAS	2016-05-02	6442
+Asfla	Aspergillus flavus	GCF_009017415.1	ASM901741v1	Complete Genome	reference genome	GCA_009017415.1	University of California, Berkeley	2019-10-13	8	37749288	Annotation submitted by University of California, Berkeley	2025-02-19	13956
+Asfla	Aspergillus flavus	GCA_009017415.1	ASM901741v1	Complete Genome	reference genome	GCF_009017415.1	University of California, Berkeley	2019-10-13	8	37749288	Annotation submitted by University of California, Berkeley	2022-11-17	13958
+Asfum	Aspergillus fumigatus	GCF_000002655.1	ASM265v1	Chromosome	reference genome	GCA_000002655.1	J. Craig Venter Institute	2005-06-10	8	29384958	Annotation submitted by J. Craig Venter Institute	2025-03-14	9914
+Asfum	Aspergillus fumigatus	GCA_000002655.1	ASM265v1	Chromosome	reference genome	GCF_000002655.1	J. Craig Venter Institute	2005-06-10	8	29384958	Annotation submitted by J. Craig Venter Institute	2005-06-10	9916
+Atrol	Athelia rolfsii	GCA_018343915.1	ASM1834391v1	Contig	reference genome		Oil Crops Research Institute	2021-05-12	8	37673359			
+Atrol	Athelia rolfsii	GCA_000961905.2	AthRolfv2.0	Scaffold	None		Kothari Vishal	2017-07-24	8919	72332728			
+Atrol	Athelia rolfsii	GCA_002940785.1	ASM294078v1	Scaffold	None		Southwest University	2018-02-24	1296	32496039			
+Atrol	Athelia rolfsii	GCA_018343895.1	ASM1834389v1	Contig	None		Oil Crops Research Institute	2021-05-12	23	70610382			
+Atrol	Athelia rolfsii	GCA_036172465.1	UNINA_Arolf_CCF1	Scaffold	None		Federico II University	2024-01-26	3138	44845534			
+Aupul	Aureobasidium pullulans	GCF_000721785.1	Aureobasidium pullulans var. pullulans EXF-150, assembly version 1.0	Scaffold	reference genome	GCA_000721785.1	DOE Joint Genome Institute	2014-07-08	186	29621078	Annotation submitted by DOE Joint Genome Institute	2019-07-12	11844
+Aupul	Aureobasidium pullulans	GCA_000721785.1	Aureobasidium pullulans var. pullulans EXF-150, assembly version 1.0	Scaffold	reference genome	GCF_000721785.1	DOE Joint Genome Institute	2014-07-08	186	29621078	Annotation submitted by DOE Joint Genome Institute	2014-07-08	11844
+Bebas	Beauveria bassiana	GCF_000280675.1	ASM28067v1	Scaffold	reference genome	GCA_000280675.1	Zhejiang University, China	2012-08-14	235	33693936	Annotation submitted by Zhejiang University, China	2024-01-02	10364
+Bebas	Beauveria bassiana	GCA_000280675.1	ASM28067v1	Scaffold	reference genome	GCF_000280675.1	Zhejiang University, China	2012-08-14	235	33693936	Annotation submitted by Zhejiang University, China	2015-03-18	10364
+Blgra	Blumeria graminis	GCA_905067625.1	Bgtriticale_THUN12_genome_v1_2	Chromosome	reference genome		UNIVERSITY OF ZURICH	2021-06-18	11	141403166	Annotation submitted by UNIVERSITY OF ZURICH	2021-06-18	7993
+Blhor	Blumeria hordei	GCA_900237765.1	BghRACE1_v1	Contig	None		MAX PLANCK INSTITUTE FOR PLANT BREEDING RESEARCH	2018-09-28	99	116475897	Annotation submitted by MAX PLANCK INSTITUTE FOR PLANT BREEDING RESEARCH	2018-09-28	7147
+Blhor	Blumeria hordei	GCA_000401675.1	A6_trimmed_clc_assembly_flt.fa	Contig	None		Max Planck Institute for Plant Breeding Research	2013-05-24	21305	47465002			
+Blhor	Blumeria hordei	GCA_900239735.1	BGH_DH14_v4	Scaffold	reference genome		RWTH Aachen University	2018-03-31	318	124489486			
+Blhor	Blumeria hordei	GCA_000151065.3	ASM15106v3	Scaffold	None		Blumeria Genome Sequencing Consortium	2013-08-06	6843	118726170	Annotation submitted by Blumeria Genome Sequencing Consortium	2013-08-06	7088
+Blhor	Blumeria hordei	GCA_000401615.1	K1_trimmed_clc_assembly_flt.fa	Contig	None		Max Planck Institute for Plant Breeding Research	2013-05-24	20359	53786025			
+Blhor	Blumeria hordei	GCA_023065745.1	BLGH_SK1	Contig	None		RWTH Aachen University	2022-04-20	1440	117367246			
+Blhor	Blumeria hordei	GCA_900638725.1	BGH_K1_v2	Contig	None		RWTH Aachen University	2019-02-21	2238	126558930			
+Bodot	Botryosphaeria dothidea	GCA_011503125.2	ASM1150312v2	Contig	reference genome		Shandong Agricultural University	2020-04-23	88	51758482	Annotation submitted by Shandong Agricultural University	2020-04-23	14118
+Bocin	Botrytis cinerea	GCF_000143535.2	ASM14353v4	Complete Genome	reference genome	GCA_000143535.4	Syngenta Biotechnology, Inc.	2015-02-05	18	42630066	Annotation submitted by Syngenta Biotechnology, Inc.	2018-04-17	11698
+Bocin	Botrytis cinerea	GCA_000143535.4	ASM14353v4	Complete Genome	reference genome	GCF_000143535.2	Syngenta Biotechnology, Inc.	2015-02-05	18	42630066	Annotation submitted by Syngenta Biotechnology, Inc.	2018-01-04	11703
+Boell	Botrytis elliptica	GCA_024478385.1	BOTELL_9401_1	Contig	reference genome		Wageningen University	2022-07-28	26	49771809			
+Boell	Botrytis elliptica	GCA_004786205.1	ASM478620v1	Scaffold	None		Wageningen University	2019-04-12	5591	47563060	Annotation submitted by Wageningen University	2019-04-12	12620
+Boell	Botrytis elliptica	GCA_014898555.1	ASM1489855v1	Contig	None		Wageningen University	2020-10-20	137	47665151	Annotation submitted by Wageningen University	2020-10-20	12431
+Caalb	Candida albicans	GCF_000182965.3	ASM18296v3	Chromosome	reference genome	GCA_000182965.3	Stanford University	2016-10-12	8	14282666	CGD A22-s07-m01-r01	2022-04-18	6263
+Caalb	Candida albicans	GCA_000182965.3	ASM18296v3	Chromosome	reference genome	GCF_000182965.3	Stanford University	2016-10-12	8	14282666	CGD A22-s07-m01-r01	2016-12-07	6263
+Capar	Candida parapsilosis	GCF_000182765.1	ASM18276v2	Contig	reference genome	GCA_000182765.2	Wellcome Trust Sanger Institute	2011-10-26	8	12998393	Annotation submitted by Wellcome Trust Sanger Institute	2023-04-03	5950
+Capar	Candida parapsilosis	GCA_000182765.2	ASM18276v2	Contig	reference genome	GCF_000182765.1	Wellcome Trust Sanger Institute	2011-10-26	8	12998393	Annotation submitted by Wellcome Trust Sanger Institute	2012-07-19	5907
+Cec01	Ceratobasidium sp. C01	GCA_049000075.1	R0301.hap1	Complete Genome	reference genome		Northwest A&F University	2025-03-26	16	41500454			
+Cec01	Ceratobasidium sp. C01	GCA_048999985.1	R0301.hap2	Complete Genome	None		Northwest A&F University	2025-03-26	16	41053716			
+Cec01	Ceratobasidium sp. C01	GCA_037042815.1	FABI_CPap_1.1	Scaffold	reference genome		Forestry and Agricultural Biotechnology Institute	2024-03-06	3091	41322102			
+Cec01	Ceratobasidium sp. C01	GCA_019677355.1	ASM1967735v1	Scaffold	None		DOE Joint Genome Institute	2021-08-18	8028	47284605	Annotation submitted by DOE Joint Genome Institute	2021-08-18	11922
+Cec01	Ceratobasidium sp. C01	GCA_019677385.1	ASM1967738v1	Scaffold	None		DOE Joint Genome Institute	2021-08-18	8904	52465834	Annotation submitted by DOE Joint Genome Institute	2021-08-18	15196
+Cec01	Ceratobasidium sp. C01	GCA_019616325.1	Cerato394_1.0	Scaffold	None		DOE Joint Genome Institute	2021-08-16	8562	53454525	Annotation submitted by DOE Joint Genome Institute	2021-08-16	18995
+Cec01	Ceratobasidium sp. C01	GCA_019616345.1	Cerato395_1.0	Scaffold	None		DOE Joint Genome Institute	2021-08-16	8769	67010313	Annotation submitted by DOE Joint Genome Institute	2021-08-16	21017
+Cec01	Ceratobasidium sp. C01	GCA_019616945.1	Cerato414_1.0	Scaffold	None		DOE Joint Genome Institute	2021-08-16	4161	50425407	Annotation submitted by DOE Joint Genome Institute	2021-08-16	12328
+Cec01	Ceratobasidium sp. C01	GCA_019616915.1	Cerato423_1.0	Scaffold	None		DOE Joint Genome Institute	2021-08-16	15380	66434938	Annotation submitted by DOE Joint Genome Institute	2021-08-16	15109
+Cec01	Ceratobasidium sp. C01	GCA_019623705.1	Cerato428_1.0	Scaffold	None		DOE Joint Genome Institute	2021-08-16	8999	69097995	Annotation submitted by DOE Joint Genome Institute	2021-08-16	25249
+Cec01	Ceratobasidium sp. C01	GCA_016906555.1	ASM1690655v1	Complete Genome	None		China Agricultural University	2021-02-18	16	48401997	Annotation submitted by China Agricultural University	2021-02-18	14626
+Cec01	Ceratobasidium sp. C01	GCA_016906575.1	ASM1690657v1	Complete Genome	None		China Agricultural University	2021-02-18	32	96290521	Annotation submitted by China Agricultural University	2021-02-18	29234
+Cec01	Ceratobasidium sp. C01	GCA_015039395.1	CerAGI	Scaffold	None		DOE Joint Genome Institute	2020-10-27	913	58444101	Annotation submitted by DOE Joint Genome Institute	2020-11-10	18182
+Cec01	Ceratobasidium sp. C01	GCA_037039685.1	ASM3703968v1	Scaffold	None		Guizhou University	2024-03-06	17	53633150			
+Cec01	Ceratobasidium sp. C01	GCA_025200755.1	ASM2520075v1	Scaffold	None		Murdoch University	2022-09-14	13085	88334453			
+Cec01	Ceratobasidium sp. C01	GCA_047651735.1	ASM4765173v1	Scaffold	None		Hunan Agricultural University	2025-02-11	373	99499756			
+Cec01	Ceratobasidium sp. C01	GCA_019677335.1	ASM1967733v1	Scaffold	None		University of Missouri	2021-08-18	7239	47766782	Annotation submitted by University of Missouri	2021-08-18	16804
+Cec01	Ceratobasidium sp. C01	GCA_037974915.1	genoma_LAO1	Contig	reference genome		CIAT	2024-04-05	546	33255833			
+Cec01	Ceratobasidium sp. C01	GCA_009078325.1	ASM907832v1	Contig	None		Beltsville Agricultural Research Center	2019-10-15	1240	31201167	Annotation submitted by Beltsville Agricultural Research Center	2019-10-15	9262
+Cec01	Ceratobasidium sp. C01	GCA_012932095.1	ASM1293209v1	Scaffold	None		Malaysian Cocoa Board	2020-04-29	4661	38567257			
+Clros	Clonostachys rosea	GCA_026958235.1	ASM2695823v1	Complete Genome	reference genome		Dr. Harald Berger	2022-12-16	9	58715541			
+Coglo	Colletotrichum gloeosporioides	GCF_011800055.1	NFU_CgLc1_1.0	Scaffold	reference genome	GCA_011800055.1	Nanjing Forestry University	2020-03-31	128	61904035	Annotation submitted by Nanjing Forestry University	2022-02-26	15667
+Coglo	Colletotrichum gloeosporioides	GCA_011800055.1	NFU_CgLc1_1.0	Scaffold	reference genome	GCF_011800055.1	Nanjing Forestry University	2020-03-31	128	61904035	Annotation submitted by Nanjing Forestry University	2020-03-31	15672
+Cohig	Colletotrichum higginsianum	GCF_001672515.1	ASM167251v1	Chromosome	reference genome	GCA_001672515.1	GATC Biotech AG	2016-06-21	12	50716103	Annotation submitted by GATC Biotech AG	2022-02-26	14651
+Cohig	Colletotrichum higginsianum	GCA_001672515.1	ASM167251v1	Chromosome	reference genome	GCF_001672515.1	GATC Biotech AG	2016-06-21	12	50716103	Annotation submitted by GATC Biotech AG	2016-06-21	14651
+Cosub	Colletotrichum sublineolum	GCA_020631755.1	DDPSC_Csu_GS1001_v1	Contig	reference genome		Donald Danforth Plant Science Center	2021-10-26	74	67666679			
+Cosub	Colletotrichum sublineolum	GCA_000696135.1	ASM69613v1	Scaffold	None		Universidad de Salamanca	2014-05-27	1625	46755813	Annotation submitted by Universidad de Salamanca	2014-05-27	12699
+Cosub	Colletotrichum sublineolum	GCA_001951195.1	ASM195119v1	Scaffold	None		University of Kentucky	2017-01-13	548	64848627			
+Cosub	Colletotrichum sublineolum	GCA_030867325.1	Colsu1	Scaffold	None		DOE Joint Genome Institute	2023-08-22	1434	46916122	Annotation submitted by DOE Joint Genome Institute	2023-09-18	15508
+Cocin	Coprinopsis cinerea	GCF_000182895.1	CC3	Contig	reference genome	GCA_000182895.1	Broad Institute	2010-06-16	13	36150142	Annotation submitted by Broad Institute	2017-09-05	13657
+Cocin	Coprinopsis cinerea	GCA_000182895.1	CC3	Contig	reference genome	GCF_000182895.1	Broad Institute	2010-06-16	13	36150142	Annotation submitted by Broad Institute	2010-06-16	13657
+Comil	Cordyceps militaris	GCF_000225605.1	CmilitarisCM01_v01	Scaffold	reference genome	GCA_000225605.1	Shanghai Institutes for Biological Sciences (SIBS), Chinese Academy of Sciences	2011-09-12	32	32268578	Annotation submitted by Shanghai Institutes for Biological Sciences (SIBS), Chinese Academy of Sciences	2024-01-02	9651
+Comil	Cordyceps militaris	GCA_000225605.1	CmilitarisCM01_v01	Scaffold	reference genome	GCF_000225605.1	Shanghai Institutes for Biological Sciences (SIBS), Chinese Academy of Sciences	2011-09-12	32	32268578	Annotation submitted by Shanghai Institutes for Biological Sciences (SIBS), Chinese Academy of Sciences	2015-03-14	9651
+Crgat	Cryptococcus gattii	GCF_000185945.1	ASM18594v1	Chromosome	reference genome	GCA_000185945.1	Canada's Michael Smith Genome Sciences Centre	2011-01-12	14	18374760	Annotation submitted by Canada's Michael Smith Genome Sciences Centre	2023-04-14	6580
+Crgat	Cryptococcus gattii	GCA_000185945.1	ASM18594v1	Chromosome	reference genome	GCF_000185945.1	Canada's Michael Smith Genome Sciences Centre	2011-01-12	14	18374760	Annotation submitted by Canada's Michael Smith Genome Sciences Centre	2014-10-01	6580
+Crneo	Cryptococcus neoformans	GCF_000091045.1	ASM9104v1	Chromosome	reference genome	GCA_000091045.1	TIGR	2005-01-07	14	19051922	Annotation submitted by TIGR	2018-04-11	7004
+Crneo	Cryptococcus neoformans	GCA_000091045.1	ASM9104v1	Chromosome	reference genome	GCF_000091045.1	TIGR	2005-01-07	14	19051922	Annotation submitted by TIGR	2016-01-20	7004
+Culun	Curvularia lunata	GCA_005212705.1	ASM521270v1	Scaffold	reference genome		Universidade Federal de Mato Grosso	2019-05-06	737	33535945			
+Culun	Curvularia lunata	GCA_000743335.1	ASM74333v1	Scaffold	None		Shanghai Jiao Tong University	2014-08-25	340	35497376			
+Diseg	Didymella segeticola	GCA_004522025.1	ASM452202v1	Contig	reference genome		Guizhou University	2019-03-29	23	33448292			
+Epnig	Epicoccum nigrum	GCA_002116315.1	ASM211631v1	Scaffold	reference genome		The University of Auckland	2017-05-01	227	34744152	Annotation submitted by The University of Auckland	2017-05-01	12190
+Fumos	Funneliformis mosseae	GCA_910592005.1	Funneliformis_mosseae_87-6_pot_B_2015	Contig	reference genome		UPPSALA UNIVERISTY	2021-11-11	27134	145719962	Annotation submitted by UPPSALA UNIVERISTY	2021-11-11	16857
+Fubra	Fusarium brachygibbosum	GCA_018886245.1	Fb-HN-1	Scaffold	reference genome		Chinese Academy of Agricultural Sciences	2021-06-15	277	40359588			
+Fugra	Fusarium graminearum	GCF_000240135.3	ASM24013v3	Chromosome	reference genome	GCA_000240135.3	International Gibberella zeae Genomics Consortium	2008-11-21	4	36458046	Annotation submitted by International Gibberella zeae Genomics Consortium	2024-01-02	13725
+Fugra	Fusarium graminearum	GCA_000240135.3	ASM24013v3	Chromosome	reference genome	GCF_000240135.3	International Gibberella zeae Genomics Consortium	2008-11-21	4	36458046	Annotation submitted by International Gibberella zeae Genomics Consortium	2013-11-22	13726
+Fuoxy	Fusarium oxysporum	GCF_013085055.1	ASM1308505v1	Complete Genome	reference genome	GCA_013085055.1	Xi'an Jiaotong University	2020-05-13	12	50358849	Annotation submitted by Xi'an Jiaotong University	2023-09-15	16502
+Fuoxy	Fusarium oxysporum	GCA_013085055.1	ASM1308505v1	Complete Genome	reference genome	GCF_013085055.1	Xi'an Jiaotong University	2020-05-13	12	50358849	Annotation submitted by Xi'an Jiaotong University	2023-06-21	16502
+Gasin	Ganoderma sinense	GCA_002760635.1	GanSi1.6	Scaffold	reference genome		The Institute of Medicinal Plant Development, China	2017-11-07	69	48955697	Annotation submitted by The Institute of Medicinal Plant Development, China	2017-11-07	15478
+Gimar	Gigaspora margarita	GCA_009809945.1	UNITO_GmarBEG34_1.0	Scaffold	reference genome		CNR	2019-12-30	6489	773098546	Annotation submitted by CNR	2019-12-30	26596
+Hicap	Histoplasma capsulatum	GCF_000150115.1	ASM15011v1	Scaffold	reference genome	GCA_000150115.1	WashU	2009-03-23	86	30438878	Annotation submitted by WashU	2022-04-19	9363
+Hicap	Histoplasma capsulatum	GCA_000150115.1	ASM15011v1	Scaffold	reference genome	GCF_000150115.1	WashU	2009-03-23	86	30438878	Annotation submitted by WashU	2015-03-11	9364
+Isfum	Isaria fumosorosea	GCF_001636725.1	ISF 1.0	Scaffold	reference genome	GCA_001636725.1	Shanghai Institutes for Biological Sciences, CAS	2016-05-04	430	33485962	Annotation submitted by Shanghai Institutes for Biological Sciences, CAS	2017-08-28	10061
+Isfum	Isaria fumosorosea	GCA_001636725.1	ISF 1.0	Scaffold	reference genome	GCF_001636725.1	Shanghai Institutes for Biological Sciences, CAS	2016-05-04	430	33485962	Annotation submitted by Shanghai Institutes for Biological Sciences, CAS	2016-05-04	10061
+Labic	Laccaria bicolor	GCF_000143565.1	V1.0	Scaffold	reference genome	GCA_000143565.1	Laccaria Genome Consortium	2008-01-11	665	64877444	Annotation submitted by Laccaria Genome Consortium	2023-11-13	18261
+Labic	Laccaria bicolor	GCA_000143565.1	V1.0	Scaffold	reference genome	GCF_000143565.1	Laccaria Genome Consortium	2008-01-11	665	64877444	Annotation submitted by Laccaria Genome Consortium	2016-07-26	18264
+Lathe	Lasiodiplodia theobromae	GCF_012971845.1	ASM1297184v1	Contig	reference genome	GCA_012971845.1	Beltsville Agricultural Research Center	2020-05-04	296	43694574	Annotation submitted by Beltsville Agricultural Research Center	2020-08-04	13054
+Lathe	Lasiodiplodia theobromae	GCA_012971845.1	ASM1297184v1	Contig	reference genome	GCF_012971845.1	Beltsville Agricultural Research Center	2020-05-04	296	43694574	Annotation submitted by Beltsville Agricultural Research Center	2020-05-04	13054
+Masym	Malassezia sympodialis	GCF_000349305.1	ASM34930v2	Scaffold	reference genome	GCA_000349305.2	SciLifeLab	2013-03-18	65	7669689	Annotation submitted by SciLifeLab	2024-01-02	3517
+Masym	Malassezia sympodialis	GCA_000349305.2	ASM34930v2	Scaffold	reference genome	GCF_000349305.1	SciLifeLab	2013-03-18	65	7669689	Annotation submitted by SciLifeLab	2013-08-20	3517
+Mabru	Marssonina brunnea	GCF_022702325.1	ASM2270232v1	Contig	reference genome	GCA_022702325.1	Nanjing Forestry University	2022-03-28	21	51946279	Annotation submitted by Nanjing Forestry University	2024-06-26	9615
+Mabru	Marssonina brunnea	GCA_022702325.1	ASM2270232v1	Contig	reference genome	GCF_022702325.1	Nanjing Forestry University	2022-03-28	21	51946279	Annotation submitted by Nanjing Forestry University	2023-02-21	9619
+Meacr	Metarhizium acridum	GCF_019434415.1	Coph_MacrARSEF324_H1_v1.0	Scaffold	reference genome	GCA_019434415.1	University of Copenhagen	2021-08-02	35	44714781	Annotation submitted by University of Copenhagen	2024-06-26	12261
+Meacr	Metarhizium acridum	GCA_019434415.1	Coph_MacrARSEF324_H1_v1.0	Scaffold	reference genome	GCF_019434415.1	University of Copenhagen	2021-08-02	35	44714781	Annotation submitted by University of Copenhagen	2021-07-30	12261
+Meani	Metarhizium anisopliae	GCA_013305495.1	ASM1330549v1	Contig	reference genome		Chonbuk National University	2020-06-09	18	42848098	Annotation submitted by Chonbuk National University	2020-06-09	13646
+Mucir	Mucor circinelloides	GCA_037974945.1	ASM3797494v1	Contig	reference genome		Faculty of Veterinary Medicine, University of Lisbon	2024-04-05	32	40883749			
+Mucir	Mucor circinelloides	GCA_001276145.1	ASM127614v1	Scaffold	None		Jiangnan University	2015-08-31	821	35338886			
+Mucir	Mucor circinelloides	GCA_001599575.1	JCM_22480_assembly_v001	Scaffold	None		RIKEN Center for Life Science Technologies, Division of Genomic Technologies	2016-03-01	401	36616466			
+Mucir	Mucor circinelloides	GCA_023629755.1	ASM2362975v1	Scaffold	None		Dalian Medical University	2022-06-01	1948	33436478			
+Mucir	Mucor circinelloides	GCA_023629775.1	ASM2362977v1	Scaffold	None		Dalian Medical University	2022-06-01	2261	30493663			
+Mucir	Mucor circinelloides	GCA_023629815.1	ASM2362981v1	Scaffold	None		Dalian Medical University	2022-06-01	2157	34006406			
+Mucir	Mucor circinelloides	GCA_023629835.1	ASM2362983v1	Scaffold	None		Dalian Medical University	2022-06-01	1934	32907721			
+Mucir	Mucor circinelloides	GCA_023629855.1	ASM2362985v1	Scaffold	None		Dalian Medical University	2022-06-01	2024	31002264			
+Mucir	Mucor circinelloides	GCA_023629875.1	ASM2362987v1	Scaffold	None		Dalian Medical University	2022-06-01	2071	29721499			
+Mucir	Mucor circinelloides	GCA_023630435.1	ASM2363043v1	Scaffold	None		Dalian Medical University	2022-06-01	3823	30129278			
+Mucir	Mucor circinelloides	GCA_023630465.1	ASM2363046v1	Scaffold	None		Dalian Medical University	2022-06-01	4026	32140319			
+Mucir	Mucor circinelloides	GCA_023630475.1	ASM2363047v1	Scaffold	None		Dalian Medical University	2022-06-01	3650	30700534			
+Mucir	Mucor circinelloides	GCA_023630555.1	ASM2363055v1	Scaffold	None		Dalian Medical University	2022-06-01	1681	33445928			
+Mucir	Mucor circinelloides	GCA_025504485.1	ASM2550448v1	Scaffold	None		Dalian Medical University	2022-09-30	2123	34078298			
+Mucir	Mucor circinelloides	GCA_025504515.1	ASM2550451v1	Scaffold	None		Dalian Medical University	2022-09-30	1903	33779198			
+Mucir	Mucor circinelloides	GCA_048772875.1	ASM4877287v1	Scaffold	None		Donghua university	2025-03-21	2359	32960975			
+Mucir	Mucor circinelloides	GCA_000401635.1	Muco_sp_1006Ph_V1	Scaffold	None		Broad Institute	2013-06-07	470	36348485	Annotation submitted by Broad Institute	2015-03-22	12410
+Mucir	Mucor circinelloides	GCA_000696935.1	MucCirB8987-1.0	Contig	None		IGS	2014-06-02	2210	36700617			
+Mulus	Mucor lusitanicus	GCA_040256725.1	ASM4025672v1	Scaffold	reference genome		DOE Joint Genome Institute	2024-06-17	12	36611222	Annotation submitted by DOE Joint Genome Institute	2024-06-21	11759
+Nacas	Naumovozyma castellii	GCF_000237345.1	ASM23734v1	Chromosome	reference genome	GCA_000237345.1	Wolfe Laboratory, Smurfit Institute of Genetics, Trinity College Dublin	2011-08-01	10	11219539	Annotation submitted by Wolfe Laboratory, Smurfit Institute of Genetics, Trinity College Dublin	2024-12-04	5867
+Nacas	Naumovozyma castellii	GCA_000237345.1	ASM23734v1	Chromosome	reference genome	GCF_000237345.1	Wolfe Laboratory, Smurfit Institute of Genetics, Trinity College Dublin	2011-08-01	10	11219539	Annotation submitted by Wolfe Laboratory, Smurfit Institute of Genetics, Trinity College Dublin	2015-03-01	5870
+Necra	Neurospora crassa	GCF_000182925.2	NC12	Chromosome	reference genome	GCA_000182925.2	Broad Institute	2013-10-25	7	41037538	Annotation submitted by Broad Institute	2023-04-03	10590
+Necra	Neurospora crassa	GCA_000182925.2	NC12	Chromosome	reference genome	GCF_000182925.2	Broad Institute	2013-10-25	7	41037538	Annotation submitted by Broad Institute	2015-03-23	10591
+Nobom	Nosema bombycis	GCA_000383075.1	NosBomCQ1_v1.0	Scaffold	reference genome		The Institute of Sericulture and Systems Biology (ISSB) of Southwest University (SWU)	2013-04-30	1607	15689776	Annotation submitted by The Institute of Sericulture and Systems Biology (ISSB) of Southwest University (SWU)	2016-06-21	4468
+Nocer	Nosema ceranae	GCF_000988165.1	ASM98816v1	Contig	reference genome	GCA_000988165.1	University of Ottawa	2015-05-05	536	5690748	Annotation submitted by University of Ottawa	2018-03-31	3265
+Nocer	Nosema ceranae	GCA_000988165.1	ASM98816v1	Contig	reference genome	GCF_000988165.1	University of Ottawa	2015-05-05	536	5690748	Annotation submitted by University of Ottawa	2015-05-05	3265
+Opsin	Ophiocordyceps sinensis	GCA_012934285.1	ASM1293428v1	Contig	reference genome		Institute of Zoology, Chinese Academy of Sciences	2020-04-30	23	110880992	Annotation submitted by Institute of Zoology, Chinese Academy of Sciences	2020-04-30	8916
+Pabra	Paracoccidioides brasiliensis	GCF_000150735.1	Paracocci_br_Pb18_V2	Scaffold	reference genome	GCA_000150735.2	Broad Institute	2014-10-24	57	29952540	Annotation submitted by Broad Institute	2022-04-18	8522
+Pabra	Paracoccidioides brasiliensis	GCA_000150735.2	Paracocci_br_Pb18_V2	Scaffold	reference genome	GCF_000150735.1	Broad Institute	2014-10-24	57	29952540	Annotation submitted by Broad Institute	2014-10-24	8522
+Paocc	Paraglomus occultum	GCA_910592205.1	Paraglomus_occultum_IA702	Contig	reference genome		UPPSALA UNIVERISTY	2021-11-11	8053	50060206	Annotation submitted by UPPSALA UNIVERISTY	2021-11-11	11385
+Peita	Penicillium italicum	GCA_002116305.1	ASM211630v1	Scaffold	reference genome		BGI	2017-05-01	358	31026583			
+Peita	Penicillium italicum	GCA_000769765.1	ASM76976v1	Contig	None		Center for Genomic Regulation (CRG)	2014-10-28	1632	30164421	Annotation submitted by Center for Genomic Regulation (CRG)	2014-10-28	9996
+Peita	Penicillium italicum	GCA_001008395.1	PI	Scaffold	None		Institute of Botany, Chinese Academy of Sciences	2015-05-15	1186	28597635			
+Pifer	Pichia fermentans	GCA_035610515.1	ASM3561051v1	Contig	reference genome		Shenzhen TaiSu Biotechnology Co.Ltd	2024-01-12	49	15023121			
+Pifer	Pichia fermentans	GCA_003339355.1	UCD_Pferm_PL1	Scaffold	None		University College Dublin	2018-07-24	714	10568644			
+Pifer	Pichia fermentans	GCA_029581925.1	ASM2958192v1	Contig	None		Concordia University	2023-04-04	62	13702895			
+Pifer	Pichia fermentans	GCA_030570255.1	ASM3057025v1	Scaffold	None		UW-Madison	2023-07-31	2079	11769294			
+Pifer	Pichia fermentans	GCA_030770065.1	ASM3077006v1	Scaffold	None		a Faculty of Food Science and Engineering	2023-08-17	488	19752745			
+Pifer	Pichia fermentans	GCA_037041205.1	ASM3704120v1	Contig	None		Dalian Medical University	2024-03-06	7829	9062088			
+Pifer	Pichia fermentans	GCA_037041255.1	ASM3704125v1	Contig	None		Dalian Medical University	2024-03-06	3270	20859976			
+Pifer	Pichia fermentans	GCA_037041515.1	ASM3704151v1	Contig	None		Dalian Medical University	2024-03-06	1441	21870954			
+Pifer	Pichia fermentans	GCA_037041755.1	ASM3704175v1	Scaffold	None		Dalian Medical University	2024-03-06	3600	20795514			
+Plcor	Pleurotus cornucopiae	GCA_019677325.2	ASM1967732v2	Chromosome	reference genome		Institute of Agricultural Resources and Regional Planning	2021-08-25	11	32382086	Annotation submitted by Institute of Agricultural Resources and Regional Planning	2021-08-25	10437
+Plery	Pleurotus eryngii	GCA_001717165.1	ASM171716v1	Scaffold	None		Shanghai Academy of Agricultural Sciences	2016-08-30	166	43779707			
+Plery	Pleurotus eryngii	GCA_003243765.1	ASM324376v1	Contig	None		Northeast Normal University	2018-06-18	153	49917831			
+Plery	Pleurotus eryngii	GCA_003314755.1	ASM331475v1	Scaffold	None		Kunming University of Science and Technology	2018-07-11	104407	174580441			
+Plery	Pleurotus eryngii	GCA_015484515.1	Pleery1	Scaffold	None		DOE Joint Genome Institute	2020-11-15	609	44606964	Annotation submitted by DOE Joint Genome Institute	2020-11-24	16135
+Plery	Pleurotus eryngii	GCA_029874175.1	ASM2987417v1	Contig	None		Jilin Agricultural University	2023-04-26	42	51138829			
+Plery	Pleurotus eryngii	GCA_029467805.1	ASM2946780v1	Contig	reference genome		Jilin Agricultural University	2023-03-29	47	53459950			
+Plery	Pleurotus eryngii	GCA_029467795.1	ASM2946779v1	Contig	None		Jilin Agricultural University	2023-03-29	51	47996066			
+Plost	Pleurotus ostreatus	GCF_014466165.1	ASM1446616v1	Contig	reference genome	GCA_014466165.1	Academia Sinica	2020-09-03	16	34897228	Annotation submitted by Academia Sinica	2023-12-29	11849
+Plost	Pleurotus ostreatus	GCA_014466165.1	ASM1446616v1	Contig	reference genome	GCF_014466165.1	Academia Sinica	2020-09-03	16	34897228	Annotation submitted by Academia Sinica	2020-09-03	11875
+Pltuo	Pleurotus tuoliensis	GCA_036872985.1	ASM3687298v1	Contig	reference genome		Qingdao Agriculturual University	2024-02-26	14	43778493			
+Pugra	Puccinia graminis	GCF_000149925.1	ASM14992v1	Scaffold	reference genome	GCA_000149925.1	Broad Institute	2008-08-26	392	88644628	Annotation submitted by Broad Institute	2023-11-13	16308
+Pugra	Puccinia graminis	GCA_000149925.1	ASM14992v1	Scaffold	reference genome	GCF_000149925.1	Broad Institute	2008-08-26	392	88644628	Annotation submitted by Broad Institute	2012-02-10	16309
+Pustr	Puccinia striiformis	GCF_021901695.1	Pst134E36_v1_pri	Chromosome	reference genome	GCA_021901695.1	Australian National University	2022-02-03	18	89491239	Annotation submitted by Australian National University	2023-12-29	17813
+Pustr	Puccinia striiformis	GCA_021901695.1	Pst134E36_v1_pri	Chromosome	reference genome	GCF_021901695.1	Australian National University	2022-02-03	18	89491239	Annotation submitted by Australian National University	2022-02-03	17813
+Putri	Puccinia triticina	GCF_026914185.1	ASM2691418v1	Complete Genome	reference genome	GCA_026914185.1	Henan Agricultural University	2022-12-15	18	122823596	Annotation submitted by Henan Agricultural University	2023-01-29	12736
+Putri	Puccinia triticina	GCA_026914185.1	ASM2691418v1	Complete Genome	reference genome	GCF_026914185.1	Henan Agricultural University	2022-12-15	18	122823596	Annotation submitted by Henan Agricultural University	2022-12-15	12736
+Pyory	Pyricularia oryzae	GCF_000002495.2	MG8	Chromosome	reference genome	GCA_000002495.2	International Rice Blast Genome Consortium	2011-10-14	7	40979121	Annotation submitted by International Rice Blast Genome Consortium	2019-11-29	13184
+Pyory	Pyricularia oryzae	GCA_000002495.2	MG8	Chromosome	reference genome	GCF_000002495.2	International Rice Blast Genome Consortium	2011-10-14	7	40979121	Annotation submitted by International Rice Blast Genome Consortium	2016-03-31	13184
+Rhsol	Rhizoctonia solani	GCF_016906535.1	ASM1690653v1	Complete Genome	reference genome	GCA_016906535.1	China Agricultural University	2021-02-18	16	40703773	Annotation submitted by China Agricultural University	2021-08-27	12425
+Rhsol	Rhizoctonia solani	GCA_016906535.1	ASM1690653v1	Complete Genome	reference genome	GCF_016906535.1	China Agricultural University	2021-02-18	16	40703773	Annotation submitted by China Agricultural University	2021-02-18	12425
+Rhirr	Rhizophagus irregularis	GCF_026210795.1	ASM2621079v1	Chromosome	reference genome	GCA_026210795.1	Royal Botanic Gardens Kew	2022-11-16	32	146773001	Annotation submitted by Royal Botanic Gardens Kew	2024-06-26	30147
+Rhirr	Rhizophagus irregularis	GCA_026210795.1	ASM2621079v1	Chromosome	reference genome	GCF_026210795.1	Royal Botanic Gardens Kew	2022-11-16	32	146773001	Annotation submitted by Royal Botanic Gardens Kew	2022-11-16	30190
+Rhjg1	Rhodotorula sp. JG-1b	GCA_001541205.1	Rhosp1	Scaffold	None		DOE Joint Genome Institute	2016-01-26	156	19393393	Annotation submitted by DOE Joint Genome Institute	2016-01-26	6790
+Rhjg1	Rhodotorula sp. JG-1b	GCA_963379285.1	SMGC_7569_bin.1_MetaWRAP_v1.2.1_MAG	Contig	None		NIH/NHGRI	2023-08-24	1341	16988136			
+Sacer	Saccharomyces cerevisiae	GCF_000146045.2	R64	Complete Genome	reference genome	GCA_000146045.2	Saccharomyces Genome Database	2014-12-17	16	12071326	SGD R64-5-1	2025-03-05	6477
+Sacer	Saccharomyces cerevisiae	GCA_000146045.2	R64	Complete Genome	reference genome	GCF_000146045.2	Saccharomyces Genome Database	2011-04-18	16	12071326	SGD R64-4-1	2025-02-28	6431
+Savan	Sanghuangporus vaninii	GCA_041442975.1	ASM4144297v1	Chromosome	reference genome		Beijing Forestry University	2024-08-26	14	34358263			
+Savan	Sanghuangporus vaninii	GCA_024703735.1	ASM2470373v1	Scaffold	None		School of Bioscience and Technology	2022-08-16	14366	30345695			
+Savan	Sanghuangporus vaninii	GCA_036873625.1	ASM3687362v1	Contig	None		Qingdao Agriculturual University	2024-02-26	8372	29698041			
+Savan	Sanghuangporus vaninii	GCA_048932575.1	ASM4893257v1	Contig	None		Seoul National University	2025-03-25	17	31867905	Annotation submitted by Seoul National University	2025-03-25	9738
+Scjap	Schizosaccharomyces japonicus	GCF_000149845.2	SJ5	Scaffold	reference genome	GCA_000149845.2	Broad Institute	2013-08-16	32	11733154	Annotation submitted by Broad Institute	2017-10-11	5224
+Scjap	Schizosaccharomyces japonicus	GCA_000149845.2	SJ5	Scaffold	reference genome	GCF_000149845.2	Broad Institute	2013-08-16	32	11733154	Annotation submitted by Broad Institute	2015-03-22	5224
+Scpom	Schizosaccharomyces pombe	GCF_000002945.2	ASM294v3	Chromosome	reference genome	GCA_000002945.3	S. pombe European Sequencing Consortium (EUPOM)	2019-07-23	3	12571820	Annotation submitted by PomBase	2024-08-16	12645
+Scpom	Schizosaccharomyces pombe	GCA_000002945.3	ASM294v3	Chromosome	reference genome	GCF_000002945.2	S. pombe European Sequencing Consortium (EUPOM)	2007-11-09	3	12571820	Annotation submitted by S. pombe European Sequencing Consortium (EUPOM)	2024-11-14	12640
+Scscl	Sclerotinia sclerotiorum	GCF_000146945.2	ASM14694v2	Scaffold	reference genome	GCA_000146945.2	Broad Institute	2015-07-16	36	38330312	Annotation submitted by Broad Institute	2023-04-03	14714
+Scscl	Sclerotinia sclerotiorum	GCA_000146945.2	ASM14694v2	Scaffold	reference genome	GCF_000146945.2	Broad Institute	2015-07-16	36	38330312	Annotation submitted by Broad Institute	2016-07-26	14715
+Spsci	Sporisorium scitamineum	GCA_001010845.1	ASM101084v1	Complete Genome	reference genome		University of Sao Paulo	2015-05-20	26	19979571			
+Tacam	Taiwanofungus camphoratus	GCA_003999685.1	ASM399968v1	Complete Genome	reference genome		Academia Sinica	2019-01-08	14	33045214			
+Tacam	Taiwanofungus camphoratus	GCA_000766995.1	ASM76699v1	Scaffold	None		Academia Sinica	2014-10-15	360	32155604			
+Tacam	Taiwanofungus camphoratus	GCA_003413585.1	ASM341358v1	Scaffold	None		Shanghai Qinshengyuan Biotechnology Co., Ltd	2018-08-20	379	30365629			
+Tacam	Taiwanofungus camphoratus	GCA_022598595.1	ASM2259859v1	Contig	None		Academia Sinica	2022-03-18	58	33158713	Annotation submitted by Academia Sinica	2022-03-18	10381
+Tacam	Taiwanofungus camphoratus	GCA_022598625.1	ASM2259862v1	Contig	None		Academia Sinica	2022-03-18	35	33373109	Annotation submitted by Academia Sinica	2022-03-18	10325
+Tacam	Taiwanofungus camphoratus	GCA_022598655.1	ASM2259865v1	Contig	None		Academia Sinica	2022-03-18	32	32855596	Annotation submitted by Academia Sinica	2022-03-18	10476
+Tacam	Taiwanofungus camphoratus	GCA_022598685.1	ASM2259868v1	Contig	None		Academia Sinica	2022-03-18	32	33571907	Annotation submitted by Academia Sinica	2022-03-16	5348
+Tacam	Taiwanofungus camphoratus	GCA_036872975.1	ASM3687297v1	Contig	None		Qingdao Agriculturual University	2024-02-26	44	36399724			
+Tamar	Talaromyces marneffei	GCF_009556855.1	ASM955685v1	Complete Genome	reference genome	GCA_009556855.1	Broad Institute	2019-11-05	8	28198338	Annotation submitted by Broad Institute	2023-03-16	10066
+Tamar	Talaromyces marneffei	GCA_009556855.1	ASM955685v1	Complete Genome	reference genome	GCF_009556855.1	Broad Institute	2019-11-05	8	28198338	Annotation submitted by Broad Institute	2019-11-05	10066
+Trasp	Trichoderma asperellum	GCF_020647865.1	ASM2064786v1	Complete Genome	reference genome	GCA_020647865.1	Academia Sinica	2021-10-27	7	37545380	Annotation submitted by Academia Sinica	2024-06-26	12041
+Trasp	Trichoderma asperellum	GCA_020647865.1	ASM2064786v1	Complete Genome	reference genome	GCF_020647865.1	Academia Sinica	2021-10-27	7	37545380	Annotation submitted by Academia Sinica	2022-02-15	12041
+Tratr	Trichoderma atroviride	GCF_020647795.1	ASM2064779v1	Complete Genome	reference genome	GCA_020647795.1	Academia Sinica	2021-10-27	7	37300646	Annotation submitted by Academia Sinica	2024-06-26	13312
+Tratr	Trichoderma atroviride	GCA_020647795.1	ASM2064779v1	Complete Genome	reference genome	GCF_020647795.1	Academia Sinica	2021-10-27	7	37300646	Annotation submitted by Academia Sinica	2022-02-15	13327
+Trree	Trichoderma reesei	GCF_000167675.1	v2.0	Scaffold	reference genome	GCA_000167675.2	DOE Joint Genome Institute	2011-07-18	77	33395713	Annotation submitted by DOE Joint Genome Institute	2020-02-05	9116
+Trree	Trichoderma reesei	GCA_000167675.2	v2.0	Scaffold	reference genome	GCF_000167675.1	DOE Joint Genome Institute	2011-07-18	77	33395713	Annotation submitted by DOE Joint Genome Institute	2016-07-25	9120
+Trrub	Trichophyton rubrum	GCF_000151425.1	ASM15142v1	Scaffold	reference genome	GCA_000151425.1	Broad Institute	2009-11-30	35	22502330	Annotation submitted by Broad Institute	2022-04-18	8713
+Trrub	Trichophyton rubrum	GCA_000151425.1	ASM15142v1	Scaffold	reference genome	GCF_000151425.1	Broad Institute	2009-11-30	35	22502330	Annotation submitted by Broad Institute	2015-03-12	8713
+Usmay	Ustilago maydis	GCF_000328475.2	Umaydis521_2.0	Chromosome	reference genome	GCA_000328475.2	Broad Institute	2015-02-18	23	19664356	Annotation submitted by Broad Institute	2024-12-03	6907
+Usmay	Ustilago maydis	GCA_000328475.2	Umaydis521_2.0	Chromosome	reference genome	GCF_000328475.2	Broad Institute	2015-02-18	23	19664356	Annotation submitted by Broad Institute	2017-06-02	6910
+Vacer	Vairimorpha ceranae	GCF_000988165.1	ASM98816v1	Contig	reference genome	GCA_000988165.1	University of Ottawa	2015-05-05	536	5690748	Annotation submitted by University of Ottawa	2018-03-31	3265
+Vacer	Vairimorpha ceranae	GCA_000988165.1	ASM98816v1	Contig	reference genome	GCF_000988165.1	University of Ottawa	2015-05-05	536	5690748	Annotation submitted by University of Ottawa	2015-05-05	3265
+Vamal	Valsa mali	GCA_025426655.1	ASM2542665v1	Contig	reference genome		Plant Disease Epidemiol & IPM	2022-09-27	24	42827319			
+Vapol	Vanderwaltozyma polyspora	GCF_000150035.1	ASM15003v1	Scaffold	reference genome	GCA_000150035.1	Trinity College Dublin, Ireland	2007-08-17	281	14674591	Annotation submitted by Trinity College Dublin, Ireland	2024-12-04	5764
+Vapol	Vanderwaltozyma polyspora	GCA_000150035.1	ASM15003v1	Scaffold	reference genome	GCF_000150035.1	Trinity College Dublin, Ireland	2007-08-17	281	14674591	Annotation submitted by Trinity College Dublin, Ireland	2016-07-26	5767
+Vealb	Verticillium albo-atrum	GCA_002851705.1	ASM285170v1	Scaffold	reference genome		Wageningen University & Research	2018-01-03	20	36468503			
+Vealb	Verticillium albo-atrum	GCA_024085555.1	Vaa-1	Scaffold	None		University of Amsterdam	2022-06-30	351	37174868			
+Vedah	Verticillium dahliae	GCF_000150675.1	ASM15067v2	Scaffold	reference genome	GCA_000150675.2	Broad Institute	2011-09-15	8	33828453	Annotation submitted by Broad Institute	2020-01-30	10811
+Vedah	Verticillium dahliae	GCA_000150675.2	ASM15067v2	Scaffold	reference genome	GCF_000150675.1	Broad Institute	2011-09-15	8	33828453	Annotation submitted by Broad Institute	2016-07-26	10811
+Venon	Verticillium nonalfalfae	GCF_003724135.2	ASM372413v2	Scaffold	reference genome	GCA_003724135.2	West Virignia University	2018-11-13	628	31747483	Annotation submitted by West Virignia University	2023-12-29	9626
+Venon	Verticillium nonalfalfae	GCA_003724135.2	ASM372413v2	Scaffold	reference genome	GCF_003724135.2	West Virignia University	2018-11-13	628	31747483	Annotation submitted by West Virignia University	2020-02-25	9627
+Vovol	Volvariella volvacea	GCA_000355865.1	Vvcontig	Contig	None		Fujian Agriculture and Forestry University	2013-04-08	2304	36626674			
+Vovol	Volvariella volvacea	GCA_000349905.1	VVO	Scaffold	reference genome		The Institute of Edible Fungi, Shanghai Academy of Agricultural Sciences	2013-04-01	62	35720033			
+Vovol	Volvariella volvacea	GCA_001691835.3	ASM169183v3	Scaffold	None		Harvard University	2018-10-17	1505	35313785	Annotation submitted by Harvard University	2020-11-10	11047
+Yalip	Yarrowia lipolytica	GCF_001761485.1	ASM176148v1	Complete Genome	reference genome	GCA_001761485.1	University of California, Irvine	2016-10-12	6	20500066	Annotation submitted by University of California, Irvine	2024-09-10	8689
+Yalip	Yarrowia lipolytica	GCA_001761485.1	ASM176148v1	Complete Genome	reference genome	GCF_001761485.1	University of California, Irvine	2016-10-12	6	20500066	Annotation submitted by University of California, Irvine	2016-10-25	8746
+Zytri	Zymoseptoria tritici	GCF_000219625.1	MYCGR v2.0	Chromosome	reference genome	GCA_000219625.1	DOE Joint Genome Institute	2011-07-06	21	39686251	Annotation submitted by DOE Joint Genome Institute	2020-02-07	10942
+Zytri	Zymoseptoria tritici	GCA_000219625.1	MYCGR v2.0	Chromosome	reference genome	GCF_000219625.1	DOE Joint Genome Institute	2011-07-06	21	39686251	Annotation submitted by DOE Joint Genome Institute	2016-07-25	10964

@@ -12,7 +12,7 @@
     "trim/SRR7068271.t.fa.gz",
     "trim/SRR7068276.t.fa.gz"
   ],
-  "adapter": "TGGAATTC",
+  "adapter": null,
   "alignment_file": "align/alignment.bam",
   "conditions": {
     "A": [
@@ -23,10 +23,14 @@
   "annotation_conditions": [
     "A"
   ],
-  "genome_file": "../../Genomes/Mucir.GCA_000401635.1_Muco_sp_1006Ph_V1_genomic.fa",
+  "genome_file": "../../Genomes/Mucir.GCA_037974945.1_ASM3797494v1_genomic.fa",
   "jbrowse_directory": null,
   "gene_annotation_file": null,
+  "annotation_file": "tradeoff_A/loci.gff3",
   "min_length": 15,
-  "max_length": 300,
-  "annotation_file": "tradeoff_A/loci.gff3"
+  "max_length": 30,
+  "adapters": {
+    "SRR7068271.fasta": "TGGAATTC",
+    "SRR7068276.fasta": "TGGAATTC"
+  }
 }

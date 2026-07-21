@@ -12,7 +12,7 @@
     "trim/SRR3494745.t.fa.gz",
     "trim/SRR3494743.t.fa.gz"
   ],
-  "adapter": "ATCTCGTA",
+  "adapter": null,
   "alignment_file": null,
   "conditions": {
     "A": [
@@ -21,12 +21,12 @@
     ]
   },
   "annotation_conditions": null,
-  "genome_file": "../../Genomes/Scpom.GCA_000002945.2_ASM294v2_genomic.fa",
+  "genome_file": "../../Genomes/Scpom.GCA_000002945.3_ASM294v3_genomic.fa",
   "jbrowse_directory": null,
   "gene_annotation_file": null,
+  "annotation_file": null,
   "min_length": 15,
   "max_length": 50,
-  "annotation_file": null,
   "adapters": {
     "SRR3494745.fasta": "ATCTCGTA",
     "SRR3494743.fasta": "ATCTCGTA"

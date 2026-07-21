@@ -1,0 +1,66 @@
+Jul-23 13:25:44.563 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf
+Jul-23 13:25:44.636 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.04.6
+Jul-23 13:25:44.654 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/Users/jax/.nextflow/plugins; core-plugins: nf-amazon@2.15.0,nf-azure@1.16.0,nf-cloudcache@0.4.3,nf-codecommit@0.2.3,nf-console@1.2.1,nf-google@1.21.1,nf-k8s@1.0.0,nf-tower@1.11.4,nf-wave@1.12.1
+Jul-23 13:25:44.672 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jul-23 13:25:44.673 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jul-23 13:25:44.675 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Jul-23 13:25:44.684 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Jul-23 13:25:44.697 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/nextflow.config
+Jul-23 13:25:44.699 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/nextflow.config
+Jul-23 13:25:44.721 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /Users/jax/.nextflow/secrets/store.json
+Jul-23 13:25:44.723 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@7144655b] - activable => nextflow.secret.LocalSecretsProvider@7144655b
+Jul-23 13:25:44.727 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Jul-23 13:25:44.958 [main] DEBUG nextflow.cli.CmdRun - Enabling module binaries
+Jul-23 13:25:44.966 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
+Jul-23 13:25:44.976 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [shrivelled_meninsky] DSL2 - revision: 320b854d99
+Jul-23 13:25:44.977 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Jul-23 13:25:44.977 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Jul-23 13:25:45.010 [main] DEBUG nextflow.Session - Session UUID: 84069023-7042-4d3d-9179-19afaa6ead00
+Jul-23 13:25:45.010 [main] DEBUG nextflow.Session - Run name: shrivelled_meninsky
+Jul-23 13:25:45.011 [main] DEBUG nextflow.Session - Executor pool size: 10
+Jul-23 13:25:45.016 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Jul-23 13:25:45.020 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=30; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Jul-23 13:25:45.062 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 25.04.6 build 5954
+  Created: 01-07-2025 11:27 UTC (07:27 CLST)
+  System: Mac OS X 14.7.6
+  Runtime: Groovy 4.0.26 on OpenJDK 64-Bit Server VM 17.0.10+7
+  Encoding: UTF-8 (UTF-8)
+  Process: 86032@NateMac.local [127.0.0.1]
+  CPUs: 10 - Mem: 16 GB (166.1 MB) - Swap: 7 GB (1.2 GB)
+Jul-23 13:25:45.071 [main] DEBUG nextflow.Session - Work-dir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work [Mac OS X]
+Jul-23 13:25:45.072 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/bin
+Jul-23 13:25:45.078 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Jul-23 13:25:45.084 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Jul-23 13:25:45.087 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Jul-23 13:25:45.100 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Jul-23 13:25:45.106 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 11; maxThreads: 1000
+Jul-23 13:25:45.143 [main] DEBUG nextflow.Session - Session start
+Jul-23 13:25:45.221 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jul-23 13:25:45.436 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-23 13:25:45.436 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-23 13:25:45.440 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Jul-23 13:25:45.444 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=10; memory=16 GB; capacity=10; pollInterval=100ms; dumpInterval=5m
+Jul-23 13:25:45.445 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Jul-23 13:25:45.460 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'conservation:GENOME_SUMMARIES': maxForks=0; fair=false; array=0
+Jul-23 13:25:45.496 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: download, get_genome_list, conservation:GENOME_SUMMARIES, GENOME_SUMMARIES
+Jul-23 13:25:45.498 [main] DEBUG nextflow.Session - Igniting dataflow network (1)
+Jul-23 13:25:45.498 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > conservation:GENOME_SUMMARIES
+Jul-23 13:25:45.499 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_9bdcec9c1aa3adf1: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/get_genomes/main.nf
+  Script_844b38a0d1e80044: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/conservation/main.nf
+  Script_a840ee3917ca4f45: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/main.nf
+Jul-23 13:25:45.499 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Jul-23 13:25:45.499 [main] DEBUG nextflow.Session - Session await
+Jul-23 13:25:45.618 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 13:25:45.619 [Task submitter] INFO  nextflow.Session - [e4/486919] Submitted process > conservation:GENOME_SUMMARIES
+Jul-23 13:25:53.871 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: conservation:GENOME_SUMMARIES; status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/e4/4869190ff3d9c3b4af2c80ed0b0b68]
+Jul-23 13:25:53.872 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=30; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Jul-23 13:25:53.887 [main] DEBUG nextflow.Session - Session await > all processes finished
+Jul-23 13:25:53.974 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Jul-23 13:25:53.974 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Jul-23 13:25:53.976 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'TaskFinalizer' shutdown completed (hard=false)
+Jul-23 13:25:53.983 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=1; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=8.2s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=0; ]
+Jul-23 13:25:54.171 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Jul-23 13:25:54.185 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Jul-23 13:25:54.185 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

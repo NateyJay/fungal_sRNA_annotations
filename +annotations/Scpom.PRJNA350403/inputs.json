@@ -78,7 +78,7 @@
     "trim/SRR4449667.t.fa.gz",
     "trim/SRR4449666.t.fa.gz"
   ],
-  "adapter": "TGGAATTC",
+  "adapter": null,
   "alignment_file": "align/alignment.bam",
   "conditions": {
     "A": [
@@ -121,10 +121,36 @@
   "annotation_conditions": [
     "F"
   ],
-  "genome_file": "../../Genomes/Scpom.GCA_000002945.2_ASM294v2_genomic.fa",
+  "genome_file": "../../Genomes/Scpom.GCA_000002945.3_ASM294v3_genomic.fa",
   "jbrowse_directory": null,
   "gene_annotation_file": null,
+  "annotation_file": "tradeoff_F/loci.gff3",
   "min_length": 15,
-  "max_length": 300,
-  "annotation_file": "tradeoff_F/loci.gff3"
+  "max_length": 30,
+  "adapters": {
+    "SRR4449649.fasta": "TGGAATTC",
+    "SRR4449648.fasta": "TGGAATTC",
+    "SRR4449647.fasta": "TGGAATTC",
+    "SRR4449646.fasta": "TGGAATTC",
+    "SRR4449653.fasta": "TGGAATTC",
+    "SRR4449652.fasta": "TGGAATTC",
+    "SRR4449651.fasta": "TGGAATTC",
+    "SRR4449650.fasta": "TGGAATTC",
+    "SRR4449657.fasta": "TGGAATTC",
+    "SRR4449656.fasta": "TGGAATTC",
+    "SRR4449655.fasta": "TGGAATTC",
+    "SRR4449654.fasta": "TGGAATTC",
+    "SRR4449661.fasta": "TGGAATTC",
+    "SRR4449660.fasta": "TGGAATTC",
+    "SRR4449659.fasta": "TGGAATTC",
+    "SRR4449658.fasta": "TGGAATTC",
+    "SRR4449662.fasta": "TGGAATTC",
+    "SRR4449665.fasta": "TGGAATTC",
+    "SRR4449664.fasta": "TGGAATTC",
+    "SRR4449663.fasta": "TGGAATTC",
+    "SRR4449669.fasta": "TGGAATTC",
+    "SRR4449668.fasta": "TGGAATTC",
+    "SRR4449667.fasta": "TGGAATTC",
+    "SRR4449666.fasta": "TGGAATTC"
+  }
 }

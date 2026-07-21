@@ -53,12 +53,12 @@
     ]
   },
   "annotation_conditions": [
-    "A"
+    "C"
   ],
   "genome_file": "../../Genomes/Opsin.GCA_012934285.1_ASM1293428v1_genomic.fa",
   "jbrowse_directory": null,
   "gene_annotation_file": null,
   "min_length": 15,
-  "max_length": 300,
-  "annotation_file": "tradeoff/loci.gff3"
+  "max_length": 30,
+  "annotation_file": "tradeoff_C/loci.gff3"
 }

@@ -16,12 +16,11 @@
   ],
   "trimmed_libraries": [
     "trim/SRR035639.t.fa.gz",
-    "trim/SRR035883.t.fa.gz",
     "trim/SRR035642.t.fa.gz",
     "trim/SRR035641.t.fa.gz",
     "trim/SRR035640.t.fa.gz"
   ],
-  "adapter": "TCGTATGC",
+  "adapter": null,
   "alignment_file": "align/alignment.bam",
   "conditions": {
     "A": [
@@ -35,10 +34,17 @@
   "annotation_conditions": [
     "A"
   ],
-  "genome_file": "../../Genomes/Scpom.GCA_000002945.2_ASM294v2_genomic.fa",
+  "genome_file": "../../Genomes/Scpom.GCA_000002945.3_ASM294v3_genomic.fa",
   "jbrowse_directory": null,
   "gene_annotation_file": null,
+  "annotation_file": null,
   "min_length": 15,
-  "max_length": 300,
-  "annotation_file": "tradeoff_A/loci.gff3"
+  "max_length": 30,
+  "adapters": {
+    "SRR035639.fasta": "TCGTATGC",
+    "SRR035883.fasta": "None",
+    "SRR035642.fasta": "TCGTATGC",
+    "SRR035641.fasta": "TCGTATGC",
+    "SRR035640.fasta": "TCGTATGC"
+  }
 }

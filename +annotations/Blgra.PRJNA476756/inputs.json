@@ -81,12 +81,12 @@
     ]
   },
   "annotation_conditions": [
-    "C"
+    "E"
   ],
   "genome_file": "../../Genomes/Blgra.GCA_905067625.1_Bgtriticale_THUN12_genome_v1_2_genomic.fa",
   "jbrowse_directory": null,
   "gene_annotation_file": null,
   "min_length": 15,
-  "max_length": 300,
-  "annotation_file": "tradeoff/loci.gff3"
+  "max_length": 30,
+  "annotation_file": "tradeoff_E/loci.gff3"
 }

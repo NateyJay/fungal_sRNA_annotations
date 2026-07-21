@@ -1,16 +1,36 @@
 {
   "project_name": "Pyory.PRJNA322180",
-  "srrs": null,
-  "untrimmed_libraries": null,
-  "trimmed_libraries": null,
+  "srrs": [
+    "SRR3545705",
+    "SRR3545690"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR3545705.fasta",
+    "untrimmed/SRR3545690.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR3545705.t.fa.gz",
+    "trim/SRR3545690.t.fa.gz"
+  ],
   "adapter": null,
-  "alignment_file": null,
-  "conditions": null,
-  "annotation_conditions": null,
-  "genome_file": null,
+  "alignment_file": "align/alignment.bam",
+  "conditions": {
+    "A": [
+      "SRR3545705",
+      "SRR3545690"
+    ]
+  },
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Pyory.GCA_000002495.2_MG8_genomic.fa",
   "jbrowse_directory": null,
   "gene_annotation_file": null,
   "min_length": 15,
-  "max_length": 50,
-  "annotation_file": null
+  "max_length": 30,
+  "annotation_file": "tradeoff_A/loci.gff3",
+  "adapters": {
+    "SRR3545705.fasta": "TGGAATTC",
+    "SRR3545690.fasta": "TGGAATTC"
+  }
 }

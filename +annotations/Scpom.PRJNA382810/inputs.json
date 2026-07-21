@@ -10,9 +10,13 @@
     "untrimmed/SRR5445683.fasta",
     "untrimmed/SRR5445672.fasta"
   ],
-  "trimmed_libraries": null,
+  "trimmed_libraries": [
+    "trim/SRR5445684.t.fa.gz",
+    "trim/SRR5445683.t.fa.gz",
+    "trim/SRR5445672.t.fa.gz"
+  ],
   "adapter": null,
-  "alignment_file": null,
+  "alignment_file": "align/alignment.bam",
   "conditions": {
     "A": [
       "SRR5445684",
@@ -20,11 +24,18 @@
       "SRR5445672"
     ]
   },
-  "annotation_conditions": null,
-  "genome_file": "../../Genomes/Scpom.GCA_000002945.2_ASM294v2_genomic.fa",
+  "annotation_conditions": [
+    "A"
+  ],
+  "genome_file": "../../Genomes/Scpom.GCA_000002945.3_ASM294v3_genomic.fa",
   "jbrowse_directory": null,
   "gene_annotation_file": null,
+  "annotation_file": "tradeoff_A/loci.gff3",
   "min_length": 15,
-  "max_length": 50,
-  "annotation_file": null
+  "max_length": 30,
+  "adapters": {
+    "SRR5445684.fasta": "AGATCGGA",
+    "SRR5445683.fasta": "AGATCGGA",
+    "SRR5445672.fasta": "AGATCGGA"
+  }
 }

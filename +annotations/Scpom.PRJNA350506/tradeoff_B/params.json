@@ -5,20 +5,20 @@
   ],
   "conditions": {
     "A": [
+      "SRR4449764",
+      "SRR4449765",
       "SRR4449756",
       "SRR4449757",
       "SRR4449760",
-      "SRR4449761",
-      "SRR4449764",
-      "SRR4449765"
+      "SRR4449761"
     ],
     "B": [
-      "SRR4449758",
-      "SRR4449759",
+      "SRR4449766",
+      "SRR4449767",
       "SRR4449762",
       "SRR4449763",
-      "SRR4449766",
-      "SRR4449767"
+      "SRR4449758",
+      "SRR4449759"
     ]
   },
   "alignment_file": "/home2/njohnson/fungi_annotations/annotations/Scpom.PRJNA350506/align/alignment.bam",

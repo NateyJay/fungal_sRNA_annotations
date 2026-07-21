@@ -25,7 +25,7 @@
     "trim/ERR2841785.t.fa.gz"
   ],
   "adapter": null,
-  "alignment_file": null,
+  "alignment_file": "align/alignment.bam",
   "conditions": {
     "A": [
       "ERR2841782",
@@ -38,13 +38,15 @@
       "ERR2841785"
     ]
   },
-  "annotation_conditions": null,
+  "annotation_conditions": [
+    "B"
+  ],
   "genome_file": "../../Genomes/Rhirr.GCA_026210795.1_ASM2621079v1_genomic.fa",
   "jbrowse_directory": null,
   "gene_annotation_file": null,
-  "annotation_file": null,
+  "annotation_file": "tradeoff_B/loci.gff3",
   "min_length": 15,
-  "max_length": 50,
+  "max_length": 30,
   "adapters": {
     "ERR2841782.fasta": "TGGAATTC",
     "ERR2841783.fasta": "TGGAATTC",

@@ -1,0 +1,10 @@
+[workspace]
+authors = ["Nate Johnson <jax523@gmail.com>"]
+channels = ["conda-forge"]
+name = "gini_alignment"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]

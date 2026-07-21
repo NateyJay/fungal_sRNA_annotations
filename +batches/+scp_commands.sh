@@ -1,6 +1,11 @@
 ## copying the master table to darwin
 scp /Volumes/YASMA/master_table.xlsx njohnson@darwin:/home2/njohnson/fungi_annotations/batch_scripts
 
+rsync -arv ../+genomes/* njohnson@darwin:/home2/njohnson/fungi_annotations/Genomes/
+
+## sending metaloci
+rsync -arv ../metaloci/01out-meta_gffs/* njohnson@darwin:/home2/njohnson/fungi_annotations/metaloci/
+
 
 ## moving config scripts to darwin
 # scp 01-make_alignments.py njohnson@darwin:/home2/njohnson/fungi_annotations/batch_scripts
@@ -14,6 +19,7 @@ scp *.py njohnson@darwin:/home2/njohnson/fungi_annotations/batch_scripts
 ## downloading all the annotations
 rsync -arv --exclude="*.bam" --exclude="*.bai" --exclude="*.sra" --exclude="*.sralite" --exclude="*.fq" --exclude="*.fastq" --exclude="*.fq.gz"  --exclude="*.fasta" --exclude="*.fa.gz"  --exclude="locus_*.eps" --exclude="locus_*.txt" --exclude="*.fa" njohnson@darwin:/home2/njohnson/fungi_annotations/annotations/ ../+annotations
 
+## including alignments (very big!!)
 rsync -arv --exclude="*.sra" --exclude="*.sralite" --exclude="*.fq" --exclude="*.fq.gz" --exclude="*.fasta" --exclude="*.fa.gz"njohnson@darwin:/home2/njohnson/fungi_annotations/annotations/ ../+annotations
 
 

@@ -1,49 +1,64 @@
 {
   "project_name": "Maory.PRJNA856435",
   "srrs": [
-    "SRR20012924",
-    "SRR20012936",
+    "SRR20012938",
     "SRR20012922",
+    "SRR20012936",
+    "SRR20012924",
+    "SRR20012937",
     "SRR20012932",
     "SRR20012935",
-    "SRR20012925"
+    "SRR20012929",
+    "SRR20012925",
+    "SRR20012933"
   ],
   "untrimmed_libraries": [
-    "/home2/njohnson/fungi_annotations/annotations/Maory.PRJNA856435/untrimmed/SRR20012924.fasta",
-    "/home2/njohnson/fungi_annotations/annotations/Maory.PRJNA856435/untrimmed/SRR20012936.fasta",
-    "/home2/njohnson/fungi_annotations/annotations/Maory.PRJNA856435/untrimmed/SRR20012922.fasta",
-    "/home2/njohnson/fungi_annotations/annotations/Maory.PRJNA856435/untrimmed/SRR20012932.fasta",
-    "/home2/njohnson/fungi_annotations/annotations/Maory.PRJNA856435/untrimmed/SRR20012935.fasta",
-    "/home2/njohnson/fungi_annotations/annotations/Maory.PRJNA856435/untrimmed/SRR20012925.fasta"
+    "untrimmed/SRR20012938.fasta",
+    "untrimmed/SRR20012922.fasta",
+    "untrimmed/SRR20012936.fasta",
+    "untrimmed/SRR20012924.fasta",
+    "untrimmed/SRR20012937.fasta",
+    "untrimmed/SRR20012932.fasta",
+    "untrimmed/SRR20012935.fasta",
+    "untrimmed/SRR20012929.fasta",
+    "untrimmed/SRR20012925.fasta",
+    "untrimmed/SRR20012933.fasta"
   ],
   "trimmed_libraries": [
-    "/home2/njohnson/fungi_annotations/annotations/Maory.PRJNA856435/trim/SRR20012924.t.fa.gz",
-    "/home2/njohnson/fungi_annotations/annotations/Maory.PRJNA856435/trim/SRR20012936.t.fa.gz",
-    "/home2/njohnson/fungi_annotations/annotations/Maory.PRJNA856435/trim/SRR20012922.t.fa.gz",
-    "/home2/njohnson/fungi_annotations/annotations/Maory.PRJNA856435/trim/SRR20012932.t.fa.gz",
-    "/home2/njohnson/fungi_annotations/annotations/Maory.PRJNA856435/trim/SRR20012935.t.fa.gz",
-    "/home2/njohnson/fungi_annotations/annotations/Maory.PRJNA856435/trim/SRR20012925.t.fa.gz"
+    "trim/SRR20012938.t.fa.gz",
+    "trim/SRR20012922.t.fa.gz",
+    "trim/SRR20012936.t.fa.gz",
+    "trim/SRR20012924.t.fa.gz",
+    "trim/SRR20012937.t.fa.gz",
+    "trim/SRR20012932.t.fa.gz",
+    "trim/SRR20012935.t.fa.gz",
+    "trim/SRR20012929.t.fa.gz",
+    "trim/SRR20012925.t.fa.gz",
+    "trim/SRR20012933.t.fa.gz"
   ],
   "adapter": "TGGAATTC",
-  "alignment_file": "/home2/njohnson/fungi_annotations/annotations/Maory.PRJNA856435/align/alignment.bam",
   "conditions": {
-    "A": [
-      "SRR20012924"
+    "C": [
+      "SRR20012938",
+      "SRR20012922"
     ],
     "B": [
       "SRR20012936"
     ],
-    "C": [
-      "SRR20012922"
+    "A": [
+      "SRR20012924"
     ],
     "Z.d1": [
+      "SRR20012937",
       "SRR20012932"
     ],
     "Y.d1d2": [
-      "SRR20012935"
+      "SRR20012935",
+      "SRR20012929"
     ],
     "X.d2": [
-      "SRR20012925"
+      "SRR20012925",
+      "SRR20012933"
     ]
   },
   "annotation_conditions": [
@@ -51,10 +66,23 @@
     "B",
     "C"
   ],
-  "genome_file": "/home2/njohnson/fungi_annotations/annotations/Maory.PRJNA856435/../../Genomes/Maory.GCF_000002495.2_MG8_genomic.fa",
+  "genome_file": "../../Genomes/Maory.GCF_000002495.2_MG8_genomic.fa",
   "jbrowse_directory": null,
   "gene_annotation_file": null,
   "min_length": 15,
   "max_length": 50,
-  "annotation_file": "/home2/njohnson/fungi_annotations/annotations/Maory.PRJNA856435/tradeoff/loci.gff3"
+  "annotation_file": "tradeoff/loci.gff3",
+  "alignment_file": "align/alignment.bam",
+  "adapters": {
+    "SRR20012938.fasta": "TGGAATTC",
+    "SRR20012922.fasta": "TGGAATTC",
+    "SRR20012936.fasta": "TGGAATTC",
+    "SRR20012924.fasta": "TGGAATTC",
+    "SRR20012937.fasta": "TGGAATTC",
+    "SRR20012932.fasta": "TGGAATTC",
+    "SRR20012935.fasta": "TGGAATTC",
+    "SRR20012929.fasta": "TGGAATTC",
+    "SRR20012925.fasta": "TGGAATTC",
+    "SRR20012933.fasta": "TGGAATTC"
+  }
 }

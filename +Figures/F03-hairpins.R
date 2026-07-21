@@ -109,7 +109,78 @@ for (suffix in c(".eps", ".txt", ".depths.txt")) {
 
 
 
+download_hairpin <- function(dest="../hairpins", 
+                             metalocus=NULL, 
+                             abbv=NULL, 
+                             hp_cat=c('imprecise','miRNA','near_miRNA'), 
+                             sub=NULL) {
+  
+  dir.create(dest,showWarnings=F)
+  
+  hp.df <- get_hairpin.df()
+  
+  if (!is.null(metalocus)) hp.df <- hp.df[hp.df$metalocus %in% metalocus,]
+  if (!is.null(abbv))      hp.df <- hp.df[hp.df$abbv %in% abbv,]
+  if (!is.null(hp_cat))    hp.df <- hp.df[hp.df$hp_cat %in% hp_cat,]
+  if (!is.null(sub))       hp.df <- hp.df[hp.df$sub %in% sub,]
+  
+  for (c in unique(hp.df$hp_cat)) dir.create(file.path(dest, c), showWarnings=F)
+  
+  table(hp.df$abbv, hp.df$hp_cat)
+    
+  hp.df$dest_path <- file.path(dest, hp.df$hp_cat, str_c(hp.df$metalocus, hp.df$source_locus, sep='-'))
+  
+  hp.df$eps_downloaded <- file.exists(str_glue("{hp.df$dest_path}.eps"))
+  hp.df$txt_downloaded <- file.exists(str_glue("{hp.df$dest_path}.txt"))
+  hp.df$dtxt_downloaded <- file.exists(str_glue("{hp.df$dest_path}.depths.text"))
+  
+  hp.df$source_path <- file.path(hp.df$project,"hairpin", hp.df$cond, "folds", str_c(str_split_fixed(hp.df$source_locus, "-", 2)[,1], hp.df$sub_name, sep='.'))
+  hp.df$source_path[hp.df$sub == 'native'] <- str_sub(hp.df$source_path[hp.df$sub == 'native'], 1,-2)
 
+  
+  eps_path = file.path(dest,  'hairpin_eps_files.txt')
+  txt_path = file.path(dest,  'hairpin_txt_files.txt')
+  dtxt_path = file.path(dest, 'hairpin_dtxt_files.txt')
+  
+  message(paste(sum(!hp.df$eps_downloaded), '.eps files to download'))
+  message(paste(sum(!hp.df$txt_downloaded), '.txt files to download'))
+  message(paste(sum(!hp.df$dtxt_downloaded), '.depths.txt files to download'))
+  
+  write.table(paste(hp.df$source_path[!hp.df$eps_downloaded], ".eps", sep=''), eps_path, quote=F, row.names = F, col.names = F)
+  write.table(paste(hp.df$source_pat[!hp.df$txt_downloaded], ".txt", sep=''), txt_path, quote=F, row.names = F, col.names = F)
+  write.table(paste(hp.df$source_path[!hp.df$dtxt_downloaded], ".depths.txt", sep=''), dtxt_path, quote=F, row.names = F, col.names = F)
+  
+  download <- function(p) {
+    call = str_glue("rsync -arv --files-from={p} njohnson@darwin:/home2/njohnson/fungi_annotations/annotations/ {dest}/temp")
+    system(call)
+  }
+  
+  download(eps_path)
+  download(txt_path)
+  download(dtxt_path)
+  
+  
+  move <- function(f, s) {
+    did_copy = sum(file.rename(  
+      file.path(dest, 'temp', str_glue("{hp.df$source_path[f]}{s}")),
+      paste(hp.df$dest_path[f], s, sep=''))
+    )
+    message(str_glue("  {did_copy} {s} files copied"))
+  }
+  
+  move(!hp.df$eps_downloaded, '.eps')
+  move(!hp.df$txt_downloaded, '.txt')
+  move(!hp.df$dtxt_downloaded, '.depths.txt')
+  
+  message("removing temp directory")
+  unlink(file.path(dest, 'temp'), recursive=T)
+  
+  
+}
+  
+
+download_hairpin(dest= '../hairpins/Cocin', abbv='Cocin')
+download_hairpin()
 
 
 # what contexts are they? -------------------------------------------------
@@ -134,7 +205,7 @@ ml.df[ml.df$simple_context %in% c("intergenic", "near-genic") &
 
 # hairpin.df <- get_hairpin.df()
 
-hp.df <- hairpin.df
+hp.df <- get_hairpin.df()
 
 table(hp.df$hp_cat)
 
@@ -497,5 +568,130 @@ lp <- lp_group_names(lp, 2, 'hp_cat')
 
 
 barplot(table(hp.df$mas_length))
+
+
+
+
+
+
+
+# new metaloci ------------------------------------------------------------
+
+
+
+hp.df <- hairpin.df
+m.df <- metalocus.df
+c.df <- context.df
+
+
+hp.df$replication <- m.df$replication[match(hp.df$metalocus, m.df$metalocus)]
+hp.df$context <- c.df$context[match(hp.df$metalocus, c.df$metalocus)]
+
+table(hp.df$replication, hp.df$hp_cat)
+table(hp.df$abbv, hp.df$hp_cat)
+
+f = hp.df$replication %in% c('binom+project+sizing','binom+sizing', 'binom')
+tab = table(hp.df$abbv[f], hp.df$hp_cat[f])
+tab
+
+f = str_detect(hp.df$replication, "sizing")
+table(hp.df$abbv[f], hp.df$hp_cat[f])
+
+
+table(hp.df$abbv, hp.df$hp_cat)
+
+hp.df[hp.df$hp_cat == 'miRNA',]
+table(hp.df$context, hp.df$hp_cat)
+
+
+basic_miRNA_counts <- function(save=F) {
+  
+  hp.df <- hairpin.df
+  # m.df <- metalocus.df
+  
+  hp.df <- hp.df[order(hp.df$pass_sum, decreasing = T),]
+  hp.df$replication <- m.df$replication[match(hp.df$metalocus, m.df$metalocus)]
+  
+  tab = table(hp.df$replication,hp.df$hp_cat)
+  tab = tab[c('none', 'binom+sizing','binom+project+sizing'),c('imprecise','near_miRNA','miRNA')]
+  
+            
+  
+  file_name = "03-basic_miRNAs.svg"
+  if (save) svglite(file_name, 3.5, 4.5)
+  
+  par(mar=c(8,5,4,4))
+  b = barplot(tab, las=2,
+          ylab='Number of loci',
+          col=c('grey','skyblue3', 'lightseagreen'))
+  par(xpd=T)
+  text(b, colSums(tab), colSums(tab), pos=3, col='red')
+  if (save) dev.off()
+  if (save) ADsvg(file_name)
+  
+}
+basic_miRNA_counts(T)
+
+
+abbv_miRNA_type <- function(save=F) {
+  
+  hp.df <- hairpin.df
+  m.df <- metalocus.df
+  q.df <- conservation.df
+  
+  hp.df$replication <- m.df$replication[match(hp.df$metalocus, m.df$metalocus)]
+  
+  # f = str_detect(hp.df$replication, "sizing") & str_detect(hp.df$replication, "binom") & str_detect(hp.df$replication, "project")
+  f = hp.df$replication == 'binom+project+sizing'
+  tab = table(abbv=hp.df$abbv[f], hp_cat=hp.df$hp_cat[f])
+  
+  df <- data.frame(tab)
+  df <- dcast(df, hp_cat ~ abbv)
+  rownames(df) <- df$hp_cat
+  df$hp_cat <- NULL
+  df <- df[c('imprecise','near_miRNA','miRNA'),]
+  
+  
+  file_name = "03-filtered_hairpin_heatmap.svg"
+  if (save) svglite(file_name, 4.8, 3)
+  
+  par(mar=c(8,5,4,4))
+  lp <- layermap(df,
+                 palette = 'blues',
+                 reverse_palette = T,
+                 zlim=c(0,50),
+                 zero_as_na = T)
+  lp <- lp_names(lp, 2)
+  lp <- lp_names(lp, 3)
+  
+  lp_plot_values(lp)
+  
+  if (save) dev.off()
+  if (save) ADsvg(file_name)
+}
+abbv_miRNA_type(T)
+  
+  
+  
+  bocin.df <- hp.df[f & hp.df$hp_cat == 'imprecise' & hp.df$abbv == 'Bocin',]
+  scscl.df <- hp.df[f & hp.df$hp_cat == 'imprecise' & hp.df$abbv == 'Scscl',]
+  
+  bocin.df$type
+  
+  
+  file_name = "03-basic_miRNAs.svg"
+  if (save) svglite(file_name, 3.5, 4.5)
+  
+  par(mar=c(8,5,4,4))
+  b = barplot(tab, las=2,
+              ylab='Number of loci')
+  par(xpd=T)
+  text(b, tab, tab, pos=3, col='red')
+  if (save) dev.off()
+  if (save) ADsvg(file_name)
+  
+}
+basic_miRNA_counts(T)
+
 
 

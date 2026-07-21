@@ -1,0 +1,207 @@
+Jul-23 12:55:34.238 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf
+Jul-23 12:55:34.382 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.04.6
+Jul-23 12:55:34.401 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/Users/jax/.nextflow/plugins; core-plugins: nf-amazon@2.15.0,nf-azure@1.16.0,nf-cloudcache@0.4.3,nf-codecommit@0.2.3,nf-console@1.2.1,nf-google@1.21.1,nf-k8s@1.0.0,nf-tower@1.11.4,nf-wave@1.12.1
+Jul-23 12:55:34.422 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jul-23 12:55:34.423 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jul-23 12:55:34.424 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Jul-23 12:55:34.437 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Jul-23 12:55:34.451 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/nextflow.config
+Jul-23 12:55:34.453 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/nextflow.config
+Jul-23 12:55:34.479 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /Users/jax/.nextflow/secrets/store.json
+Jul-23 12:55:34.481 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@7144655b] - activable => nextflow.secret.LocalSecretsProvider@7144655b
+Jul-23 12:55:34.485 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Jul-23 12:55:34.736 [main] DEBUG nextflow.cli.CmdRun - Enabling module binaries
+Jul-23 12:55:34.744 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
+Jul-23 12:55:34.754 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [adoring_brenner] DSL2 - revision: 320b854d99
+Jul-23 12:55:34.755 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Jul-23 12:55:34.755 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Jul-23 12:55:34.796 [main] DEBUG nextflow.Session - Session UUID: 9ad6a578-de94-41c2-927c-72c1739dfd86
+Jul-23 12:55:34.796 [main] DEBUG nextflow.Session - Run name: adoring_brenner
+Jul-23 12:55:34.796 [main] DEBUG nextflow.Session - Executor pool size: 10
+Jul-23 12:55:34.802 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Jul-23 12:55:34.807 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=30; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Jul-23 12:55:34.825 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 25.04.6 build 5954
+  Created: 01-07-2025 11:27 UTC (07:27 CLST)
+  System: Mac OS X 14.7.6
+  Runtime: Groovy 4.0.26 on OpenJDK 64-Bit Server VM 17.0.10+7
+  Encoding: UTF-8 (UTF-8)
+  Process: 67997@NateMac.local [127.0.0.1]
+  CPUs: 10 - Mem: 16 GB (1.1 GB) - Swap: 6 GB (303.6 MB)
+Jul-23 12:55:34.834 [main] DEBUG nextflow.Session - Work-dir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work [Mac OS X]
+Jul-23 12:55:34.834 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/bin
+Jul-23 12:55:34.843 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Jul-23 12:55:34.850 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Jul-23 12:55:34.853 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Jul-23 12:55:34.870 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Jul-23 12:55:34.877 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 11; maxThreads: 1000
+Jul-23 12:55:34.916 [main] DEBUG nextflow.Session - Session start
+Jul-23 12:55:35.006 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jul-23 12:55:35.234 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-23 12:55:35.235 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-23 12:55:35.239 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Jul-23 12:55:35.244 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=10; memory=16 GB; capacity=10; pollInterval=100ms; dumpInterval=5m
+Jul-23 12:55:35.246 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Jul-23 12:55:35.261 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'conservation:EXTRACT_DATA': maxForks=0; fair=false; array=0
+Jul-23 12:55:35.296 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: download, conservation:EXTRACT_DATA, get_genome_list, EXTRACT_DATA
+Jul-23 12:55:35.297 [main] DEBUG nextflow.Session - Igniting dataflow network (2)
+Jul-23 12:55:35.303 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > conservation:EXTRACT_DATA
+Jul-23 12:55:35.304 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_9bdcec9c1aa3adf1: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/get_genomes/main.nf
+  Script_f57303f92499cdf0: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/conservation/main.nf
+  Script_a840ee3917ca4f45: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/main.nf
+Jul-23 12:55:35.304 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Jul-23 12:55:35.304 [main] DEBUG nextflow.Session - Session await
+Jul-23 12:55:35.429 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:55:35.431 [Task submitter] INFO  nextflow.Session - [2f/dfad64] Submitted process > conservation:EXTRACT_DATA (5)
+Jul-23 12:55:35.439 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:55:35.439 [Task submitter] INFO  nextflow.Session - [73/b32b50] Submitted process > conservation:EXTRACT_DATA (9)
+Jul-23 12:55:35.443 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:55:35.444 [Task submitter] INFO  nextflow.Session - [40/70e821] Submitted process > conservation:EXTRACT_DATA (4)
+Jul-23 12:55:35.448 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:55:35.449 [Task submitter] INFO  nextflow.Session - [6b/1c4199] Submitted process > conservation:EXTRACT_DATA (3)
+Jul-23 12:55:35.452 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:55:35.454 [Task submitter] INFO  nextflow.Session - [21/466d99] Submitted process > conservation:EXTRACT_DATA (10)
+Jul-23 12:55:35.459 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:55:35.460 [Task submitter] INFO  nextflow.Session - [3d/aa212f] Submitted process > conservation:EXTRACT_DATA (2)
+Jul-23 12:55:35.461 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: conservation:EXTRACT_DATA (5); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/2f/dfad641205c05b76eb112718965e19]
+Jul-23 12:55:35.467 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:55:35.469 [Task submitter] INFO  nextflow.Session - [26/2bf208] Submitted process > conservation:EXTRACT_DATA (14)
+Jul-23 12:55:35.471 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=30; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Jul-23 12:55:35.474 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:55:35.475 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: conservation:EXTRACT_DATA (9); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/73/b32b50ce5e2c299eadb6965730831d]
+Jul-23 12:55:35.475 [Task submitter] INFO  nextflow.Session - [70/fc3abe] Submitted process > conservation:EXTRACT_DATA (6)
+Jul-23 12:55:35.477 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: conservation:EXTRACT_DATA (4); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/40/70e821ab8d5e93e98e95f3c16f5f2c]
+Jul-23 12:55:35.479 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:55:35.480 [Task submitter] INFO  nextflow.Session - [22/795f38] Submitted process > conservation:EXTRACT_DATA (1)
+Jul-23 12:55:35.485 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:55:35.485 [TaskFinalizer-2] DEBUG nextflow.processor.TaskProcessor - Process `conservation:EXTRACT_DATA (9)` is unable to find [UnixPath]: `/Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/73/b32b50ce5e2c299eadb6965730831d/output.txt` (pattern: `output.txt`)
+Jul-23 12:55:35.486 [Task submitter] INFO  nextflow.Session - [e9/fe187a] Submitted process > conservation:EXTRACT_DATA (7)
+Jul-23 12:55:35.486 [TaskFinalizer-1] DEBUG nextflow.processor.TaskProcessor - Process `conservation:EXTRACT_DATA (5)` is unable to find [UnixPath]: `/Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/2f/dfad641205c05b76eb112718965e19/output.txt` (pattern: `output.txt`)
+Jul-23 12:55:35.496 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:55:35.496 [Task submitter] INFO  nextflow.Session - [76/2f3f34] Submitted process > conservation:EXTRACT_DATA (8)
+Jul-23 12:55:35.499 [TaskFinalizer-3] DEBUG nextflow.processor.TaskProcessor - Process `conservation:EXTRACT_DATA (4)` is unable to find [UnixPath]: `/Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/40/70e821ab8d5e93e98e95f3c16f5f2c/output.txt` (pattern: `output.txt`)
+Jul-23 12:55:35.499 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: conservation:EXTRACT_DATA (3); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/6b/1c41998a39950e6cb3aa1104d45204]
+Jul-23 12:55:35.500 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:55:35.501 [TaskFinalizer-4] DEBUG nextflow.processor.TaskProcessor - Process `conservation:EXTRACT_DATA (3)` is unable to find [UnixPath]: `/Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/6b/1c41998a39950e6cb3aa1104d45204/output.txt` (pattern: `output.txt`)
+Jul-23 12:55:35.501 [Task submitter] INFO  nextflow.Session - [74/e2e545] Submitted process > conservation:EXTRACT_DATA (11)
+Jul-23 12:55:35.501 [TaskFinalizer-2] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=conservation:EXTRACT_DATA (9); work-dir=/Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/73/b32b50ce5e2c299eadb6965730831d
+  error [nextflow.exception.MissingFileException]: Missing output file(s) `output.txt` expected by process `conservation:EXTRACT_DATA (9)`
+Jul-23 12:55:35.502 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: conservation:EXTRACT_DATA (10); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/21/466d995e82da75307818af5c02c118]
+Jul-23 12:55:35.504 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:55:35.504 [Task submitter] INFO  nextflow.Session - [8c/5a0dc4] Submitted process > conservation:EXTRACT_DATA (12)
+Jul-23 12:55:35.504 [TaskFinalizer-5] DEBUG nextflow.processor.TaskProcessor - Process `conservation:EXTRACT_DATA (10)` is unable to find [UnixPath]: `/Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/21/466d995e82da75307818af5c02c118/output.txt` (pattern: `output.txt`)
+Jul-23 12:55:35.507 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:55:35.508 [Task submitter] INFO  nextflow.Session - [54/3a24bb] Submitted process > conservation:EXTRACT_DATA (13)
+Jul-23 12:55:35.512 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: conservation:EXTRACT_DATA (2); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/3d/aa212f990a8dd027d47e340539de90]
+Jul-23 12:55:35.512 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:55:35.513 [Task submitter] INFO  nextflow.Session - [07/4fe896] Submitted process > conservation:EXTRACT_DATA (15)
+Jul-23 12:55:35.514 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 14; name: conservation:EXTRACT_DATA (14); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/26/2bf2083d20d61f9ccb9ca5161ebd54]
+Jul-23 12:55:35.515 [TaskFinalizer-6] DEBUG nextflow.processor.TaskProcessor - Process `conservation:EXTRACT_DATA (2)` is unable to find [UnixPath]: `/Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/3d/aa212f990a8dd027d47e340539de90/output.txt` (pattern: `output.txt`)
+Jul-23 12:55:35.516 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:55:35.517 [Task submitter] INFO  nextflow.Session - [e9/82d41a] Submitted process > conservation:EXTRACT_DATA (16)
+Jul-23 12:55:35.523 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:55:35.523 [Task submitter] INFO  nextflow.Session - [62/835ad9] Submitted process > conservation:EXTRACT_DATA (17)
+Jul-23 12:55:35.531 [TaskFinalizer-7] DEBUG nextflow.processor.TaskProcessor - Process `conservation:EXTRACT_DATA (14)` is unable to find [UnixPath]: `/Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/26/2bf2083d20d61f9ccb9ca5161ebd54/output.txt` (pattern: `output.txt`)
+Jul-23 12:55:35.531 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: conservation:EXTRACT_DATA (6); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/70/fc3abeb94676821cc7451ae307b826]
+Jul-23 12:55:35.532 [TaskFinalizer-8] DEBUG nextflow.processor.TaskProcessor - Process `conservation:EXTRACT_DATA (6)` is unable to find [UnixPath]: `/Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/70/fc3abeb94676821cc7451ae307b826/output.txt` (pattern: `output.txt`)
+Jul-23 12:55:35.532 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: conservation:EXTRACT_DATA (1); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/22/795f38f86a4856aca738206d572dcb]
+Jul-23 12:55:35.533 [TaskFinalizer-9] DEBUG nextflow.processor.TaskProcessor - Process `conservation:EXTRACT_DATA (1)` is unable to find [UnixPath]: `/Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/22/795f38f86a4856aca738206d572dcb/output.txt` (pattern: `output.txt`)
+Jul-23 12:55:35.533 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: conservation:EXTRACT_DATA (7); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/e9/fe187a5376635e6f77e11d81d2210c]
+Jul-23 12:55:35.539 [TaskFinalizer-10] DEBUG nextflow.processor.TaskProcessor - Process `conservation:EXTRACT_DATA (7)` is unable to find [UnixPath]: `/Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/e9/fe187a5376635e6f77e11d81d2210c/output.txt` (pattern: `output.txt`)
+Jul-23 12:55:35.539 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: conservation:EXTRACT_DATA (8); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/76/2f3f34834d69bc3e528a53bb8440b2]
+Jul-23 12:55:35.541 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:55:35.541 [TaskFinalizer-2] ERROR nextflow.processor.TaskProcessor - Error executing process > 'conservation:EXTRACT_DATA (9)'
+
+Caused by:
+  Missing output file(s) `output.txt` expected by process `conservation:EXTRACT_DATA (9)`
+
+
+Command executed:
+
+  echo "source: GCA_000143105.2, link: ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/143/105/GCA_000143105.2_Sanger-454-IlluminaPA_2.0/GCA_000143105.2_Sanger-454-IlluminaPA_2.0_genomic.fna.gz"
+
+Command exit status:
+  0
+
+Command output:
+  source: GCA_000143105.2, link: ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/143/105/GCA_000143105.2_Sanger-454-IlluminaPA_2.0/GCA_000143105.2_Sanger-454-IlluminaPA_2.0_genomic.fna.gz
+
+Work dir:
+  /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/73/b32b50ce5e2c299eadb6965730831d
+
+Tip: when you have fixed the problem you can continue the execution adding the option `-resume` to the run command line
+Jul-23 12:55:35.541 [Task submitter] INFO  nextflow.Session - [9b/244a9e] Submitted process > conservation:EXTRACT_DATA (18)
+Jul-23 12:55:35.543 [TaskFinalizer-10] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=conservation:EXTRACT_DATA (7); work-dir=/Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/e9/fe187a5376635e6f77e11d81d2210c
+  error [nextflow.exception.MissingFileException]: Missing output file(s) `output.txt` expected by process `conservation:EXTRACT_DATA (7)`
+Jul-23 12:55:35.544 [TaskFinalizer-9] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=conservation:EXTRACT_DATA (1); work-dir=/Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/22/795f38f86a4856aca738206d572dcb
+  error [nextflow.exception.MissingFileException]: Missing output file(s) `output.txt` expected by process `conservation:EXTRACT_DATA (1)`
+Jul-23 12:55:35.544 [TaskFinalizer-8] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=conservation:EXTRACT_DATA (6); work-dir=/Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/70/fc3abeb94676821cc7451ae307b826
+  error [nextflow.exception.MissingFileException]: Missing output file(s) `output.txt` expected by process `conservation:EXTRACT_DATA (6)`
+Jul-23 12:55:35.544 [TaskFinalizer-7] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=conservation:EXTRACT_DATA (14); work-dir=/Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/26/2bf2083d20d61f9ccb9ca5161ebd54
+  error [nextflow.exception.MissingFileException]: Missing output file(s) `output.txt` expected by process `conservation:EXTRACT_DATA (14)`
+Jul-23 12:55:35.545 [TaskFinalizer-6] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=conservation:EXTRACT_DATA (2); work-dir=/Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/3d/aa212f990a8dd027d47e340539de90
+  error [nextflow.exception.MissingFileException]: Missing output file(s) `output.txt` expected by process `conservation:EXTRACT_DATA (2)`
+Jul-23 12:55:35.545 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 11; name: conservation:EXTRACT_DATA (11); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/74/e2e545a80c4de50df8f53db5f16d99]
+Jul-23 12:55:35.545 [TaskFinalizer-5] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=conservation:EXTRACT_DATA (10); work-dir=/Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/21/466d995e82da75307818af5c02c118
+  error [nextflow.exception.MissingFileException]: Missing output file(s) `output.txt` expected by process `conservation:EXTRACT_DATA (10)`
+Jul-23 12:55:35.545 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 12; name: conservation:EXTRACT_DATA (12); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/8c/5a0dc43c641843633b70db0071b69a]
+Jul-23 12:55:35.545 [TaskFinalizer-4] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=conservation:EXTRACT_DATA (3); work-dir=/Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/6b/1c41998a39950e6cb3aa1104d45204
+  error [nextflow.exception.MissingFileException]: Missing output file(s) `output.txt` expected by process `conservation:EXTRACT_DATA (3)`
+Jul-23 12:55:35.546 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 13; name: conservation:EXTRACT_DATA (13); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/54/3a24bb2174c69433642db4b2a8a7dd]
+Jul-23 12:55:35.546 [TaskFinalizer-3] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=conservation:EXTRACT_DATA (4); work-dir=/Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/40/70e821ab8d5e93e98e95f3c16f5f2c
+  error [nextflow.exception.MissingFileException]: Missing output file(s) `output.txt` expected by process `conservation:EXTRACT_DATA (4)`
+Jul-23 12:55:35.546 [TaskFinalizer-1] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=conservation:EXTRACT_DATA (5); work-dir=/Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/2f/dfad641205c05b76eb112718965e19
+  error [nextflow.exception.MissingFileException]: Missing output file(s) `output.txt` expected by process `conservation:EXTRACT_DATA (5)`
+Jul-23 12:55:35.547 [TaskFinalizer-10] DEBUG nextflow.processor.TaskProcessor - Process `conservation:EXTRACT_DATA (8)` is unable to find [UnixPath]: `/Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/76/2f3f34834d69bc3e528a53bb8440b2/output.txt` (pattern: `output.txt`)
+Jul-23 12:55:35.547 [TaskFinalizer-6] DEBUG nextflow.processor.TaskProcessor - Process `conservation:EXTRACT_DATA (12)` is unable to find [UnixPath]: `/Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/8c/5a0dc43c641843633b70db0071b69a/output.txt` (pattern: `output.txt`)
+Jul-23 12:55:35.547 [TaskFinalizer-9] DEBUG nextflow.processor.TaskProcessor - Process `conservation:EXTRACT_DATA (11)` is unable to find [UnixPath]: `/Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/74/e2e545a80c4de50df8f53db5f16d99/output.txt` (pattern: `output.txt`)
+Jul-23 12:55:35.547 [TaskFinalizer-8] DEBUG nextflow.processor.TaskProcessor - Process `conservation:EXTRACT_DATA (13)` is unable to find [UnixPath]: `/Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/54/3a24bb2174c69433642db4b2a8a7dd/output.txt` (pattern: `output.txt`)
+Jul-23 12:55:35.547 [TaskFinalizer-6] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=conservation:EXTRACT_DATA (12); work-dir=/Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/8c/5a0dc43c641843633b70db0071b69a
+  error [nextflow.exception.MissingFileException]: Missing output file(s) `output.txt` expected by process `conservation:EXTRACT_DATA (12)`
+Jul-23 12:55:35.548 [TaskFinalizer-8] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=conservation:EXTRACT_DATA (13); work-dir=/Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/54/3a24bb2174c69433642db4b2a8a7dd
+  error [nextflow.exception.MissingFileException]: Missing output file(s) `output.txt` expected by process `conservation:EXTRACT_DATA (13)`
+Jul-23 12:55:35.548 [TaskFinalizer-10] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=conservation:EXTRACT_DATA (8); work-dir=/Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/76/2f3f34834d69bc3e528a53bb8440b2
+  error [nextflow.exception.MissingFileException]: Missing output file(s) `output.txt` expected by process `conservation:EXTRACT_DATA (8)`
+Jul-23 12:55:35.549 [TaskFinalizer-9] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=conservation:EXTRACT_DATA (11); work-dir=/Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/74/e2e545a80c4de50df8f53db5f16d99
+  error [nextflow.exception.MissingFileException]: Missing output file(s) `output.txt` expected by process `conservation:EXTRACT_DATA (11)`
+Jul-23 12:55:35.550 [TaskFinalizer-2] DEBUG nextflow.Session - Session aborted -- Cause: Missing output file(s) `output.txt` expected by process `conservation:EXTRACT_DATA (9)`
+Jul-23 12:55:35.557 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Jul-23 12:55:35.564 [TaskFinalizer-2] DEBUG nextflow.Session - The following nodes are still active:
+[process] conservation:EXTRACT_DATA
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: data
+  port 1: (cntrl) -     ; channel: $
+
+Jul-23 12:55:35.570 [main] DEBUG nextflow.Session - Session await > all processes finished
+Jul-23 12:55:35.570 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Jul-23 12:55:35.574 [main] WARN  n.processor.TaskPollingMonitor - Killing running tasks (4)
+Jul-23 12:55:35.580 [main] DEBUG n.executor.local.LocalTaskHandler - Unable to kill conservation:EXTRACT_DATA (15) -- command: kill -TERM 68213; exit: 1 
+ bash: line 0: kill: (68213) - No such process
+
+Jul-23 12:55:35.584 [main] DEBUG n.executor.local.LocalTaskHandler - Unable to kill conservation:EXTRACT_DATA (16) -- command: kill -TERM 68215; exit: 1 
+ bash: line 0: kill: (68215) - No such process
+
+Jul-23 12:55:35.588 [main] DEBUG n.executor.local.LocalTaskHandler - Unable to kill conservation:EXTRACT_DATA (17) -- command: kill -TERM 68236; exit: 1 
+ bash: line 0: kill: (68236) - No such process
+
+Jul-23 12:55:35.592 [main] DEBUG n.executor.local.LocalTaskHandler - Unable to kill conservation:EXTRACT_DATA (18) -- command: kill -TERM 68273; exit: 1 
+ bash: line 0: kill: (68273) - No such process
+
+Jul-23 12:55:35.594 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=14; ignoredCount=0; cachedCount=0; pendingCount=141; submittedCount=4; runningCount=-4; retriesCount=0; abortedCount=4; succeedDuration=0ms; failedDuration=13ms; cachedDuration=0ms;loadCpus=-4; loadMemory=0; peakRunning=13; peakCpus=13; peakMemory=0; ]
+Jul-23 12:55:35.754 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Jul-23 12:55:35.770 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

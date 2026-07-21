@@ -21,7 +21,7 @@
     "trim/SRR1555768.t.fa.gz",
     "trim/SRR1555766.t.fa.gz"
   ],
-  "adapter": "TGGAATTC",
+  "adapter": null,
   "alignment_file": "align/alignment.bam",
   "conditions": {
     "B": [
@@ -41,10 +41,17 @@
   "annotation_conditions": [
     "D"
   ],
-  "genome_file": "../../Genomes/Scpom.GCA_000002945.2_ASM294v2_genomic.fa",
+  "genome_file": "../../Genomes/Scpom.GCA_000002945.3_ASM294v3_genomic.fa",
   "jbrowse_directory": null,
   "gene_annotation_file": null,
+  "annotation_file": "tradeoff_D/loci.gff3",
   "min_length": 15,
-  "max_length": 300,
-  "annotation_file": "tradeoff_D/loci.gff3"
+  "max_length": 30,
+  "adapters": {
+    "SRR1555771.fasta": "TGGAATTC",
+    "SRR1555769.fasta": "TGGAATTC",
+    "SRR1555770.fasta": "TGGAATTC",
+    "SRR1555768.fasta": "TGGAATTC",
+    "SRR1555766.fasta": "TGGAATTC"
+  }
 }

@@ -40,9 +40,28 @@
     "untrimmed/SRR1630067.fasta",
     "untrimmed/SRR1630066.fasta"
   ],
-  "trimmed_libraries": null,
+  "trimmed_libraries": [
+    "trim/SRR1630053.t.fa.gz",
+    "trim/SRR1630052.t.fa.gz",
+    "trim/SRR1630051.t.fa.gz",
+    "trim/SRR1630050.t.fa.gz",
+    "trim/SRR1630049.t.fa.gz",
+    "trim/SRR1630048.t.fa.gz",
+    "trim/SRR1630047.t.fa.gz",
+    "trim/SRR1630046.t.fa.gz",
+    "trim/SRR1630045.t.fa.gz",
+    "trim/SRR1630044.t.fa.gz",
+    "trim/SRR1630043.t.fa.gz",
+    "trim/SRR1630042.t.fa.gz",
+    "trim/SRR1630071.t.fa.gz",
+    "trim/SRR1630069.t.fa.gz",
+    "trim/SRR1630070.t.fa.gz",
+    "trim/SRR1630068.t.fa.gz",
+    "trim/SRR1630067.t.fa.gz",
+    "trim/SRR1630066.t.fa.gz"
+  ],
   "adapter": null,
-  "alignment_file": null,
+  "alignment_file": "align/alignment.bam",
   "conditions": {
     "Z.d1d2": [
       "SRR1630053",
@@ -73,11 +92,31 @@
       "SRR1630066"
     ]
   },
-  "annotation_conditions": null,
+  "annotation_conditions": [],
   "genome_file": "../../Genomes/Cohig.GCA_001672515.1_ASM167251v1_genomic.fa",
   "jbrowse_directory": null,
   "gene_annotation_file": null,
+  "annotation_file": null,
   "min_length": 15,
   "max_length": 50,
-  "annotation_file": null
+  "adapters": {
+    "SRR1630053.fasta": "CTGTAGGC",
+    "SRR1630052.fasta": "CTGTAGGC",
+    "SRR1630051.fasta": "CTGTAGGC",
+    "SRR1630050.fasta": "CTGTAGGC",
+    "SRR1630049.fasta": "CTGTAGGC",
+    "SRR1630048.fasta": "CTGTAGGC",
+    "SRR1630047.fasta": "CTGTAGGC",
+    "SRR1630046.fasta": "CTGTAGGC",
+    "SRR1630045.fasta": "CTGTAGGC",
+    "SRR1630044.fasta": "CTGTAGGC",
+    "SRR1630043.fasta": "CTGTAGGC",
+    "SRR1630042.fasta": "CTGTAGGC",
+    "SRR1630071.fasta": "CTGTAGGC",
+    "SRR1630069.fasta": "CTGTAGGC",
+    "SRR1630070.fasta": "CTGTAGGC",
+    "SRR1630068.fasta": "CTGTAGGC",
+    "SRR1630067.fasta": "CTGTAGGC",
+    "SRR1630066.fasta": "CTGTAGGC"
+  }
 }

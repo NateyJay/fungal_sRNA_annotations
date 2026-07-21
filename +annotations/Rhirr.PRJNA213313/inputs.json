@@ -16,7 +16,7 @@
       "SRR943039"
     ]
   },
-  "annotation_conditions": null,
+  "annotation_conditions": [],
   "genome_file": "../../Genomes/Rhirr.GCA_026210795.1_ASM2621079v1_genomic.fa",
   "jbrowse_directory": null,
   "gene_annotation_file": null,

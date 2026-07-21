@@ -1,0 +1,1027 @@
+Jul-23 12:51:56.960 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf
+Jul-23 12:51:57.028 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.04.6
+Jul-23 12:51:57.046 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/Users/jax/.nextflow/plugins; core-plugins: nf-amazon@2.15.0,nf-azure@1.16.0,nf-cloudcache@0.4.3,nf-codecommit@0.2.3,nf-console@1.2.1,nf-google@1.21.1,nf-k8s@1.0.0,nf-tower@1.11.4,nf-wave@1.12.1
+Jul-23 12:51:57.064 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jul-23 12:51:57.064 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jul-23 12:51:57.066 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Jul-23 12:51:57.074 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Jul-23 12:51:57.087 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/nextflow.config
+Jul-23 12:51:57.089 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/nextflow.config
+Jul-23 12:51:57.112 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /Users/jax/.nextflow/secrets/store.json
+Jul-23 12:51:57.114 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@7144655b] - activable => nextflow.secret.LocalSecretsProvider@7144655b
+Jul-23 12:51:57.118 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Jul-23 12:51:57.360 [main] DEBUG nextflow.cli.CmdRun - Enabling module binaries
+Jul-23 12:51:57.366 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
+Jul-23 12:51:57.375 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [spontaneous_noether] DSL2 - revision: 320b854d99
+Jul-23 12:51:57.376 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Jul-23 12:51:57.376 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Jul-23 12:51:57.412 [main] DEBUG nextflow.Session - Session UUID: 766bf2a8-9b99-41bf-841b-08e1bb50ac51
+Jul-23 12:51:57.412 [main] DEBUG nextflow.Session - Run name: spontaneous_noether
+Jul-23 12:51:57.412 [main] DEBUG nextflow.Session - Executor pool size: 10
+Jul-23 12:51:57.419 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Jul-23 12:51:57.423 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=30; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Jul-23 12:51:57.443 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 25.04.6 build 5954
+  Created: 01-07-2025 11:27 UTC (07:27 CLST)
+  System: Mac OS X 14.7.6
+  Runtime: Groovy 4.0.26 on OpenJDK 64-Bit Server VM 17.0.10+7
+  Encoding: UTF-8 (UTF-8)
+  Process: 62984@NateMac.local [127.0.0.1]
+  CPUs: 10 - Mem: 16 GB (300.4 MB) - Swap: 5 GB (1.5 GB)
+Jul-23 12:51:57.452 [main] DEBUG nextflow.Session - Work-dir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work [Mac OS X]
+Jul-23 12:51:57.453 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/bin
+Jul-23 12:51:57.460 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Jul-23 12:51:57.466 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Jul-23 12:51:57.469 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Jul-23 12:51:57.487 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Jul-23 12:51:57.493 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 11; maxThreads: 1000
+Jul-23 12:51:57.527 [main] DEBUG nextflow.Session - Session start
+Jul-23 12:51:57.615 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jul-23 12:51:57.885 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-23 12:51:57.885 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-23 12:51:57.889 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Jul-23 12:51:57.893 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=10; memory=16 GB; capacity=10; pollInterval=100ms; dumpInterval=5m
+Jul-23 12:51:57.895 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Jul-23 12:51:57.912 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'conservation:EXTRACT_DATA': maxForks=0; fair=false; array=0
+Jul-23 12:51:57.932 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: download, conservation:EXTRACT_DATA, get_genome_list, EXTRACT_DATA
+Jul-23 12:51:57.933 [main] DEBUG nextflow.Session - Igniting dataflow network (2)
+Jul-23 12:51:57.937 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > conservation:EXTRACT_DATA
+Jul-23 12:51:57.938 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_9bdcec9c1aa3adf1: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/get_genomes/main.nf
+  Script_39acaa0b2a690915: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/conservation/main.nf
+  Script_a840ee3917ca4f45: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/main.nf
+Jul-23 12:51:57.939 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Jul-23 12:51:57.939 [main] DEBUG nextflow.Session - Session await
+Jul-23 12:51:58.095 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.097 [Task submitter] INFO  nextflow.Session - [6e/b34f8a] Submitted process > conservation:EXTRACT_DATA (10)
+Jul-23 12:51:58.105 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.106 [Task submitter] INFO  nextflow.Session - [52/9f37ae] Submitted process > conservation:EXTRACT_DATA (1)
+Jul-23 12:51:58.111 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.111 [Task submitter] INFO  nextflow.Session - [41/84b437] Submitted process > conservation:EXTRACT_DATA (4)
+Jul-23 12:51:58.115 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.116 [Task submitter] INFO  nextflow.Session - [e2/f731d4] Submitted process > conservation:EXTRACT_DATA (7)
+Jul-23 12:51:58.121 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.121 [Task submitter] INFO  nextflow.Session - [09/34abec] Submitted process > conservation:EXTRACT_DATA (6)
+Jul-23 12:51:58.125 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.126 [Task submitter] INFO  nextflow.Session - [a6/30f703] Submitted process > conservation:EXTRACT_DATA (5)
+Jul-23 12:51:58.133 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.140 [Task submitter] INFO  nextflow.Session - [83/5cd0d9] Submitted process > conservation:EXTRACT_DATA (9)
+Jul-23 12:51:58.162 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: conservation:EXTRACT_DATA (10); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/6e/b34f8a6b86d331221964f8fb2ff474]
+Jul-23 12:51:58.171 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=30; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Jul-23 12:51:58.174 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: conservation:EXTRACT_DATA (1); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/52/9f37ae44aa8efb226b4d817bb32034]
+Jul-23 12:51:58.178 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.179 [Task submitter] INFO  nextflow.Session - [44/92ce4c] Submitted process > conservation:EXTRACT_DATA (2)
+Jul-23 12:51:58.184 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.185 [Task submitter] INFO  nextflow.Session - [2c/0c1d99] Submitted process > conservation:EXTRACT_DATA (8)
+Jul-23 12:51:58.190 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: conservation:EXTRACT_DATA (4); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/41/84b4373e361cbbfd7cbf07b7ecb6f1]
+Jul-23 12:51:58.191 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.197 [Task submitter] INFO  nextflow.Session - [96/fbe7a8] Submitted process > conservation:EXTRACT_DATA (3)
+Jul-23 12:51:58.199 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: conservation:EXTRACT_DATA (7); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/e2/f731d4a186b671e6c60eb4b391b2ae]
+Jul-23 12:51:58.206 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: conservation:EXTRACT_DATA (6); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/09/34abece8ac4db7814295a10ed479b1]
+Jul-23 12:51:58.208 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.208 [Task submitter] INFO  nextflow.Session - [6f/212f47] Submitted process > conservation:EXTRACT_DATA (11)
+Jul-23 12:51:58.211 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.211 [Task submitter] INFO  nextflow.Session - [43/23025c] Submitted process > conservation:EXTRACT_DATA (18)
+Jul-23 12:51:58.214 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.214 [Task submitter] INFO  nextflow.Session - [6a/1335fb] Submitted process > conservation:EXTRACT_DATA (12)
+Jul-23 12:51:58.222 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.224 [Task submitter] INFO  nextflow.Session - [29/26a76e] Submitted process > conservation:EXTRACT_DATA (13)
+Jul-23 12:51:58.226 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: conservation:EXTRACT_DATA (5); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/a6/30f7038941458ae88b45c52fc8b859]
+Jul-23 12:51:58.230 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: conservation:EXTRACT_DATA (9); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/83/5cd0d95b5a5f52e760622286fa32d2]
+Jul-23 12:51:58.233 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.234 [Task submitter] INFO  nextflow.Session - [b5/5d9610] Submitted process > conservation:EXTRACT_DATA (14)
+Jul-23 12:51:58.238 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: conservation:EXTRACT_DATA (2); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/44/92ce4ca1456054d2004143cd34f3c3]
+Jul-23 12:51:58.240 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.240 [Task submitter] INFO  nextflow.Session - [c0/5daf72] Submitted process > conservation:EXTRACT_DATA (15)
+Jul-23 12:51:58.244 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.244 [Task submitter] INFO  nextflow.Session - [9d/52fcb4] Submitted process > conservation:EXTRACT_DATA (16)
+Jul-23 12:51:58.247 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.247 [Task submitter] INFO  nextflow.Session - [63/fb8d7e] Submitted process > conservation:EXTRACT_DATA (17)
+Jul-23 12:51:58.267 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: conservation:EXTRACT_DATA (8); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/2c/0c1d995941249d13b8ef12cdfaccb5]
+Jul-23 12:51:58.277 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: conservation:EXTRACT_DATA (3); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/96/fbe7a83ec848790994fe2c4257bdce]
+Jul-23 12:51:58.286 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.286 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 11; name: conservation:EXTRACT_DATA (11); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/6f/212f474929eaca43b6387d5fa0a635]
+Jul-23 12:51:58.286 [Task submitter] INFO  nextflow.Session - [50/79cde6] Submitted process > conservation:EXTRACT_DATA (19)
+Jul-23 12:51:58.291 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.291 [Task submitter] INFO  nextflow.Session - [11/9dbf65] Submitted process > conservation:EXTRACT_DATA (20)
+Jul-23 12:51:58.295 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.295 [Task submitter] INFO  nextflow.Session - [8f/636f8b] Submitted process > conservation:EXTRACT_DATA (21)
+Jul-23 12:51:58.298 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 18; name: conservation:EXTRACT_DATA (18); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/43/23025c8bc5f83d7f85d8a00c24b594]
+Jul-23 12:51:58.307 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 12; name: conservation:EXTRACT_DATA (12); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/6a/1335fbf042b798399f38bc90ba4a91]
+Jul-23 12:51:58.308 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 13; name: conservation:EXTRACT_DATA (13); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/29/26a76e23123affdc1e373fb0ce3919]
+Jul-23 12:51:58.311 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.312 [Task submitter] INFO  nextflow.Session - [7e/af8e46] Submitted process > conservation:EXTRACT_DATA (23)
+Jul-23 12:51:58.316 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.316 [Task submitter] INFO  nextflow.Session - [39/aa0a66] Submitted process > conservation:EXTRACT_DATA (22)
+Jul-23 12:51:58.317 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 14; name: conservation:EXTRACT_DATA (14); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/b5/5d9610b9ca88fd40e59d76a362dbe4]
+Jul-23 12:51:58.321 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.322 [Task submitter] INFO  nextflow.Session - [f1/8bc21d] Submitted process > conservation:EXTRACT_DATA (24)
+Jul-23 12:51:58.326 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.326 [Task submitter] INFO  nextflow.Session - [2a/41e4d4] Submitted process > conservation:EXTRACT_DATA (25)
+Jul-23 12:51:58.334 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 15; name: conservation:EXTRACT_DATA (15); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/c0/5daf72a689e00de1430f0ca0a4c278]
+Jul-23 12:51:58.343 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 16; name: conservation:EXTRACT_DATA (16); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/9d/52fcb4b73fd5f39647da0345410383]
+Jul-23 12:51:58.354 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.354 [Task submitter] INFO  nextflow.Session - [38/df1cec] Submitted process > conservation:EXTRACT_DATA (26)
+Jul-23 12:51:58.358 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.359 [Task submitter] INFO  nextflow.Session - [eb/2d7141] Submitted process > conservation:EXTRACT_DATA (27)
+Jul-23 12:51:58.362 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 17; name: conservation:EXTRACT_DATA (17); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/63/fb8d7e036c4b2972daab07d3ea96b4]
+Jul-23 12:51:58.366 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.366 [Task submitter] INFO  nextflow.Session - [51/385036] Submitted process > conservation:EXTRACT_DATA (158)
+Jul-23 12:51:58.372 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 19; name: conservation:EXTRACT_DATA (19); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/50/79cde60da84e3fff4c6c7f84439316]
+Jul-23 12:51:58.373 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 20; name: conservation:EXTRACT_DATA (20); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/11/9dbf65e3f2454226a4b30a29449824]
+Jul-23 12:51:58.382 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 21; name: conservation:EXTRACT_DATA (21); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/8f/636f8bd6b4cb93cb747e6599153278]
+Jul-23 12:51:58.383 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.384 [Task submitter] INFO  nextflow.Session - [be/1ce3e1] Submitted process > conservation:EXTRACT_DATA (28)
+Jul-23 12:51:58.388 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.389 [Task submitter] INFO  nextflow.Session - [bf/aaa994] Submitted process > conservation:EXTRACT_DATA (29)
+Jul-23 12:51:58.392 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.392 [Task submitter] INFO  nextflow.Session - [4c/16661d] Submitted process > conservation:EXTRACT_DATA (30)
+Jul-23 12:51:58.397 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 23; name: conservation:EXTRACT_DATA (23); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/7e/af8e4689cd2a3780d6dd7f03494405]
+Jul-23 12:51:58.398 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 22; name: conservation:EXTRACT_DATA (22); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/39/aa0a6643eba4295e371f3b05beb311]
+Jul-23 12:51:58.399 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 24; name: conservation:EXTRACT_DATA (24); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/f1/8bc21debf230a7c33fd7d2ea26cdab]
+Jul-23 12:51:58.400 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 25; name: conservation:EXTRACT_DATA (25); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/2a/41e4d47b2b1df8755fcefc600c17b8]
+Jul-23 12:51:58.400 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.400 [Task submitter] INFO  nextflow.Session - [a6/9d2cc9] Submitted process > conservation:EXTRACT_DATA (164)
+Jul-23 12:51:58.402 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 26; name: conservation:EXTRACT_DATA (26); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/38/df1cec2c2a985a69e56eb2e0a6cb39]
+Jul-23 12:51:58.404 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.404 [Task submitter] INFO  nextflow.Session - [ab/9550e3] Submitted process > conservation:EXTRACT_DATA (156)
+Jul-23 12:51:58.407 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.407 [Task submitter] INFO  nextflow.Session - [61/f038d0] Submitted process > conservation:EXTRACT_DATA (157)
+Jul-23 12:51:58.411 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.411 [Task submitter] INFO  nextflow.Session - [e8/f8b340] Submitted process > conservation:EXTRACT_DATA (159)
+Jul-23 12:51:58.414 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.415 [Task submitter] INFO  nextflow.Session - [83/b13b7f] Submitted process > conservation:EXTRACT_DATA (160)
+Jul-23 12:51:58.415 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 27; name: conservation:EXTRACT_DATA (27); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/eb/2d7141b238598f3da6d1d3dcc0cf5b]
+Jul-23 12:51:58.416 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 158; name: conservation:EXTRACT_DATA (158); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/51/385036d2a0256ee11d74f761238e1e]
+Jul-23 12:51:58.417 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 28; name: conservation:EXTRACT_DATA (28); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/be/1ce3e168a598a630c111ca993d9079]
+Jul-23 12:51:58.419 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.419 [Task submitter] INFO  nextflow.Session - [cf/dcdc4f] Submitted process > conservation:EXTRACT_DATA (161)
+Jul-23 12:51:58.430 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 29; name: conservation:EXTRACT_DATA (29); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/bf/aaa994b571616529a031ada6400daa]
+Jul-23 12:51:58.435 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.435 [Task submitter] INFO  nextflow.Session - [5d/7290ba] Submitted process > conservation:EXTRACT_DATA (162)
+Jul-23 12:51:58.439 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 30; name: conservation:EXTRACT_DATA (30); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/4c/16661d57d7b1b4b9e4f5a19bb0691c]
+Jul-23 12:51:58.447 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 164; name: conservation:EXTRACT_DATA (164); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/a6/9d2cc93de6f473f110f28d49202f4f]
+Jul-23 12:51:58.448 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.448 [Task submitter] INFO  nextflow.Session - [a9/f4ec95] Submitted process > conservation:EXTRACT_DATA (165)
+Jul-23 12:51:58.455 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 156; name: conservation:EXTRACT_DATA (156); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/ab/9550e31b9e89799fe66eac1b430aa5]
+Jul-23 12:51:58.459 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.460 [Task submitter] INFO  nextflow.Session - [ff/266292] Submitted process > conservation:EXTRACT_DATA (166)
+Jul-23 12:51:58.463 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 157; name: conservation:EXTRACT_DATA (157); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/61/f038d06cdc404f0aab8704f1486104]
+Jul-23 12:51:58.470 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.470 [Task submitter] INFO  nextflow.Session - [db/22f034] Submitted process > conservation:EXTRACT_DATA (167)
+Jul-23 12:51:58.472 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 159; name: conservation:EXTRACT_DATA (159); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/e8/f8b340b00a7c9bb5ac0f627de5ea04]
+Jul-23 12:51:58.473 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 160; name: conservation:EXTRACT_DATA (160); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/83/b13b7ff6120085734ed872e5fc1364]
+Jul-23 12:51:58.474 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 161; name: conservation:EXTRACT_DATA (161); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/cf/dcdc4f4e4a619e22aeb87595cb35fd]
+Jul-23 12:51:58.476 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.476 [Task submitter] INFO  nextflow.Session - [70/ff8fd5] Submitted process > conservation:EXTRACT_DATA (168)
+Jul-23 12:51:58.481 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.481 [Task submitter] INFO  nextflow.Session - [84/00f386] Submitted process > conservation:EXTRACT_DATA (169)
+Jul-23 12:51:58.484 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 162; name: conservation:EXTRACT_DATA (162); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/5d/7290ba25a6cdbe37e43a79606c3d29]
+Jul-23 12:51:58.485 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 165; name: conservation:EXTRACT_DATA (165); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/a9/f4ec957f648de21b3aaa3ebbba681e]
+Jul-23 12:51:58.489 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.490 [Task submitter] INFO  nextflow.Session - [72/0695f6] Submitted process > conservation:EXTRACT_DATA (170)
+Jul-23 12:51:58.493 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.493 [Task submitter] INFO  nextflow.Session - [7c/6c0f00] Submitted process > conservation:EXTRACT_DATA (171)
+Jul-23 12:51:58.497 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.497 [Task submitter] INFO  nextflow.Session - [74/deae78] Submitted process > conservation:EXTRACT_DATA (172)
+Jul-23 12:51:58.503 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 166; name: conservation:EXTRACT_DATA (166); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/ff/2662924b388f0232c8de81cefd5d32]
+Jul-23 12:51:58.504 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.505 [Task submitter] INFO  nextflow.Session - [c6/749c67] Submitted process > conservation:EXTRACT_DATA (173)
+Jul-23 12:51:58.509 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.509 [Task submitter] INFO  nextflow.Session - [e1/120feb] Submitted process > conservation:EXTRACT_DATA (174)
+Jul-23 12:51:58.517 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.518 [Task submitter] INFO  nextflow.Session - [b7/39d29f] Submitted process > conservation:EXTRACT_DATA (181)
+Jul-23 12:51:58.518 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 167; name: conservation:EXTRACT_DATA (167); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/db/22f034c84d15ca54bfa096a4041604]
+Jul-23 12:51:58.519 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 168; name: conservation:EXTRACT_DATA (168); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/70/ff8fd59944471db849acf1381e1207]
+Jul-23 12:51:58.524 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.524 [Task submitter] INFO  nextflow.Session - [f1/2f00af] Submitted process > conservation:EXTRACT_DATA (175)
+Jul-23 12:51:58.526 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.527 [Task submitter] INFO  nextflow.Session - [ae/1065e3] Submitted process > conservation:EXTRACT_DATA (176)
+Jul-23 12:51:58.530 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.530 [Task submitter] INFO  nextflow.Session - [a2/8ba9b5] Submitted process > conservation:EXTRACT_DATA (177)
+Jul-23 12:51:58.538 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 169; name: conservation:EXTRACT_DATA (169); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/84/00f38696ff7e9fdc0d7d28e4e79b96]
+Jul-23 12:51:58.547 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.547 [Task submitter] INFO  nextflow.Session - [d0/1239e2] Submitted process > conservation:EXTRACT_DATA (31)
+Jul-23 12:51:58.551 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 170; name: conservation:EXTRACT_DATA (170); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/72/0695f6286eb7691c306ea212598d96]
+Jul-23 12:51:58.555 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.555 [Task submitter] INFO  nextflow.Session - [8b/21f345] Submitted process > conservation:EXTRACT_DATA (269)
+Jul-23 12:51:58.560 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 171; name: conservation:EXTRACT_DATA (171); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/7c/6c0f00571ed6554b06849bdea35e3d]
+Jul-23 12:51:58.561 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 172; name: conservation:EXTRACT_DATA (172); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/74/deae78e71fe6b1ea7537beeda63411]
+Jul-23 12:51:58.575 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.575 [Task submitter] INFO  nextflow.Session - [f7/f3fb72] Submitted process > conservation:EXTRACT_DATA (32)
+Jul-23 12:51:58.579 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.579 [Task submitter] INFO  nextflow.Session - [c0/db5787] Submitted process > conservation:EXTRACT_DATA (33)
+Jul-23 12:51:58.591 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 173; name: conservation:EXTRACT_DATA (173); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/c6/749c67d1b3f10816876c7e50b33bff]
+Jul-23 12:51:58.592 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 174; name: conservation:EXTRACT_DATA (174); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/e1/120febef1c1d410530705ae1c4b8b8]
+Jul-23 12:51:58.593 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 181; name: conservation:EXTRACT_DATA (181); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/b7/39d29f426da3a6003aa44ff6cba27a]
+Jul-23 12:51:58.596 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.596 [Task submitter] INFO  nextflow.Session - [4e/34e187] Submitted process > conservation:EXTRACT_DATA (371)
+Jul-23 12:51:58.599 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.599 [Task submitter] INFO  nextflow.Session - [25/cc7bb6] Submitted process > conservation:EXTRACT_DATA (364)
+Jul-23 12:51:58.603 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.603 [Task submitter] INFO  nextflow.Session - [d5/f53a0e] Submitted process > conservation:EXTRACT_DATA (374)
+Jul-23 12:51:58.606 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 175; name: conservation:EXTRACT_DATA (175); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/f1/2f00af4af952726b322604cd53468d]
+Jul-23 12:51:58.609 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.610 [Task submitter] INFO  nextflow.Session - [13/18c662] Submitted process > conservation:EXTRACT_DATA (79)
+Jul-23 12:51:58.616 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 176; name: conservation:EXTRACT_DATA (176); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/ae/1065e3fa319c668026ddcc22384a85]
+Jul-23 12:51:58.617 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 177; name: conservation:EXTRACT_DATA (177); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/a2/8ba9b5a7598fc894984a3bd80c64fc]
+Jul-23 12:51:58.624 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 31; name: conservation:EXTRACT_DATA (31); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/d0/1239e24b5176b92dec65c3edf3ac47]
+Jul-23 12:51:58.630 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.630 [Task submitter] INFO  nextflow.Session - [c1/27dedd] Submitted process > conservation:EXTRACT_DATA (34)
+Jul-23 12:51:58.633 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.634 [Task submitter] INFO  nextflow.Session - [9a/6354f9] Submitted process > conservation:EXTRACT_DATA (35)
+Jul-23 12:51:58.635 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 269; name: conservation:EXTRACT_DATA (269); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/8b/21f3454f4ef5b2cb935d543b68f3cd]
+Jul-23 12:51:58.637 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.637 [Task submitter] INFO  nextflow.Session - [24/0fd557] Submitted process > conservation:EXTRACT_DATA (36)
+Jul-23 12:51:58.643 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 32; name: conservation:EXTRACT_DATA (32); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/f7/f3fb72c4609d2d0ec00a59ed808b98]
+Jul-23 12:51:58.645 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.645 [Task submitter] INFO  nextflow.Session - [83/2a618e] Submitted process > conservation:EXTRACT_DATA (37)
+Jul-23 12:51:58.649 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.650 [Task submitter] INFO  nextflow.Session - [c0/470484] Submitted process > conservation:EXTRACT_DATA (44)
+Jul-23 12:51:58.654 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 33; name: conservation:EXTRACT_DATA (33); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/c0/db5787bae4e213efb1dd7fa683b405]
+Jul-23 12:51:58.658 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.658 [Task submitter] INFO  nextflow.Session - [5e/9af34e] Submitted process > conservation:EXTRACT_DATA (365)
+Jul-23 12:51:58.660 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 371; name: conservation:EXTRACT_DATA (371); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/4e/34e18711d1c218e3b267b3e9e5a6f7]
+Jul-23 12:51:58.664 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 364; name: conservation:EXTRACT_DATA (364); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/25/cc7bb65f27068fcc64ac6fdc978a09]
+Jul-23 12:51:58.664 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.665 [Task submitter] INFO  nextflow.Session - [ad/8ddb1a] Submitted process > conservation:EXTRACT_DATA (366)
+Jul-23 12:51:58.666 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.667 [Task submitter] INFO  nextflow.Session - [cc/533730] Submitted process > conservation:EXTRACT_DATA (367)
+Jul-23 12:51:58.670 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 374; name: conservation:EXTRACT_DATA (374); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/d5/f53a0ea92dbd7bf01029919855044b]
+Jul-23 12:51:58.674 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.675 [Task submitter] INFO  nextflow.Session - [db/8cb0ed] Submitted process > conservation:EXTRACT_DATA (91)
+Jul-23 12:51:58.677 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 79; name: conservation:EXTRACT_DATA (79); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/13/18c662c0be5c3fce448a00a829c905]
+Jul-23 12:51:58.709 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 34; name: conservation:EXTRACT_DATA (34); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/c1/27dedd8f4140305c36e7945fa352c3]
+Jul-23 12:51:58.724 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 35; name: conservation:EXTRACT_DATA (35); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/9a/6354f94b28e61daee1374ba526ac28]
+Jul-23 12:51:58.724 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 36; name: conservation:EXTRACT_DATA (36); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/24/0fd5576585a1a06faf77c0334abecb]
+Jul-23 12:51:58.725 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 37; name: conservation:EXTRACT_DATA (37); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/83/2a618e73b4dd4526d32225ce06f837]
+Jul-23 12:51:58.729 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.729 [Task submitter] INFO  nextflow.Session - [2f/48ab71] Submitted process > conservation:EXTRACT_DATA (38)
+Jul-23 12:51:58.730 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 44; name: conservation:EXTRACT_DATA (44); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/c0/4704846191d01e97763c8cded731e6]
+Jul-23 12:51:58.731 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 365; name: conservation:EXTRACT_DATA (365); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/5e/9af34eb633e4ab82dbaf4e7c6f6548]
+Jul-23 12:51:58.731 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.731 [Task submitter] INFO  nextflow.Session - [3a/60f2d1] Submitted process > conservation:EXTRACT_DATA (39)
+Jul-23 12:51:58.733 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.733 [Task submitter] INFO  nextflow.Session - [93/035b02] Submitted process > conservation:EXTRACT_DATA (40)
+Jul-23 12:51:58.735 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.735 [Task submitter] INFO  nextflow.Session - [3d/0b18c7] Submitted process > conservation:EXTRACT_DATA (41)
+Jul-23 12:51:58.748 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.748 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 366; name: conservation:EXTRACT_DATA (366); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/ad/8ddb1aabd53cc80434fc4bb6802d76]
+Jul-23 12:51:58.748 [Task submitter] INFO  nextflow.Session - [74/cdd971] Submitted process > conservation:EXTRACT_DATA (42)
+Jul-23 12:51:58.748 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 367; name: conservation:EXTRACT_DATA (367); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/cc/533730109832ef56d1f3b7ee515aa1]
+Jul-23 12:51:58.750 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.750 [Task submitter] INFO  nextflow.Session - [b4/24e100] Submitted process > conservation:EXTRACT_DATA (43)
+Jul-23 12:51:58.752 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.752 [Task submitter] INFO  nextflow.Session - [92/5970ef] Submitted process > conservation:EXTRACT_DATA (45)
+Jul-23 12:51:58.754 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.754 [Task submitter] INFO  nextflow.Session - [b3/a35951] Submitted process > conservation:EXTRACT_DATA (46)
+Jul-23 12:51:58.759 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 91; name: conservation:EXTRACT_DATA (91); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/db/8cb0eded48cdbcb3b9469ff6f7c379]
+Jul-23 12:51:58.760 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 38; name: conservation:EXTRACT_DATA (38); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/2f/48ab719c6bb301f5ccaa42808b87ac]
+Jul-23 12:51:58.761 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 39; name: conservation:EXTRACT_DATA (39); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/3a/60f2d1ddcb3286070abccaa3b3d5e9]
+Jul-23 12:51:58.761 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 40; name: conservation:EXTRACT_DATA (40); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/93/035b02caf78c8744e4bdab67688172]
+Jul-23 12:51:58.768 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 41; name: conservation:EXTRACT_DATA (41); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/3d/0b18c717308cf1ff5af53b5e49ee89]
+Jul-23 12:51:58.769 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.769 [Task submitter] INFO  nextflow.Session - [04/28242a] Submitted process > conservation:EXTRACT_DATA (47)
+Jul-23 12:51:58.771 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.772 [Task submitter] INFO  nextflow.Session - [5d/fcd68a] Submitted process > conservation:EXTRACT_DATA (48)
+Jul-23 12:51:58.773 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.773 [Task submitter] INFO  nextflow.Session - [3d/bc4c37] Submitted process > conservation:EXTRACT_DATA (49)
+Jul-23 12:51:58.775 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.775 [Task submitter] INFO  nextflow.Session - [10/bd347f] Submitted process > conservation:EXTRACT_DATA (50)
+Jul-23 12:51:58.784 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.784 [Task submitter] INFO  nextflow.Session - [8d/55d8ce] Submitted process > conservation:EXTRACT_DATA (51)
+Jul-23 12:51:58.785 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 42; name: conservation:EXTRACT_DATA (42); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/74/cdd971eb13e2022aba10c348acc6f2]
+Jul-23 12:51:58.786 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.786 [Task submitter] INFO  nextflow.Session - [9b/aad884] Submitted process > conservation:EXTRACT_DATA (52)
+Jul-23 12:51:58.789 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.789 [Task submitter] INFO  nextflow.Session - [b0/bab1c9] Submitted process > conservation:EXTRACT_DATA (53)
+Jul-23 12:51:58.796 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 43; name: conservation:EXTRACT_DATA (43); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/b4/24e10090a2ae612f5389a4247af9e1]
+Jul-23 12:51:58.797 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 45; name: conservation:EXTRACT_DATA (45); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/92/5970ef4f18620c867d6463ac108bc7]
+Jul-23 12:51:58.797 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 46; name: conservation:EXTRACT_DATA (46); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/b3/a3595153ec17170f3acef5ad70511d]
+Jul-23 12:51:58.798 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 47; name: conservation:EXTRACT_DATA (47); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/04/28242a324b96b1ac02f74760129077]
+Jul-23 12:51:58.798 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 48; name: conservation:EXTRACT_DATA (48); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/5d/fcd68a740de415d3e9dbeb590facd9]
+Jul-23 12:51:58.798 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 49; name: conservation:EXTRACT_DATA (49); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/3d/bc4c37d133353032fbf0362349559a]
+Jul-23 12:51:58.799 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 50; name: conservation:EXTRACT_DATA (50); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/10/bd347fd4a03dd80ef64cc38f4caa60]
+Jul-23 12:51:58.799 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 51; name: conservation:EXTRACT_DATA (51); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/8d/55d8ce6791d3474cdce7d888e74741]
+Jul-23 12:51:58.801 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 52; name: conservation:EXTRACT_DATA (52); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/9b/aad884914a88eeef8a40c73ceb3f59]
+Jul-23 12:51:58.804 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 53; name: conservation:EXTRACT_DATA (53); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/b0/bab1c940a400c95a86c93697f606a9]
+Jul-23 12:51:58.804 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.804 [Task submitter] INFO  nextflow.Session - [b0/d16df5] Submitted process > conservation:EXTRACT_DATA (54)
+Jul-23 12:51:58.806 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.806 [Task submitter] INFO  nextflow.Session - [56/8d7a0b] Submitted process > conservation:EXTRACT_DATA (55)
+Jul-23 12:51:58.810 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.810 [Task submitter] INFO  nextflow.Session - [7b/1baf4a] Submitted process > conservation:EXTRACT_DATA (56)
+Jul-23 12:51:58.818 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 54; name: conservation:EXTRACT_DATA (54); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/b0/d16df5e5f8ab27809c4899a80cf69a]
+Jul-23 12:51:58.821 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 55; name: conservation:EXTRACT_DATA (55); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/56/8d7a0bd46ab28a18ca188b4f5ef98c]
+Jul-23 12:51:58.823 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.823 [Task submitter] INFO  nextflow.Session - [7c/dc42a6] Submitted process > conservation:EXTRACT_DATA (57)
+Jul-23 12:51:58.825 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.825 [Task submitter] INFO  nextflow.Session - [e2/5a2f68] Submitted process > conservation:EXTRACT_DATA (59)
+Jul-23 12:51:58.829 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 56; name: conservation:EXTRACT_DATA (56); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/7b/1baf4a4c93e39b2a0a3df24c2ebf98]
+Jul-23 12:51:58.832 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.833 [Task submitter] INFO  nextflow.Session - [aa/a6c18c] Submitted process > conservation:EXTRACT_DATA (58)
+Jul-23 12:51:58.835 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.838 [Task submitter] INFO  nextflow.Session - [9f/b2edcd] Submitted process > conservation:EXTRACT_DATA (60)
+Jul-23 12:51:58.839 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 57; name: conservation:EXTRACT_DATA (57); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/7c/dc42a6178dcee1301c44b53beb3730]
+Jul-23 12:51:58.842 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.842 [Task submitter] INFO  nextflow.Session - [2b/bd3398] Submitted process > conservation:EXTRACT_DATA (61)
+Jul-23 12:51:58.843 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.844 [Task submitter] INFO  nextflow.Session - [c1/72e4c4] Submitted process > conservation:EXTRACT_DATA (68)
+Jul-23 12:51:58.851 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 59; name: conservation:EXTRACT_DATA (59); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/e2/5a2f681de547115ec421c48407c5b0]
+Jul-23 12:51:58.851 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 58; name: conservation:EXTRACT_DATA (58); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/aa/a6c18cde8c30d2c7fbfaea383ac36e]
+Jul-23 12:51:58.856 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.856 [Task submitter] INFO  nextflow.Session - [ac/dedd75] Submitted process > conservation:EXTRACT_DATA (62)
+Jul-23 12:51:58.858 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.858 [Task submitter] INFO  nextflow.Session - [04/c20f1f] Submitted process > conservation:EXTRACT_DATA (63)
+Jul-23 12:51:58.862 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.862 [Task submitter] INFO  nextflow.Session - [38/f7543e] Submitted process > conservation:EXTRACT_DATA (64)
+Jul-23 12:51:58.864 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.864 [Task submitter] INFO  nextflow.Session - [86/565908] Submitted process > conservation:EXTRACT_DATA (71)
+Jul-23 12:51:58.865 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.865 [Task submitter] INFO  nextflow.Session - [38/a41a21] Submitted process > conservation:EXTRACT_DATA (65)
+Jul-23 12:51:58.871 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 60; name: conservation:EXTRACT_DATA (60); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/9f/b2edcdc32f160c07a1650d571be105]
+Jul-23 12:51:58.878 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 61; name: conservation:EXTRACT_DATA (61); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/2b/bd3398a2539f37bc0864540e845cac]
+Jul-23 12:51:58.878 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.878 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 68; name: conservation:EXTRACT_DATA (68); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/c1/72e4c41daff46ae9c9549ac7631039]
+Jul-23 12:51:58.878 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 62; name: conservation:EXTRACT_DATA (62); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/ac/dedd75dd15aca3431cc2c39de0ae9c]
+Jul-23 12:51:58.878 [Task submitter] INFO  nextflow.Session - [73/630f0a] Submitted process > conservation:EXTRACT_DATA (75)
+Jul-23 12:51:58.883 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 63; name: conservation:EXTRACT_DATA (63); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/04/c20f1fb3f1634e48984ce69997f722]
+Jul-23 12:51:58.883 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.883 [Task submitter] INFO  nextflow.Session - [fb/cd465d] Submitted process > conservation:EXTRACT_DATA (66)
+Jul-23 12:51:58.886 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.886 [Task submitter] INFO  nextflow.Session - [0b/8ed7ef] Submitted process > conservation:EXTRACT_DATA (67)
+Jul-23 12:51:58.887 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 64; name: conservation:EXTRACT_DATA (64); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/38/f7543e5fdb4f6f8eb06235d8c6c31a]
+Jul-23 12:51:58.888 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 71; name: conservation:EXTRACT_DATA (71); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/86/56590852c1e23ba5b0f26122076b8a]
+Jul-23 12:51:58.889 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.890 [Task submitter] INFO  nextflow.Session - [91/ffb849] Submitted process > conservation:EXTRACT_DATA (69)
+Jul-23 12:51:58.891 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.892 [Task submitter] INFO  nextflow.Session - [10/692d60] Submitted process > conservation:EXTRACT_DATA (70)
+Jul-23 12:51:58.893 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.894 [Task submitter] INFO  nextflow.Session - [07/565114] Submitted process > conservation:EXTRACT_DATA (73)
+Jul-23 12:51:58.896 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.896 [Task submitter] INFO  nextflow.Session - [30/a0d2a5] Submitted process > conservation:EXTRACT_DATA (72)
+Jul-23 12:51:58.897 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.898 [Task submitter] INFO  nextflow.Session - [6d/a0a5e9] Submitted process > conservation:EXTRACT_DATA (74)
+Jul-23 12:51:58.899 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.899 [Task submitter] INFO  nextflow.Session - [5e/881ff3] Submitted process > conservation:EXTRACT_DATA (82)
+Jul-23 12:51:58.918 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 65; name: conservation:EXTRACT_DATA (65); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/38/a41a21548771628eed7b0223fa11e7]
+Jul-23 12:51:58.928 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.929 [Task submitter] INFO  nextflow.Session - [2b/62e870] Submitted process > conservation:EXTRACT_DATA (76)
+Jul-23 12:51:58.944 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 75; name: conservation:EXTRACT_DATA (75); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/73/630f0ad68d1e45de2f6ff193defefb]
+Jul-23 12:51:58.950 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 66; name: conservation:EXTRACT_DATA (66); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/fb/cd465dbe23a51b26fb977fec78cebd]
+Jul-23 12:51:58.955 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 67; name: conservation:EXTRACT_DATA (67); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/0b/8ed7eff437671eadd6aa412bcc9ac4]
+Jul-23 12:51:58.961 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 69; name: conservation:EXTRACT_DATA (69); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/91/ffb849da768aad744ca35c1c457d8f]
+Jul-23 12:51:58.963 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.963 [Task submitter] INFO  nextflow.Session - [88/65f760] Submitted process > conservation:EXTRACT_DATA (77)
+Jul-23 12:51:58.965 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.965 [Task submitter] INFO  nextflow.Session - [e2/5d2ba5] Submitted process > conservation:EXTRACT_DATA (78)
+Jul-23 12:51:58.968 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.968 [Task submitter] INFO  nextflow.Session - [75/2f3502] Submitted process > conservation:EXTRACT_DATA (80)
+Jul-23 12:51:58.970 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.971 [Task submitter] INFO  nextflow.Session - [29/c47a92] Submitted process > conservation:EXTRACT_DATA (81)
+Jul-23 12:51:58.981 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 70; name: conservation:EXTRACT_DATA (70); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/10/692d608c1c165f54866e333082a51f]
+Jul-23 12:51:58.989 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 73; name: conservation:EXTRACT_DATA (73); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/07/565114905e6f4116504831af70a73d]
+Jul-23 12:51:58.990 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 72; name: conservation:EXTRACT_DATA (72); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/30/a0d2a53ea97b479504e8ffb3d1abf1]
+Jul-23 12:51:58.991 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.991 [Task submitter] INFO  nextflow.Session - [02/b63ffb] Submitted process > conservation:EXTRACT_DATA (83)
+Jul-23 12:51:58.993 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.993 [Task submitter] INFO  nextflow.Session - [5c/2ede34] Submitted process > conservation:EXTRACT_DATA (84)
+Jul-23 12:51:58.995 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.995 [Task submitter] INFO  nextflow.Session - [d4/cb771d] Submitted process > conservation:EXTRACT_DATA (85)
+Jul-23 12:51:58.996 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 74; name: conservation:EXTRACT_DATA (74); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/6d/a0a5e9cd5e66c730de41b2897cd543]
+Jul-23 12:51:58.997 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:58.997 [Task submitter] INFO  nextflow.Session - [46/43cf36] Submitted process > conservation:EXTRACT_DATA (86)
+Jul-23 12:51:59.007 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 82; name: conservation:EXTRACT_DATA (82); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/5e/881ff3a8654d03da47786d9ca4b2a2]
+Jul-23 12:51:59.008 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 76; name: conservation:EXTRACT_DATA (76); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/2b/62e8708e3c14514bd95e3527915606]
+Jul-23 12:51:59.013 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 77; name: conservation:EXTRACT_DATA (77); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/88/65f76065dae50463320d00a903a190]
+Jul-23 12:51:59.018 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.019 [Task submitter] INFO  nextflow.Session - [62/554c23] Submitted process > conservation:EXTRACT_DATA (87)
+Jul-23 12:51:59.020 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 78; name: conservation:EXTRACT_DATA (78); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/e2/5d2ba5bb968835f79536abf073ab18]
+Jul-23 12:51:59.021 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 80; name: conservation:EXTRACT_DATA (80); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/75/2f35028211d8e976a93d592f5ffd2a]
+Jul-23 12:51:59.021 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.021 [Task submitter] INFO  nextflow.Session - [cd/2ea268] Submitted process > conservation:EXTRACT_DATA (88)
+Jul-23 12:51:59.021 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 81; name: conservation:EXTRACT_DATA (81); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/29/c47a92b141970d04565cb42b3acb7e]
+Jul-23 12:51:59.023 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.023 [Task submitter] INFO  nextflow.Session - [0c/10ebd7] Submitted process > conservation:EXTRACT_DATA (89)
+Jul-23 12:51:59.024 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.025 [Task submitter] INFO  nextflow.Session - [0d/8be70e] Submitted process > conservation:EXTRACT_DATA (90)
+Jul-23 12:51:59.026 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.027 [Task submitter] INFO  nextflow.Session - [2c/d3e778] Submitted process > conservation:EXTRACT_DATA (92)
+Jul-23 12:51:59.031 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.032 [Task submitter] INFO  nextflow.Session - [b5/7a3547] Submitted process > conservation:EXTRACT_DATA (93)
+Jul-23 12:51:59.034 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 83; name: conservation:EXTRACT_DATA (83); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/02/b63ffbda1e6b2004bb3cda66c9e71e]
+Jul-23 12:51:59.034 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 84; name: conservation:EXTRACT_DATA (84); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/5c/2ede345f44c58a55d6e6e7206b1878]
+Jul-23 12:51:59.034 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 85; name: conservation:EXTRACT_DATA (85); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/d4/cb771db24bd63fe6c29d3f533adbb5]
+Jul-23 12:51:59.036 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.036 [Task submitter] INFO  nextflow.Session - [c5/d52a20] Submitted process > conservation:EXTRACT_DATA (347)
+Jul-23 12:51:59.038 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.038 [Task submitter] INFO  nextflow.Session - [2d/ec0686] Submitted process > conservation:EXTRACT_DATA (357)
+Jul-23 12:51:59.044 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.046 [Task submitter] INFO  nextflow.Session - [e0/8114cf] Submitted process > conservation:EXTRACT_DATA (348)
+Jul-23 12:51:59.061 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 86; name: conservation:EXTRACT_DATA (86); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/46/43cf36db65cf49444e79d033adad6b]
+Jul-23 12:51:59.068 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 87; name: conservation:EXTRACT_DATA (87); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/62/554c23dff0cc6c995c0ab13237ec7f]
+Jul-23 12:51:59.069 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.070 [Task submitter] INFO  nextflow.Session - [66/b63ec0] Submitted process > conservation:EXTRACT_DATA (100)
+Jul-23 12:51:59.072 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 88; name: conservation:EXTRACT_DATA (88); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/cd/2ea2686a7c7fb7020f37faf76d4967]
+Jul-23 12:51:59.072 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.072 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 89; name: conservation:EXTRACT_DATA (89); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/0c/10ebd7cb0491d68d0995ad31143ed8]
+Jul-23 12:51:59.072 [Task submitter] INFO  nextflow.Session - [74/1c0a94] Submitted process > conservation:EXTRACT_DATA (94)
+Jul-23 12:51:59.079 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 90; name: conservation:EXTRACT_DATA (90); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/0d/8be70edbaecaee9f5a89c98fea6099]
+Jul-23 12:51:59.089 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 92; name: conservation:EXTRACT_DATA (92); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/2c/d3e7787c016bd353095d3ae191045e]
+Jul-23 12:51:59.091 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.091 [Task submitter] INFO  nextflow.Session - [7b/8ff61b] Submitted process > conservation:EXTRACT_DATA (95)
+Jul-23 12:51:59.094 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.094 [Task submitter] INFO  nextflow.Session - [f3/0a5288] Submitted process > conservation:EXTRACT_DATA (96)
+Jul-23 12:51:59.094 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 93; name: conservation:EXTRACT_DATA (93); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/b5/7a3547ef25decb03658a5b843a345f]
+Jul-23 12:51:59.098 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.098 [Task submitter] INFO  nextflow.Session - [ac/496952] Submitted process > conservation:EXTRACT_DATA (97)
+Jul-23 12:51:59.099 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.100 [Task submitter] INFO  nextflow.Session - [df/02267b] Submitted process > conservation:EXTRACT_DATA (98)
+Jul-23 12:51:59.102 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.102 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 347; name: conservation:EXTRACT_DATA (347); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/c5/d52a206583a95ee01dd1ad9deabccb]
+Jul-23 12:51:59.103 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 357; name: conservation:EXTRACT_DATA (357); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/2d/ec06869443c3b2d78858f430eff6f1]
+Jul-23 12:51:59.102 [Task submitter] INFO  nextflow.Session - [e1/cb2bfa] Submitted process > conservation:EXTRACT_DATA (99)
+Jul-23 12:51:59.107 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.107 [Task submitter] INFO  nextflow.Session - [c3/b4bb37] Submitted process > conservation:EXTRACT_DATA (101)
+Jul-23 12:51:59.108 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.108 [Task submitter] INFO  nextflow.Session - [5c/2181a6] Submitted process > conservation:EXTRACT_DATA (102)
+Jul-23 12:51:59.126 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 348; name: conservation:EXTRACT_DATA (348); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/e0/8114cf36b7aae28965a7b3bc8c0494]
+Jul-23 12:51:59.134 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.134 [Task submitter] INFO  nextflow.Session - [e2/dc7c14] Submitted process > conservation:EXTRACT_DATA (110)
+Jul-23 12:51:59.149 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 100; name: conservation:EXTRACT_DATA (100); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/66/b63ec0a388450928a0671cb38dbf64]
+Jul-23 12:51:59.152 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 94; name: conservation:EXTRACT_DATA (94); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/74/1c0a94a1d3673e56856a50a1575da9]
+Jul-23 12:51:59.156 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 95; name: conservation:EXTRACT_DATA (95); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/7b/8ff61b150e91daace52be032c57502]
+Jul-23 12:51:59.156 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.156 [Task submitter] INFO  nextflow.Session - [62/e8a410] Submitted process > conservation:EXTRACT_DATA (103)
+Jul-23 12:51:59.158 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.158 [Task submitter] INFO  nextflow.Session - [1f/b363e4] Submitted process > conservation:EXTRACT_DATA (111)
+Jul-23 12:51:59.160 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.160 [Task submitter] INFO  nextflow.Session - [e2/269fb8] Submitted process > conservation:EXTRACT_DATA (104)
+Jul-23 12:51:59.161 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 96; name: conservation:EXTRACT_DATA (96); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/f3/0a5288f009c01baa2b81239e2991c7]
+Jul-23 12:51:59.163 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.163 [Task submitter] INFO  nextflow.Session - [f3/eb1e24] Submitted process > conservation:EXTRACT_DATA (985)
+Jul-23 12:51:59.204 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 97; name: conservation:EXTRACT_DATA (97); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/ac/4969523613459675a3a044f56f9f52]
+Jul-23 12:51:59.204 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 98; name: conservation:EXTRACT_DATA (98); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/df/02267bea83044f326356e74980c293]
+Jul-23 12:51:59.205 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 99; name: conservation:EXTRACT_DATA (99); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/e1/cb2bfafa7fe4dab03a60a117f6722f]
+Jul-23 12:51:59.205 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 101; name: conservation:EXTRACT_DATA (101); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/c3/b4bb37399f543805bb870551776807]
+Jul-23 12:51:59.206 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 102; name: conservation:EXTRACT_DATA (102); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/5c/2181a67d762fa0fbb1db6fc6318e34]
+Jul-23 12:51:59.206 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 110; name: conservation:EXTRACT_DATA (110); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/e2/dc7c14cbab3e86be87ea701e0efd6f]
+Jul-23 12:51:59.212 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.212 [Task submitter] INFO  nextflow.Session - [9a/4e5434] Submitted process > conservation:EXTRACT_DATA (105)
+Jul-23 12:51:59.216 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.216 [Task submitter] INFO  nextflow.Session - [1d/b8b4ff] Submitted process > conservation:EXTRACT_DATA (106)
+Jul-23 12:51:59.217 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.217 [Task submitter] INFO  nextflow.Session - [0c/a28bcb] Submitted process > conservation:EXTRACT_DATA (107)
+Jul-23 12:51:59.219 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.220 [Task submitter] INFO  nextflow.Session - [f9/299747] Submitted process > conservation:EXTRACT_DATA (108)
+Jul-23 12:51:59.221 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.221 [Task submitter] INFO  nextflow.Session - [db/8ec9eb] Submitted process > conservation:EXTRACT_DATA (109)
+Jul-23 12:51:59.223 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.223 [Task submitter] INFO  nextflow.Session - [0b/ab890d] Submitted process > conservation:EXTRACT_DATA (113)
+Jul-23 12:51:59.246 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 103; name: conservation:EXTRACT_DATA (103); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/62/e8a4104b43b7fba21ed2531b1d1d25]
+Jul-23 12:51:59.254 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 111; name: conservation:EXTRACT_DATA (111); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/1f/b363e4d468ed98043a4baa5008da32]
+Jul-23 12:51:59.263 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 104; name: conservation:EXTRACT_DATA (104); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/e2/269fb81a4b7ede6fbaa7545ebc8432]
+Jul-23 12:51:59.264 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.264 [Task submitter] INFO  nextflow.Session - [33/672c3a] Submitted process > conservation:EXTRACT_DATA (112)
+Jul-23 12:51:59.266 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.266 [Task submitter] INFO  nextflow.Session - [8f/53bc85] Submitted process > conservation:EXTRACT_DATA (121)
+Jul-23 12:51:59.267 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.267 [Task submitter] INFO  nextflow.Session - [fa/83152b] Submitted process > conservation:EXTRACT_DATA (122)
+Jul-23 12:51:59.272 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 985; name: conservation:EXTRACT_DATA (985); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/f3/eb1e24f31248e918bc4da27abfc7b9]
+Jul-23 12:51:59.286 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.287 [Task submitter] INFO  nextflow.Session - [7e/287706] Submitted process > conservation:EXTRACT_DATA (114)
+Jul-23 12:51:59.288 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 105; name: conservation:EXTRACT_DATA (105); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/9a/4e54343a47d4ed729d4b29c2ea6cca]
+Jul-23 12:51:59.289 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 106; name: conservation:EXTRACT_DATA (106); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/1d/b8b4ffee1a78a12d180ccc56c4c8a6]
+Jul-23 12:51:59.296 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 107; name: conservation:EXTRACT_DATA (107); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/0c/a28bcb1c93aa4ee50ef9518c4e7fda]
+Jul-23 12:51:59.299 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 108; name: conservation:EXTRACT_DATA (108); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/f9/299747fcb348c3497a6a83454fdb1a]
+Jul-23 12:51:59.300 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.301 [Task submitter] INFO  nextflow.Session - [3e/eaf148] Submitted process > conservation:EXTRACT_DATA (115)
+Jul-23 12:51:59.301 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 109; name: conservation:EXTRACT_DATA (109); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/db/8ec9ebf16ab16bd8e101960fa760af]
+Jul-23 12:51:59.301 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 113; name: conservation:EXTRACT_DATA (113); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/0b/ab890d62d1fe910e5a5ebf97a19e3d]
+Jul-23 12:51:59.302 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.302 [Task submitter] INFO  nextflow.Session - [39/f7c7ea] Submitted process > conservation:EXTRACT_DATA (116)
+Jul-23 12:51:59.304 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.304 [Task submitter] INFO  nextflow.Session - [04/beef15] Submitted process > conservation:EXTRACT_DATA (125)
+Jul-23 12:51:59.305 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.305 [Task submitter] INFO  nextflow.Session - [96/a48f94] Submitted process > conservation:EXTRACT_DATA (117)
+Jul-23 12:51:59.307 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.307 [Task submitter] INFO  nextflow.Session - [c3/4bd1d6] Submitted process > conservation:EXTRACT_DATA (127)
+Jul-23 12:51:59.308 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.308 [Task submitter] INFO  nextflow.Session - [ed/fb7117] Submitted process > conservation:EXTRACT_DATA (118)
+Jul-23 12:51:59.328 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 112; name: conservation:EXTRACT_DATA (112); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/33/672c3a6c3f2babd765c5fa2acddf85]
+Jul-23 12:51:59.329 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 121; name: conservation:EXTRACT_DATA (121); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/8f/53bc8542c9e418c199020317b8caa9]
+Jul-23 12:51:59.329 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 122; name: conservation:EXTRACT_DATA (122); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/fa/83152b979bf31dc872ce68429af213]
+Jul-23 12:51:59.329 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 114; name: conservation:EXTRACT_DATA (114); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/7e/287706dbd51bc094ee27c1daff409d]
+Jul-23 12:51:59.330 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 115; name: conservation:EXTRACT_DATA (115); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/3e/eaf148f4abaf8b9bc058fbd26ee543]
+Jul-23 12:51:59.330 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 116; name: conservation:EXTRACT_DATA (116); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/39/f7c7ea0237b7ee0b2fbb8879eace3f]
+Jul-23 12:51:59.330 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 125; name: conservation:EXTRACT_DATA (125); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/04/beef15f617fef1e0e4195c49fd0d01]
+Jul-23 12:51:59.331 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 127; name: conservation:EXTRACT_DATA (127); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/c3/4bd1d6662437d284db6e9c37096905]
+Jul-23 12:51:59.331 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 118; name: conservation:EXTRACT_DATA (118); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/ed/fb711733b33fae09d738da2370c398]
+Jul-23 12:51:59.332 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.332 [Task submitter] INFO  nextflow.Session - [aa/48c90c] Submitted process > conservation:EXTRACT_DATA (119)
+Jul-23 12:51:59.333 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.334 [Task submitter] INFO  nextflow.Session - [34/661bbc] Submitted process > conservation:EXTRACT_DATA (120)
+Jul-23 12:51:59.335 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.335 [Task submitter] INFO  nextflow.Session - [43/3974eb] Submitted process > conservation:EXTRACT_DATA (123)
+Jul-23 12:51:59.337 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.337 [Task submitter] INFO  nextflow.Session - [08/1cf563] Submitted process > conservation:EXTRACT_DATA (124)
+Jul-23 12:51:59.340 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.340 [Task submitter] INFO  nextflow.Session - [e1/9aeadb] Submitted process > conservation:EXTRACT_DATA (133)
+Jul-23 12:51:59.343 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.344 [Task submitter] INFO  nextflow.Session - [06/26ee9b] Submitted process > conservation:EXTRACT_DATA (126)
+Jul-23 12:51:59.349 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 117; name: conservation:EXTRACT_DATA (117); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/96/a48f94773df3f5afad20fc5625540f]
+Jul-23 12:51:59.351 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.351 [Task submitter] INFO  nextflow.Session - [a4/a35450] Submitted process > conservation:EXTRACT_DATA (134)
+Jul-23 12:51:59.352 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 119; name: conservation:EXTRACT_DATA (119); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/aa/48c90ce6a96e046aece061e6cf5135]
+Jul-23 12:51:59.353 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.353 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 120; name: conservation:EXTRACT_DATA (120); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/34/661bbcbe8a590494aa10d00deca4ad]
+Jul-23 12:51:59.353 [Task submitter] INFO  nextflow.Session - [d4/51dba0] Submitted process > conservation:EXTRACT_DATA (136)
+Jul-23 12:51:59.353 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 123; name: conservation:EXTRACT_DATA (123); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/43/3974eb21ea6533f1e2678ffe9aeed5]
+Jul-23 12:51:59.353 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 124; name: conservation:EXTRACT_DATA (124); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/08/1cf563016038d59276d79a445a6d23]
+Jul-23 12:51:59.353 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 133; name: conservation:EXTRACT_DATA (133); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/e1/9aeadba9d0d06ec72885c6d674b0e6]
+Jul-23 12:51:59.354 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.354 [Task submitter] INFO  nextflow.Session - [fb/7e5966] Submitted process > conservation:EXTRACT_DATA (130)
+Jul-23 12:51:59.356 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.356 [Task submitter] INFO  nextflow.Session - [67/5863c5] Submitted process > conservation:EXTRACT_DATA (128)
+Jul-23 12:51:59.357 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.357 [Task submitter] INFO  nextflow.Session - [11/5ff209] Submitted process > conservation:EXTRACT_DATA (131)
+Jul-23 12:51:59.359 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.359 [Task submitter] INFO  nextflow.Session - [f9/72fe5c] Submitted process > conservation:EXTRACT_DATA (141)
+Jul-23 12:51:59.363 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 126; name: conservation:EXTRACT_DATA (126); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/06/26ee9b4b73bc04eeac0af58fd46462]
+Jul-23 12:51:59.367 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 134; name: conservation:EXTRACT_DATA (134); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/a4/a354503903665bad8243c4f0e9ede5]
+Jul-23 12:51:59.369 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 136; name: conservation:EXTRACT_DATA (136); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/d4/51dba0534e5c81574f4c4b007c1651]
+Jul-23 12:51:59.370 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.371 [Task submitter] INFO  nextflow.Session - [b2/5bd703] Submitted process > conservation:EXTRACT_DATA (129)
+Jul-23 12:51:59.371 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 130; name: conservation:EXTRACT_DATA (130); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/fb/7e596614a311e2dad492bef0480550]
+Jul-23 12:51:59.372 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 128; name: conservation:EXTRACT_DATA (128); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/67/5863c55d86b6a5b99d49ba370706a2]
+Jul-23 12:51:59.373 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.373 [Task submitter] INFO  nextflow.Session - [3b/dd52d5] Submitted process > conservation:EXTRACT_DATA (132)
+Jul-23 12:51:59.373 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 141; name: conservation:EXTRACT_DATA (141); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/f9/72fe5c414269e1ffe511915ce853bb]
+Jul-23 12:51:59.374 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 131; name: conservation:EXTRACT_DATA (131); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/11/5ff20955382b18e9be25dd8a77ea59]
+Jul-23 12:51:59.374 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.374 [Task submitter] INFO  nextflow.Session - [8a/7c6155] Submitted process > conservation:EXTRACT_DATA (145)
+Jul-23 12:51:59.376 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.376 [Task submitter] INFO  nextflow.Session - [06/0eeb81] Submitted process > conservation:EXTRACT_DATA (135)
+Jul-23 12:51:59.377 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.377 [Task submitter] INFO  nextflow.Session - [55/6334ba] Submitted process > conservation:EXTRACT_DATA (137)
+Jul-23 12:51:59.379 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.379 [Task submitter] INFO  nextflow.Session - [4d/dae1ba] Submitted process > conservation:EXTRACT_DATA (146)
+Jul-23 12:51:59.380 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.381 [Task submitter] INFO  nextflow.Session - [b5/363c25] Submitted process > conservation:EXTRACT_DATA (142)
+Jul-23 12:51:59.382 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.382 [Task submitter] INFO  nextflow.Session - [15/40312c] Submitted process > conservation:EXTRACT_DATA (148)
+Jul-23 12:51:59.384 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.384 [Task submitter] INFO  nextflow.Session - [06/927174] Submitted process > conservation:EXTRACT_DATA (149)
+Jul-23 12:51:59.386 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.386 [Task submitter] INFO  nextflow.Session - [8f/0036ff] Submitted process > conservation:EXTRACT_DATA (151)
+Jul-23 12:51:59.401 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 129; name: conservation:EXTRACT_DATA (129); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/b2/5bd70353f91b23fea3b7ccfa3715ee]
+Jul-23 12:51:59.405 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 132; name: conservation:EXTRACT_DATA (132); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/3b/dd52d54f8b7e558f5c4736cbfe8fec]
+Jul-23 12:51:59.405 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 145; name: conservation:EXTRACT_DATA (145); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/8a/7c6155ff6bf6ca672a1b3487323be1]
+Jul-23 12:51:59.405 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 135; name: conservation:EXTRACT_DATA (135); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/06/0eeb81b71809804ce1801441c2847d]
+Jul-23 12:51:59.406 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 137; name: conservation:EXTRACT_DATA (137); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/55/6334bacdad029389cf22c026dac3da]
+Jul-23 12:51:59.406 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 146; name: conservation:EXTRACT_DATA (146); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/4d/dae1ba3a7178843e2634511b9e0167]
+Jul-23 12:51:59.406 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.406 [Task submitter] INFO  nextflow.Session - [07/5ce191] Submitted process > conservation:EXTRACT_DATA (139)
+Jul-23 12:51:59.406 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 142; name: conservation:EXTRACT_DATA (142); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/b5/363c2535a49a53333255b2ee870665]
+Jul-23 12:51:59.407 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 148; name: conservation:EXTRACT_DATA (148); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/15/40312c79d02ae2adf1abcc9fbb7bff]
+Jul-23 12:51:59.407 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 149; name: conservation:EXTRACT_DATA (149); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/06/927174c1be4bbdc8debaae4651a32b]
+Jul-23 12:51:59.407 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 151; name: conservation:EXTRACT_DATA (151); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/8f/0036ff7e978b6a9d488a3563e3bfa9]
+Jul-23 12:51:59.408 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.408 [Task submitter] INFO  nextflow.Session - [88/88548e] Submitted process > conservation:EXTRACT_DATA (152)
+Jul-23 12:51:59.410 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.410 [Task submitter] INFO  nextflow.Session - [47/9f81f0] Submitted process > conservation:EXTRACT_DATA (154)
+Jul-23 12:51:59.411 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.411 [Task submitter] INFO  nextflow.Session - [4b/57138b] Submitted process > conservation:EXTRACT_DATA (140)
+Jul-23 12:51:59.413 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.413 [Task submitter] INFO  nextflow.Session - [ed/f5e7d7] Submitted process > conservation:EXTRACT_DATA (155)
+Jul-23 12:51:59.414 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.414 [Task submitter] INFO  nextflow.Session - [6c/92bf6d] Submitted process > conservation:EXTRACT_DATA (138)
+Jul-23 12:51:59.423 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.423 [Task submitter] INFO  nextflow.Session - [63/dd728b] Submitted process > conservation:EXTRACT_DATA (144)
+Jul-23 12:51:59.423 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 139; name: conservation:EXTRACT_DATA (139); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/07/5ce1918e2c85ae51f883f1b84b24f7]
+Jul-23 12:51:59.425 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.425 [Task submitter] INFO  nextflow.Session - [9e/61b3b5] Submitted process > conservation:EXTRACT_DATA (143)
+Jul-23 12:51:59.426 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.428 [Task submitter] INFO  nextflow.Session - [13/a58e24] Submitted process > conservation:EXTRACT_DATA (147)
+Jul-23 12:51:59.435 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 152; name: conservation:EXTRACT_DATA (152); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/88/88548e7033dde30091bbadd16b6a95]
+Jul-23 12:51:59.435 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 154; name: conservation:EXTRACT_DATA (154); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/47/9f81f012e25d721c3434ada3ae967a]
+Jul-23 12:51:59.435 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 140; name: conservation:EXTRACT_DATA (140); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/4b/57138b618f27baadf3f89dc9403aae]
+Jul-23 12:51:59.435 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 155; name: conservation:EXTRACT_DATA (155); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/ed/f5e7d7b498b3801cbfd376f1771b98]
+Jul-23 12:51:59.435 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 138; name: conservation:EXTRACT_DATA (138); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/6c/92bf6d820430bb394a50c0279a99b1]
+Jul-23 12:51:59.440 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.440 [Task submitter] INFO  nextflow.Session - [73/ef675c] Submitted process > conservation:EXTRACT_DATA (150)
+Jul-23 12:51:59.443 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 144; name: conservation:EXTRACT_DATA (144); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/63/dd728b6cb029f5ee1802e18371ece8]
+Jul-23 12:51:59.443 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.443 [Task submitter] INFO  nextflow.Session - [f9/4aa226] Submitted process > conservation:EXTRACT_DATA (153)
+Jul-23 12:51:59.445 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.445 [Task submitter] INFO  nextflow.Session - [fc/72e439] Submitted process > conservation:EXTRACT_DATA (163)
+Jul-23 12:51:59.445 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 143; name: conservation:EXTRACT_DATA (143); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/9e/61b3b50e016683b2ac3c68f67db26b]
+Jul-23 12:51:59.446 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 147; name: conservation:EXTRACT_DATA (147); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/13/a58e247dedb340f3effa0ea1e3e178]
+Jul-23 12:51:59.447 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.447 [Task submitter] INFO  nextflow.Session - [27/2e3008] Submitted process > conservation:EXTRACT_DATA (178)
+Jul-23 12:51:59.449 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.449 [Task submitter] INFO  nextflow.Session - [f0/05ebcc] Submitted process > conservation:EXTRACT_DATA (179)
+Jul-23 12:51:59.453 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.453 [Task submitter] INFO  nextflow.Session - [3e/6d8f9d] Submitted process > conservation:EXTRACT_DATA (180)
+Jul-23 12:51:59.456 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.456 [Task submitter] INFO  nextflow.Session - [a8/634ffb] Submitted process > conservation:EXTRACT_DATA (188)
+Jul-23 12:51:59.461 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.461 [Task submitter] INFO  nextflow.Session - [c5/ad98f2] Submitted process > conservation:EXTRACT_DATA (182)
+Jul-23 12:51:59.464 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.464 [Task submitter] INFO  nextflow.Session - [e1/c4d777] Submitted process > conservation:EXTRACT_DATA (183)
+Jul-23 12:51:59.469 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.470 [Task submitter] INFO  nextflow.Session - [a6/03d599] Submitted process > conservation:EXTRACT_DATA (184)
+Jul-23 12:51:59.475 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 150; name: conservation:EXTRACT_DATA (150); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/73/ef675cb07ed41e1b8a9d3b0ffcd8c2]
+Jul-23 12:51:59.478 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.479 [Task submitter] INFO  nextflow.Session - [f8/1318fe] Submitted process > conservation:EXTRACT_DATA (185)
+Jul-23 12:51:59.482 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 153; name: conservation:EXTRACT_DATA (153); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/f9/4aa22656ecdf3b5a66966ddc7da189]
+Jul-23 12:51:59.485 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.486 [Task submitter] INFO  nextflow.Session - [3b/777e02] Submitted process > conservation:EXTRACT_DATA (186)
+Jul-23 12:51:59.490 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 163; name: conservation:EXTRACT_DATA (163); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/fc/72e439d7074d5de719af74af8bd9e4]
+Jul-23 12:51:59.494 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 178; name: conservation:EXTRACT_DATA (178); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/27/2e3008bc0c9c787325a5ad5673b96b]
+Jul-23 12:51:59.494 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 179; name: conservation:EXTRACT_DATA (179); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/f0/05ebcc38b1e65ca2aca3b16cfd67d0]
+Jul-23 12:51:59.495 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 180; name: conservation:EXTRACT_DATA (180); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/3e/6d8f9d3da45f163a88e84006960fc7]
+Jul-23 12:51:59.495 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 188; name: conservation:EXTRACT_DATA (188); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/a8/634ffb39e2dd87173f3fae810b4154]
+Jul-23 12:51:59.496 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 182; name: conservation:EXTRACT_DATA (182); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/c5/ad98f2b4e12f1b17f7942acd5f1909]
+Jul-23 12:51:59.497 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 183; name: conservation:EXTRACT_DATA (183); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/e1/c4d7778a679dc6d93694413aa2ab1c]
+Jul-23 12:51:59.497 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 184; name: conservation:EXTRACT_DATA (184); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/a6/03d599e0def0e16a350647542143df]
+Jul-23 12:51:59.501 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 185; name: conservation:EXTRACT_DATA (185); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/f8/1318fef2656e86cc780d934dc3db5e]
+Jul-23 12:51:59.503 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 186; name: conservation:EXTRACT_DATA (186); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/3b/777e028fb19b69e5f30ace794358d4]
+Jul-23 12:51:59.506 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.506 [Task submitter] INFO  nextflow.Session - [69/fcfd39] Submitted process > conservation:EXTRACT_DATA (187)
+Jul-23 12:51:59.508 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.508 [Task submitter] INFO  nextflow.Session - [64/058449] Submitted process > conservation:EXTRACT_DATA (195)
+Jul-23 12:51:59.509 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.509 [Task submitter] INFO  nextflow.Session - [72/ebc184] Submitted process > conservation:EXTRACT_DATA (189)
+Jul-23 12:51:59.511 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.511 [Task submitter] INFO  nextflow.Session - [57/ef3fd3] Submitted process > conservation:EXTRACT_DATA (191)
+Jul-23 12:51:59.525 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 187; name: conservation:EXTRACT_DATA (187); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/69/fcfd390d96cd76ab901958c39ca94c]
+Jul-23 12:51:59.528 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 195; name: conservation:EXTRACT_DATA (195); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/64/05844984ec1146d3cade8830696ddf]
+Jul-23 12:51:59.528 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 189; name: conservation:EXTRACT_DATA (189); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/72/ebc18468d8c6acb9a6b4e2d7f03acc]
+Jul-23 12:51:59.531 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 191; name: conservation:EXTRACT_DATA (191); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/57/ef3fd3a13918343b3e37ebb6ae7957]
+Jul-23 12:51:59.532 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.533 [Task submitter] INFO  nextflow.Session - [da/7a05ca] Submitted process > conservation:EXTRACT_DATA (190)
+Jul-23 12:51:59.536 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.536 [Task submitter] INFO  nextflow.Session - [06/c949be] Submitted process > conservation:EXTRACT_DATA (192)
+Jul-23 12:51:59.540 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.540 [Task submitter] INFO  nextflow.Session - [80/c96544] Submitted process > conservation:EXTRACT_DATA (193)
+Jul-23 12:51:59.544 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.544 [Task submitter] INFO  nextflow.Session - [7c/714f35] Submitted process > conservation:EXTRACT_DATA (194)
+Jul-23 12:51:59.547 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.548 [Task submitter] INFO  nextflow.Session - [0f/10705c] Submitted process > conservation:EXTRACT_DATA (196)
+Jul-23 12:51:59.555 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.555 [Task submitter] INFO  nextflow.Session - [53/b80062] Submitted process > conservation:EXTRACT_DATA (197)
+Jul-23 12:51:59.557 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 190; name: conservation:EXTRACT_DATA (190); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/da/7a05cab1250354a0d1cd1bfd36fbdb]
+Jul-23 12:51:59.557 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.557 [Task submitter] INFO  nextflow.Session - [87/04b5b4] Submitted process > conservation:EXTRACT_DATA (205)
+Jul-23 12:51:59.560 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.560 [Task submitter] INFO  nextflow.Session - [de/39078d] Submitted process > conservation:EXTRACT_DATA (199)
+Jul-23 12:51:59.561 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 192; name: conservation:EXTRACT_DATA (192); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/06/c949be16ace6832cde765e4c44bd11]
+Jul-23 12:51:59.561 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.561 [Task submitter] INFO  nextflow.Session - [9a/4210f7] Submitted process > conservation:EXTRACT_DATA (198)
+Jul-23 12:51:59.563 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 193; name: conservation:EXTRACT_DATA (193); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/80/c965447077a8c9d78500bd01a65f11]
+Jul-23 12:51:59.564 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.564 [Task submitter] INFO  nextflow.Session - [d1/6c02e1] Submitted process > conservation:EXTRACT_DATA (201)
+Jul-23 12:51:59.565 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.566 [Task submitter] INFO  nextflow.Session - [72/48a3b0] Submitted process > conservation:EXTRACT_DATA (208)
+Jul-23 12:51:59.567 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.567 [Task submitter] INFO  nextflow.Session - [df/a7bdfd] Submitted process > conservation:EXTRACT_DATA (200)
+Jul-23 12:51:59.570 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.571 [Task submitter] INFO  nextflow.Session - [f9/78767d] Submitted process > conservation:EXTRACT_DATA (203)
+Jul-23 12:51:59.572 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 194; name: conservation:EXTRACT_DATA (194); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/7c/714f35a1f18cc5d44fc0cc65701a17]
+Jul-23 12:51:59.576 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.576 [Task submitter] INFO  nextflow.Session - [ea/783c0d] Submitted process > conservation:EXTRACT_DATA (202)
+Jul-23 12:51:59.577 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 196; name: conservation:EXTRACT_DATA (196); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/0f/10705c39db1ff6662f17caf2b49386]
+Jul-23 12:51:59.579 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.579 [Task submitter] INFO  nextflow.Session - [6c/b94861] Submitted process > conservation:EXTRACT_DATA (440)
+Jul-23 12:51:59.596 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 197; name: conservation:EXTRACT_DATA (197); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/53/b800627f2e96dc8a072e39f39dae17]
+Jul-23 12:51:59.601 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.601 [Task submitter] INFO  nextflow.Session - [87/d81f8d] Submitted process > conservation:EXTRACT_DATA (204)
+Jul-23 12:51:59.604 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 205; name: conservation:EXTRACT_DATA (205); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/87/04b5b4876e866c047a0a34c0992a97]
+Jul-23 12:51:59.604 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 198; name: conservation:EXTRACT_DATA (198); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/9a/4210f7f3b0675dea604f8fc4edf6b2]
+Jul-23 12:51:59.607 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.607 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 199; name: conservation:EXTRACT_DATA (199); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/de/39078dc04098ad46d143e72a79ad60]
+Jul-23 12:51:59.608 [Task submitter] INFO  nextflow.Session - [66/851693] Submitted process > conservation:EXTRACT_DATA (389)
+Jul-23 12:51:59.609 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.609 [Task submitter] INFO  nextflow.Session - [65/c77f10] Submitted process > conservation:EXTRACT_DATA (390)
+Jul-23 12:51:59.610 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 201; name: conservation:EXTRACT_DATA (201); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/d1/6c02e1d8e3d0c6c3fbbf22ebb4189c]
+Jul-23 12:51:59.611 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 208; name: conservation:EXTRACT_DATA (208); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/72/48a3b040c48e4e938385dbeb9c3371]
+Jul-23 12:51:59.611 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.611 [Task submitter] INFO  nextflow.Session - [5f/61db83] Submitted process > conservation:EXTRACT_DATA (391)
+Jul-23 12:51:59.614 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.614 [Task submitter] INFO  nextflow.Session - [e4/1ee1aa] Submitted process > conservation:EXTRACT_DATA (392)
+Jul-23 12:51:59.616 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.616 [Task submitter] INFO  nextflow.Session - [ca/6a46a6] Submitted process > conservation:EXTRACT_DATA (393)
+Jul-23 12:51:59.617 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 200; name: conservation:EXTRACT_DATA (200); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/df/a7bdfdf6ad982ccaf749dc61649fe0]
+Jul-23 12:51:59.618 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 202; name: conservation:EXTRACT_DATA (202); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/ea/783c0df704a9b1285dc53a3e0b639e]
+Jul-23 12:51:59.619 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 440; name: conservation:EXTRACT_DATA (440); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/6c/b94861167b548f1a810e7146bb96a3]
+Jul-23 12:51:59.619 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.619 [Task submitter] INFO  nextflow.Session - [3e/af9ccc] Submitted process > conservation:EXTRACT_DATA (952)
+Jul-23 12:51:59.621 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.622 [Task submitter] INFO  nextflow.Session - [62/5864b9] Submitted process > conservation:EXTRACT_DATA (951)
+Jul-23 12:51:59.623 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.623 [Task submitter] INFO  nextflow.Session - [84/e9b8a5] Submitted process > conservation:EXTRACT_DATA (960)
+Jul-23 12:51:59.631 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 203; name: conservation:EXTRACT_DATA (203); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/f9/78767d680b8c74c8d7f05abed98d60]
+Jul-23 12:51:59.631 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 204; name: conservation:EXTRACT_DATA (204); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/87/d81f8dba58053b503c4d5aced29cc9]
+Jul-23 12:51:59.639 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 390; name: conservation:EXTRACT_DATA (390); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/65/c77f10630166b3db35337f9d9aa53b]
+Jul-23 12:51:59.640 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 389; name: conservation:EXTRACT_DATA (389); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/66/851693b34fa7c12f20383d23fd562e]
+Jul-23 12:51:59.640 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 391; name: conservation:EXTRACT_DATA (391); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/5f/61db83ae4f1e2630d2c35b67a805b3]
+Jul-23 12:51:59.640 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 392; name: conservation:EXTRACT_DATA (392); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/e4/1ee1aa1f6aa3eb68bcb03b30e24f31]
+Jul-23 12:51:59.641 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 393; name: conservation:EXTRACT_DATA (393); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/ca/6a46a6db9663320e07aa952afcf98d]
+Jul-23 12:51:59.641 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 952; name: conservation:EXTRACT_DATA (952); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/3e/af9cccd71e1fa7acddf12f741248a4]
+Jul-23 12:51:59.646 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 951; name: conservation:EXTRACT_DATA (951); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/62/5864b94a211be4365d2f560e9836ac]
+Jul-23 12:51:59.647 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 960; name: conservation:EXTRACT_DATA (960); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/84/e9b8a5d77f1203dacfdccf089b6dd4]
+Jul-23 12:51:59.648 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.648 [Task submitter] INFO  nextflow.Session - [d8/c81a14] Submitted process > conservation:EXTRACT_DATA (206)
+Jul-23 12:51:59.650 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.650 [Task submitter] INFO  nextflow.Session - [b1/b657fc] Submitted process > conservation:EXTRACT_DATA (207)
+Jul-23 12:51:59.651 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.651 [Task submitter] INFO  nextflow.Session - [00/e698e3] Submitted process > conservation:EXTRACT_DATA (209)
+Jul-23 12:51:59.653 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.653 [Task submitter] INFO  nextflow.Session - [97/93ea92] Submitted process > conservation:EXTRACT_DATA (216)
+Jul-23 12:51:59.655 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.655 [Task submitter] INFO  nextflow.Session - [29/910b2b] Submitted process > conservation:EXTRACT_DATA (210)
+Jul-23 12:51:59.657 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.657 [Task submitter] INFO  nextflow.Session - [fa/e1062f] Submitted process > conservation:EXTRACT_DATA (212)
+Jul-23 12:51:59.659 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.659 [Task submitter] INFO  nextflow.Session - [48/e7e4e1] Submitted process > conservation:EXTRACT_DATA (211)
+Jul-23 12:51:59.661 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.661 [Task submitter] INFO  nextflow.Session - [5f/2d8ac8] Submitted process > conservation:EXTRACT_DATA (213)
+Jul-23 12:51:59.662 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.662 [Task submitter] INFO  nextflow.Session - [93/d29d71] Submitted process > conservation:EXTRACT_DATA (221)
+Jul-23 12:51:59.663 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 206; name: conservation:EXTRACT_DATA (206); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/d8/c81a1406987a80bfa1b6e06b0f6f08]
+Jul-23 12:51:59.664 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.664 [Task submitter] INFO  nextflow.Session - [ed/6797b8] Submitted process > conservation:EXTRACT_DATA (214)
+Jul-23 12:51:59.666 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.666 [Task submitter] INFO  nextflow.Session - [2e/114385] Submitted process > conservation:EXTRACT_DATA (215)
+Jul-23 12:51:59.669 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 207; name: conservation:EXTRACT_DATA (207); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/b1/b657fc9c5349cf4b3cba9f0d0548a9]
+Jul-23 12:51:59.672 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 209; name: conservation:EXTRACT_DATA (209); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/00/e698e363f838f901ffd94c2e7700ec]
+Jul-23 12:51:59.678 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 216; name: conservation:EXTRACT_DATA (216); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/97/93ea9277e97f731f38f0899fb18e93]
+Jul-23 12:51:59.679 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 210; name: conservation:EXTRACT_DATA (210); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/29/910b2bd2a0c00c1207536a6585c0d1]
+Jul-23 12:51:59.682 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.682 [Task submitter] INFO  nextflow.Session - [65/aae066] Submitted process > conservation:EXTRACT_DATA (217)
+Jul-23 12:51:59.683 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 212; name: conservation:EXTRACT_DATA (212); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/fa/e1062f3e06f09acd4c6da81b486dff]
+Jul-23 12:51:59.683 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 211; name: conservation:EXTRACT_DATA (211); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/48/e7e4e10980bcee56385762f3eba900]
+Jul-23 12:51:59.683 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 213; name: conservation:EXTRACT_DATA (213); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/5f/2d8ac8ce778f66eace7f8a69d3ab3b]
+Jul-23 12:51:59.683 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 221; name: conservation:EXTRACT_DATA (221); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/93/d29d71ccbdce8bb2c38c63ea521b3c]
+Jul-23 12:51:59.684 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.684 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 214; name: conservation:EXTRACT_DATA (214); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/ed/6797b877f6bf308fc01b09db5ba57a]
+Jul-23 12:51:59.684 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 215; name: conservation:EXTRACT_DATA (215); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/2e/114385ef5663907daaa73909d98d6d]
+Jul-23 12:51:59.684 [Task submitter] INFO  nextflow.Session - [3f/06cf48] Submitted process > conservation:EXTRACT_DATA (220)
+Jul-23 12:51:59.686 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.687 [Task submitter] INFO  nextflow.Session - [66/81d480] Submitted process > conservation:EXTRACT_DATA (219)
+Jul-23 12:51:59.688 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.689 [Task submitter] INFO  nextflow.Session - [ec/b9a00d] Submitted process > conservation:EXTRACT_DATA (218)
+Jul-23 12:51:59.691 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.691 [Task submitter] INFO  nextflow.Session - [d9/6f0585] Submitted process > conservation:EXTRACT_DATA (222)
+Jul-23 12:51:59.693 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.693 [Task submitter] INFO  nextflow.Session - [1b/030556] Submitted process > conservation:EXTRACT_DATA (224)
+Jul-23 12:51:59.695 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.695 [Task submitter] INFO  nextflow.Session - [3b/a26f98] Submitted process > conservation:EXTRACT_DATA (223)
+Jul-23 12:51:59.697 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 217; name: conservation:EXTRACT_DATA (217); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/65/aae066741c2acea659fc8464f0bfcf]
+Jul-23 12:51:59.698 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.698 [Task submitter] INFO  nextflow.Session - [64/041fe8] Submitted process > conservation:EXTRACT_DATA (232)
+Jul-23 12:51:59.699 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 220; name: conservation:EXTRACT_DATA (220); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/3f/06cf48df537de62dd49df4b90f079f]
+Jul-23 12:51:59.703 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 219; name: conservation:EXTRACT_DATA (219); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/66/81d48009859bc01bd75f7a40d2b694]
+Jul-23 12:51:59.700 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.706 [Task submitter] INFO  nextflow.Session - [e3/b8bdc6] Submitted process > conservation:EXTRACT_DATA (233)
+Jul-23 12:51:59.707 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 218; name: conservation:EXTRACT_DATA (218); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/ec/b9a00d44392dc174d0379b3cc453c4]
+Jul-23 12:51:59.709 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.710 [Task submitter] INFO  nextflow.Session - [c3/67157b] Submitted process > conservation:EXTRACT_DATA (225)
+Jul-23 12:51:59.711 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 224; name: conservation:EXTRACT_DATA (224); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/1b/030556a2fabadb57525772247ca3f8]
+Jul-23 12:51:59.712 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 223; name: conservation:EXTRACT_DATA (223); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/3b/a26f98239b2d55b0a1e013bba848dd]
+Jul-23 12:51:59.712 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 222; name: conservation:EXTRACT_DATA (222); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/d9/6f0585aa9205ef690a60f5319db3e6]
+Jul-23 12:51:59.713 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.713 [Task submitter] INFO  nextflow.Session - [94/b73613] Submitted process > conservation:EXTRACT_DATA (227)
+Jul-23 12:51:59.716 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.716 [Task submitter] INFO  nextflow.Session - [de/de349d] Submitted process > conservation:EXTRACT_DATA (226)
+Jul-23 12:51:59.717 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 232; name: conservation:EXTRACT_DATA (232); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/64/041fe88e9af0fb978b37663ec48733]
+Jul-23 12:51:59.718 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.718 [Task submitter] INFO  nextflow.Session - [cc/c493c7] Submitted process > conservation:EXTRACT_DATA (228)
+Jul-23 12:51:59.719 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.719 [Task submitter] INFO  nextflow.Session - [57/f75ddc] Submitted process > conservation:EXTRACT_DATA (229)
+Jul-23 12:51:59.721 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.721 [Task submitter] INFO  nextflow.Session - [be/f33001] Submitted process > conservation:EXTRACT_DATA (230)
+Jul-23 12:51:59.722 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.723 [Task submitter] INFO  nextflow.Session - [cc/393042] Submitted process > conservation:EXTRACT_DATA (231)
+Jul-23 12:51:59.724 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.724 [Task submitter] INFO  nextflow.Session - [ce/f23df8] Submitted process > conservation:EXTRACT_DATA (241)
+Jul-23 12:51:59.725 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 233; name: conservation:EXTRACT_DATA (233); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/e3/b8bdc600180b47edad775b0a6eb4c6]
+Jul-23 12:51:59.726 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.726 [Task submitter] INFO  nextflow.Session - [8c/411d5a] Submitted process > conservation:EXTRACT_DATA (234)
+Jul-23 12:51:59.731 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 225; name: conservation:EXTRACT_DATA (225); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/c3/67157b55b80329a12cc9ce441106a8]
+Jul-23 12:51:59.742 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 227; name: conservation:EXTRACT_DATA (227); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/94/b73613434c2fe3c47ba1afa9ca8f22]
+Jul-23 12:51:59.743 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 226; name: conservation:EXTRACT_DATA (226); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/de/de349def419440b5d609fdeb6ac980]
+Jul-23 12:51:59.748 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 228; name: conservation:EXTRACT_DATA (228); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/cc/c493c724610feeac56c10f10c6f590]
+Jul-23 12:51:59.748 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 229; name: conservation:EXTRACT_DATA (229); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/57/f75ddc0f15bf184ed59e561de6410f]
+Jul-23 12:51:59.750 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 231; name: conservation:EXTRACT_DATA (231); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/cc/3930429d7743fd11e828c799c87dab]
+Jul-23 12:51:59.750 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 241; name: conservation:EXTRACT_DATA (241); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/ce/f23df80e6bf27658e428835749cf85]
+Jul-23 12:51:59.751 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 234; name: conservation:EXTRACT_DATA (234); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/8c/411d5a17592d6b77b60a26ddc08503]
+Jul-23 12:51:59.752 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.753 [Task submitter] INFO  nextflow.Session - [83/458f8e] Submitted process > conservation:EXTRACT_DATA (235)
+Jul-23 12:51:59.754 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.755 [Task submitter] INFO  nextflow.Session - [35/4739c1] Submitted process > conservation:EXTRACT_DATA (238)
+Jul-23 12:51:59.757 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.757 [Task submitter] INFO  nextflow.Session - [a3/768e7e] Submitted process > conservation:EXTRACT_DATA (237)
+Jul-23 12:51:59.762 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.762 [Task submitter] INFO  nextflow.Session - [73/050c78] Submitted process > conservation:EXTRACT_DATA (245)
+Jul-23 12:51:59.765 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.765 [Task submitter] INFO  nextflow.Session - [3c/72e06c] Submitted process > conservation:EXTRACT_DATA (236)
+Jul-23 12:51:59.767 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.767 [Task submitter] INFO  nextflow.Session - [f1/6af548] Submitted process > conservation:EXTRACT_DATA (239)
+Jul-23 12:51:59.769 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 230; name: conservation:EXTRACT_DATA (230); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/be/f330015a9fe80c913f4aa57a311abd]
+Jul-23 12:51:59.769 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.769 [Task submitter] INFO  nextflow.Session - [45/c3e00a] Submitted process > conservation:EXTRACT_DATA (242)
+Jul-23 12:51:59.771 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 235; name: conservation:EXTRACT_DATA (235); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/83/458f8e5955aaf1ac157df14dde310e]
+Jul-23 12:51:59.771 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.771 [Task submitter] INFO  nextflow.Session - [08/f8cc34] Submitted process > conservation:EXTRACT_DATA (244)
+Jul-23 12:51:59.771 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 238; name: conservation:EXTRACT_DATA (238); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/35/4739c1f20e30f5e365dc447b17472f]
+Jul-23 12:51:59.773 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.773 [Task submitter] INFO  nextflow.Session - [ae/4c2a47] Submitted process > conservation:EXTRACT_DATA (240)
+Jul-23 12:51:59.775 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 237; name: conservation:EXTRACT_DATA (237); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/a3/768e7eff866a0a99d116c8707696b3]
+Jul-23 12:51:59.775 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.775 [Task submitter] INFO  nextflow.Session - [2e/6b01cf] Submitted process > conservation:EXTRACT_DATA (251)
+Jul-23 12:51:59.777 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.777 [Task submitter] INFO  nextflow.Session - [1f/bc7dbf] Submitted process > conservation:EXTRACT_DATA (243)
+Jul-23 12:51:59.778 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.779 [Task submitter] INFO  nextflow.Session - [eb/34aec8] Submitted process > conservation:EXTRACT_DATA (250)
+Jul-23 12:51:59.780 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.780 [Task submitter] INFO  nextflow.Session - [fe/1ba177] Submitted process > conservation:EXTRACT_DATA (246)
+Jul-23 12:51:59.792 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 245; name: conservation:EXTRACT_DATA (245); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/73/050c785ad96874a946676a6118ddf9]
+Jul-23 12:51:59.793 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 236; name: conservation:EXTRACT_DATA (236); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/3c/72e06c9549e779c5fdee43fc114910]
+Jul-23 12:51:59.794 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.795 [Task submitter] INFO  nextflow.Session - [27/d01c90] Submitted process > conservation:EXTRACT_DATA (247)
+Jul-23 12:51:59.796 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.796 [Task submitter] INFO  nextflow.Session - [86/da7541] Submitted process > conservation:EXTRACT_DATA (248)
+Jul-23 12:51:59.800 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 239; name: conservation:EXTRACT_DATA (239); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/f1/6af548c9539fdc99dfe06a246f1bf2]
+Jul-23 12:51:59.801 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 242; name: conservation:EXTRACT_DATA (242); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/45/c3e00ad5f80ed8bff1ccd07d167156]
+Jul-23 12:51:59.801 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 244; name: conservation:EXTRACT_DATA (244); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/08/f8cc349850b2d95b30bb2a9ee7534f]
+Jul-23 12:51:59.801 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 251; name: conservation:EXTRACT_DATA (251); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/2e/6b01cfbdb5ddaa8bd619cc2aad4daa]
+Jul-23 12:51:59.802 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 246; name: conservation:EXTRACT_DATA (246); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/fe/1ba1779aeed24cc56512d0ee4f0d0f]
+Jul-23 12:51:59.802 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.803 [Task submitter] INFO  nextflow.Session - [f6/c1aa83] Submitted process > conservation:EXTRACT_DATA (249)
+Jul-23 12:51:59.804 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.804 [Task submitter] INFO  nextflow.Session - [03/d8eb73] Submitted process > conservation:EXTRACT_DATA (252)
+Jul-23 12:51:59.806 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.806 [Task submitter] INFO  nextflow.Session - [66/12510c] Submitted process > conservation:EXTRACT_DATA (253)
+Jul-23 12:51:59.808 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.808 [Task submitter] INFO  nextflow.Session - [3d/b225bd] Submitted process > conservation:EXTRACT_DATA (259)
+Jul-23 12:51:59.809 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.809 [Task submitter] INFO  nextflow.Session - [bd/cdddc8] Submitted process > conservation:EXTRACT_DATA (254)
+Jul-23 12:51:59.811 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 240; name: conservation:EXTRACT_DATA (240); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/ae/4c2a47a0d860ea55434a52315196f7]
+Jul-23 12:51:59.811 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 243; name: conservation:EXTRACT_DATA (243); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/1f/bc7dbf3a32e9cd32d0909b49e96c77]
+Jul-23 12:51:59.811 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 250; name: conservation:EXTRACT_DATA (250); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/eb/34aec86523068352be017c81f5cbdf]
+Jul-23 12:51:59.813 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.814 [Task submitter] INFO  nextflow.Session - [88/335208] Submitted process > conservation:EXTRACT_DATA (255)
+Jul-23 12:51:59.815 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.815 [Task submitter] INFO  nextflow.Session - [56/b3b318] Submitted process > conservation:EXTRACT_DATA (256)
+Jul-23 12:51:59.817 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.817 [Task submitter] INFO  nextflow.Session - [4d/1c8fbb] Submitted process > conservation:EXTRACT_DATA (257)
+Jul-23 12:51:59.820 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 247; name: conservation:EXTRACT_DATA (247); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/27/d01c90cf83267ed26aa7d15b1dec75]
+Jul-23 12:51:59.820 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 248; name: conservation:EXTRACT_DATA (248); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/86/da754165ccffcc91005787c5f9ee04]
+Jul-23 12:51:59.822 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.823 [Task submitter] INFO  nextflow.Session - [28/68ac72] Submitted process > conservation:EXTRACT_DATA (266)
+Jul-23 12:51:59.824 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.824 [Task submitter] INFO  nextflow.Session - [f1/0e45da] Submitted process > conservation:EXTRACT_DATA (267)
+Jul-23 12:51:59.829 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 252; name: conservation:EXTRACT_DATA (252); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/03/d8eb73f9f817835b4c83ce71e9255c]
+Jul-23 12:51:59.832 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.832 [Task submitter] INFO  nextflow.Session - [92/b86ea1] Submitted process > conservation:EXTRACT_DATA (260)
+Jul-23 12:51:59.833 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 249; name: conservation:EXTRACT_DATA (249); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/f6/c1aa83bfb34144b86a51df18467930]
+Jul-23 12:51:59.836 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.836 [Task submitter] INFO  nextflow.Session - [2b/b5231f] Submitted process > conservation:EXTRACT_DATA (587)
+Jul-23 12:51:59.837 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 253; name: conservation:EXTRACT_DATA (253); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/66/12510c0327bba861d95306b0919fa0]
+Jul-23 12:51:59.839 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.839 [Task submitter] INFO  nextflow.Session - [64/9d0059] Submitted process > conservation:EXTRACT_DATA (663)
+Jul-23 12:51:59.840 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 259; name: conservation:EXTRACT_DATA (259); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/3d/b225bdd88fdc88ec803e2f892e752e]
+Jul-23 12:51:59.845 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.845 [Task submitter] INFO  nextflow.Session - [eb/6dcfa0] Submitted process > conservation:EXTRACT_DATA (937)
+Jul-23 12:51:59.845 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 254; name: conservation:EXTRACT_DATA (254); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/bd/cdddc88a34984abe20d7c151c77bf9]
+Jul-23 12:51:59.845 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 255; name: conservation:EXTRACT_DATA (255); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/88/335208f239cce78ece21742e8a542a]
+Jul-23 12:51:59.845 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 266; name: conservation:EXTRACT_DATA (266); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/28/68ac720248d686f35fcf541dbc10e6]
+Jul-23 12:51:59.849 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 257; name: conservation:EXTRACT_DATA (257); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/4d/1c8fbb4fd491c2b3a64411e745cde6]
+Jul-23 12:51:59.849 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 267; name: conservation:EXTRACT_DATA (267); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/f1/0e45daa35e9a9a880b38d3ee0e4cfe]
+Jul-23 12:51:59.858 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 256; name: conservation:EXTRACT_DATA (256); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/56/b3b3181e2001ab8c28e5574c9e0308]
+Jul-23 12:51:59.859 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 260; name: conservation:EXTRACT_DATA (260); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/92/b86ea17b06f2bf7ee4d0c3b91e411f]
+Jul-23 12:51:59.859 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 587; name: conservation:EXTRACT_DATA (587); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/2b/b5231f3040c66d17c761f4ca357e48]
+Jul-23 12:51:59.860 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.860 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 663; name: conservation:EXTRACT_DATA (663); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/64/9d0059dd585ba157cd94eef9a76ae4]
+Jul-23 12:51:59.860 [Task submitter] INFO  nextflow.Session - [ab/40e8ce] Submitted process > conservation:EXTRACT_DATA (940)
+Jul-23 12:51:59.862 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.863 [Task submitter] INFO  nextflow.Session - [da/f9abfd] Submitted process > conservation:EXTRACT_DATA (926)
+Jul-23 12:51:59.865 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.865 [Task submitter] INFO  nextflow.Session - [21/41f992] Submitted process > conservation:EXTRACT_DATA (929)
+Jul-23 12:51:59.866 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 937; name: conservation:EXTRACT_DATA (937); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/eb/6dcfa020666e2764f24c86f7fee9f6]
+Jul-23 12:51:59.868 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.868 [Task submitter] INFO  nextflow.Session - [ec/d3fd07] Submitted process > conservation:EXTRACT_DATA (931)
+Jul-23 12:51:59.869 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.869 [Task submitter] INFO  nextflow.Session - [28/305e8c] Submitted process > conservation:EXTRACT_DATA (945)
+Jul-23 12:51:59.871 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.871 [Task submitter] INFO  nextflow.Session - [ac/243cc0] Submitted process > conservation:EXTRACT_DATA (930)
+Jul-23 12:51:59.872 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.873 [Task submitter] INFO  nextflow.Session - [15/a7cf58] Submitted process > conservation:EXTRACT_DATA (932)
+Jul-23 12:51:59.874 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.874 [Task submitter] INFO  nextflow.Session - [6f/3ca838] Submitted process > conservation:EXTRACT_DATA (935)
+Jul-23 12:51:59.875 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.876 [Task submitter] INFO  nextflow.Session - [f0/09a490] Submitted process > conservation:EXTRACT_DATA (939)
+Jul-23 12:51:59.877 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.877 [Task submitter] INFO  nextflow.Session - [93/a0fcdc] Submitted process > conservation:EXTRACT_DATA (942)
+Jul-23 12:51:59.883 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 926; name: conservation:EXTRACT_DATA (926); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/da/f9abfd91a09774cb820748c2c07ea8]
+Jul-23 12:51:59.886 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.886 [Task submitter] INFO  nextflow.Session - [2b/e6a93b] Submitted process > conservation:EXTRACT_DATA (258)
+Jul-23 12:51:59.901 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 940; name: conservation:EXTRACT_DATA (940); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/ab/40e8ce58e5c731d9d4141bf45dafc6]
+Jul-23 12:51:59.902 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 929; name: conservation:EXTRACT_DATA (929); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/21/41f9929c8b4109ee76b3be06e2e75f]
+Jul-23 12:51:59.904 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.904 [Task submitter] INFO  nextflow.Session - [eb/e180a7] Submitted process > conservation:EXTRACT_DATA (261)
+Jul-23 12:51:59.906 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.907 [Task submitter] INFO  nextflow.Session - [4e/595e8e] Submitted process > conservation:EXTRACT_DATA (262)
+Jul-23 12:51:59.917 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 931; name: conservation:EXTRACT_DATA (931); status: COMPLETED; exit: 2; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/ec/d3fd07da44eda20753bc7c20133914]
+Jul-23 12:51:59.917 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 945; name: conservation:EXTRACT_DATA (945); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/28/305e8c1e809c5217b76847f870a01d]
+Jul-23 12:51:59.917 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 930; name: conservation:EXTRACT_DATA (930); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/ac/243cc0f935393860250bbc4c7f8c7a]
+Jul-23 12:51:59.917 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 932; name: conservation:EXTRACT_DATA (932); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/15/a7cf58ded2b565914de91b9b42f49a]
+Jul-23 12:51:59.917 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 935; name: conservation:EXTRACT_DATA (935); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/6f/3ca838ae5417c6570f79b10129837d]
+Jul-23 12:51:59.917 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 939; name: conservation:EXTRACT_DATA (939); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/f0/09a4908d619b4395fae2942796ea5d]
+Jul-23 12:51:59.919 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.919 [Task submitter] INFO  nextflow.Session - [75/68dab1] Submitted process > conservation:EXTRACT_DATA (263)
+Jul-23 12:51:59.921 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.921 [Task submitter] INFO  nextflow.Session - [e2/211e47] Submitted process > conservation:EXTRACT_DATA (264)
+Jul-23 12:51:59.922 [TaskFinalizer-10] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=conservation:EXTRACT_DATA (931); work-dir=/Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/ec/d3fd07da44eda20753bc7c20133914
+  error [nextflow.exception.ProcessFailedException]: Process `conservation:EXTRACT_DATA (931)` terminated with an error exit status (2)
+Jul-23 12:51:59.923 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.923 [Task submitter] INFO  nextflow.Session - [a1/3aab8c] Submitted process > conservation:EXTRACT_DATA (268)
+Jul-23 12:51:59.924 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 942; name: conservation:EXTRACT_DATA (942); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/93/a0fcdcc46ddd77e25ee52f326e955e]
+Jul-23 12:51:59.924 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.924 [Task submitter] INFO  nextflow.Session - [72/19242c] Submitted process > conservation:EXTRACT_DATA (275)
+Jul-23 12:51:59.925 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 258; name: conservation:EXTRACT_DATA (258); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/2b/e6a93b48ddefa922b8ecd82b3a5f75]
+Jul-23 12:51:59.926 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.926 [Task submitter] INFO  nextflow.Session - [31/d9ee8a] Submitted process > conservation:EXTRACT_DATA (265)
+Jul-23 12:51:59.927 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.928 [Task submitter] INFO  nextflow.Session - [e5/cf0cdf] Submitted process > conservation:EXTRACT_DATA (270)
+Jul-23 12:51:59.929 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.929 [Task submitter] INFO  nextflow.Session - [8f/6ce658] Submitted process > conservation:EXTRACT_DATA (278)
+Jul-23 12:51:59.931 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.931 [Task submitter] INFO  nextflow.Session - [f2/b2844b] Submitted process > conservation:EXTRACT_DATA (271)
+Jul-23 12:51:59.938 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 261; name: conservation:EXTRACT_DATA (261); status: COMPLETED; exit: 0; error: -; workDir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/eb/e180a7f253e0875464948260e8e0a3]
+Jul-23 12:51:59.940 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-23 12:51:59.940 [Task submitter] INFO  nextflow.Session - [f5/337d60] Submitted process > conservation:EXTRACT_DATA (272)
+Jul-23 12:51:59.942 [TaskFinalizer-10] ERROR nextflow.processor.TaskProcessor - Error executing process > 'conservation:EXTRACT_DATA (931)'
+
+Caused by:
+  Process `conservation:EXTRACT_DATA (931)` terminated with an error exit status (2)
+
+
+Command executed:
+
+  echo "source: NCBI, link:  657–662 (2009).""
+
+Command exit status:
+  2
+
+Command output:
+  (empty)
+
+Command error:
+  .command.sh: line 2: unexpected EOF while looking for matching `"'
+
+Work dir:
+  /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work/ec/d3fd07da44eda20753bc7c20133914
+
+Tip: you can try to figure out what's wrong by changing to the process work dir and showing the script file named `.command.sh`
+Jul-23 12:51:59.946 [TaskFinalizer-10] DEBUG nextflow.Session - Session aborted -- Cause: Process `conservation:EXTRACT_DATA (931)` terminated with an error exit status (2)
+Jul-23 12:51:59.950 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Jul-23 12:51:59.961 [main] DEBUG nextflow.Session - Session await > all processes finished
+Jul-23 12:51:59.961 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Jul-23 12:51:59.965 [main] WARN  n.processor.TaskPollingMonitor - Killing running tasks (10)
+Jul-23 12:51:59.971 [main] DEBUG n.executor.local.LocalTaskHandler - Unable to kill conservation:EXTRACT_DATA (262) -- command: kill -TERM 66867; exit: 1 
+ bash: line 0: kill: (66867) - No such process
+
+Jul-23 12:51:59.975 [main] DEBUG n.executor.local.LocalTaskHandler - Unable to kill conservation:EXTRACT_DATA (263) -- command: kill -TERM 66892; exit: 1 
+ bash: line 0: kill: (66892) - No such process
+
+Jul-23 12:51:59.978 [main] DEBUG n.executor.local.LocalTaskHandler - Unable to kill conservation:EXTRACT_DATA (264) -- command: kill -TERM 66894; exit: 1 
+ bash: line 0: kill: (66894) - No such process
+
+Jul-23 12:51:59.982 [main] DEBUG n.executor.local.LocalTaskHandler - Unable to kill conservation:EXTRACT_DATA (268) -- command: kill -TERM 66897; exit: 1 
+ bash: line 0: kill: (66897) - No such process
+
+Jul-23 12:51:59.984 [main] DEBUG n.executor.local.LocalTaskHandler - Unable to kill conservation:EXTRACT_DATA (275) -- command: kill -TERM 66901; exit: 1 
+ bash: line 0: kill: (66901) - No such process
+
+Jul-23 12:51:59.987 [main] DEBUG n.executor.local.LocalTaskHandler - Unable to kill conservation:EXTRACT_DATA (265) -- command: kill -TERM 66904; exit: 1 
+ bash: line 0: kill: (66904) - No such process
+
+Jul-23 12:51:59.990 [main] DEBUG n.executor.local.LocalTaskHandler - Unable to kill conservation:EXTRACT_DATA (270) -- command: kill -TERM 66909; exit: 1 
+ bash: line 0: kill: (66909) - No such process
+
+Jul-23 12:51:59.992 [main] DEBUG n.executor.local.LocalTaskHandler - Unable to kill conservation:EXTRACT_DATA (278) -- command: kill -TERM 66910; exit: 1 
+ bash: line 0: kill: (66910) - No such process
+
+Jul-23 12:51:59.995 [main] DEBUG n.executor.local.LocalTaskHandler - Unable to kill conservation:EXTRACT_DATA (271) -- command: kill -TERM 66913; exit: 1 
+ bash: line 0: kill: (66913) - No such process
+
+Jul-23 12:51:59.998 [main] DEBUG n.executor.local.LocalTaskHandler - Unable to kill conservation:EXTRACT_DATA (272) -- command: kill -TERM 66956; exit: 1 
+ bash: line 0: kill: (66956) - No such process
+
+Jul-23 12:52:00.000 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=295; failedCount=1; ignoredCount=0; cachedCount=0; pendingCount=798; submittedCount=1; runningCount=-1; retriesCount=0; abortedCount=10; succeedDuration=2s; failedDuration=33ms; cachedDuration=0ms;loadCpus=-1; loadMemory=0; peakRunning=13; peakCpus=13; peakMemory=0; ]
+Jul-23 12:52:00.161 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Jul-23 12:52:00.174 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

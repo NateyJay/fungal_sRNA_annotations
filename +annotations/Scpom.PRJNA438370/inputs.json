@@ -72,7 +72,7 @@
     "trim/SRR6837115.t.fa.gz",
     "trim/SRR6837114.t.fa.gz"
   ],
-  "adapter": "CTGTAGGC",
+  "adapter": null,
   "alignment_file": "align/alignment.bam",
   "conditions": {
     "?": [
@@ -103,10 +103,34 @@
   "annotation_conditions": [
     "?"
   ],
-  "genome_file": "../../Genomes/Scpom.GCA_000002945.2_ASM294v2_genomic.fa",
+  "genome_file": "../../Genomes/Scpom.GCA_000002945.3_ASM294v3_genomic.fa",
   "jbrowse_directory": null,
   "gene_annotation_file": null,
+  "annotation_file": "tradeoff_?/loci.gff3",
   "min_length": 15,
-  "max_length": 300,
-  "annotation_file": "tradeoff/loci.gff3"
+  "max_length": 30,
+  "adapters": {
+    "SRR6837113.fasta": "CTGTAGGC",
+    "SRR6837121.fasta": "CTGTAGGC",
+    "SRR6837116.fasta": "CTGTAGGC",
+    "SRR6837112.fasta": "CTGTAGGC",
+    "SRR6837117.fasta": "CTGTAGGC",
+    "SRR6837119.fasta": "CTGTAGGC",
+    "SRR6837120.fasta": "CTGTAGGC",
+    "SRR6837118.fasta": "CTGTAGGC",
+    "SRR6837128.fasta": "CTGTAGGC",
+    "SRR6837130.fasta": "CTGTAGGC",
+    "SRR6837132.fasta": "CTGTAGGC",
+    "SRR6837131.fasta": "CTGTAGGC",
+    "SRR6837126.fasta": "CTGTAGGC",
+    "SRR6837125.fasta": "CTGTAGGC",
+    "SRR6837124.fasta": "CTGTAGGC",
+    "SRR6837127.fasta": "CTGTAGGC",
+    "SRR6837122.fasta": "CTGTAGGC",
+    "SRR6837129.fasta": "CTGTAGGC",
+    "SRR6837123.fasta": "CTGTAGGC",
+    "SRR6837133.fasta": "CTGTAGGC",
+    "SRR6837115.fasta": "CTGTAGGC",
+    "SRR6837114.fasta": "CTGTAGGC"
+  }
 }

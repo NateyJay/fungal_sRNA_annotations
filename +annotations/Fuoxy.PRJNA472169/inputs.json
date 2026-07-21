@@ -73,6 +73,6 @@
   "jbrowse_directory": null,
   "gene_annotation_file": null,
   "min_length": 15,
-  "max_length": 300,
+  "max_length": 30,
   "annotation_file": null
 }

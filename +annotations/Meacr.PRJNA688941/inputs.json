@@ -24,7 +24,7 @@
     "untrimmed/SRR13347131.fasta",
     "untrimmed/SRR13347132.fasta"
   ],
-  "adapter": "PRE-TRIMMED",
+  "adapter": null,
   "alignment_file": "align/alignment.bam",
   "conditions": {
     "A": [
@@ -41,10 +41,18 @@
   "annotation_conditions": [
     "B"
   ],
-  "genome_file": "../../Genomes/Meacr.GCA_000187405.1_MetAcr_May2010_genomic.fa",
+  "genome_file": "../../Genomes/Meacr.GCA_019434415.1_Coph_MacrARSEF324_H1_v1.0_genomic.fa",
   "jbrowse_directory": null,
   "gene_annotation_file": null,
+  "annotation_file": "tradeoff_B/loci.gff3",
   "min_length": 15,
-  "max_length": 300,
-  "annotation_file": "tradeoff_B/loci.gff3"
+  "max_length": 30,
+  "adapters": {
+    "SRR13347136.fasta": "PRE-TRIMMED",
+    "SRR13347133.fasta": "PRE-TRIMMED",
+    "SRR13347135.fasta": "PRE-TRIMMED",
+    "SRR13347134.fasta": "PRE-TRIMMED",
+    "SRR13347131.fasta": "PRE-TRIMMED",
+    "SRR13347132.fasta": "PRE-TRIMMED"
+  }
 }

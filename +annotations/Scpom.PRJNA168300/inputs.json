@@ -18,7 +18,7 @@
     "trim/SRR507112.t.fa.gz",
     "trim/SRR507110.t.fa.gz"
   ],
-  "adapter": "CTGTAGGC",
+  "adapter": null,
   "alignment_file": "align/alignment.bam",
   "conditions": {
     "A": [
@@ -28,10 +28,16 @@
   "annotation_conditions": [
     "A"
   ],
-  "genome_file": "../../Genomes/Scpom.GCA_000002945.2_ASM294v2_genomic.fa",
+  "genome_file": "../../Genomes/Scpom.GCA_000002945.3_ASM294v3_genomic.fa",
   "jbrowse_directory": null,
   "gene_annotation_file": null,
+  "annotation_file": "tradeoff_A/loci.gff3",
   "min_length": 15,
-  "max_length": 300,
-  "annotation_file": "tradeoff_A/loci.gff3"
+  "max_length": 30,
+  "adapters": {
+    "SRR507114.fasta": "CTGTAGGC",
+    "SRR507113.fasta": "CTGTAGGC",
+    "SRR507112.fasta": "CTGTAGGC",
+    "SRR507110.fasta": "CTGTAGGC"
+  }
 }

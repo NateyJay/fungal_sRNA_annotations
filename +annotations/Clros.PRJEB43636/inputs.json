@@ -1,66 +1,78 @@
 {
   "project_name": "Clros.PRJEB43636",
   "srrs": [
-    "ERR5960091",
-    "ERR5960110",
-    "ERR5960111",
-    "ERR5961147",
-    "ERR5950791",
-    "ERR5950921",
     "ERR5950930",
     "ERR5950932",
     "ERR5950923",
-    "ERR5950927"
+    "ERR5950927",
+    "ERR5950791",
+    "ERR5950921",
+    "ERR5960111",
+    "ERR5961147",
+    "ERR5960091",
+    "ERR5960110"
   ],
   "untrimmed_libraries": [
-    "untrimmed/ERR5960091.fasta",
-    "untrimmed/ERR5960110.fasta",
-    "untrimmed/ERR5960111.fasta",
-    "untrimmed/ERR5961147.fasta",
-    "untrimmed/ERR5950791.fasta",
-    "untrimmed/ERR5950921.fasta",
     "untrimmed/ERR5950930.fasta",
     "untrimmed/ERR5950932.fasta",
     "untrimmed/ERR5950923.fasta",
-    "untrimmed/ERR5950927.fasta"
+    "untrimmed/ERR5950927.fasta",
+    "untrimmed/ERR5950791.fasta",
+    "untrimmed/ERR5950921.fasta",
+    "untrimmed/ERR5960111.fasta",
+    "untrimmed/ERR5961147.fasta",
+    "untrimmed/ERR5960091.fasta",
+    "untrimmed/ERR5960110.fasta"
   ],
   "trimmed_libraries": [
-    "untrimmed/ERR5960091.fasta",
-    "untrimmed/ERR5960110.fasta",
-    "untrimmed/ERR5960111.fasta",
-    "untrimmed/ERR5961147.fasta",
-    "untrimmed/ERR5950791.fasta",
-    "untrimmed/ERR5950921.fasta",
     "untrimmed/ERR5950930.fasta",
     "untrimmed/ERR5950932.fasta",
     "untrimmed/ERR5950923.fasta",
-    "untrimmed/ERR5950927.fasta"
+    "untrimmed/ERR5950927.fasta",
+    "untrimmed/ERR5950791.fasta",
+    "untrimmed/ERR5950921.fasta",
+    "untrimmed/ERR5960111.fasta",
+    "untrimmed/ERR5961147.fasta",
+    "untrimmed/ERR5960091.fasta",
+    "untrimmed/ERR5960110.fasta"
   ],
-  "adapter": "PRE-TRIMMED",
+  "adapter": null,
   "alignment_file": "align/alignment.bam",
   "conditions": {
-    "C": [
-      "ERR5960091",
-      "ERR5960110",
-      "ERR5960111",
-      "ERR5961147"
-    ],
     "F": [
-      "ERR5950791",
-      "ERR5950921",
       "ERR5950930",
       "ERR5950932",
       "ERR5950923",
-      "ERR5950927"
+      "ERR5950927",
+      "ERR5950791",
+      "ERR5950921"
+    ],
+    "C": [
+      "ERR5960111",
+      "ERR5961147",
+      "ERR5960091",
+      "ERR5960110"
     ]
   },
   "annotation_conditions": [
-    "F"
+    "C"
   ],
-  "genome_file": "../../Genomes/Clros.GCA_902827195.2_C_rosea_IK726_genomic.fa",
+  "genome_file": "../../Genomes/Clros.GCA_026958235.1_ASM2695823v1_genomic.fa",
   "jbrowse_directory": null,
   "gene_annotation_file": null,
+  "annotation_file": "tradeoff_C/loci.gff3",
   "min_length": 15,
-  "max_length": 300,
-  "annotation_file": "tradeoff/loci.gff3"
+  "max_length": 30,
+  "adapters": {
+    "ERR5950930.fasta": "PRE-TRIMMED",
+    "ERR5950932.fasta": "PRE-TRIMMED",
+    "ERR5950923.fasta": "PRE-TRIMMED",
+    "ERR5950927.fasta": "PRE-TRIMMED",
+    "ERR5950791.fasta": "PRE-TRIMMED",
+    "ERR5950921.fasta": "PRE-TRIMMED",
+    "ERR5960111.fasta": "PRE-TRIMMED",
+    "ERR5961147.fasta": "PRE-TRIMMED",
+    "ERR5960091.fasta": "PRE-TRIMMED",
+    "ERR5960110.fasta": "PRE-TRIMMED"
+  }
 }

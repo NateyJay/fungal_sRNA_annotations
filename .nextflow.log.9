@@ -1,0 +1,101 @@
+Jul-23 12:45:00.899 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf
+Jul-23 12:45:00.966 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.04.6
+Jul-23 12:45:00.984 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/Users/jax/.nextflow/plugins; core-plugins: nf-amazon@2.15.0,nf-azure@1.16.0,nf-cloudcache@0.4.3,nf-codecommit@0.2.3,nf-console@1.2.1,nf-google@1.21.1,nf-k8s@1.0.0,nf-tower@1.11.4,nf-wave@1.12.1
+Jul-23 12:45:01.001 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jul-23 12:45:01.002 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jul-23 12:45:01.003 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Jul-23 12:45:01.012 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Jul-23 12:45:01.025 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/nextflow.config
+Jul-23 12:45:01.027 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/nextflow.config
+Jul-23 12:45:01.052 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /Users/jax/.nextflow/secrets/store.json
+Jul-23 12:45:01.054 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@7144655b] - activable => nextflow.secret.LocalSecretsProvider@7144655b
+Jul-23 12:45:01.058 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Jul-23 12:45:01.313 [main] DEBUG nextflow.cli.CmdRun - Enabling module binaries
+Jul-23 12:45:01.320 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
+Jul-23 12:45:01.331 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [mighty_leakey] DSL2 - revision: 320b854d99
+Jul-23 12:45:01.332 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Jul-23 12:45:01.332 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Jul-23 12:45:01.374 [main] DEBUG nextflow.Session - Session UUID: 67f0bc85-206d-480f-9319-4ae26c24318d
+Jul-23 12:45:01.375 [main] DEBUG nextflow.Session - Run name: mighty_leakey
+Jul-23 12:45:01.375 [main] DEBUG nextflow.Session - Executor pool size: 10
+Jul-23 12:45:01.384 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Jul-23 12:45:01.389 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=30; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Jul-23 12:45:01.411 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 25.04.6 build 5954
+  Created: 01-07-2025 11:27 UTC (07:27 CLST)
+  System: Mac OS X 14.7.6
+  Runtime: Groovy 4.0.26 on OpenJDK 64-Bit Server VM 17.0.10+7
+  Encoding: UTF-8 (UTF-8)
+  Process: 60760@NateMac.local [127.0.0.1]
+  CPUs: 10 - Mem: 16 GB (201.3 MB) - Swap: 5 GB (1.5 GB)
+Jul-23 12:45:01.422 [main] DEBUG nextflow.Session - Work-dir: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/work [Mac OS X]
+Jul-23 12:45:01.423 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/bin
+Jul-23 12:45:01.430 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Jul-23 12:45:01.436 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Jul-23 12:45:01.440 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Jul-23 12:45:01.454 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Jul-23 12:45:01.461 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 11; maxThreads: 1000
+Jul-23 12:45:01.498 [main] DEBUG nextflow.Session - Session start
+Jul-23 12:45:01.588 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jul-23 12:45:01.833 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: download, get_genome_list, EXTRACT_DATA
+Jul-23 12:45:01.834 [main] DEBUG nextflow.Session - Igniting dataflow network (1)
+Jul-23 12:45:01.838 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_b317a22ef2b0b3a1: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/conservation/main.nf
+  Script_9bdcec9c1aa3adf1: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/get_genomes/main.nf
+  Script_a840ee3917ca4f45: /Users/jax/🔬Research/🔍2024 - fungal_sRNA_annotations/main.nf
+Jul-23 12:45:01.838 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Jul-23 12:45:01.838 [main] DEBUG nextflow.Session - Session await
+Jul-23 12:45:01.838 [main] DEBUG nextflow.Session - Session await > all processes finished
+Jul-23 12:45:01.838 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Jul-23 12:45:01.841 [Actor Thread 3] ERROR nextflow.extension.DataflowHelper - @unknown
+java.nio.charset.MalformedInputException: Input length = 1
+	at java.base/java.nio.charset.CoderResult.throwException(CoderResult.java:274)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:188)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:177)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:162)
+	at java.base/java.io.BufferedReader.read1(BufferedReader.java:213)
+	at java.base/java.io.BufferedReader.read(BufferedReader.java:287)
+	at java.base/java.io.Reader.read(Reader.java:250)
+	at nextflow.splitter.AbstractTextSplitter.positionAfterBOM(AbstractTextSplitter.groovy:335)
+	at nextflow.splitter.AbstractTextSplitter.normalizeSource(AbstractTextSplitter.groovy:114)
+	at nextflow.splitter.AbstractTextSplitter.normalizeSource(AbstractTextSplitter.groovy)
+	at nextflow.splitter.AbstractSplitter.apply(AbstractSplitter.groovy:153)
+	at nextflow.extension.SplitOp$_applySplittingOperator_closure1.doCall(SplitOp.groovy:190)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:280)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.extension.DataflowHelper$_subscribeImpl_closure2.doCall(DataflowHelper.groovy:287)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:280)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at groovy.lang.Closure.call(Closure.java:433)
+	at groovyx.gpars.dataflow.operator.DataflowOperatorActor.startTask(DataflowOperatorActor.java:120)
+	at groovyx.gpars.dataflow.operator.DataflowOperatorActor.onMessage(DataflowOperatorActor.java:108)
+	at groovyx.gpars.actor.impl.SDAClosure$1.call(SDAClosure.java:43)
+	at groovyx.gpars.actor.AbstractLoopingActor.runEnhancedWithoutRepliesOnMessages(AbstractLoopingActor.java:293)
+	at groovyx.gpars.actor.AbstractLoopingActor.access$400(AbstractLoopingActor.java:30)
+	at groovyx.gpars.actor.AbstractLoopingActor$1.handleMessage(AbstractLoopingActor.java:93)
+	at groovyx.gpars.util.AsyncMessagingCore.run(AsyncMessagingCore.java:132)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Jul-23 12:45:01.846 [Actor Thread 3] DEBUG nextflow.Session - Session aborted -- Cause: Input length = 1
+Jul-23 12:45:01.856 [Actor Thread 3] DEBUG nextflow.Session - The following nodes are still active:
+  [operator] splitCsv
+  [operator] map
+
+Jul-23 12:45:01.864 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=0; peakCpus=0; peakMemory=0; ]
+Jul-23 12:45:01.907 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Jul-23 12:45:01.922 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

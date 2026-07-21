@@ -4,19 +4,19 @@
     "C"
   ],
   "conditions": {
-    "C": [
-      "ERR5960091",
-      "ERR5960110",
-      "ERR5960111",
-      "ERR5961147"
-    ],
     "F": [
-      "ERR5950791",
-      "ERR5950921",
       "ERR5950930",
       "ERR5950932",
       "ERR5950923",
-      "ERR5950927"
+      "ERR5950927",
+      "ERR5950791",
+      "ERR5950921"
+    ],
+    "C": [
+      "ERR5960111",
+      "ERR5961147",
+      "ERR5960091",
+      "ERR5960110"
     ]
   },
   "alignment_file": "/home2/njohnson/fungi_annotations/annotations/Clros.PRJEB43636/align/alignment.bam",

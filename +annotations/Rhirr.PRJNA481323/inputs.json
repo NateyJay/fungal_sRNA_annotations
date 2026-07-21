@@ -38,13 +38,15 @@
       "SRR7525690"
     ]
   },
-  "annotation_conditions": null,
+  "annotation_conditions": [
+    "D"
+  ],
   "genome_file": "../../Genomes/Rhirr.GCA_026210795.1_ASM2621079v1_genomic.fa",
   "jbrowse_directory": null,
   "gene_annotation_file": null,
-  "annotation_file": null,
+  "annotation_file": "tradeoff_D/loci.gff3",
   "min_length": 15,
-  "max_length": 300,
+  "max_length": 30,
   "adapters": {
     "SRR7525701.fasta": "PRE-TRIMMED",
     "SRR7525700.fasta": "PRE-TRIMMED",

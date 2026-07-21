@@ -12,7 +12,7 @@
     "untrimmed/SRR3571005.fasta",
     "untrimmed/SRR3571006.fasta"
   ],
-  "adapter": "PRE-TRIMMED",
+  "adapter": null,
   "alignment_file": "align/alignment.bam",
   "conditions": {
     "B": [
@@ -23,10 +23,14 @@
   "annotation_conditions": [
     "B"
   ],
-  "genome_file": "../../Genomes/Scpom.GCA_000002945.2_ASM294v2_genomic.fa",
+  "genome_file": "../../Genomes/Scpom.GCA_000002945.3_ASM294v3_genomic.fa",
   "jbrowse_directory": null,
   "gene_annotation_file": null,
+  "annotation_file": "tradeoff_B/loci.gff3",
   "min_length": 15,
-  "max_length": 300,
-  "annotation_file": "tradeoff_B/loci.gff3"
+  "max_length": 30,
+  "adapters": {
+    "SRR3571005.fasta": "PRE-TRIMMED",
+    "SRR3571006.fasta": "PRE-TRIMMED"
+  }
 }

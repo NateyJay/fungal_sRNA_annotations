@@ -6,7 +6,7 @@
   "adapter": null,
   "alignment_file": "align/alignment.bam",
   "conditions": null,
-  "annotation_conditions": null,
+  "annotation_conditions": [],
   "genome_file": "../../Genomes/Capar.GCA_000182765.2_ASM18276v2_genomic.fa",
   "jbrowse_directory": null,
   "gene_annotation_file": null,

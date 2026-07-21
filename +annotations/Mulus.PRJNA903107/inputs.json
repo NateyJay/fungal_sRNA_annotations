@@ -1,16 +1,157 @@
 {
   "project_name": "Mulus.PRJNA903107",
-  "srrs": null,
-  "untrimmed_libraries": null,
-  "trimmed_libraries": null,
+  "srrs": [
+    "SRR22390019",
+    "SRR22390021",
+    "SRR22390022",
+    "SRR22390023",
+    "SRR22390024",
+    "SRR22390035",
+    "SRR22390036",
+    "SRR22390037",
+    "SRR22390038",
+    "SRR22390039",
+    "SRR22390041",
+    "SRR22390042",
+    "SRR22390043",
+    "SRR22390044",
+    "SRR22390045",
+    "SRR22390046",
+    "SRR22390047",
+    "SRR22390048",
+    "SRR22390049"
+  ],
+  "untrimmed_libraries": [
+    "untrimmed/SRR22390019.fasta",
+    "untrimmed/SRR22390021.fasta",
+    "untrimmed/SRR22390022.fasta",
+    "untrimmed/SRR22390023.fasta",
+    "untrimmed/SRR22390024.fasta",
+    "untrimmed/SRR22390035.fasta",
+    "untrimmed/SRR22390036.fasta",
+    "untrimmed/SRR22390037.fasta",
+    "untrimmed/SRR22390038.fasta",
+    "untrimmed/SRR22390039.fasta",
+    "untrimmed/SRR22390041.fasta",
+    "untrimmed/SRR22390042.fasta",
+    "untrimmed/SRR22390043.fasta",
+    "untrimmed/SRR22390044.fasta",
+    "untrimmed/SRR22390045.fasta",
+    "untrimmed/SRR22390046.fasta",
+    "untrimmed/SRR22390047.fasta",
+    "untrimmed/SRR22390048.fasta",
+    "untrimmed/SRR22390049.fasta"
+  ],
+  "trimmed_libraries": [
+    "trim/SRR22390019.t.fa.gz",
+    "trim/SRR22390021.t.fa.gz",
+    "trim/SRR22390022.t.fa.gz",
+    "trim/SRR22390023.t.fa.gz",
+    "trim/SRR22390024.t.fa.gz",
+    "trim/SRR22390035.t.fa.gz",
+    "trim/SRR22390036.t.fa.gz",
+    "trim/SRR22390037.t.fa.gz",
+    "trim/SRR22390038.t.fa.gz",
+    "trim/SRR22390039.t.fa.gz",
+    "trim/SRR22390041.t.fa.gz",
+    "trim/SRR22390042.t.fa.gz",
+    "trim/SRR22390043.t.fa.gz",
+    "trim/SRR22390044.t.fa.gz",
+    "trim/SRR22390045.t.fa.gz",
+    "trim/SRR22390046.t.fa.gz",
+    "trim/SRR22390047.t.fa.gz",
+    "trim/SRR22390048.t.fa.gz",
+    "trim/SRR22390049.t.fa.gz"
+  ],
   "adapter": null,
   "alignment_file": "align/alignment.bam",
-  "conditions": null,
-  "annotation_conditions": null,
-  "genome_file": "../../Genomes/Mulus.GCA_010203745.1_Muccir1_3_genomic.fa",
+  "conditions": {
+    "A": [
+      "SRR22390019"
+    ],
+    "B": [
+      "SRR22390021"
+    ],
+    "C": [
+      "SRR22390022"
+    ],
+    "D": [
+      "SRR22390023"
+    ],
+    "E": [
+      "SRR22390024"
+    ],
+    "F": [
+      "SRR22390035"
+    ],
+    "G": [
+      "SRR22390036"
+    ],
+    "H": [
+      "SRR22390037"
+    ],
+    "I": [
+      "SRR22390038"
+    ],
+    "J": [
+      "SRR22390039"
+    ],
+    "K": [
+      "SRR22390041"
+    ],
+    "L": [
+      "SRR22390042"
+    ],
+    "M": [
+      "SRR22390043"
+    ],
+    "N": [
+      "SRR22390044"
+    ],
+    "O": [
+      "SRR22390045"
+    ],
+    "P": [
+      "SRR22390046"
+    ],
+    "Q": [
+      "SRR22390047"
+    ],
+    "R": [
+      "SRR22390048"
+    ],
+    "S": [
+      "SRR22390049"
+    ]
+  },
+  "annotation_conditions": [
+    "S"
+  ],
+  "genome_file": "../../Genomes/Mulus.GCA_040256725.1_ASM4025672v1_genomic.fa",
   "jbrowse_directory": null,
   "gene_annotation_file": null,
-  "annotation_file": null,
-  "min_length": null,
-  "max_length": 300
+  "annotation_file": "tradeoff_S/loci.gff3",
+  "min_length": 15,
+  "max_length": 30,
+  "adapters": {
+    "SRR22390019.fasta": "AGATCGGA",
+    "SRR22390021.fasta": "AGATCGGA",
+    "SRR22390022.fasta": "AGATCGGA",
+    "SRR22390023.fasta": "AGATCGGA",
+    "SRR22390024.fasta": "AGATCGGA",
+    "SRR22390035.fasta": "AGATCGGA",
+    "SRR22390036.fasta": "AGATCGGA",
+    "SRR22390037.fasta": "AGATCGGA",
+    "SRR22390038.fasta": "AGATCGGA",
+    "SRR22390039.fasta": "AGATCGGA",
+    "SRR22390041.fasta": "AGATCGGA",
+    "SRR22390042.fasta": "AGATCGGA",
+    "SRR22390043.fasta": "AGATCGGA",
+    "SRR22390044.fasta": "AGATCGGA",
+    "SRR22390045.fasta": "AGATCGGA",
+    "SRR22390046.fasta": "AGATCGGA",
+    "SRR22390047.fasta": "AGATCGGA",
+    "SRR22390048.fasta": "AGATCGGA",
+    "SRR22390049.fasta": "AGATCGGA"
+  }
 }

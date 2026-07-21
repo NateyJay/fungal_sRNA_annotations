@@ -1,19 +1,29 @@
 {
   "project_name": "Sacer.PRJNA154125",
   "srrs": [
+    "SRR332052",
     "SRR332051",
+    "SRR332050",
     "SRR332049"
   ],
   "untrimmed_libraries": [
+    "untrimmed/SRR332052.fasta",
     "untrimmed/SRR332051.fasta",
+    "untrimmed/SRR332050.fasta",
     "untrimmed/SRR332049.fasta"
   ],
   "trimmed_libraries": null,
   "adapter": "None",
   "alignment_file": null,
   "conditions": {
+    "X.a1d1": [
+      "SRR332052"
+    ],
     "Z.d1": [
       "SRR332051"
+    ],
+    "Y.a1": [
+      "SRR332050"
     ],
     "A": [
       "SRR332049"
@@ -27,7 +37,9 @@
   "max_length": 50,
   "annotation_file": null,
   "adapters": {
+    "SRR332052.fasta": "None",
     "SRR332051.fasta": "None",
+    "SRR332050.fasta": "None",
     "SRR332049.fasta": "None"
   }
 }

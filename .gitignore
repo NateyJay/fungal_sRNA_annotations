@@ -312,3 +312,13 @@ cython_debug/
 *.sra.tmp
 *.cm
 *.cm.*
+*.xml
+*.fa.*
+*.svg
+
+## huge folders
+.nextflow/*
+enhanced_search/xmls/*
+TE_annotations/eg_out/*
+old_conservation/*
+old_conservation*/*
