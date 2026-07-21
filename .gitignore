@@ -272,7 +272,28 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 
+# Nextflow execution artifacts
+.nextflow/
+.nextflow.log*
 
+# Work directory (contains massive intermediate pipeline execution data)
+work/
+
+# Auto-generated pipeline reports and timelines (if saved to root)
+*.html
+*.txt
+trace*.txt*
+dag*.dot
+dag*.png
+dag*.svg
+
+# Container engine cache (if using local downloads)
+.singularity/
+.apptainer/
+
+# Environment and sensitive data
+.env
+.secrets/
 
 
 
@@ -317,7 +338,6 @@ cython_debug/
 *.svg
 
 ## huge folders
-.nextflow/*
 enhanced_search/xmls/
 TE_annotations/eg_out/*
 old_conservation/*
